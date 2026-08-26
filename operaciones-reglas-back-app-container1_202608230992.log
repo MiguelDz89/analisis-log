@@ -1,0 +1,283 @@
+ ,-----. ,------. ,------.,------.   ,---. ,--------.,--. ,-----. ,--.  ,--. ,---. ,------. ,--. ,--.,--.   ,------. ,---.   ,---.  ,------. ,--.
+'  .-.  '|  .--. '|  .---'|  .--. ' /  O  \'--.  .--'|  |'  .-.  '|  ,'.|  |'   .-'|  .--. '|  | |  ||  |   |  .---''   .-' /  O  \ |  .--. '|  |
+|  | |  ||  '--' ||  `--, |  '--'.'|  .-.  |  |  |   |  ||  | |  ||  |' '  |`.  `-.|  '--'.'|  | |  ||  |   |  `--, `.  `-.|  .-.  ||  '--' ||  |
+'  '-'  '|  | --' |  `---.|  |\  \ |  | |  |  |  |   |  |'  '-'  '|  | `   |.-'    |  |\  \ '  '-'  '|  '--.|  `---..-'    |  | |  ||  | --' |  |
+ `-----' `--'     `------'`--' '--'`--' `--'  `--'   `--' `-----' `--'  `--'`-----'`--' '--' `-----' `-----'`------'`-----'`--' `--'`--'     `--'
+
+Operations Rules Api 0.56.1-alpha.8
+Powered by Spring Boot 3.5.16
+[30m2026-08-26T00:19:46,255[m [32mINFO  [m[[1;34mmain[m] [36mStartupInfoLogger[m - Starting OperationsRulesApiApplication v0.56.1-alpha.8 using Java 17.0.20.1 with PID 1 (/app/app.jar started by ? in /app)
+[30m2026-08-26T00:19:46,300[m [32mINFO  [m[[1;34mmain[m] [36mSpringApplication[m - The following 1 profile is active: "dev"
+[30m2026-08-26T00:19:53,693[m [32mINFO  [m[[1;34mmain[m] [36mRepositoryConfigurationDelegate[m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[30m2026-08-26T00:19:54,219[m [32mINFO  [m[[1;34mmain[m] [36mRepositoryConfigurationDelegate[m - Finished Spring Data repository scanning in 482 ms. Found 9 JPA repository interfaces.
+[30m2026-08-26T00:19:59,024[m [32mINFO  [m[[1;34mmain[m] [36mTomcatWebServer[m - Tomcat initialized with port 8080 (http)
+[30m2026-08-26T00:19:59,095[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Initializing ProtocolHandler ["http-nio-8080"]
+[30m2026-08-26T00:19:59,118[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting service [Tomcat]
+[30m2026-08-26T00:19:59,119[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting Servlet engine: [Apache Tomcat/11.0.24]
+[30m2026-08-26T00:19:59,489[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Initializing Spring embedded WebApplicationContext
+[30m2026-08-26T00:19:59,500[m [32mINFO  [m[[1;34mmain[m] [36mServletWebServerApplicationContext[m - Root WebApplicationContext: initialization completed in 12963 ms
+[30m2026-08-26T00:20:03,769[m [32mINFO  [m[[1;34mmain[m] [36mSpringPersistenceUnitInfo[m - No LoadTimeWeaver setup: ignoring JPA class transformer
+[30m2026-08-26T00:20:12,747[m [32mINFO  [m[[1;34mmain[m] [36mAbstractEntityManagerFactoryBean[m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[30m2026-08-26T00:20:14,968[m [32mINFO  [m[[1;34mmain[m] [36mQueryEnhancerFactory[m - Hibernate is in classpath; If applicable, HQL parser will be used.
+[30m2026-08-26T00:20:24,381[m [32mINFO  [m[[1;34mmain[m] [36mEndpointLinksResolver[m - Exposing 4 endpoints beneath base path '/actuator'
+[30m2026-08-26T00:20:24,712[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting ProtocolHandler ["http-nio-8080"]
+[30m2026-08-26T00:20:24,826[m [32mINFO  [m[[1;34mmain[m] [36mTomcatWebServer[m - Tomcat started on port 8080 (http) with context path '/operations-rules-api'
+[30m2026-08-26T00:20:24,900[m [32mINFO  [m[[1;34mmain[m] [36mStartupInfoLogger[m - Started OperationsRulesApiApplication in 42.096 seconds (process running for 46.172)
+[30m2026-08-26T00:22:48,244[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mDirectJDKLog[m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2026-08-26T00:22:48,245[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mFrameworkServlet[m - Initializing Servlet 'dispatcherServlet'
+[30m2026-08-26T00:22:48,247[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mFrameworkServlet[m - Completed initialization in 2 ms
+[30m2026-08-26T00:22:51,944[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mStatusUpdateBusinessRuleServiceImpl[m - [rules] rule-map-cache MISS countryId=37 code=RULE_ASSIGNMENT — loading from DB
+[30m2026-08-26T00:22:52,042[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mStatusUpdateBusinessRuleServiceImpl[m - [rules] rule-map-cache LOADED countryId=37 code=RULE_ASSIGNMENT rules=[RULE_FRACTION, RULE_SIDE, RULE_FRACTION_CUSTODIAN, RULE_FOLIO] elapsed=100ms
+[30m2026-08-26T00:22:52,442[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - An I/O error occurred while sending to the backend.
+[30m2026-08-26T00:22:52,459[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): JDBC exception executing SQL [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?] [An I/O error occurred while sending to the backend.] [n/a]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: null
+[30m2026-08-26T00:22:52,472[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,473[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,477[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,478[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,481[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,482[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,537[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,538[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,542[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,543[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,547[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,547[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,551[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,551[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,554[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,555[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,558[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,559[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,562[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,563[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,565[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,566[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,568[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,569[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,572[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,572[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,575[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,575[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,639[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,640[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,643[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,644[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,647[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,647[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,650[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,650[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,654[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,655[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,657[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,658[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,660[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,661[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,663[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,664[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,666[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,667[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,670[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,670[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,672[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,673[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,675[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,676[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,678[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,679[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,738[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,739[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,742[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,742[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,745[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,746[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,748[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,749[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,751[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,752[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,754[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,755[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,757[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,758[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,760[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,761[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,763[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,764[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,766[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,767[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,769[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,769[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,772[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,772[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,774[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,775[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,839[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,839[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,842[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,843[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,846[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,846[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,849[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,849[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,852[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,852[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,855[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,855[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,868[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,869[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,872[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,873[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,876[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mSqlExceptionHelper[m - Connection is closed
+[30m2026-08-26T00:22:52,876[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mRuleServiceImpl[m - MVEL Expression failed: [rule.clearingDate >= ruleService.currentDateByCountry(rule.countryCode)] | Exception: PropertyAccessException | Message: [Error: ruleService.currentDateByCountry(rule.countryCode): could not prepare statement [Connection is closed] [select ce1_0."COUNTRY_ID",ce1_0."CODE",ce1_0."NAME",ce1_0."TIME_ZONE" from "NUANBODB"."COUNTRY" ce1_0 where ce1_0."CODE"=?]]
+[Near : {... rule.clearingDate >= ruleServi ....}]
+             ^
+[Line: 1, Column: 1] | Root Cause: Connection is closed
+[30m2026-08-26T00:22:52,876[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mStatusUpdateBusinessRuleServiceImpl[m - PERF_RULES_BATCH service=reglas podName=operaciones-reglas-back-app-5894db7bb6-7np7h batchId=cb85f9c5-0868-4c67-b49d-e5a5902568e2 items=50 tradeRequested=50 tradeUnique=50 tradeRepositoryCalls=1 tradeRowsLoaded=50 tradeBulkMs=127 settlementRequestedPairs=50 settlementUniquePairs=50 settlementRepositoryCalls=1 settlementRowsLoaded=0 settlementBulkMs=54 businessRuleRepositoryCalls=10 statusTransitionRequests=0 uniqueStatusTransitionKeys=0 statusHttpCalls=0 statusHttpTotalMs=0 evaluationMs=828 prevalidatedCount=50 businessValidCount=0 businessRejectedCount=50 fallbackCount=0 totalMs=1121 result=SUCCESS
+[30m2026-08-26T00:22:52,877[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mStatusUpdateBusinessRuleServiceImpl[m - PERF_RULES_BATCH_REDUCTION service=reglas podName=operaciones-reglas-back-app-5894db7bb6-7np7h batchId=cb85f9c5-0868-4c67-b49d-e5a5902568e2 legacyFractionationToRulesHttpCallsEstimated=50 fractionationToRulesBatchHttpCalls=1 legacyTradeReadsEstimated=50 tradeRepositoryReadsAfter=1 legacySettlementReadsEstimated=50 settlementRepositoryReadsAfter=1 logicalStatusTransitionRequests=0 uniqueStatusTransitionKeys=0 statusHttpCallsAfter=0 statusHttpReductionPercent=0
+[30m2026-08-26T00:22:52,941[m [1;31mERROR [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalExceptionHandler[m - Error -> ErrorResponse(httpCode=500, httpMethod=POST, url=http://operaciones-reglas-back-service/operations-rules-api/v1/status-update-business-rule/trade/validation/batch, timestamp=2026-08-26T00:22:46, errorCode=UNEXPECTED, errorMessage=An unexpected error occurred, errorMessageDetail=Unable to rollback against JDBC Connection, errorDetails=null)
