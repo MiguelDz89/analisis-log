@@ -1,0 +1,29 @@
+ ,-----. ,------. ,------.,------.   ,---. ,--------.,--. ,-----. ,--.  ,--. ,---. ,------.,------.   ,---.   ,-----.,--------.,--. ,-----. ,--.  ,--.  ,---. ,--------.,--. ,-----. ,--.  ,--.  ,---.  ,------. ,--.
+'  .-.  '|  .--. '|  .---'|  .--. ' /  O  \'--.  .--'|  |'  .-.  '|  ,'.|  |'   .-'|  .---'|  .--. ' /  O  \ '  .--./'--.  .--'|  |'  .-.  '|  ,'.|  | /  O  \'--.  .--'|  |'  .-.  '|  ,'.|  | /  O  \ |  .--. '|  |
+|  | |  ||  '--' ||  `--, |  '--'.'|  .-.  |  |  |   |  ||  | |  ||  |' '  |`.  `-.|  `--, |  '--'.'|  .-.  ||  |       |  |   |  ||  | |  ||  |' '  ||  .-.  |  |  |   |  ||  | |  ||  |' '  ||  .-.  ||  '--' ||  |
+'  '-'  '|  | --' |  `---.|  |\  \ |  | |  |  |  |   |  |'  '-'  '|  | `   |.-'    |  |`   |  |\  \ |  | |  |'  '--'\   |  |   |  |'  '-'  '|  | `   ||  | |  |  |  |   |  |'  '-'  '|  | `   ||  | |  ||  | --' |  |
+ `-----' `--'     `------'`--' '--'`--' `--'  `--'   `--' `-----' `--'  `--'`-----'`--'    `--' '--'`--' `--' `-----'   `--'   `--' `-----' `--'  `--'`--' `--'  `--'   `--' `-----' `--'  `--'`--' `--'`--'     `--'
+
+Operations Fractionation Api 0.68.4-alpha.22
+Powered by Spring Boot 3.5.16
+
+[30m2026-08-28T13:26:50,521[m [32mINFO  [m[[1;34mmain[m] [36mStartupInfoLogger[m - Starting OperationsFractionationApiApplication v0.68.4-alpha.22 using Java 17.0.20.1 with PID 1 (/app/app.jar started by javauser in /app)
+[30m2026-08-28T13:26:50,584[m [32mINFO  [m[[1;34mmain[m] [36mSpringApplication[m - The following 1 profile is active: "dev"
+[30m2026-08-28T13:26:55,698[m [32mINFO  [m[[1;34mmain[m] [36mRepositoryConfigurationDelegate[m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[30m2026-08-28T13:26:56,081[m [32mINFO  [m[[1;34mmain[m] [36mRepositoryConfigurationDelegate[m - Finished Spring Data repository scanning in 367 ms. Found 17 JPA repository interfaces.
+[30m2026-08-28T13:26:58,826[m [32mINFO  [m[[1;34mmain[m] [36mTomcatWebServer[m - Tomcat initialized with port 8080 (http)
+[30m2026-08-28T13:26:58,893[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Initializing ProtocolHandler ["http-nio-8080"]
+[30m2026-08-28T13:26:58,898[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting service [Tomcat]
+[30m2026-08-28T13:26:58,899[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting Servlet engine: [Apache Tomcat/11.0.24]
+[30m2026-08-28T13:26:59,124[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Initializing Spring embedded WebApplicationContext
+[30m2026-08-28T13:26:59,127[m [32mINFO  [m[[1;34mmain[m] [36mServletWebServerApplicationContext[m - Root WebApplicationContext: initialization completed in 8410 ms
+[30m2026-08-28T13:27:02,218[m [32mINFO  [m[[1;34mmain[m] [36mSpringPersistenceUnitInfo[m - No LoadTimeWeaver setup: ignoring JPA class transformer
+[30m2026-08-28T13:27:10,006[m [32mINFO  [m[[1;34mmain[m] [36mAbstractEntityManagerFactoryBean[m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[30m2026-08-28T13:27:10,111[m [32mINFO  [m[[1;34mmain[m] [36mBatchAssignmentTransactionMetricsConfig[m - PERF_ASSIGNMENT_TX_CONFIG service=fracciones transactionManager=org.springframework.orm.jpa.JpaTransactionManager listenerRegistered=true listenerCount=1
+[30m2026-08-28T13:27:11,900[m [32mINFO  [m[[1;34mmain[m] [36mQueryEnhancerFactory[m - Hibernate is in classpath; If applicable, HQL parser will be used.
+[30m2026-08-28T13:27:15,494[m [32mINFO  [m[[1;34mmain[m] [36mBatchAssignmentServiceImpl[m - PERF_ASSIGNMENT_CONFIG service=fracciones podName=operaciones-fracciones-contado-back-app-7b97b6ccbd-t76wv batchProcessingSize=80 rulesBatchEnabled=true
+[30m2026-08-28T13:27:15,495[m [32mINFO  [m[[1;34mmain[m] [36mBatchAssignmentServiceImpl[m - PERF_ASSIGNMENT_PERSISTENCE_CONFIG service=fracciones podName=operaciones-fracciones-contado-back-app-7b97b6ccbd-t76wv persistenceDiagnosticsEnabled=true hibernateStatisticsEnabled=false preserveContextAfterSettlementDelete=true
+[30m2026-08-28T13:27:18,686[m [32mINFO  [m[[1;34mmain[m] [36mEndpointLinksResolver[m - Exposing 3 endpoints beneath base path '/actuator'
+[30m2026-08-28T13:27:19,183[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting ProtocolHandler ["http-nio-8080"]
+[30m2026-08-28T13:27:19,204[m [32mINFO  [m[[1;34mmain[m] [36mTomcatWebServer[m - Tomcat started on port 8080 (http) with context path '/operations-fractionation-api'
+[30m2026-08-28T13:27:19,280[m [32mINFO  [m[[1;34mmain[m] [36mStartupInfoLogger[m - Started OperationsFractionationApiApplication in 31.073 seconds (process running for 34.372)
