@@ -1,0 +1,39 @@
+ ,-----. ,------. ,------.,------.   ,---. ,--------.,--. ,-----. ,--.  ,--. ,---.   ,---.,--------. ,---. ,--------.,--. ,--. ,---.   ,---.  ,------. ,--.
+'  .-.  '|  .--. '|  .---'|  .--. ' /  O  \'--.  .--'|  |'  .-.  '|  ,'.|  |'   .-' '   .-'--.  .--'/  O  \'--.  .--'|  | |  |'   .-' /  O  \ |  .--. '|  |
+|  | |  ||  '--' ||  `--, |  '--'.'|  .-.  |  |  |   |  ||  | |  ||  |' '  |`.  `-. `.  `-.  |  |  |  .-.  |  |  |   |  | |  |`.  `-.|  .-.  ||  '--' ||  |
+'  '-'  '|  | --' |  `---.|  |\  \ |  | |  |  |  |   |  |'  '-'  '|  | `   |.-'    |.-'    | |  |  |  | |  |  |  |   '  '-'  '.-'    |  | |  ||  | --' |  |
+ `-----' `--'     `------'`--' '--'`--' `--'  `--'   `--' `-----' `--'  `--'`-----' `-----'  `--'  `--' `--'  `--'    `-----' `-----'`--' `--'`--'     `--'
+
+Operations Status Api 0.24.1-alpha.4
+Powered by Spring Boot 3.5.14
+
+[30m2026-08-31T18:03:46,784[m [32mINFO  [m[[1;34mmain[m] [36mStartupInfoLogger[m - Starting OperationsStatusApiApplication v0.24.1-alpha.4 using Java 17.0.20.1 with PID 1 (/app/app.jar started by ? in /app)
+[30m2026-08-31T18:03:46,835[m [32mINFO  [m[[1;34mmain[m] [36mSpringApplication[m - The following 1 profile is active: "dev"
+[30m2026-08-31T18:03:53,267[m [32mINFO  [m[[1;34mmain[m] [36mRepositoryConfigurationDelegate[m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[30m2026-08-31T18:03:53,661[m [32mINFO  [m[[1;34mmain[m] [36mRepositoryConfigurationDelegate[m - Finished Spring Data repository scanning in 320 ms. Found 2 JPA repository interfaces.
+[30m2026-08-31T18:03:57,429[m [32mINFO  [m[[1;34mmain[m] [36mTomcatWebServer[m - Tomcat initialized with port 8080 (http)
+[30m2026-08-31T18:03:57,481[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Initializing ProtocolHandler ["http-nio-8080"]
+[30m2026-08-31T18:03:57,489[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting service [Tomcat]
+[30m2026-08-31T18:03:57,490[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting Servlet engine: [Apache Tomcat/10.1.54]
+[30m2026-08-31T18:03:57,857[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Initializing Spring embedded WebApplicationContext
+[30m2026-08-31T18:03:57,864[m [32mINFO  [m[[1;34mmain[m] [36mServletWebServerApplicationContext[m - Root WebApplicationContext: initialization completed in 10807 ms
+[30m2026-08-31T18:04:01,469[m [32mINFO  [m[[1;34mmain[m] [36mSpringPersistenceUnitInfo[m - No LoadTimeWeaver setup: ignoring JPA class transformer
+[30m2026-08-31T18:04:08,463[m [32mINFO  [m[[1;34mmain[m] [36mAbstractEntityManagerFactoryBean[m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[30m2026-08-31T18:04:10,350[m [32mINFO  [m[[1;34mmain[m] [36mQueryEnhancerFactory[m - Hibernate is in classpath; If applicable, HQL parser will be used.
+[30m2026-08-31T18:04:15,656[m [33mWARN  [m[[1;34mmain[m] [36mJpaBaseConfiguration$JpaWebConfiguration[m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[30m2026-08-31T18:04:18,590[m [32mINFO  [m[[1;34mmain[m] [36mEndpointLinksResolver[m - Exposing 3 endpoints beneath base path '/actuator'
+[30m2026-08-31T18:04:19,014[m [32mINFO  [m[[1;34mmain[m] [36mDirectJDKLog[m - Starting ProtocolHandler ["http-nio-8080"]
+[30m2026-08-31T18:04:19,082[m [32mINFO  [m[[1;34mmain[m] [36mTomcatWebServer[m - Tomcat started on port 8080 (http) with context path '/operations-status-api'
+[30m2026-08-31T18:04:19,136[m [32mINFO  [m[[1;34mmain[m] [36mStartupInfoLogger[m - Started OperationsStatusApiApplication in 35.249 seconds (process running for 39.516)
+[30m2026-08-31T19:01:35,153[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mDirectJDKLog[m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2026-08-31T19:01:35,155[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mFrameworkServlet[m - Initializing Servlet 'dispatcherServlet'
+[30m2026-08-31T19:01:35,158[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mFrameworkServlet[m - Completed initialization in 2 ms
+[30m2026-08-31T19:01:35,419[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mStatusTransitionServiceImpl[m - Start method transitionByBusinessRuleIdAndOriginStatusIdV1, businessRuleId -> 230, originStatusId -> 1
+[30m2026-08-31T19:01:36,022[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mStatusTransitionServiceImpl[m - End method transitionByBusinessRuleIdAndOriginStatusIdV1, statusTransitionOutDto -> StatusTransitionOutDto(id=410, originStatus=StatusOutDto(id=1, description=REGISTRADA, category=REGISTRO_OPERACION, shortName=Registrada, detail=Registro de operación aprobado), targetStatus=StatusOutDto(id=2, description=ASIGNADA, category=ASIGNACION, shortName=Asignada, detail=Punta asignada), restriction=null, description=Registrada -> Asignada, Operacion, country=null)
+[30m2026-08-31T19:01:36,024[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mStatusTransitionServiceImpl[m - PERF_STATUS_SLOW_LOOKUP service=estados operation=transitionByBusinessRuleAndOrigin businessRuleId=230 originStatusId=1 transitionId=410 durationMs=602
+[30m2026-08-31T19:01:36,276[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mStatusTransitionServiceImpl[m - Start method transitionByBusinessRuleIdAndOriginStatusIdV1, businessRuleId -> 232, originStatusId -> 1
+[30m2026-08-31T19:01:36,325[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mStatusTransitionServiceImpl[m - End method transitionByBusinessRuleIdAndOriginStatusIdV1, statusTransitionOutDto -> StatusTransitionOutDto(id=413, originStatus=StatusOutDto(id=1, description=REGISTRADA, category=REGISTRO_OPERACION, shortName=Registrada, detail=Registro de operación aprobado), targetStatus=StatusOutDto(id=2, description=ASIGNADA, category=ASIGNACION, shortName=Asignada, detail=Punta asignada), restriction=null, description=Registrada -> Asignada, Operacion, country=null)
+[30m2026-08-31T19:01:36,337[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mStatusTransitionServiceImpl[m - Start method transitionByBusinessRuleIdAndOriginStatusIdV1, businessRuleId -> 239, originStatusId -> null
+[30m2026-08-31T19:01:36,349[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mStatusTransitionServiceImpl[m - End method transitionByBusinessRuleIdAndOriginStatusIdV1, statusTransitionOutDto -> StatusTransitionOutDto(id=421, originStatus=null, targetStatus=StatusOutDto(id=1071, description=TRASLADADA, category=CUSTODIO, shortName=Trasladada, detail=Posici�n trasladada al Custodio), restriction=null, description=sin custodio -> Trasladada, Operacion, country=null)
+[30m2026-08-31T19:07:31,588[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mStatusTransitionServiceImpl[m - Start method transitionByBusinessRuleIdAndOriginStatusIdV1, businessRuleId -> 231, originStatusId -> 1
+[30m2026-08-31T19:07:31,687[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mStatusTransitionServiceImpl[m - End method transitionByBusinessRuleIdAndOriginStatusIdV1, statusTransitionOutDto -> StatusTransitionOutDto(id=414, originStatus=StatusOutDto(id=1, description=REGISTRADA, category=REGISTRO_OPERACION, shortName=Registrada, detail=Registro de operación aprobado), targetStatus=StatusOutDto(id=2, description=ASIGNADA, category=ASIGNACION, shortName=Asignada, detail=Punta asignada), restriction=null, description=Registrada -> Asignada, Operacion, country=null)
