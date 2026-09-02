@@ -1,0 +1,316 @@
+[30m2026-09-02T06:37:12,163[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,163[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,163[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,163[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,177[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,177[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,177[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,177[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,192[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,193[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,193[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,193[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,206[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,206[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,206[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,206[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,223[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,224[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,224[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,224[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,234[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,235[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,235[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,235[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,256[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,257[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,257[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,257[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,265[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,265[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,266[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,266[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,288[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,289[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,289[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,289[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,296[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,296[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,296[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,296[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,320[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,320[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,321[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,321[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,325[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,325[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,325[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,325[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,351[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,352[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,352[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,352[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,356[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,356[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,356[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,356[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,382[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,383[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,383[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,383[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,388[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,388[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,388[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,388[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,411[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,412[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,412[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,412[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,415[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,415[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,415[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,415[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,440[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,441[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,472[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,500[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,501[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,501[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,501[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,504[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,505[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,505[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,505[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,529[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,530[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,530[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,530[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,535[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,535[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,535[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,536[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,559[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,559[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,559[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,559[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,565[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,566[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,566[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,566[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,586[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,586[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,587[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,587[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,594[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,594[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,594[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,594[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,615[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,616[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,616[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,616[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,626[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,626[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,626[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,626[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,645[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,645[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,645[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,645[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,656[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,656[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,656[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,656[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,673[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,673[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,674[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,674[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,685[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,686[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,686[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,686[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,700[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,701[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,701[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,701[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,714[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,714[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,714[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,715[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,730[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,731[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,731[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,731[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,745[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,746[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,746[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,746[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,759[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,760[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,760[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,760[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,779[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,779[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,780[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,780[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,793[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,794[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,794[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,794[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,812[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,812[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,812[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,812[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,823[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,824[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,824[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,824[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,849[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,850[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,850[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,850[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,869[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,870[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,870[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,870[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,888[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,889[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,889[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,889[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,897[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,898[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,898[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,898[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,919[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,919[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,919[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,919[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,925[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,926[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,926[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,926[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,950[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,950[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,950[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,950[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,955[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,955[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,956[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,956[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,981[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,982[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,982[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,982[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:12,986[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:12,987[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:12,987[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:12,987[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,012[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,012[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,012[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,012[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,017[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,017[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,017[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,017[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,047[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,047[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,048[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,048[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,048[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,048[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,048[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,048[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,079[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,080[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,080[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,080[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,109[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,110[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,110[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,110[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,272[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,273[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,273[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,273[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,276[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,277[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,277[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,277[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,305[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,305[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,305[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,305[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,306[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,307[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,307[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,307[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,335[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,335[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,335[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,336[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,339[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,340[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,340[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,340[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,367[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,367[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,367[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,367[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,371[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,372[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,372[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,372[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,400[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,400[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,400[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,400[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-4[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,401[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,401[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,402[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,402[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-10[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,431[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,431[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,431[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,431[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-9[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,432[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,433[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,433[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,433[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-3[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,463[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,463[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,463[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,463[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-8[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,464[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,464[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,464[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,464[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-1[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,494[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,494[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,494[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,494[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-6[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,495[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,495[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,495[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,495[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-5[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,525[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,526[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,526[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,526[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-7[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
+[30m2026-09-02T06:37:13,528[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mGlobalFilter[m - ----------- Client User: operaciones-orquestador-ext-back ----------
+[30m2026-09-02T06:37:13,529[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - Start method settleAccountsV1, side -> BUY
+[30m2026-09-02T06:37:13,529[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - End method settleAccountsV1
+[30m2026-09-02T06:37:13,529[m [32mINFO  [m[[1;34mhttp-nio-8080-exec-2[m] [36mCalculationServiceImpl[m - PERF_ASSIGNMENT service=calculos operation=settleAccounts result=SUCCESS side=BUY fractionCount=1 totalMs=0 validationMs=0 calculationAndMappingMs=0 dbQueryCount=0
