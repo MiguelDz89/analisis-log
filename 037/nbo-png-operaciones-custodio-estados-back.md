@@ -1,0 +1,9798 @@
+# nbo-png-operaciones-custodio-estados-back
+
+Código Java de producción y configuraciones, sin tests. Cada sección contiene el archivo original completo y su ruta. Captura: 28/10/2026.
+
+## Índice
+
+1. `.mvn/wrapper/maven-wrapper.properties`
+2. `mvnw`
+3. `mvnw.cmd`
+4. `pom.xml`
+5. `src/main/java/com/nubo/operations/custody/api/OperationsCustodyStatusApiApplication.java`
+6. `src/main/java/com/nubo/operations/custody/api/application/annotations/RateLimited.java`
+7. `src/main/java/com/nubo/operations/custody/api/application/annotations/ValidBigDecimal.java`
+8. `src/main/java/com/nubo/operations/custody/api/application/config/KafkaProducerConfig.java`
+9. `src/main/java/com/nubo/operations/custody/api/application/config/SwaggerConfig.java`
+10. `src/main/java/com/nubo/operations/custody/api/application/config/ValidBigDecimalConfig.java`
+11. `src/main/java/com/nubo/operations/custody/api/application/config/WebConfig.java`
+12. `src/main/java/com/nubo/operations/custody/api/application/context/GlobalContext.java`
+13. `src/main/java/com/nubo/operations/custody/api/application/database/NamingStrategyConfig.java`
+14. `src/main/java/com/nubo/operations/custody/api/application/database/UpperNamingConfig.java`
+15. `src/main/java/com/nubo/operations/custody/api/application/filters/GlobalFilter.java`
+16. `src/main/java/com/nubo/operations/custody/api/application/interceptors/GlobalInterceptor.java`
+17. `src/main/java/com/nubo/operations/custody/api/application/interceptors/RateLimitInterceptor.java`
+18. `src/main/java/com/nubo/operations/custody/api/application/properties/PropertiesConfig.java`
+19. `src/main/java/com/nubo/operations/custody/api/application/properties/PropertiesContext.java`
+20. `src/main/java/com/nubo/operations/custody/api/application/security/CustomBasicAuthenticationEntryPoint.java`
+21. `src/main/java/com/nubo/operations/custody/api/application/security/CustomBearerTokenAccessDeniedHandler.java`
+22. `src/main/java/com/nubo/operations/custody/api/application/security/CustomBearerTokenAuthenticationEntryPoint.java`
+23. `src/main/java/com/nubo/operations/custody/api/application/security/SecurityConfig.java`
+24. `src/main/java/com/nubo/operations/custody/api/application/util/ApplicationUtils.java`
+25. `src/main/java/com/nubo/operations/custody/api/application/util/RestClientUtils.java`
+26. `src/main/java/com/nubo/operations/custody/api/client/kafka/producer/dto/request/ProducerSpecialTradeCompensationInDto.java`
+27. `src/main/java/com/nubo/operations/custody/api/client/kafka/producer/service/KafkaNuboProducer.java`
+28. `src/main/java/com/nubo/operations/custody/api/client/kafka/producer/service/impl/KafkaNuboProducerImpl.java`
+29. `src/main/java/com/nubo/operations/custody/api/exception/ServiceException.java`
+30. `src/main/java/com/nubo/operations/custody/api/exception/error/ErrorCode.java`
+31. `src/main/java/com/nubo/operations/custody/api/exception/error/ErrorResponse.java`
+32. `src/main/java/com/nubo/operations/custody/api/exception/error/ErrorValidation.java`
+33. `src/main/java/com/nubo/operations/custody/api/exception/handler/CustomKafkaErrorHandler.java`
+34. `src/main/java/com/nubo/operations/custody/api/exception/handler/GlobalExceptionHandler.java`
+35. `src/main/java/com/nubo/operations/custody/api/exception/kafka/KafkaErrorBuild.java`
+36. `src/main/java/com/nubo/operations/custody/api/helpers/MapperPageUtil.java`
+37. `src/main/java/com/nubo/operations/custody/api/helpers/MapperUtil.java`
+38. `src/main/java/com/nubo/operations/custody/api/helpers/SendNotificationUtil.java`
+39. `src/main/java/com/nubo/operations/custody/api/models/dto/request/SettlementStatusHistoryInDto.java`
+40. `src/main/java/com/nubo/operations/custody/api/models/dto/request/SettlementUpdateTransferInDto.java`
+41. `src/main/java/com/nubo/operations/custody/api/models/dto/request/SpecialTradeCompensationInDto.java`
+42. `src/main/java/com/nubo/operations/custody/api/models/dto/request/StatusInDto.java`
+43. `src/main/java/com/nubo/operations/custody/api/models/dto/request/StatusUpdateInDto.java`
+44. `src/main/java/com/nubo/operations/custody/api/models/dto/response/AfpFundOutDto.java`
+45. `src/main/java/com/nubo/operations/custody/api/models/dto/response/BankAccountOutDto.java`
+46. `src/main/java/com/nubo/operations/custody/api/models/dto/response/BankOutDto.java`
+47. `src/main/java/com/nubo/operations/custody/api/models/dto/response/CfiOutDto.java`
+48. `src/main/java/com/nubo/operations/custody/api/models/dto/response/CountryOutDto.java`
+49. `src/main/java/com/nubo/operations/custody/api/models/dto/response/CurrencyOutDto.java`
+50. `src/main/java/com/nubo/operations/custody/api/models/dto/response/DepositoryOutDto.java`
+51. `src/main/java/com/nubo/operations/custody/api/models/dto/response/ExchangeRateOutDto.java`
+52. `src/main/java/com/nubo/operations/custody/api/models/dto/response/FicAdministratorOutDto.java`
+53. `src/main/java/com/nubo/operations/custody/api/models/dto/response/GicsOutDto.java`
+54. `src/main/java/com/nubo/operations/custody/api/models/dto/response/IdentificationTypeOutDto.java`
+55. `src/main/java/com/nubo/operations/custody/api/models/dto/response/InvestorAccountOutDto.java`
+56. `src/main/java/com/nubo/operations/custody/api/models/dto/response/InvestorOutDto.java`
+57. `src/main/java/com/nubo/operations/custody/api/models/dto/response/MarketOutDto.java`
+58. `src/main/java/com/nubo/operations/custody/api/models/dto/response/NotificationRequestDto.java`
+59. `src/main/java/com/nubo/operations/custody/api/models/dto/response/PageResponseOutDto.java`
+60. `src/main/java/com/nubo/operations/custody/api/models/dto/response/ParticipantAccountOutDto.java`
+61. `src/main/java/com/nubo/operations/custody/api/models/dto/response/ParticipantOutDto.java`
+62. `src/main/java/com/nubo/operations/custody/api/models/dto/response/RejectionReasonOutDto.java`
+63. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SecurityTitleOutDto.java`
+64. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SettlementByCustodyOutDto.java`
+65. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SettlementOutDto.java`
+66. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SettlementStatusHistoryOutDto.java`
+67. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SideOutDto.java`
+68. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SmallParticipantOutDto.java`
+69. `src/main/java/com/nubo/operations/custody/api/models/dto/response/SpecialTradeOutDto.java`
+70. `src/main/java/com/nubo/operations/custody/api/models/dto/response/StatusOutDto.java`
+71. `src/main/java/com/nubo/operations/custody/api/models/dto/response/TaxStatusOutDto.java`
+72. `src/main/java/com/nubo/operations/custody/api/models/dto/response/TradeEquityOutDto.java`
+73. `src/main/java/com/nubo/operations/custody/api/models/dto/response/TradeOutDto.java`
+74. `src/main/java/com/nubo/operations/custody/api/models/dto/response/TradingSessionOutDto.java`
+75. `src/main/java/com/nubo/operations/custody/api/models/dto/response/TradingSystemOutDto.java`
+76. `src/main/java/com/nubo/operations/custody/api/models/dto/response/TypeOutDto.java`
+77. `src/main/java/com/nubo/operations/custody/api/models/entity/AfpFundEntity.java`
+78. `src/main/java/com/nubo/operations/custody/api/models/entity/BankAccountEntity.java`
+79. `src/main/java/com/nubo/operations/custody/api/models/entity/BankEntity.java`
+80. `src/main/java/com/nubo/operations/custody/api/models/entity/CfiEntity.java`
+81. `src/main/java/com/nubo/operations/custody/api/models/entity/CountryEntity.java`
+82. `src/main/java/com/nubo/operations/custody/api/models/entity/CurrencyEntity.java`
+83. `src/main/java/com/nubo/operations/custody/api/models/entity/DepositoryEntity.java`
+84. `src/main/java/com/nubo/operations/custody/api/models/entity/ExchangeRateEntity.java`
+85. `src/main/java/com/nubo/operations/custody/api/models/entity/FicAdministratorEntity.java`
+86. `src/main/java/com/nubo/operations/custody/api/models/entity/GicsEntity.java`
+87. `src/main/java/com/nubo/operations/custody/api/models/entity/IdentificationTypeEntity.java`
+88. `src/main/java/com/nubo/operations/custody/api/models/entity/InvestorAccountEntity.java`
+89. `src/main/java/com/nubo/operations/custody/api/models/entity/InvestorEntity.java`
+90. `src/main/java/com/nubo/operations/custody/api/models/entity/MarketEntity.java`
+91. `src/main/java/com/nubo/operations/custody/api/models/entity/ParticipantAccountEntity.java`
+92. `src/main/java/com/nubo/operations/custody/api/models/entity/ParticipantBankAccountEntity.java`
+93. `src/main/java/com/nubo/operations/custody/api/models/entity/ParticipantEntity.java`
+94. `src/main/java/com/nubo/operations/custody/api/models/entity/RejectionReasonEntity.java`
+95. `src/main/java/com/nubo/operations/custody/api/models/entity/SecurityTitleEntity.java`
+96. `src/main/java/com/nubo/operations/custody/api/models/entity/SettlementEntity.java`
+97. `src/main/java/com/nubo/operations/custody/api/models/entity/SettlementKey.java`
+98. `src/main/java/com/nubo/operations/custody/api/models/entity/SettlementStatusHistoryEntity.java`
+99. `src/main/java/com/nubo/operations/custody/api/models/entity/SettlementStatusHistoryKey.java`
+100. `src/main/java/com/nubo/operations/custody/api/models/entity/SideEntity.java`
+101. `src/main/java/com/nubo/operations/custody/api/models/entity/SpecialTradeEntity.java`
+102. `src/main/java/com/nubo/operations/custody/api/models/entity/StatusEntity.java`
+103. `src/main/java/com/nubo/operations/custody/api/models/entity/TaxStatusEntity.java`
+104. `src/main/java/com/nubo/operations/custody/api/models/entity/TradeEntity.java`
+105. `src/main/java/com/nubo/operations/custody/api/models/entity/TradingSessionEntity.java`
+106. `src/main/java/com/nubo/operations/custody/api/models/entity/TradingSystemEntity.java`
+107. `src/main/java/com/nubo/operations/custody/api/models/entity/TypeEntity.java`
+108. `src/main/java/com/nubo/operations/custody/api/models/entity/TypeMappingEntity.java`
+109. `src/main/java/com/nubo/operations/custody/api/models/entity/UserNuboEntity.java`
+110. `src/main/java/com/nubo/operations/custody/api/models/enums/CustodianStatusEnum.java`
+111. `src/main/java/com/nubo/operations/custody/api/models/enums/NotificationMessageEnum.java`
+112. `src/main/java/com/nubo/operations/custody/api/models/enums/NotificationTypeEnum.java`
+113. `src/main/java/com/nubo/operations/custody/api/models/enums/PropertiesEnum.java`
+114. `src/main/java/com/nubo/operations/custody/api/models/enums/TypeEnum.java`
+115. `src/main/java/com/nubo/operations/custody/api/models/enums/TypeMappingEnum.java`
+116. `src/main/java/com/nubo/operations/custody/api/models/enums/UserTypeEnum.java`
+117. `src/main/java/com/nubo/operations/custody/api/models/enums/VersionApiEnum.java`
+118. `src/main/java/com/nubo/operations/custody/api/repository/FicAdministratorRepository.java`
+119. `src/main/java/com/nubo/operations/custody/api/repository/ParticipantBankAccountRepository.java`
+120. `src/main/java/com/nubo/operations/custody/api/repository/ParticipantRepository.java`
+121. `src/main/java/com/nubo/operations/custody/api/repository/RejectionReasonRepository.java`
+122. `src/main/java/com/nubo/operations/custody/api/repository/SettlementRepository.java`
+123. `src/main/java/com/nubo/operations/custody/api/repository/SettlementStatusHistoryRepository.java`
+124. `src/main/java/com/nubo/operations/custody/api/repository/SideRepository.java`
+125. `src/main/java/com/nubo/operations/custody/api/repository/StatusRepository.java`
+126. `src/main/java/com/nubo/operations/custody/api/repository/TradeRepository.java`
+127. `src/main/java/com/nubo/operations/custody/api/repository/TypeMappingRepository.java`
+128. `src/main/java/com/nubo/operations/custody/api/repository/TypeRepository.java`
+129. `src/main/java/com/nubo/operations/custody/api/repository/UserNuboRepository.java`
+130. `src/main/java/com/nubo/operations/custody/api/service/FicAdministratorService.java`
+131. `src/main/java/com/nubo/operations/custody/api/service/ParticipantService.java`
+132. `src/main/java/com/nubo/operations/custody/api/service/RejectionReasonService.java`
+133. `src/main/java/com/nubo/operations/custody/api/service/SettlementService.java`
+134. `src/main/java/com/nubo/operations/custody/api/service/SettlementStatusHistoryService.java`
+135. `src/main/java/com/nubo/operations/custody/api/service/StatusService.java`
+136. `src/main/java/com/nubo/operations/custody/api/service/impl/FicAdministratorServiceImpl.java`
+137. `src/main/java/com/nubo/operations/custody/api/service/impl/ParticipantServiceImpl.java`
+138. `src/main/java/com/nubo/operations/custody/api/service/impl/RejectionReasonServiceImpl.java`
+139. `src/main/java/com/nubo/operations/custody/api/service/impl/SettlementServiceImpl.java`
+140. `src/main/java/com/nubo/operations/custody/api/service/impl/SettlementStatusHistoryServiceImpl.java`
+141. `src/main/java/com/nubo/operations/custody/api/service/impl/StatusServiceImpl.java`
+142. `src/main/java/com/nubo/operations/custody/api/web/controller/FicAdministratorRestController.java`
+143. `src/main/java/com/nubo/operations/custody/api/web/controller/ParticipantRestController.java`
+144. `src/main/java/com/nubo/operations/custody/api/web/controller/RejectionReasonRestController.java`
+145. `src/main/java/com/nubo/operations/custody/api/web/controller/SettlementRestController.java`
+146. `src/main/java/com/nubo/operations/custody/api/web/controller/SettlementStatusHistoryRestController.java`
+147. `src/main/resources/application-dev.yml`
+148. `src/main/resources/application-local.yml`
+149. `src/main/resources/application-prod.yml`
+150. `src/main/resources/application-qa.yml`
+151. `src/main/resources/application-uat.yml`
+152. `src/main/resources/application.yml`
+153. `src/main/resources/banner.txt`
+154. `src/main/resources/log/JsonEventLayout_error.json`
+155. `src/main/resources/log/JsonEventLayout_info.json`
+156. `src/main/resources/log/JsonEventLayout_trace.json`
+157. `src/main/resources/log/log4j2-prod.properties`
+158. `src/main/resources/log/log4j2.properties`
+
+## .mvn/wrapper/maven-wrapper.properties
+
+```properties
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+wrapperVersion=3.3.2
+distributionType=only-script
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip
+
+```
+
+## mvnw
+
+```
+#!/bin/sh
+# ----------------------------------------------------------------------------
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+# Apache Maven Wrapper startup batch script, version 3.3.2
+#
+# Optional ENV vars
+# -----------------
+#   JAVA_HOME - location of a JDK home dir, required when download maven via java source
+#   MVNW_REPOURL - repo url base for downloading maven distribution
+#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
+#   MVNW_VERBOSE - true: enable verbose log; debug: trace the mvnw script; others: silence the output
+# ----------------------------------------------------------------------------
+
+set -euf
+[ "${MVNW_VERBOSE-}" != debug ] || set -x
+
+# OS specific support.
+native_path() { printf %s\\n "$1"; }
+case "$(uname)" in
+CYGWIN* | MINGW*)
+  [ -z "${JAVA_HOME-}" ] || JAVA_HOME="$(cygpath --unix "$JAVA_HOME")"
+  native_path() { cygpath --path --windows "$1"; }
+  ;;
+esac
+
+# set JAVACMD and JAVACCMD
+set_java_home() {
+  # For Cygwin and MinGW, ensure paths are in Unix format before anything is touched
+  if [ -n "${JAVA_HOME-}" ]; then
+    if [ -x "$JAVA_HOME/jre/sh/java" ]; then
+      # IBM's JDK on AIX uses strange locations for the executables
+      JAVACMD="$JAVA_HOME/jre/sh/java"
+      JAVACCMD="$JAVA_HOME/jre/sh/javac"
+    else
+      JAVACMD="$JAVA_HOME/bin/java"
+      JAVACCMD="$JAVA_HOME/bin/javac"
+
+      if [ ! -x "$JAVACMD" ] || [ ! -x "$JAVACCMD" ]; then
+        echo "The JAVA_HOME environment variable is not defined correctly, so mvnw cannot run." >&2
+        echo "JAVA_HOME is set to \"$JAVA_HOME\", but \"\$JAVA_HOME/bin/java\" or \"\$JAVA_HOME/bin/javac\" does not exist." >&2
+        return 1
+      fi
+    fi
+  else
+    JAVACMD="$(
+      'set' +e
+      'unset' -f command 2>/dev/null
+      'command' -v java
+    )" || :
+    JAVACCMD="$(
+      'set' +e
+      'unset' -f command 2>/dev/null
+      'command' -v javac
+    )" || :
+
+    if [ ! -x "${JAVACMD-}" ] || [ ! -x "${JAVACCMD-}" ]; then
+      echo "The java/javac command does not exist in PATH nor is JAVA_HOME set, so mvnw cannot run." >&2
+      return 1
+    fi
+  fi
+}
+
+# hash string like Java String::hashCode
+hash_string() {
+  str="${1:-}" h=0
+  while [ -n "$str" ]; do
+    char="${str%"${str#?}"}"
+    h=$(((h * 31 + $(LC_CTYPE=C printf %d "'$char")) % 4294967296))
+    str="${str#?}"
+  done
+  printf %x\\n $h
+}
+
+verbose() { :; }
+[ "${MVNW_VERBOSE-}" != true ] || verbose() { printf %s\\n "${1-}"; }
+
+die() {
+  printf %s\\n "$1" >&2
+  exit 1
+}
+
+trim() {
+  # MWRAPPER-139:
+  #   Trims trailing and leading whitespace, carriage returns, tabs, and linefeeds.
+  #   Needed for removing poorly interpreted newline sequences when running in more
+  #   exotic environments such as mingw bash on Windows.
+  printf "%s" "${1}" | tr -d '[:space:]'
+}
+
+# parse distributionUrl and optional distributionSha256Sum, requires .mvn/wrapper/maven-wrapper.properties
+while IFS="=" read -r key value; do
+  case "${key-}" in
+  distributionUrl) distributionUrl=$(trim "${value-}") ;;
+  distributionSha256Sum) distributionSha256Sum=$(trim "${value-}") ;;
+  esac
+done <"${0%/*}/.mvn/wrapper/maven-wrapper.properties"
+[ -n "${distributionUrl-}" ] || die "cannot read distributionUrl property in ${0%/*}/.mvn/wrapper/maven-wrapper.properties"
+
+case "${distributionUrl##*/}" in
+maven-mvnd-*bin.*)
+  MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/
+  case "${PROCESSOR_ARCHITECTURE-}${PROCESSOR_ARCHITEW6432-}:$(uname -a)" in
+  *AMD64:CYGWIN* | *AMD64:MINGW*) distributionPlatform=windows-amd64 ;;
+  :Darwin*x86_64) distributionPlatform=darwin-amd64 ;;
+  :Darwin*arm64) distributionPlatform=darwin-aarch64 ;;
+  :Linux*x86_64*) distributionPlatform=linux-amd64 ;;
+  *)
+    echo "Cannot detect native platform for mvnd on $(uname)-$(uname -m), use pure java version" >&2
+    distributionPlatform=linux-amd64
+    ;;
+  esac
+  distributionUrl="${distributionUrl%-bin.*}-$distributionPlatform.zip"
+  ;;
+maven-mvnd-*) MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/ ;;
+*) MVN_CMD="mvn${0##*/mvnw}" _MVNW_REPO_PATTERN=/org/apache/maven/ ;;
+esac
+
+# apply MVNW_REPOURL and calculate MAVEN_HOME
+# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
+[ -z "${MVNW_REPOURL-}" ] || distributionUrl="$MVNW_REPOURL$_MVNW_REPO_PATTERN${distributionUrl#*"$_MVNW_REPO_PATTERN"}"
+distributionUrlName="${distributionUrl##*/}"
+distributionUrlNameMain="${distributionUrlName%.*}"
+distributionUrlNameMain="${distributionUrlNameMain%-bin}"
+MAVEN_USER_HOME="${MAVEN_USER_HOME:-${HOME}/.m2}"
+MAVEN_HOME="${MAVEN_USER_HOME}/wrapper/dists/${distributionUrlNameMain-}/$(hash_string "$distributionUrl")"
+
+exec_maven() {
+  unset MVNW_VERBOSE MVNW_USERNAME MVNW_PASSWORD MVNW_REPOURL || :
+  exec "$MAVEN_HOME/bin/$MVN_CMD" "$@" || die "cannot exec $MAVEN_HOME/bin/$MVN_CMD"
+}
+
+if [ -d "$MAVEN_HOME" ]; then
+  verbose "found existing MAVEN_HOME at $MAVEN_HOME"
+  exec_maven "$@"
+fi
+
+case "${distributionUrl-}" in
+*?-bin.zip | *?maven-mvnd-?*-?*.zip) ;;
+*) die "distributionUrl is not valid, must match *-bin.zip or maven-mvnd-*.zip, but found '${distributionUrl-}'" ;;
+esac
+
+# prepare tmp dir
+if TMP_DOWNLOAD_DIR="$(mktemp -d)" && [ -d "$TMP_DOWNLOAD_DIR" ]; then
+  clean() { rm -rf -- "$TMP_DOWNLOAD_DIR"; }
+  trap clean HUP INT TERM EXIT
+else
+  die "cannot create temp dir"
+fi
+
+mkdir -p -- "${MAVEN_HOME%/*}"
+
+# Download and Install Apache Maven
+verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
+verbose "Downloading from: $distributionUrl"
+verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
+
+# select .zip or .tar.gz
+if ! command -v unzip >/dev/null; then
+  distributionUrl="${distributionUrl%.zip}.tar.gz"
+  distributionUrlName="${distributionUrl##*/}"
+fi
+
+# verbose opt
+__MVNW_QUIET_WGET=--quiet __MVNW_QUIET_CURL=--silent __MVNW_QUIET_UNZIP=-q __MVNW_QUIET_TAR=''
+[ "${MVNW_VERBOSE-}" != true ] || __MVNW_QUIET_WGET='' __MVNW_QUIET_CURL='' __MVNW_QUIET_UNZIP='' __MVNW_QUIET_TAR=v
+
+# normalize http auth
+case "${MVNW_PASSWORD:+has-password}" in
+'') MVNW_USERNAME='' MVNW_PASSWORD='' ;;
+has-password) [ -n "${MVNW_USERNAME-}" ] || MVNW_USERNAME='' MVNW_PASSWORD='' ;;
+esac
+
+if [ -z "${MVNW_USERNAME-}" ] && command -v wget >/dev/null; then
+  verbose "Found wget ... using wget"
+  wget ${__MVNW_QUIET_WGET:+"$__MVNW_QUIET_WGET"} "$distributionUrl" -O "$TMP_DOWNLOAD_DIR/$distributionUrlName" || die "wget: Failed to fetch $distributionUrl"
+elif [ -z "${MVNW_USERNAME-}" ] && command -v curl >/dev/null; then
+  verbose "Found curl ... using curl"
+  curl ${__MVNW_QUIET_CURL:+"$__MVNW_QUIET_CURL"} -f -L -o "$TMP_DOWNLOAD_DIR/$distributionUrlName" "$distributionUrl" || die "curl: Failed to fetch $distributionUrl"
+elif set_java_home; then
+  verbose "Falling back to use Java to download"
+  javaSource="$TMP_DOWNLOAD_DIR/Downloader.java"
+  targetZip="$TMP_DOWNLOAD_DIR/$distributionUrlName"
+  cat >"$javaSource" <<-END
+	public class Downloader extends java.net.Authenticator
+	{
+	  protected java.net.PasswordAuthentication getPasswordAuthentication()
+	  {
+	    return new java.net.PasswordAuthentication( System.getenv( "MVNW_USERNAME" ), System.getenv( "MVNW_PASSWORD" ).toCharArray() );
+	  }
+	  public static void main( String[] args ) throws Exception
+	  {
+	    setDefault( new Downloader() );
+	    java.nio.file.Files.copy( java.net.URI.create( args[0] ).toURL().openStream(), java.nio.file.Paths.get( args[1] ).toAbsolutePath().normalize() );
+	  }
+	}
+	END
+  # For Cygwin/MinGW, switch paths to Windows format before running javac and java
+  verbose " - Compiling Downloader.java ..."
+  "$(native_path "$JAVACCMD")" "$(native_path "$javaSource")" || die "Failed to compile Downloader.java"
+  verbose " - Running Downloader.java ..."
+  "$(native_path "$JAVACMD")" -cp "$(native_path "$TMP_DOWNLOAD_DIR")" Downloader "$distributionUrl" "$(native_path "$targetZip")"
+fi
+
+# If specified, validate the SHA-256 sum of the Maven distribution zip file
+if [ -n "${distributionSha256Sum-}" ]; then
+  distributionSha256Result=false
+  if [ "$MVN_CMD" = mvnd.sh ]; then
+    echo "Checksum validation is not supported for maven-mvnd." >&2
+    echo "Please disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
+    exit 1
+  elif command -v sha256sum >/dev/null; then
+    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | sha256sum -c >/dev/null 2>&1; then
+      distributionSha256Result=true
+    fi
+  elif command -v shasum >/dev/null; then
+    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | shasum -a 256 -c >/dev/null 2>&1; then
+      distributionSha256Result=true
+    fi
+  else
+    echo "Checksum validation was requested but neither 'sha256sum' or 'shasum' are available." >&2
+    echo "Please install either command, or disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
+    exit 1
+  fi
+  if [ $distributionSha256Result = false ]; then
+    echo "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised." >&2
+    echo "If you updated your Maven version, you need to update the specified distributionSha256Sum property." >&2
+    exit 1
+  fi
+fi
+
+# unzip and move
+if command -v unzip >/dev/null; then
+  unzip ${__MVNW_QUIET_UNZIP:+"$__MVNW_QUIET_UNZIP"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -d "$TMP_DOWNLOAD_DIR" || die "failed to unzip"
+else
+  tar xzf${__MVNW_QUIET_TAR:+"$__MVNW_QUIET_TAR"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -C "$TMP_DOWNLOAD_DIR" || die "failed to untar"
+fi
+printf %s\\n "$distributionUrl" >"$TMP_DOWNLOAD_DIR/$distributionUrlNameMain/mvnw.url"
+mv -- "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" "$MAVEN_HOME" || [ -d "$MAVEN_HOME" ] || die "fail to move MAVEN_HOME"
+
+clean || :
+exec_maven "$@"
+
+```
+
+## mvnw.cmd
+
+```
+<# : batch portion
+@REM ----------------------------------------------------------------------------
+@REM Licensed to the Apache Software Foundation (ASF) under one
+@REM or more contributor license agreements.  See the NOTICE file
+@REM distributed with this work for additional information
+@REM regarding copyright ownership.  The ASF licenses this file
+@REM to you under the Apache License, Version 2.0 (the
+@REM "License"); you may not use this file except in compliance
+@REM with the License.  You may obtain a copy of the License at
+@REM
+@REM    http://www.apache.org/licenses/LICENSE-2.0
+@REM
+@REM Unless required by applicable law or agreed to in writing,
+@REM software distributed under the License is distributed on an
+@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+@REM KIND, either express or implied.  See the License for the
+@REM specific language governing permissions and limitations
+@REM under the License.
+@REM ----------------------------------------------------------------------------
+
+@REM ----------------------------------------------------------------------------
+@REM Apache Maven Wrapper startup batch script, version 3.3.2
+@REM
+@REM Optional ENV vars
+@REM   MVNW_REPOURL - repo url base for downloading maven distribution
+@REM   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
+@REM   MVNW_VERBOSE - true: enable verbose log; others: silence the output
+@REM ----------------------------------------------------------------------------
+
+@IF "%__MVNW_ARG0_NAME__%"=="" (SET __MVNW_ARG0_NAME__=%~nx0)
+@SET __MVNW_CMD__=
+@SET __MVNW_ERROR__=
+@SET __MVNW_PSMODULEP_SAVE=%PSModulePath%
+@SET PSModulePath=
+@FOR /F "usebackq tokens=1* delims==" %%A IN (`powershell -noprofile "& {$scriptDir='%~dp0'; $script='%__MVNW_ARG0_NAME__%'; icm -ScriptBlock ([Scriptblock]::Create((Get-Content -Raw '%~f0'))) -NoNewScope}"`) DO @(
+  IF "%%A"=="MVN_CMD" (set __MVNW_CMD__=%%B) ELSE IF "%%B"=="" (echo %%A) ELSE (echo %%A=%%B)
+)
+@SET PSModulePath=%__MVNW_PSMODULEP_SAVE%
+@SET __MVNW_PSMODULEP_SAVE=
+@SET __MVNW_ARG0_NAME__=
+@SET MVNW_USERNAME=
+@SET MVNW_PASSWORD=
+@IF NOT "%__MVNW_CMD__%"=="" (%__MVNW_CMD__% %*)
+@echo Cannot start maven from wrapper >&2 && exit /b 1
+@GOTO :EOF
+: end batch / begin powershell #>
+
+$ErrorActionPreference = "Stop"
+if ($env:MVNW_VERBOSE -eq "true") {
+  $VerbosePreference = "Continue"
+}
+
+# calculate distributionUrl, requires .mvn/wrapper/maven-wrapper.properties
+$distributionUrl = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionUrl
+if (!$distributionUrl) {
+  Write-Error "cannot read distributionUrl property in $scriptDir/.mvn/wrapper/maven-wrapper.properties"
+}
+
+switch -wildcard -casesensitive ( $($distributionUrl -replace '^.*/','') ) {
+  "maven-mvnd-*" {
+    $USE_MVND = $true
+    $distributionUrl = $distributionUrl -replace '-bin\.[^.]*$',"-windows-amd64.zip"
+    $MVN_CMD = "mvnd.cmd"
+    break
+  }
+  default {
+    $USE_MVND = $false
+    $MVN_CMD = $script -replace '^mvnw','mvn'
+    break
+  }
+}
+
+# apply MVNW_REPOURL and calculate MAVEN_HOME
+# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
+if ($env:MVNW_REPOURL) {
+  $MVNW_REPO_PATTERN = if ($USE_MVND) { "/org/apache/maven/" } else { "/maven/mvnd/" }
+  $distributionUrl = "$env:MVNW_REPOURL$MVNW_REPO_PATTERN$($distributionUrl -replace '^.*'+$MVNW_REPO_PATTERN,'')"
+}
+$distributionUrlName = $distributionUrl -replace '^.*/',''
+$distributionUrlNameMain = $distributionUrlName -replace '\.[^.]*$','' -replace '-bin$',''
+$MAVEN_HOME_PARENT = "$HOME/.m2/wrapper/dists/$distributionUrlNameMain"
+if ($env:MAVEN_USER_HOME) {
+  $MAVEN_HOME_PARENT = "$env:MAVEN_USER_HOME/wrapper/dists/$distributionUrlNameMain"
+}
+$MAVEN_HOME_NAME = ([System.Security.Cryptography.MD5]::Create().ComputeHash([byte[]][char[]]$distributionUrl) | ForEach-Object {$_.ToString("x2")}) -join ''
+$MAVEN_HOME = "$MAVEN_HOME_PARENT/$MAVEN_HOME_NAME"
+
+if (Test-Path -Path "$MAVEN_HOME" -PathType Container) {
+  Write-Verbose "found existing MAVEN_HOME at $MAVEN_HOME"
+  Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
+  exit $?
+}
+
+if (! $distributionUrlNameMain -or ($distributionUrlName -eq $distributionUrlNameMain)) {
+  Write-Error "distributionUrl is not valid, must end with *-bin.zip, but found $distributionUrl"
+}
+
+# prepare tmp dir
+$TMP_DOWNLOAD_DIR_HOLDER = New-TemporaryFile
+$TMP_DOWNLOAD_DIR = New-Item -Itemtype Directory -Path "$TMP_DOWNLOAD_DIR_HOLDER.dir"
+$TMP_DOWNLOAD_DIR_HOLDER.Delete() | Out-Null
+trap {
+  if ($TMP_DOWNLOAD_DIR.Exists) {
+    try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
+    catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
+  }
+}
+
+New-Item -Itemtype Directory -Path "$MAVEN_HOME_PARENT" -Force | Out-Null
+
+# Download and Install Apache Maven
+Write-Verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
+Write-Verbose "Downloading from: $distributionUrl"
+Write-Verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
+
+$webclient = New-Object System.Net.WebClient
+if ($env:MVNW_USERNAME -and $env:MVNW_PASSWORD) {
+  $webclient.Credentials = New-Object System.Net.NetworkCredential($env:MVNW_USERNAME, $env:MVNW_PASSWORD)
+}
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$webclient.DownloadFile($distributionUrl, "$TMP_DOWNLOAD_DIR/$distributionUrlName") | Out-Null
+
+# If specified, validate the SHA-256 sum of the Maven distribution zip file
+$distributionSha256Sum = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionSha256Sum
+if ($distributionSha256Sum) {
+  if ($USE_MVND) {
+    Write-Error "Checksum validation is not supported for maven-mvnd. `nPlease disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties."
+  }
+  Import-Module $PSHOME\Modules\Microsoft.PowerShell.Utility -Function Get-FileHash
+  if ((Get-FileHash "$TMP_DOWNLOAD_DIR/$distributionUrlName" -Algorithm SHA256).Hash.ToLower() -ne $distributionSha256Sum) {
+    Write-Error "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised. If you updated your Maven version, you need to update the specified distributionSha256Sum property."
+  }
+}
+
+# unzip and move
+Expand-Archive "$TMP_DOWNLOAD_DIR/$distributionUrlName" -DestinationPath "$TMP_DOWNLOAD_DIR" | Out-Null
+Rename-Item -Path "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" -NewName $MAVEN_HOME_NAME | Out-Null
+try {
+  Move-Item -Path "$TMP_DOWNLOAD_DIR/$MAVEN_HOME_NAME" -Destination $MAVEN_HOME_PARENT | Out-Null
+} catch {
+  if (! (Test-Path -Path "$MAVEN_HOME" -PathType Container)) {
+    Write-Error "fail to move MAVEN_HOME"
+  }
+} finally {
+  try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
+  catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
+}
+
+Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
+
+```
+
+## pom.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.14</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.nubo.operations.custody.api</groupId>
+    <artifactId>operations-custody-status-api</artifactId>
+    <version>0.56.2</version>
+    <name>${project.artifactId}</name>
+    <description>Operations Custody Status Api</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <spring.port>8080</spring.port>
+        <test.skip>false</test.skip>
+        <tomcat.version>10.1.54</tomcat.version>
+        <!-- Override necesario para los CVE de Log4j -->
+        <log4j2.version>2.25.4</log4j2.version>
+        <datasource.url.application.name>ApplicationName=${project.artifactId}</datasource.url.application.name>
+        <hikari.pool.name>${project.artifactId}-pool</hikari.pool.name>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-spring-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-layout-template-json</artifactId>
+            <version>2.25.4</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Database -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- Swagger -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.8.5</version>
+        </dependency>
+        <!-- Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Validation -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- Actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- Json -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.xmlunit</groupId>
+            <artifactId>xmlunit-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Kafka -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.kafka</groupId>
+                    <artifactId>kafka-clients</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.kafka</groupId>
+                    <artifactId>kafka-server-common</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-io</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>${test.skip}</skipTests>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/application/**</exclude>
+                                <exclude>**/models/**</exclude>
+                                <exclude>**/repository/**</exclude>
+                                <exclude>**/OperationsCustodyStatusApiApplication.class</exclude>
+                            </excludes>
+                            <includes>
+                                <include>**/*.class</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/jacoco-report</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/OperationsCustodyStatusApiApplication.java
+
+```java
+package com.nubo.operations.custody.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class OperationsCustodyStatusApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OperationsCustodyStatusApiApplication.class, args);
+	}
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/annotations/RateLimited.java
+
+```java
+package com.nubo.operations.custody.api.application.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD, ElementType.TYPE})
+public @interface RateLimited {
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/annotations/ValidBigDecimal.java
+
+```java
+package com.nubo.operations.custody.api.application.annotations;
+
+import com.nubo.operations.custody.api.application.config.ValidBigDecimalConfig;
+import jakarta.validation.Constraint;
+import jakarta.validation.Payload;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Constraint(validatedBy = ValidBigDecimalConfig.class)
+@Target({ ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.PARAMETER })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ValidBigDecimal {
+    String message() default "";
+
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+
+    int precision();
+    int scale();
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/config/KafkaProducerConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.config;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import lombok.RequiredArgsConstructor;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
+import org.springframework.kafka.core.DefaultKafkaProducerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.ProducerFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Configuration
+@RequiredArgsConstructor
+public class KafkaProducerConfig {
+
+    private final Environment environment;
+    private final PropertiesConfig propertiesConfig;
+
+    @Bean
+    public ProducerFactory<String, String> producerFactoryKafkaNubo() {
+        Map<String, Object> configProps = new HashMap<>();
+        configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, propertiesConfig.getKafkaNuboBootstrapServers());
+        configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        configProps.put("security.protocol", propertiesConfig.getKafkaNuboSecurityProtocol());
+
+        if (!isLocalProfile()) {
+            configProps.put("sasl.mechanism", propertiesConfig.getKafkaNuboSaslMechanism());
+            configProps.put("sasl.jaas.config", propertiesConfig.getKafkaNuboSaslJaasConfig());
+        }
+
+        return new DefaultKafkaProducerFactory<>(configProps);
+    }
+
+    @Bean
+    public KafkaTemplate<String, String> kafkaNuboTemplate() {
+        return new KafkaTemplate<>(producerFactoryKafkaNubo());
+    }
+
+    private boolean isLocalProfile() {
+        String[] activeProfiles = environment.getActiveProfiles();
+        for (String profile : activeProfiles) {
+            if ("local".equals(profile)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/config/SwaggerConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.config;
+
+import com.nubo.operations.custody.api.exception.error.ErrorResponse;
+import com.nubo.operations.custody.api.exception.error.ErrorValidation;
+import com.nubo.operations.custody.api.models.enums.PropertiesEnum;
+import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.media.Content;
+import io.swagger.v3.oas.models.media.MediaType;
+import io.swagger.v3.oas.models.media.Schema;
+import io.swagger.v3.oas.models.parameters.HeaderParameter;
+import io.swagger.v3.oas.models.parameters.Parameter;
+import io.swagger.v3.oas.models.responses.ApiResponse;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import org.springdoc.core.customizers.GlobalOpenApiCustomizer;
+import org.springdoc.core.models.GroupedOpenApi;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+
+@Configuration
+@Controller
+public class SwaggerConfig {
+
+    @GetMapping(value = "/")
+    @Hidden
+    @Operation(description = "Redirect to api home page")
+    public ModelAndView index() {
+        return new ModelAndView("redirect:/swagger-ui/index.html");
+    }
+
+    @Bean
+    public GroupedOpenApi publicApi(@Value("${application.group}") String appGroup) {
+        return GroupedOpenApi.builder().group(appGroup).pathsToMatch("/**").build();
+    }
+
+    @Bean
+    public OpenAPI customOpenAPI(
+            @Value("${application.title}") String appTitle,
+            @Value("${application.description}") String appDescription,
+            @Value("${application.version}") String appVersion) {
+        final String securitySchemeName = "bearerAuth";
+
+        return new OpenAPI()
+                .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
+                .components(new Components()
+                        .addSecuritySchemes(securitySchemeName, new SecurityScheme()
+                                .name(securitySchemeName).type(SecurityScheme.Type.HTTP)
+                                .scheme("bearer").bearerFormat("JWT")))
+                .info(new Info()
+                        .title(appTitle)
+                        .description(appDescription)
+                        .version(appVersion));
+    }
+
+    @Bean
+    public GlobalOpenApiCustomizer customizer() {
+        Content content = createErrorResponse();
+        return openApi -> openApi.getPaths().values().stream().flatMap(pathItem -> pathItem.readOperations().stream())
+                .forEach(operation -> {
+                    operation.addParametersItem(new HeaderParameter().name(PropertiesEnum.CLIENT_IP.getValue())
+                                    .in(ParameterIn.HEADER.toString()).required(true).example("127.0.0.1"))
+                            .addParametersItem(new HeaderParameter().name(PropertiesEnum.CLIENT_USER.getValue())
+                                    .in(ParameterIn.HEADER.toString()).required(true).example("admin"))
+                            .addParametersItem(new HeaderParameter().name(PropertiesEnum.CLIENT_DATETIME.getValue())
+                                    .in(ParameterIn.HEADER.toString()).required(true).example("2024-09-11T15:30:00"))
+                            .addParametersItem(new Parameter().name("version").in(ParameterIn.PATH.toString())
+                                    .required(true).example("v1"))
+                            .getResponses()
+                            .addApiResponse("500", new ApiResponse().description("Error Response").content(content));
+                });
+    }
+
+    private Content createErrorResponse() {
+        var errorValidationSchema = new Schema<ErrorValidation>()
+                .addProperty("id", new Schema<String>())
+                .addProperty("description", new Schema<String>());
+        var errorDetailsSchema = new Schema<List<ErrorValidation>>()
+                .items(errorValidationSchema);
+        var errorResponseSchema = new Schema<ErrorResponse>()
+                .addProperty("httpCode", new Schema<String>())
+                .addProperty("httpMethod", new Schema<String>())
+                .addProperty("url", new Schema<String>())
+                .addProperty("timestamp", new Schema<String>())
+                .addProperty("errorCode", new Schema<String>())
+                .addProperty("errorMessage", new Schema<String>())
+                .addProperty("errorMessageDetail", new Schema<String>())
+                .addProperty("errorDetails", errorDetailsSchema);
+        return new Content().addMediaType("application/json", new MediaType().schema(errorResponseSchema));
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/config/ValidBigDecimalConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.config;
+
+import com.nubo.operations.custody.api.application.annotations.ValidBigDecimal;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+import java.math.BigDecimal;
+
+public class ValidBigDecimalConfig implements ConstraintValidator<ValidBigDecimal, BigDecimal> {
+    private int precision;
+    private int scale;
+    private String message;
+
+    @Override
+    public void initialize(ValidBigDecimal constraintAnnotation) {
+        this.precision = constraintAnnotation.precision();
+        this.scale = constraintAnnotation.scale();
+        this.message = constraintAnnotation.message();
+    }
+
+    @Override
+    public boolean isValid(BigDecimal value, ConstraintValidatorContext context) {
+        if (value == null) {
+            return true;
+        }
+        int integerPartLength = value.precision() - value.scale();
+        boolean isValid = integerPartLength + scale <= precision && value.scale() <= scale;
+        if (!isValid) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate(
+                    message.isEmpty() ?
+                            String.format("The value must have a maximum precision of %d, a maximum scale of %d " +
+                                            "and round to an absolute value less than 10^%d.",
+                                    precision, scale, precision - scale) : message
+            ).addConstraintViolation();
+        }
+        return isValid;
+    }
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/config/WebConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.config;
+
+import com.nubo.operations.custody.api.application.interceptors.GlobalInterceptor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.client.RestClient;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+
+import java.util.Locale;
+
+@Configuration
+@RequiredArgsConstructor
+public class WebConfig implements WebMvcConfigurer {
+
+    private final GlobalInterceptor globalInterceptor;
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        SessionLocaleResolver slr = new SessionLocaleResolver();
+        slr.setDefaultLocale(Locale.ENGLISH);
+        return slr;
+    }
+
+    @Override
+    @Profile({"local", "dev", "qa"})
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOriginPatterns("*")
+                .allowedMethods(HttpMethod.GET.name(),
+                        HttpMethod.POST.name(),
+                        HttpMethod.PUT.name(),
+                        HttpMethod.PATCH.name(),
+                        HttpMethod.DELETE.name(),
+                        HttpMethod.OPTIONS.name())
+                .allowedHeaders("*")
+                .allowCredentials(true);
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(globalInterceptor)
+                .addPathPatterns("/**");
+    }
+
+    @Bean
+    public RestClient restClient() {
+        return RestClient.create();
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/context/GlobalContext.java
+
+```java
+package com.nubo.operations.custody.api.application.context;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class GlobalContext {
+
+    private static final ThreadLocal<Map<String, String>> context = ThreadLocal.withInitial(HashMap::new);
+
+    private GlobalContext() {
+    }
+
+    public static void setProperty(String key, String value) {
+        context.get().put(key, value);
+    }
+
+    public static String getProperty(String key) {
+        Object value = context.get().get(key);
+        return value != null ? String.valueOf(value) : null;
+    }
+
+    public static void remove() {
+        context.remove();
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/database/NamingStrategyConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.database;
+
+import org.hibernate.boot.model.naming.PhysicalNamingStrategy;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class NamingStrategyConfig {
+
+    @Bean
+    public PhysicalNamingStrategy physicalNamingStrategy() {
+        return new UpperNamingConfig();
+    }
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/database/UpperNamingConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.database;
+
+import org.hibernate.boot.model.naming.Identifier;
+import org.hibernate.boot.model.naming.PhysicalNamingStrategy;
+import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;
+
+public class UpperNamingConfig implements PhysicalNamingStrategy {
+
+    @Override
+    public Identifier toPhysicalCatalogName(Identifier name, JdbcEnvironment context) {
+        return convertToUpperCase(name);
+    }
+
+    @Override
+    public Identifier toPhysicalSchemaName(Identifier name, JdbcEnvironment context) {
+        return convertToUpperCase(name);
+    }
+
+    @Override
+    public Identifier toPhysicalSequenceName(Identifier name, JdbcEnvironment context) {
+        return convertToUpperCase(name);
+    }
+
+    @Override
+    public Identifier toPhysicalTableName(Identifier name, JdbcEnvironment context) {
+        return convertToUpperCase(name);
+    }
+
+    @Override
+    public Identifier toPhysicalColumnName(Identifier name, JdbcEnvironment context) {
+        return convertToUpperCase(name);
+    }
+
+    private Identifier convertToUpperCase(Identifier identifier) {
+        if (identifier == null) {
+            return null;
+        }
+        return new Identifier(identifier.getText().toUpperCase(), identifier.isQuoted());
+    }
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/filters/GlobalFilter.java
+
+```java
+package com.nubo.operations.custody.api.application.filters;
+
+import com.nubo.operations.custody.api.application.context.GlobalContext;
+import com.nubo.operations.custody.api.application.util.ApplicationUtils;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.exception.error.ErrorResponse;
+import com.nubo.operations.custody.api.models.enums.PropertiesEnum;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
+import org.springframework.util.ObjectUtils;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.time.LocalDateTime;
+
+@Component
+@Order(1)
+@Slf4j
+public class GlobalFilter extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+            throws ServletException, IOException {
+        try {
+            String uri = request.getRequestURI();
+            if (uri.contains("/v3/api-docs") || uri.contains("/swagger-ui") || uri.contains("/actuator")) {
+                chain.doFilter(request, response);
+                return;
+            }
+            String versionPath = this.validateVersionPath(request);
+            String clientIpHeader = this.validateClientIpHeader(request);
+            String clientUserHeader = this.validateClientUserHeader(request);
+            String clientDatetime = this.validateClientDatetimeHeader(request);
+            String token = this.validateTokenRequest(request);
+
+            GlobalContext.setProperty(PropertiesEnum.VERSION_API.getValue(), VersionApiEnum.fromValue(versionPath).getValue());
+            GlobalContext.setProperty(PropertiesEnum.CLIENT_IP.getValue(), clientIpHeader);
+            GlobalContext.setProperty(PropertiesEnum.CLIENT_USER.getValue(), clientUserHeader);
+            GlobalContext.setProperty(PropertiesEnum.CLIENT_DATETIME.getValue(), clientDatetime);
+            GlobalContext.setProperty(PropertiesEnum.AUTH_TOKEN.getValue(), token);
+
+            chain.doFilter(request, response);
+
+        } catch (ServiceException ex) {
+            handleServiceException(ex, request, response);
+        }
+    }
+
+    private String validateClientIpHeader(HttpServletRequest request) {
+        String clientIp = request.getHeader(PropertiesEnum.CLIENT_IP.getValue());
+        if (clientIp == null || clientIp.isEmpty()) {
+            throw new ServiceException(ErrorCode.HEADER_CLIENT_IP_REQUIRED, HttpStatus.BAD_REQUEST);
+        }
+        try {
+            InetAddress ip = InetAddress.getByName(clientIp);
+            if (!ip.getHostAddress().equals(clientIp)) {
+                throw new ServiceException(ErrorCode.HEADER_CLIENT_IP_INVALID, HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            throw new ServiceException(ErrorCode.HEADER_CLIENT_IP_INVALID, HttpStatus.BAD_REQUEST);
+        }
+        return clientIp;
+    }
+
+    private String validateClientUserHeader(HttpServletRequest request) {
+        String clientUser = request.getHeader(PropertiesEnum.CLIENT_USER.getValue());
+        if (clientUser == null || clientUser.isEmpty()) {
+            throw new ServiceException(ErrorCode.HEADER_CLIENT_USER_REQUIRED, HttpStatus.BAD_REQUEST);
+        }
+        return clientUser;
+    }
+
+    private String validateClientDatetimeHeader(HttpServletRequest request) {
+        String clientDatetime = request.getHeader(PropertiesEnum.CLIENT_DATETIME.getValue());
+        if (clientDatetime == null || clientDatetime.isEmpty()) {
+            throw new ServiceException(ErrorCode.HEADER_CLIENT_DATETIME_REQUIRED, HttpStatus.BAD_REQUEST);
+        }
+        String datetimePattern = "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}";
+        if (!clientDatetime.matches(datetimePattern)) {
+            throw new ServiceException(ErrorCode.HEADER_CLIENT_DATETIME_INVALID, HttpStatus.BAD_REQUEST);
+        }
+        return clientDatetime;
+    }
+
+    private String validateVersionPath(HttpServletRequest request) {
+        String requestURI = request.getRequestURI();
+        String contextPath = request.getContextPath() != null ? request.getContextPath() : "";
+        if (requestURI.startsWith(contextPath)) {
+            String pathInfo = requestURI.replace(contextPath.concat("/"), "");
+            if (pathInfo.matches("v[1-9]\\d?(/.*)?")) {
+                String version = pathInfo.split("/")[0];
+                try {
+                    return version;
+                } catch (IllegalArgumentException e) {
+                    throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+                }
+            }
+        }
+        throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+    }
+
+    private String validateTokenRequest(HttpServletRequest request) {
+        String bearerToken = request.getHeader(HttpHeaders.AUTHORIZATION);
+        String token = null;
+        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+            token = bearerToken.substring(7);
+        }
+        if (token == null) {
+            throw new ServiceException(ErrorCode.UNAUTHORIZED, HttpStatus.UNAUTHORIZED);
+        }
+        return token;
+    }
+
+    private void handleServiceException(ServiceException exception, HttpServletRequest request,
+                                        HttpServletResponse response) throws IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        ErrorResponse errorResponse = ErrorResponse.builder()
+                .httpCode(String.valueOf(exception.getHttpStatus().value()))
+                .httpMethod(request.getMethod())
+                .url(request.getRequestURL().toString())
+                .errorCode(exception.getErrorCode().getName())
+                .errorMessage(exception.getMessage())
+                .errorMessageDetail(ObjectUtils.isEmpty(exception.getCause()) ?
+                        exception.getMessage() : exception.getCause().getMessage())
+                .timestamp(String.valueOf(LocalDateTime.now()))
+                .build();
+        response.getWriter().write(ApplicationUtils.convertObjectToJson(errorResponse));
+        response.setStatus(exception.getHttpStatus().value());
+
+        log.error("Error -> {}", errorResponse);
+    }
+
+}
+
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/interceptors/GlobalInterceptor.java
+
+```java
+package com.nubo.operations.custody.api.application.interceptors;
+
+import com.nubo.operations.custody.api.application.context.GlobalContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+@Component
+@Order(2)
+@RequiredArgsConstructor
+public class GlobalInterceptor implements HandlerInterceptor {
+
+    private final RateLimitInterceptor rateLimitInterceptor;
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
+        GlobalContext.remove();
+    }
+
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        rateLimitInterceptor.rateLimitInterceptor(request, handler);
+        return true;
+    }
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/interceptors/RateLimitInterceptor.java
+
+```java
+package com.nubo.operations.custody.api.application.interceptors;
+
+import com.nubo.operations.custody.api.application.annotations.RateLimited;
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.models.enums.PropertiesEnum;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
+
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
+
+@Component
+@RequiredArgsConstructor
+public class RateLimitInterceptor {
+
+    private final ConcurrentHashMap<String, RequestData> requestCounts = new ConcurrentHashMap<>();
+
+    private final PropertiesConfig propertiesConfig;
+
+    public void rateLimitInterceptor(HttpServletRequest request, Object handler) {
+        if (handler instanceof org.springframework.web.method.HandlerMethod handlerMethod
+                && (handlerMethod.hasMethodAnnotation(RateLimited.class)
+                || handlerMethod.getBeanType().isAnnotationPresent(RateLimited.class))) {
+
+            String clientIp = getClientIp(request);
+            String methodName = request.getMethod();
+            String path = request.getRequestURI();
+            String key = clientIp + ":" + methodName + ":" + path;
+
+            RequestData requestData = requestCounts.computeIfAbsent(key,
+                    k -> new RequestData(propertiesConfig.getRangeTimeRequest(),
+                            propertiesConfig.getWaitingTime()));
+
+            synchronized (requestData) {
+
+                requestData.incrementCount();
+
+                if (requestData.isRateLimited()) {
+                    throw new ServiceException(ErrorCode.RATE_LIMITING_EXCEEDED, HttpStatus.TOO_MANY_REQUESTS);
+                }
+
+                if (requestData.getCount() > propertiesConfig.getNumberMaxRequest()) {
+                    requestData.setRateLimited(true);
+                    throw new ServiceException(ErrorCode.RATE_LIMITING_EXCEEDED, HttpStatus.TOO_MANY_REQUESTS);
+                }
+            }
+        }
+
+    }
+
+    private String getClientIp(HttpServletRequest request) {
+        String clientIp = request.getHeader(PropertiesEnum.CLIENT_IP.getValue());
+        if (clientIp == null || clientIp.isEmpty()) {
+            clientIp = request.getRemoteAddr();
+        }
+        return clientIp;
+    }
+
+    private static class RequestData {
+
+        @Getter
+        private int count = 0;
+        private long lastRequestTime = System.currentTimeMillis();
+        @Getter
+        @Setter
+        private boolean rateLimited = false;
+        private final Integer rangeTimeRequest;
+        private final Integer waitingTime;
+
+        public RequestData(Integer rangeTimeRequest, Integer waitingTime) {
+            this.rangeTimeRequest = rangeTimeRequest;
+            this.waitingTime = waitingTime;
+        }
+
+        public void incrementCount() {
+            long currentTime = System.currentTimeMillis();
+
+            if (rateLimited && currentTime - lastRequestTime > TimeUnit.SECONDS.toMillis(waitingTime)) {
+                count = 0;
+                rateLimited = false;
+            } else if (rateLimited) {
+                lastRequestTime = currentTime;
+            } else {
+                if (currentTime - lastRequestTime > TimeUnit.SECONDS.toMillis(rangeTimeRequest)) {
+                    count = 0;
+                    rateLimited = false;
+                }
+                count++;
+                lastRequestTime = currentTime;
+            }
+        }
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/properties/PropertiesConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.properties;
+
+import lombok.Getter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+@Getter
+public class PropertiesConfig {
+
+    @Value("${spring.application.name}")
+    private String apiName;
+
+    @Value("${config.application.rateLimited.number-max-request}")
+    private Integer numberMaxRequest;
+
+    @Value("${config.application.rateLimited.range-time-request}")
+    private Integer rangeTimeRequest;
+
+    @Value("${config.application.rateLimited.waiting-time}")
+    private Integer waitingTime;
+
+    @Value("${client.keycloak.client-id}")
+    private String keycloakClientId;
+
+    @Value("${client.keycloak.client-secret}")
+    private String keycloakClientSecret;
+
+    @Value("${client.keycloak.introspection-uri}")
+    private String keycloakIntrospectionUri;
+
+    @Value("${client.nubo.url-operation-special-status}")
+    private String urlNuboSpecialOperationStatus;
+
+    @Value("${kafka.nubo.bootstrap-servers}")
+    private String kafkaNuboBootstrapServers;
+
+    @Value("${kafka.nubo.sasl.mechanism}")
+    private String kafkaNuboSaslMechanism;
+
+    @Value("${kafka.nubo.sasl.jaas.config}")
+    private String kafkaNuboSaslJaasConfig;
+
+    @Value("${kafka.nubo.security.protocol}")
+    private String kafkaNuboSecurityProtocol;
+
+    @Value("${kafka.nubo.retries}")
+    private Integer kafkaNuboRetries;
+
+    @Value("${kafka.nubo.auto-offset-reset}")
+    private String kafkaNuboAutoOffsetReset;
+
+    @Value("${kafka.nubo.producer.topic-name-special-trade-compensation}")
+    private String kafkaNuboProducerTopicNameSpecialTradeCompensation;
+
+    @Value("${kafka.nubo.notification.id:23}")
+    private String kafkaNuboNotificationId;
+
+    @Value("${kafka.nubo.notification.event-type}")
+    private String kafkaNuboNotificationEventType;
+
+    @Value("${kafka.nubo.notification.module}")
+    private String kafkaNuboNotificationModule;
+
+    @Value("${kafka.nubo.notification.kafka-notification-request-topic}")
+    private String kafkaNuboNotificationTopic;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/properties/PropertiesContext.java
+
+```java
+package com.nubo.operations.custody.api.application.properties;
+
+import com.nubo.operations.custody.api.application.context.GlobalContext;
+import com.nubo.operations.custody.api.application.util.ApplicationUtils;
+import com.nubo.operations.custody.api.models.enums.PropertiesEnum;
+import org.springframework.util.ObjectUtils;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class PropertiesContext {
+
+    private PropertiesContext() {
+    }
+
+    public static String getClientIp() {
+        return GlobalContext.getProperty(PropertiesEnum.CLIENT_IP.getValue());
+    }
+
+    public static String getClientUser() {
+        return GlobalContext.getProperty(PropertiesEnum.CLIENT_USER.getValue());
+    }
+
+    public static LocalDateTime getClientDatetime() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(ApplicationUtils.getFormatDatetime());
+        String clientDatetime = GlobalContext.getProperty(PropertiesEnum.CLIENT_DATETIME.getValue());
+        if (ObjectUtils.isEmpty(clientDatetime)) {
+            return LocalDateTime.now();
+        }
+        return LocalDateTime.parse(clientDatetime, formatter);
+    }
+
+    public static String getVersion() {
+        return GlobalContext.getProperty(PropertiesEnum.VERSION_API.getValue());
+    }
+
+    public static String getAuthToken() {
+        return GlobalContext.getProperty(PropertiesEnum.AUTH_TOKEN.getValue());
+    }
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/security/CustomBasicAuthenticationEntryPoint.java
+
+```java
+package com.nubo.operations.custody.api.application.security;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+
+@Component
+public class CustomBasicAuthenticationEntryPoint implements AuthenticationEntryPoint {
+
+    private final HandlerExceptionResolver resolver;
+
+    public CustomBasicAuthenticationEntryPoint(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
+        this.resolver = resolver;
+    }
+
+    @Override
+    public void commence(HttpServletRequest request,
+                         HttpServletResponse response, AuthenticationException authException) {
+        response.addHeader("WWW-Authenticate", "Basic realm=\"Realm\"");
+        this.resolver.resolveException(request, response, null, authException);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/security/CustomBearerTokenAccessDeniedHandler.java
+
+```java
+package com.nubo.operations.custody.api.application.security;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+
+@Component
+public class CustomBearerTokenAccessDeniedHandler implements AccessDeniedHandler {
+
+    private final HandlerExceptionResolver resolver;
+
+
+    public CustomBearerTokenAccessDeniedHandler(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
+        this.resolver = resolver;
+    }
+
+    @Override
+    public void handle(HttpServletRequest request, HttpServletResponse response,
+                       AccessDeniedException accessDeniedException) {
+        this.resolver.resolveException(request, response, null, accessDeniedException);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/security/CustomBearerTokenAuthenticationEntryPoint.java
+
+```java
+package com.nubo.operations.custody.api.application.security;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+
+@Component
+public class CustomBearerTokenAuthenticationEntryPoint implements AuthenticationEntryPoint {
+
+    private final HandlerExceptionResolver resolver;
+
+
+    public CustomBearerTokenAuthenticationEntryPoint(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
+        this.resolver = resolver;
+    }
+
+    @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response,
+                         AuthenticationException authException) {
+        this.resolver.resolveException(request, response, null, authException);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/security/SecurityConfig.java
+
+```java
+package com.nubo.operations.custody.api.application.security;
+
+import com.nubo.operations.custody.api.application.filters.GlobalFilter;
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity
+@RequiredArgsConstructor
+public class SecurityConfig {
+
+    private final CustomBasicAuthenticationEntryPoint customBasicAuthenticationEntryPoint;
+    private final CustomBearerTokenAuthenticationEntryPoint customBearerTokenAuthenticationEntryPoint;
+    private final CustomBearerTokenAccessDeniedHandler customBearerTokenAccessDeniedHandler;
+    private final GlobalFilter globalFilter;
+    private final PropertiesConfig propertiesConfig;
+
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        return httpSecurity
+                .csrf(AbstractHttpConfigurer::disable)
+                .addFilterBefore(globalFilter, UsernamePasswordAuthenticationFilter.class)
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html",
+                                "/v1/keycloak/token")
+                        .permitAll().anyRequest().authenticated())
+                .oauth2ResourceServer(oauth ->
+                        oauth.opaqueToken(opaqueToken ->
+                                        opaqueToken
+                                                .introspectionUri(propertiesConfig.getKeycloakIntrospectionUri())
+                                                .introspectionClientCredentials(propertiesConfig.getKeycloakClientId(),
+                                                        propertiesConfig.getKeycloakClientSecret())
+                                )
+                                .authenticationEntryPoint(this.customBearerTokenAuthenticationEntryPoint)
+                                .accessDeniedHandler(this.customBearerTokenAccessDeniedHandler)
+                )
+                .cors(Customizer.withDefaults())
+                .httpBasic(httpBasic -> httpBasic.authenticationEntryPoint(this.customBasicAuthenticationEntryPoint))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .build();
+    }
+
+}
+
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/util/ApplicationUtils.java
+
+```java
+package com.nubo.operations.custody.api.application.util;
+
+import com.google.gson.Gson;
+
+import java.lang.reflect.Type;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class ApplicationUtils {
+
+    static final String FORMAT_DATETIME = "yyyy-MM-dd'T'HH:mm:ss";
+
+    private ApplicationUtils() {
+    }
+
+    public static String getFormatDatetime() {
+        return FORMAT_DATETIME;
+    }
+
+    public static String getLocalDateTimeNow() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(ApplicationUtils.getFormatDatetime()));
+    }
+
+    public static LocalDateTime convertStringToLocalDateTime(String timeString) {
+        return LocalDateTime.parse(timeString, DateTimeFormatter.ofPattern(FORMAT_DATETIME));
+    }
+
+    public static String convertLocalDateTimeToString(LocalDateTime localDateTime) {
+        return localDateTime.format(DateTimeFormatter.ofPattern(ApplicationUtils.getFormatDatetime()));
+    }
+
+    public static String convertObjectToJson(Object object) {
+        return new Gson().toJson(object);
+    }
+
+    public static Object convertJsonToObject(String json, Object object) {
+        return new Gson().fromJson(json, (Type) object);
+    }
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/application/util/RestClientUtils.java
+
+```java
+package com.nubo.operations.custody.api.application.util;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClient;
+
+import java.net.URI;
+
+@Component
+@RequiredArgsConstructor
+@Slf4j
+public class RestClientUtils {
+
+    private final RestClient restClient;
+
+    public <T> ResponseEntity<T> requestWithResponseObject(URI url, HttpMethod method, HttpHeaders headers,
+                                                           Object requestBody, Class<T> responseType) {
+        log.info("Client url, method[{}] {}", method, url);
+        return restClient.method(method)
+                .uri(url)
+                .headers(h -> h.addAll(headers))
+                .body(requestBody)
+                .retrieve()
+                .toEntity(responseType);
+    }
+
+    public <T> ResponseEntity<T> requestWithoutBodyWithResponseObject(URI url, HttpMethod method, HttpHeaders headers,
+                                                                      Class<T> responseType) {
+        log.info("Client url, method[{}] {}", method, url);
+        return restClient.method(method)
+                .uri(url)
+                .headers(h -> h.addAll(headers))
+                .retrieve()
+                .toEntity(responseType);
+    }
+
+    public <T> ResponseEntity<T> requestWithResponseObject(URI url, HttpMethod method, HttpHeaders headers,
+                                                           Object requestBody, ParameterizedTypeReference<T> responseType) {
+        log.info("Client url, method[{}] {}", method, url);
+        return restClient.method(method)
+                .uri(url)
+                .headers(h -> h.addAll(headers))
+                .body(requestBody)
+                .retrieve()
+                .toEntity(responseType);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/client/kafka/producer/dto/request/ProducerSpecialTradeCompensationInDto.java
+
+```java
+package com.nubo.operations.custody.api.client.kafka.producer.dto.request;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProducerSpecialTradeCompensationInDto {
+
+    @NotNull
+    @Min(value = 1)
+    private Long specialTradeId;
+
+    @NotNull
+    @Min(value = 1)
+    private Long paymentTypeId;
+
+    private String clientIp;
+
+    private String clientUser;
+
+    private String clientDateTime;
+
+    private Boolean specialTradeCompensation;
+
+    private Boolean bankTransaction;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/client/kafka/producer/service/KafkaNuboProducer.java
+
+```java
+package com.nubo.operations.custody.api.client.kafka.producer.service;
+
+public interface KafkaNuboProducer {
+
+    void sendMessageSpecialTradeCompensation(Long specialTradeId, Long paymentTypeId);
+    void sendMessageNotification(String message);
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/client/kafka/producer/service/impl/KafkaNuboProducerImpl.java
+
+```java
+package com.nubo.operations.custody.api.client.kafka.producer.service.impl;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.application.util.ApplicationUtils;
+import com.nubo.operations.custody.api.client.kafka.producer.dto.request.ProducerSpecialTradeCompensationInDto;
+import com.nubo.operations.custody.api.client.kafka.producer.service.KafkaNuboProducer;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
+import org.springframework.stereotype.Service;
+
+import java.util.concurrent.CompletableFuture;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class KafkaNuboProducerImpl implements KafkaNuboProducer {
+
+    private final PropertiesConfig propertiesConfig;
+    private final KafkaTemplate<String, String> kafkaNuboTemplate;
+
+    public void sendMessageSpecialTradeCompensation(Long specialTradeId, Long paymentTypeId) {
+        log.debug("Start method sendMessageSpecialTradeCompensation, specialTradeId -> {}, paymentTypeId -> {}", specialTradeId, paymentTypeId);
+
+        ProducerSpecialTradeCompensationInDto producerSpecialTradeCompensationInDto = ProducerSpecialTradeCompensationInDto.builder()
+                .specialTradeId(specialTradeId)
+                .paymentTypeId(paymentTypeId)
+                .clientIp(PropertiesContext.getClientIp())
+                .clientUser(PropertiesContext.getClientUser())
+                .clientDateTime(ApplicationUtils.convertLocalDateTimeToString(PropertiesContext.getClientDatetime()))
+                .specialTradeCompensation(true)
+                .build();
+
+        String topic = propertiesConfig.getKafkaNuboProducerTopicNameSpecialTradeCompensation();
+        String jsonString = ApplicationUtils.convertObjectToJson(producerSpecialTradeCompensationInDto);
+        CompletableFuture<SendResult<String, String>> future = kafkaNuboTemplate.send(topic, jsonString).toCompletableFuture();
+
+        future.thenAccept(result -> log.info("Send message Kafka Special Trade Compensation -- Topic: {} -- offset: {} -- json: {} ",
+                        topic, result.getRecordMetadata().offset(), jsonString))
+                .exceptionally(ex -> {
+                    throw new ServiceException(ErrorCode.ERROR_KAFKA_PRODUCER_NUBO, ex);
+                });
+    }
+
+    public void sendMessageNotification(String message) {
+        if(message != null){
+            String topic = propertiesConfig.getKafkaNuboNotificationTopic();
+            CompletableFuture<SendResult<String, String>> future = kafkaNuboTemplate.send(topic, message).toCompletableFuture();
+
+            future.thenAccept(result -> log.info("Send message -- Topic: {} -- offset: {} -- json: {} ",
+                            topic, result.getRecordMetadata().offset(), message) )
+                    .exceptionally(ex -> {
+                        throw new ServiceException(ErrorCode.ERROR_KAFKA_PRODUCER_NUBO, ex);
+                    });
+        }
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/ServiceException.java
+
+```java
+package com.nubo.operations.custody.api.exception;
+
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import lombok.Getter;
+import org.springframework.http.HttpStatus;
+
+@Getter
+public class ServiceException extends RuntimeException {
+
+    private final ErrorCode errorCode;
+    private final HttpStatus httpStatus;
+
+    public ServiceException(ErrorCode errorCode) {
+        super(errorCode.getMessage());
+        this.errorCode = errorCode;
+        this.httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+    }
+
+    public ServiceException(ErrorCode errorCode, HttpStatus httpStatus) {
+        super(errorCode.getMessage());
+        this.errorCode = errorCode;
+        this.httpStatus = httpStatus;
+    }
+
+    public ServiceException(ErrorCode errorCode, Throwable throwable) {
+        super(errorCode.getMessage(), throwable);
+        this.errorCode = errorCode;
+        this.httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+    }
+
+    public ServiceException(ErrorCode errorCode, HttpStatus httpStatus, Throwable throwable) {
+        super(errorCode.getMessage(), throwable);
+        this.errorCode = errorCode;
+        this.httpStatus = httpStatus;
+    }
+
+    public HttpStatus getHttpStatusOrDefault() {
+        return this.httpStatus != null ? this.httpStatus : HttpStatus.INTERNAL_SERVER_ERROR;
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/error/ErrorCode.java
+
+```java
+package com.nubo.operations.custody.api.exception.error;
+
+import lombok.Getter;
+
+@Getter
+public enum ErrorCode {
+
+    UNAUTHORIZED("Not unauthorized"),
+    FORBIDDEN("Access denied"),
+    UNEXPECTED("An unexpected error occurred"),
+    METHOD_ARGUMENT_TYPE("Invalid request path"),
+    METHOD_NOT_ALLOWED("Http method not allowed"),
+    NOT_FOUND("Resource not found"),
+    UNSUPPORTED_MEDIA_TYPE("Content Type is not supported"),
+    MESSAGE_NOT_READABLE("Error reading the message body request"),
+    BAD_REQUEST("Invalid request body"),
+    RATE_LIMITING_EXCEEDED("Rate Limiting Exceeded"),
+    HEADER_CLIENT_IP_REQUIRED("Header client_ip required"),
+    HEADER_CLIENT_IP_INVALID("Header client_ip is invalid"),
+    HEADER_CLIENT_USER_REQUIRED("Header client_user is required"),
+    HEADER_CLIENT_DATETIME_REQUIRED("Header client_datetime is required"),
+    HEADER_CLIENT_DATETIME_INVALID("Header client_datetime is invalid"),
+    VERSION_API_NOT_FOUND("Version API not found"),
+    ERROR_DESERIALIZER_JSON("Error Deserializer Json"),
+    PARTICIPANT_NOT_FOUND("Participant not found"),
+    SIDE_NOT_FOUND("Side not found"),
+    STATUS_NOT_FOUND("Status not found"),
+    FIC_ADMINISTRATOR_NOT_FOUND("FIC Administrator not found"),
+    TRADE_NOT_FOUND("Trade not found"),
+    SETTLEMENT_NOT_FOUND("Settlement not found"),
+    REJECTION_REASON_NOT_FOUND("Rejection Reason not found"),
+    TYPE_NOT_FOUND("Type not found"),
+    CUSTODIAN_NOT_FOUND("Type not found"),
+    ERROR_KAFKA_PRODUCER_NUBO("Error Producer Kafka Nubo");
+
+    private final String message;
+
+    ErrorCode(String message) {
+        this.message = message;
+    }
+
+    public String getName() {
+        return this.name();
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/error/ErrorResponse.java
+
+```java
+package com.nubo.operations.custody.api.exception.error;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ErrorResponse {
+
+    private String httpCode;
+    private String httpMethod;
+    private String url;
+    private String timestamp;
+    private String errorCode;
+    private String errorMessage;
+    private String errorMessageDetail;
+    private List<ErrorValidation> errorDetails;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/error/ErrorValidation.java
+
+```java
+package com.nubo.operations.custody.api.exception.error;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class ErrorValidation {
+
+    private String id;
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/handler/CustomKafkaErrorHandler.java
+
+```java
+package com.nubo.operations.custody.api.exception.handler;
+
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.exception.kafka.KafkaErrorBuild;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.clients.consumer.Consumer;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.common.errors.RecordDeserializationException;
+import org.springframework.kafka.listener.CommonErrorHandler;
+import org.springframework.kafka.listener.MessageListenerContainer;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+@Slf4j
+public class CustomKafkaErrorHandler implements CommonErrorHandler {
+
+    private final KafkaErrorBuild kafkaErrorBuild;
+
+    @Override
+    public void handleOtherException(@NonNull Exception thrownException, Consumer<?, ?> consumer,
+                                     MessageListenerContainer container, boolean batchListener) {
+        handle(thrownException, consumer);
+    }
+
+    @Override
+    public boolean handleOne(@NonNull Exception thrownException, ConsumerRecord<?, ?> record, Consumer<?, ?> consumer,
+                             MessageListenerContainer container) {
+        handle(thrownException, consumer);
+        return true;
+    }
+
+    private void handle(Exception exception, Consumer<?, ?> consumer) {
+        if (exception instanceof ServiceException ex) {
+            kafkaErrorBuild.buildError(exception, ex.getErrorCode());
+        } else if (exception instanceof RecordDeserializationException ex) {
+            kafkaErrorBuild.buildError(exception, ErrorCode.ERROR_DESERIALIZER_JSON, ex.offset());
+            consumer.seek(ex.topicPartition(), ex.offset() + 1L);
+            consumer.commitSync();
+        } else {
+            kafkaErrorBuild.buildError(exception, ErrorCode.ERROR_KAFKA_PRODUCER_NUBO);
+        }
+    }
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/handler/GlobalExceptionHandler.java
+
+```java
+package com.nubo.operations.custody.api.exception.handler;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.exception.error.ErrorResponse;
+import com.nubo.operations.custody.api.exception.error.ErrorValidation;
+import com.nubo.operations.custody.api.models.entity.UserNuboEntity;
+import com.nubo.operations.custody.api.repository.UserNuboRepository;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.oauth2.server.resource.InvalidBearerTokenException;
+import org.springframework.util.ObjectUtils;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestControllerAdvice
+@Slf4j
+@RequiredArgsConstructor
+public class GlobalExceptionHandler {
+
+    private final UserNuboRepository userNuboRepository;
+    private final PropertiesConfig propertiesConfig;
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handlerGeneralException(Exception exception,
+                                                                 HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, exception, request, ErrorCode.UNEXPECTED);
+    }
+
+    @ExceptionHandler(ServiceException.class)
+    public ResponseEntity<ErrorResponse> handlerServiceException(ServiceException exception,
+                                                                 HttpServletRequest request) {
+        HttpStatus httpStatus = exception.getHttpStatus();
+        return buildErrorResponse(httpStatus, exception, request, exception.getErrorCode());
+    }
+
+    @ExceptionHandler(NoResourceFoundException.class)
+    public ResponseEntity<ErrorResponse> handlerNoResourceFoundException(NoResourceFoundException exception,
+                                                                         HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.NOT_FOUND, exception, request, ErrorCode.NOT_FOUND);
+    }
+
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<ErrorResponse> handlerHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException exception,
+                                                                                       HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.METHOD_NOT_ALLOWED, exception, request, ErrorCode.METHOD_NOT_ALLOWED);
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<ErrorResponse> handlerMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException exception,
+                                                                                    HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.BAD_REQUEST, exception, request, ErrorCode.METHOD_ARGUMENT_TYPE);
+    }
+
+    @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+    public ResponseEntity<ErrorResponse> handlerHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException exception,
+                                                                                   HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.UNSUPPORTED_MEDIA_TYPE, exception, request, ErrorCode.UNSUPPORTED_MEDIA_TYPE);
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ErrorResponse> handlerHttpMessageNotReadableException(HttpMessageNotReadableException exception,
+                                                                                HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.BAD_REQUEST, exception, request, ErrorCode.MESSAGE_NOT_READABLE);
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<ErrorResponse> handlerAccessDeniedException(AccessDeniedException exception,
+                                                                      HttpServletRequest request) {
+        return buildErrorResponse(HttpStatus.FORBIDDEN, exception, request, ErrorCode.FORBIDDEN);
+    }
+
+    @ExceptionHandler(InvalidBearerTokenException.class)
+    public ResponseEntity<ErrorResponse> handlerInvalidBearerTokenException(InvalidBearerTokenException exception,
+                                                                            HttpServletRequest request) {
+        this.logoutUser();
+        return buildErrorResponse(HttpStatus.UNAUTHORIZED, exception, request, ErrorCode.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handlerMethodArgumentNotValidException(MethodArgumentNotValidException exception,
+                                                                                HttpServletRequest request) {
+        List<ErrorValidation> errors = exception.getBindingResult().getFieldErrors().stream()
+                .map(error -> ErrorValidation.builder()
+                        .id(error.getField())
+                        .description(error.getDefaultMessage())
+                        .build())
+                .toList();
+        return buildErrorResponse(HttpStatus.BAD_REQUEST, exception, request, ErrorCode.BAD_REQUEST, errors);
+    }
+
+    private ResponseEntity<ErrorResponse> buildErrorResponse(HttpStatus status, Exception exception,
+                                                             HttpServletRequest request, ErrorCode errorCode) {
+        return buildErrorResponse(status, exception, request, errorCode, null);
+    }
+
+    private ResponseEntity<ErrorResponse> buildErrorResponse(HttpStatus status, Exception exception,
+                                                             HttpServletRequest request, ErrorCode errorCode,
+                                                             List<ErrorValidation> errorDetails) {
+        ErrorResponse errorResponse = ErrorResponse.builder()
+                .httpCode(String.valueOf(status.value()))
+                .httpMethod(request.getMethod())
+                .url(request.getRequestURL().toString())
+                .errorCode(errorCode.getName())
+                .errorMessage(errorCode.getMessage())
+                .errorMessageDetail(ObjectUtils.isEmpty(exception.getCause()) ?
+                        exception.getMessage() : exception.getCause().getMessage())
+                .timestamp(ObjectUtils.isEmpty(String.valueOf(PropertiesContext.getClientDatetime())) ? null :
+                        String.valueOf(PropertiesContext.getClientDatetime()))
+                .errorDetails(errorDetails)
+                .build();
+
+        log.error("Error -> {}", errorResponse);
+
+        return ResponseEntity.status(status).body(errorResponse);
+    }
+
+    private void logoutUser() {
+        log.info("Start logoutUser");
+        try {
+            Optional<UserNuboEntity> userNuboEntityOptional = userNuboRepository.findByUserName(PropertiesContext.getClientUser());
+            if (userNuboEntityOptional.isPresent()) {
+                UserNuboEntity userNuboEntityLast = userNuboEntityOptional.get();
+                userNuboEntityLast.setPreviousSession(false);
+                userNuboEntityLast.setLastModifyApplication(propertiesConfig.getApiName());
+                userNuboEntityLast.setLastModifyIp(PropertiesContext.getClientIp());
+                userNuboEntityLast.setLastModifyUser(PropertiesContext.getClientUser());
+                userNuboEntityLast.setLastModifyDate(PropertiesContext.getClientDatetime());
+
+                userNuboRepository.save(userNuboEntityLast);
+
+                log.info("End logoutUser -> {}", userNuboEntityLast);
+            }
+        } catch (Exception ex) {
+            log.error("Error logoutUser -> {}", ex.getMessage());
+        }
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/exception/kafka/KafkaErrorBuild.java
+
+```java
+package com.nubo.operations.custody.api.exception.kafka;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.exception.error.ErrorResponse;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
+import org.springframework.util.ObjectUtils;
+
+import java.time.LocalDateTime;
+
+@Component
+@RequiredArgsConstructor
+@Slf4j
+public class KafkaErrorBuild {
+
+    private final PropertiesConfig propertiesConfig;
+
+    public void buildError(Exception exception, ErrorCode errorCode) {
+        this.buildErrorResponse(exception, errorCode, null, null, null);
+    }
+
+    public void buildError(Exception exception, ErrorCode errorCode, Long offset) {
+        this.buildErrorResponse(exception, errorCode, offset, null, null);
+    }
+
+    public void buildError(Exception exception, ErrorCode errorCode, Long offset, String topic, Integer retry) {
+        this.buildErrorResponse(exception, errorCode, offset, topic, retry);
+    }
+
+    private void buildErrorResponse(Exception exception, ErrorCode errorCode, Long offset, String topic, Integer retry) {
+        ErrorResponse errorResponse = ErrorResponse.builder()
+                .httpCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()))
+                .url(propertiesConfig.getKafkaNuboBootstrapServers())
+                .errorCode(errorCode.getName())
+                .errorMessage(errorCode.getMessage())
+                .errorMessageDetail(ObjectUtils.isEmpty(exception.getCause()) ?
+                        exception.getMessage() : exception.getCause().getMessage())
+                .timestamp(String.valueOf(LocalDateTime.now()))
+                .build();
+
+        log.error("Error -> {}", errorResponse);
+    }
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/helpers/MapperPageUtil.java
+
+```java
+package com.nubo.operations.custody.api.helpers;
+
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import org.springframework.data.domain.Page;
+
+import java.util.List;
+
+public class MapperPageUtil {
+
+    private MapperPageUtil() {
+    }
+
+    public static <T, U> PageResponseOutDto<T> pageToPageResponseOutDto(List<T> list, Page<U> page) {
+        PageResponseOutDto<T> paginationResponseDto = new PageResponseOutDto<>();
+        paginationResponseDto.setContent(list);
+        paginationResponseDto.setPageSize(page.getSize());
+        paginationResponseDto.setPageNumber(page.getNumber());
+        paginationResponseDto.setTotalElements(page.getTotalElements());
+        paginationResponseDto.setTotalPages(page.getTotalPages());
+
+        return paginationResponseDto;
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/helpers/MapperUtil.java
+
+```java
+package com.nubo.operations.custody.api.helpers;
+
+import com.nubo.operations.custody.api.models.dto.response.*;
+import org.springframework.util.ObjectUtils;
+
+import com.nubo.operations.custody.api.models.entity.BankEntity;
+import com.nubo.operations.custody.api.models.entity.CfiEntity;
+import com.nubo.operations.custody.api.models.entity.CountryEntity;
+import com.nubo.operations.custody.api.models.entity.CurrencyEntity;
+import com.nubo.operations.custody.api.models.entity.DepositoryEntity;
+import com.nubo.operations.custody.api.models.entity.FicAdministratorEntity;
+import com.nubo.operations.custody.api.models.entity.GicsEntity;
+import com.nubo.operations.custody.api.models.entity.IdentificationTypeEntity;
+import com.nubo.operations.custody.api.models.entity.InvestorAccountEntity;
+import com.nubo.operations.custody.api.models.entity.InvestorEntity;
+import com.nubo.operations.custody.api.models.entity.MarketEntity;
+import com.nubo.operations.custody.api.models.entity.ParticipantAccountEntity;
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.RejectionReasonEntity;
+import com.nubo.operations.custody.api.models.entity.SecurityTitleEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementStatusHistoryEntity;
+import com.nubo.operations.custody.api.models.entity.SideEntity;
+import com.nubo.operations.custody.api.models.entity.SpecialTradeEntity;
+import com.nubo.operations.custody.api.models.entity.StatusEntity;
+import com.nubo.operations.custody.api.models.entity.TaxStatusEntity;
+import com.nubo.operations.custody.api.models.entity.TradeEntity;
+import com.nubo.operations.custody.api.models.entity.TradingSessionEntity;
+import com.nubo.operations.custody.api.models.entity.TradingSystemEntity;
+import com.nubo.operations.custody.api.models.entity.TypeEntity;
+
+public class MapperUtil {
+
+    private MapperUtil() {
+    }
+
+    public static SpecialTradeOutDto specialTradeEntityToSpecialTradeOutDto(SpecialTradeEntity specialTradeEntity) {
+        if (ObjectUtils.isEmpty(specialTradeEntity)) return null;
+        return SpecialTradeOutDto.builder()
+                .id(specialTradeEntity.getId())
+                .recordDate(specialTradeEntity.getRecordDate())
+                .specialOperationId(specialTradeEntity.getSpecialOperationId())
+                .settlementDate(specialTradeEntity.getSettlementDate())
+                .daysToSettlement(specialTradeEntity.getDaysToSettlement())
+                .specialOperationName(specialTradeEntity.getSpecialOperationName())
+                .countryId(specialTradeEntity.getCountry().getId())
+                .typeId(specialTradeEntity.getType().getId())
+                .securityId(specialTradeEntity.getSecurityTitle().getId())
+                .depositoryId(specialTradeEntity.getDepository().getId())
+                .sideId(specialTradeEntity.getSide().getId())
+                .statusId(specialTradeEntity.getStatus().getId())
+                .directDepositorId(specialTradeEntity.getDirectDepositor() != null ? specialTradeEntity.getDirectDepositor().getId() : null)
+                .clientSettlementAgent(depositoryEntityToDepositoryOutDto(specialTradeEntity.getClientSettlementAgent()))
+                .afpFundId(specialTradeEntity.getAfpFund().getId())
+                .totalAmount(specialTradeEntity.getTotalAmount())
+                .totalAmountLocal(specialTradeEntity.getTotalAmountLocal())
+                .currencyId(specialTradeEntity.getCurrency().getId())
+                .exchangeRateId(specialTradeEntity.getExchangeRate().getId())
+                .price(specialTradeEntity.getPrice())
+                .quantity(specialTradeEntity.getQuantity())
+                .numberFolios(specialTradeEntity.getNumberFolios())
+                .fractionalMark(specialTradeEntity.getFractionalMark())
+                .marketEntity(marketEntityToMarketOutDto(specialTradeEntity.getIssuanceMarket()))
+                .localCurrencyPrice(specialTradeEntity.getLocalCurrencyPrice())
+                .build();
+    }
+
+
+    public static SettlementOutDto settlementEntityToSettlementOutDto(SettlementEntity settlementEntity) {
+        if (ObjectUtils.isEmpty(settlementEntity)) return null;
+        return SettlementOutDto.builder()
+                .tradeId(settlementEntity.getTrade().getId())
+                .fraction(settlementEntity.getFraction())
+                .side(sideEntityToSideOutDto(settlementEntity.getSide()))
+                .investor(investorEntityToInvestorOutDto(settlementEntity.getInvestor()))
+                .investorAccount(investorAccountEntityToInvestorAccountOutDto(settlementEntity.getInvestorAccount()))
+                .participantAccount(participantAccountEntityToParticipantAccountOutDto(settlementEntity.getParticipantAccount()))
+                .fractionQuantity(settlementEntity.getFractionQuantity())
+                .fractionVolume(settlementEntity.getFractionVolume())
+                .fiduciarySpecialist(settlementEntity.getFiduciarySpecialist())
+                .commissionPercentage(settlementEntity.getCommissionPercentage())
+                .commissionAmount(settlementEntity.getCommissionAmount())
+                .valTax(settlementEntity.getValTax())
+                .valTaxAmount(settlementEntity.getValTaxAmount())
+                .withholdingTax(settlementEntity.getWithholdingTax())
+                .withholdingTaxAmount(settlementEntity.getWithholdingTaxAmount())
+                .netAmount(settlementEntity.getNetAmount())
+                .transferValue(settlementEntity.getTransferValue())
+                .issuedReceipt(settlementEntity.getIssuedReceipt())
+                .issuedReceiptNumber(settlementEntity.getIssuedReceiptNumber())
+                .repoAmount(settlementEntity.getRepoAmount())
+                .fundingAmount(settlementEntity.getFundingAmount())
+                .netOutFlowTotal(settlementEntity.getNetOutFlowTotal())
+                .outFlowTurnoverValue(settlementEntity.getOutFlowTurnoverValue())
+                .returnTurnoverValue(settlementEntity.getReturnTurnoverValue())
+                .deliveryVersusPaymentValue(settlementEntity.getDeliveryVersusPaymentValue())
+                .tradingSystem(tradingSystemEntityToTradingSystemOutDto(settlementEntity.getTradingSystem()))
+                .status(statusEntityToStatusOutDto(settlementEntity.getStatus()))
+                .brokerageService(settlementEntity.getBrokerageService())
+                .custodian(participantEntityToParticipantOutDto(settlementEntity.getCustodian()))
+                .settlementAmount(settlementEntity.getSettlementAmount())
+                .reference(settlementEntity.getReference())
+                .capitalGainValue(settlementEntity.getCapitalGainValue())
+                .disbursementValue(settlementEntity.getDisbursementValue())
+                .sourceQuoteType(typeEntityToTypeOutDto(settlementEntity.getSourceQuoteType()))
+                .ficAdministrator(participantEntityToParticipantOutDto(settlementEntity.getFicAdministrator()))
+                .custodianStatus(statusEntityToStatusOutDto(settlementEntity.getCustodianStatus()))
+                .settlementStatus(statusEntityToStatusOutDto(settlementEntity.getSettlementStatus()))
+                .rejectionReason(settlementEntity.getRejectionReason())
+                .build();
+    }
+
+    public static SettlementByCustodyOutDto settlementEntityToSettlementByCustodyOutDto(SettlementEntity settlementEntity) {
+        if (ObjectUtils.isEmpty(settlementEntity)) return null;
+        return SettlementByCustodyOutDto.builder()
+                .trade(tradeEntityToTradeOutDto(settlementEntity.getTrade()))
+                .tradeId(settlementEntity.getTrade().getId())
+                .fraction(settlementEntity.getFraction())
+                .side(sideEntityToSideOutDto(settlementEntity.getSide()))
+                .investor(investorEntityToInvestorOutDto(settlementEntity.getInvestor()))
+                .investorAccount(investorAccountEntityToInvestorAccountOutDto(settlementEntity.getInvestorAccount()))
+                .participantAccount(participantAccountEntityToParticipantAccountOutDto(settlementEntity.getParticipantAccount()))
+                .fractionQuantity(settlementEntity.getFractionQuantity())
+                .fractionVolume(settlementEntity.getFractionVolume())
+                .fiduciarySpecialist(settlementEntity.getFiduciarySpecialist())
+                .commissionPercentage(settlementEntity.getCommissionPercentage())
+                .commissionAmount(settlementEntity.getCommissionAmount())
+                .valTax(settlementEntity.getValTax())
+                .valTaxAmount(settlementEntity.getValTaxAmount())
+                .withholdingTax(settlementEntity.getWithholdingTax())
+                .withholdingTaxAmount(settlementEntity.getWithholdingTaxAmount())
+                .netAmount(settlementEntity.getNetAmount())
+                .transferValue(settlementEntity.getTransferValue())
+                .issuedReceipt(settlementEntity.getIssuedReceipt())
+                .issuedReceiptNumber(settlementEntity.getIssuedReceiptNumber())
+                .repoAmount(settlementEntity.getRepoAmount())
+                .fundingAmount(settlementEntity.getFundingAmount())
+                .netOutFlowTotal(settlementEntity.getNetOutFlowTotal())
+                .outFlowTurnoverValue(settlementEntity.getOutFlowTurnoverValue())
+                .returnTurnoverValue(settlementEntity.getReturnTurnoverValue())
+                .deliveryVersusPaymentValue(settlementEntity.getDeliveryVersusPaymentValue())
+                .tradingSystem(tradingSystemEntityToTradingSystemOutDto(settlementEntity.getTradingSystem()))
+                .status(statusEntityToStatusOutDto(settlementEntity.getStatus()))
+                .brokerageService(settlementEntity.getBrokerageService())
+                .custodian(participantEntityToParticipantOutDto(settlementEntity.getCustodian()))
+                .settlementAmount(settlementEntity.getSettlementAmount())
+                .reference(settlementEntity.getReference())
+                .capitalGainValue(settlementEntity.getCapitalGainValue())
+                .disbursementValue(settlementEntity.getDisbursementValue())
+                .sourceQuoteType(typeEntityToTypeOutDto(settlementEntity.getSourceQuoteType()))
+                //.ficAdministrator(ficAdministratorEntityToFicAdministratorOutDto(settlementEntity.getFicAdministrator()))
+                .custodianStatus(statusEntityToStatusOutDto(settlementEntity.getCustodianStatus()))
+                .settlementStatus(statusEntityToStatusOutDto(settlementEntity.getSettlementStatus()))
+                .build();
+    }
+
+    public static TradeOutDto tradeEntityToTradeOutDto(TradeEntity tradeEntity) {
+        if (ObjectUtils.isEmpty(tradeEntity)) return null;
+        return TradeOutDto.builder()
+                .id(tradeEntity.getId())
+                .matchDate(tradeEntity.getMatchDate())
+                .matchId(tradeEntity.getMatchId())
+                .clearingDate(tradeEntity.getClearingDate())
+                .returnClearingDate(tradeEntity.getReturnClearingDate())
+                .depository(depositoryEntityToDepositoryOutDto(tradeEntity.getDepository()))
+                .country(countryEntityToCountryOutDto(tradeEntity.getCountry()))
+                .type(typeEntityToTypeOutDto(tradeEntity.getType()))
+                .market(marketEntityToMarketOutDto(tradeEntity.getMarket()))
+                .securityTitle(securityTitleEntityToSecurityTitleOutDto(tradeEntity.getSecurityTitle()))
+                .participantBuy(participantEntityToParticipantOutDto(tradeEntity.getParticipantBuy()))
+                .participantSell(participantEntityToParticipantOutDto(tradeEntity.getParticipantSell()))
+                .custodianBuy(participantEntityToParticipantOutDto(tradeEntity.getCustodianBuy()))
+                .custodianSell(participantEntityToParticipantOutDto(tradeEntity.getCustodianSell()))
+                .assignmentMarkBuy(tradeEntity.getAssignmentMarkBuy())
+                .assignmentMarkSell(tradeEntity.getAssignmentMarkSell())
+                .fractionalMarkBuy(tradeEntity.getFractionalMarkBuy())
+                .fractionalMarkSell(tradeEntity.getFractionalMarkSell())
+                .advanceStatus(tradeEntity.getAdvanceStatus())
+                .exitIndicatorSettlement(tradeEntity.getExitIndicatorSettlement())
+                .returnIndicatorSettlement(tradeEntity.getReturnIndicatorSettlement())
+                .canceledStatus(tradeEntity.getCanceledStatus())
+                .quantity(tradeEntity.getQuantity())
+                .price(tradeEntity.getPrice())
+                .volume(tradeEntity.getVolume())
+                .repurchaseRate(tradeEntity.getRepurchaseRate())
+                .repurchaseAmount(tradeEntity.getRepurchaseAmount())
+                .status(statusEntityToStatusOutDto(tradeEntity.getStatus()))
+                .matchTime(tradeEntity.getMatchTime())
+                .ownPositionSell(tradeEntity.getOwnPositionSell())
+                .ownPositionBuy(tradeEntity.getOwnPositionBuy())
+                .currency(currencyEntityToCurrencyOutDto(tradeEntity.getCurrency()))
+                .tradingSystem(tradingSystemEntityToTradingSystemOutDto(tradeEntity.getTradingSystem()))
+                .tradingSession(tradingSessionEntityToTradingSessionOutDto(tradeEntity.getTradingSession()))
+                .repurchaseAgreementDate(tradeEntity.getRepurchaseAgreementDate())
+                .daysToSettlement(tradeEntity.getDaysToSettlement())
+                .repoRate(tradeEntity.getRepoRate())
+                .repoAmount(tradeEntity.getRepoAmount())
+                .fundingAmount(tradeEntity.getFundingAmount())
+                .netOutFlowTotal(tradeEntity.getNetOutFlowTotal())
+                .outFlowTurnOverValue(tradeEntity.getOutFlowTurnOverValue())
+                .totalNetReturn(tradeEntity.getTotalNetReturn())
+                .returnTurnoverValue(tradeEntity.getReturnTurnoverValue())
+                .deliveryVersusPaymentValue(tradeEntity.getDeliveryVersusPaymentValue())
+                .reallocationIndicator(tradeEntity.getReallocationIndicator())
+                .businessType(typeEntityToTypeOutDto(tradeEntity.getBusinessType()))
+                .marketType(typeEntityToTypeOutDto(tradeEntity.getMarketType()))
+                .originType(typeEntityToTypeOutDto(tradeEntity.getOriginType()))
+                .specialTrade(specialTradeEntityToSpecialTradeOutDto(tradeEntity.getSpecialTrade()))
+                .settlementIndicatorOutgoing(tradeEntity.getSettlementIndicatorOutgoing())
+                .settlementIndicatorReturn(tradeEntity.getSettlementIndicatorReturn())
+                .settlementIndicatorAdvance(tradeEntity.getSettlementIndicatorAdvance())
+                .salesGuarantee(tradeEntity.getSalesGuarantee())
+                .purchaseGuarantee(tradeEntity.getPurchaseGuarantee())
+                .purchasePaymentIndicator(tradeEntity.getPurchasePaymentIndicator())
+                .issuanceMarket(marketEntityToMarketOutDto(tradeEntity.getIssuanceMarket()))
+                .paymentType(typeEntityToTypeOutDto(tradeEntity.getPaymentType()))
+                .settlementType(typeEntityToTypeOutDto(tradeEntity.getSettlementType()))
+                .custodianStatus(statusEntityToStatusOutDto(tradeEntity.getCustodianStatus()))
+                .settlementStatus(statusEntityToStatusOutDto(tradeEntity.getSettlementStatus()))
+                .bloquingStatus(statusEntityToStatusOutDto(tradeEntity.getBloquingStatus()))
+                .build();
+    }
+
+    public static SecurityTitleOutDto securityTitleEntityToSecurityTitleOutDto(SecurityTitleEntity securityTitleEntity) {
+        if (ObjectUtils.isEmpty(securityTitleEntity)) return null;
+        return SecurityTitleOutDto.builder()
+                .id(securityTitleEntity.getId())
+                .market(marketEntityToMarketOutDto(securityTitleEntity.getMarket()))
+                .equityCode(securityTitleEntity.getEquityCode())
+                .mnemonic(securityTitleEntity.getMnemonic())
+                .isin(securityTitleEntity.getIsin())
+                .cfi(cfiEntityToCfiOutDto(securityTitleEntity.getCfi()))
+                .currencyId(securityTitleEntity.getCurrencyId())
+                .settlementPeriod(securityTitleEntity.getSettlementPeriod())
+                .listingDate(securityTitleEntity.getListingDate())
+                .delistingDate(securityTitleEntity.getDelistingDate())
+                .parent(securityTitleEntity.getParent())
+                .parentId(securityTitleEntity.getParentId())
+                .status(statusEntityToStatusOutDto(securityTitleEntity.getStatus()))
+                .issuerId(securityTitleEntity.getIssuerId())
+                .countryId(securityTitleEntity.getCountryId())
+                .amountIssued(securityTitleEntity.getAmountIssued())
+                .classId(securityTitleEntity.getClassId())
+                .segmentId(securityTitleEntity.getSegmentId())
+                .category(securityTitleEntity.getCategory())
+                .depository(depositoryEntityToDepositoryOutDto(securityTitleEntity.getDepository()))
+                .punishmentRepo(securityTitleEntity.getPunishmentRepo())
+                .regulatoryCode(securityTitleEntity.getRegulatoryCode())
+                .build();
+    }
+
+    public static InvestorOutDto investorEntityToInvestorOutDto(InvestorEntity investorEntity) {
+        if (ObjectUtils.isEmpty(investorEntity)) return null;
+        return InvestorOutDto.builder()
+                .id(investorEntity.getId())
+                .code(investorEntity.getCode())
+                .firstName(investorEntity.getFirstName())
+                .lastName(investorEntity.getLastName())
+                .companyName(investorEntity.getCompanyName())
+                .type(typeEntityToTypeOutDto(investorEntity.getType()))
+                .status(statusEntityToStatusOutDto(investorEntity.getStatus()))
+                .country(countryEntityToCountryOutDto(investorEntity.getCountry()))
+                .departmentId(investorEntity.getDepartmentId())
+                .cityId(investorEntity.getCityId())
+                .documentNumber(investorEntity.getDocumentNumber())
+                .identificationType(identificationTypeEntityToIdentificationTypeOutDto(investorEntity.getIdentificationType()))
+                .nationality(investorEntity.getNationality())
+                .address(investorEntity.getAddress())
+                .phoneNumber(investorEntity.getPhoneNumber())
+                .email(investorEntity.getEmail())
+                .clearinghouseCode(investorEntity.getClearinghouseCode())
+                .gicsId(gicsEntityToGicsOutDto(investorEntity.getGics()))
+                .moneyLaunderingFlag(investorEntity.getMoneyLaunderingFlag())
+                .taxStatusId(taxStatusEntityToTaxStatusOutDto(investorEntity.getTaxStatus()))
+                .build();
+    }
+
+    public static InvestorAccountOutDto investorAccountEntityToInvestorAccountOutDto(InvestorAccountEntity investorAccountEntity) {
+        if (ObjectUtils.isEmpty(investorAccountEntity)) return null;
+        return InvestorAccountOutDto.builder()
+                .id(investorAccountEntity.getId())
+                .accountNumber(investorAccountEntity.getAccountNumber())
+                .investor(investorEntityToInvestorOutDto(investorAccountEntity.getInvestor()))
+                .status(statusEntityToStatusOutDto(investorAccountEntity.getStatus()))
+                .type(typeEntityToTypeOutDto(investorAccountEntity.getType()))
+                .depository(depositoryEntityToDepositoryOutDto(investorAccountEntity.getDepository()))
+                .participant(participantEntityToParticipantOutDto(investorAccountEntity.getParticipant()))
+                .build();
+    }
+
+    public static ParticipantAccountOutDto participantAccountEntityToParticipantAccountOutDto(
+            ParticipantAccountEntity participantAccountEntity) {
+        if (ObjectUtils.isEmpty(participantAccountEntity)) return null;
+        return ParticipantAccountOutDto.builder()
+                .id(participantAccountEntity.getId())
+                .accountNumber(participantAccountEntity.getAccountNumber())
+                .status(statusEntityToStatusOutDto(participantAccountEntity.getStatus()))
+                .type(typeEntityToTypeOutDto(participantAccountEntity.getType()))
+                .participant(participantEntityToParticipantOutDto(participantAccountEntity.getParticipant()))
+                .build();
+    }
+
+    public static SettlementStatusHistoryOutDto settlementStatusHistoryEntityToSettlementStatusHistoryOutDto(
+            SettlementStatusHistoryEntity settlementStatusHistoryEntity) {
+        if (ObjectUtils.isEmpty(settlementStatusHistoryEntity)) return null;
+        return SettlementStatusHistoryOutDto.builder()
+                .tradeId(settlementStatusHistoryEntity.getTrade().getId())
+                .fraction(settlementStatusHistoryEntity.getFraction())
+                .side(ObjectUtils.isEmpty(settlementStatusHistoryEntity.getSide()) ?
+                        null : sideEntityToSideOutDto(settlementStatusHistoryEntity.getSide()))
+                .time(settlementStatusHistoryEntity.getTime())
+                .status(ObjectUtils.isEmpty(settlementStatusHistoryEntity.getStatus()) ?
+                        null : statusEntityToStatusOutDto(settlementStatusHistoryEntity.getStatus()))
+                .build();
+    }
+
+    public static SmallParticipantOutDto ficAdministratorEntityToFicAdministratorOutDto(ParticipantEntity entity) {
+        if (ObjectUtils.isEmpty(entity)) return null;
+        return SmallParticipantOutDto.builder()
+                .id(entity.getId())
+                .code(entity.getCode())
+                .name(entity.getName())
+                .shortName(entity.getShortName())
+                .type(ObjectUtils.isEmpty(entity.getType()) ? null : typeEntityToTypeOutDto(entity.getType()))
+                .status(ObjectUtils.isEmpty(entity.getStatus()) ? null : statusEntityToStatusOutDto(entity.getStatus()))
+                .documentNumber(entity.getDocumentNumber())
+                .identificationType(ObjectUtils.isEmpty(entity.getIdentificationType()) ?
+                        null : identificationTypeEntityToIdentificationTypeOutDto(entity.getIdentificationType()))
+                .build();
+    }
+
+    public static TaxStatusOutDto taxStatusEntityToTaxStatusOutDto(TaxStatusEntity entity) {
+        if (ObjectUtils.isEmpty(entity)) return null;
+        return TaxStatusOutDto.builder()
+                .id(entity.getId())
+                .description(entity.getDescription())
+                .build();
+    }
+
+    public static GicsOutDto gicsEntityToGicsOutDto(GicsEntity entity) {
+        if (ObjectUtils.isEmpty(entity)) return null;
+        return GicsOutDto.builder()
+                .id(entity.getId())
+                .description(entity.getDescription())
+                .build();
+    }
+
+    public static IdentificationTypeOutDto identificationTypeEntityToIdentificationTypeOutDto(IdentificationTypeEntity entity) {
+        if (ObjectUtils.isEmpty(entity)) return null;
+        return IdentificationTypeOutDto.builder()
+                .id(entity.getId())
+                .description(entity.getDescription())
+                .build();
+    }
+
+    public static RejectionReasonOutDto rejectionReasonEntityToRejectionReasonOutDto(RejectionReasonEntity entity) {
+        if (ObjectUtils.isEmpty(entity)) return null;
+        return RejectionReasonOutDto.builder()
+                .id(entity.getId())
+                .reason(entity.getReason())
+                .build();
+    }
+
+    public static CountryOutDto countryEntityToCountryOutDto(CountryEntity countryEntity) {
+        if (ObjectUtils.isEmpty(countryEntity)) return null;
+        return CountryOutDto.builder()
+                .id(countryEntity.getId())
+                .name(countryEntity.getName())
+                .build();
+    }
+
+    public static TypeOutDto typeEntityToTypeOutDto(TypeEntity typeEntity) {
+        if (ObjectUtils.isEmpty(typeEntity)) return null;
+        return TypeOutDto.builder()
+                .id(typeEntity.getId())
+                .description(typeEntity.getDescription())
+                .build();
+    }
+
+    public static BankOutDto bankEntityToTypeOutDto(BankEntity bank) {
+        if (ObjectUtils.isEmpty(bank)) return null;
+        return BankOutDto.builder()
+                .id(bank.getId())
+                .name(bank.getName())
+                .code(bank.getCode())
+                .country(countryEntityToCountryOutDto(bank.getCountry()))
+                .build();
+    }
+
+    public static DepositoryOutDto depositoryEntityToDepositoryOutDto(DepositoryEntity depositoryEntity) {
+        if (ObjectUtils.isEmpty(depositoryEntity)) return null;
+        return DepositoryOutDto.builder()
+                .id(depositoryEntity.getId())
+                .description(depositoryEntity.getDescription())
+                .build();
+    }
+
+    public static SideOutDto sideEntityToSideOutDto(SideEntity sideEntity) {
+        if (ObjectUtils.isEmpty(sideEntity)) return null;
+        return SideOutDto.builder()
+                .id(sideEntity.getId())
+                .description(sideEntity.getDescription())
+                .build();
+    }
+
+    public static StatusOutDto statusEntityToStatusOutDto(StatusEntity statusEntity) {
+        if (ObjectUtils.isEmpty(statusEntity)) return null;
+        return StatusOutDto.builder()
+                .id(statusEntity.getId())
+                .description(statusEntity.getDescription())
+                .build();
+    }
+
+    public static ParticipantOutDto participantEntityToParticipantOutDto(ParticipantEntity participantEntity) {
+        if (ObjectUtils.isEmpty(participantEntity)) return null;
+        return ParticipantOutDto.builder()
+                .id(participantEntity.getId())
+                .name(participantEntity.getName())
+                .code(participantEntity.getCode())
+                .documentNumber(participantEntity.getDocumentNumber())
+                .shortName(participantEntity.getShortName())
+                .mnemonic(participantEntity.getMnemonic())
+                .identificationType(identificationTypeEntityToIdentificationTypeOutDto(participantEntity.getIdentificationType()))
+                .build();
+    }
+
+    public static TradingSessionOutDto tradingSessionEntityToTradingSessionOutDto(TradingSessionEntity tradingSessionEntity) {
+        if (ObjectUtils.isEmpty(tradingSessionEntity)) return null;
+        return TradingSessionOutDto.builder()
+                .id(tradingSessionEntity.getId())
+                .description(tradingSessionEntity.getDescription())
+                .build();
+    }
+
+    public static TradingSystemOutDto tradingSystemEntityToTradingSystemOutDto(TradingSystemEntity tradingSystemEntity) {
+        if (ObjectUtils.isEmpty(tradingSystemEntity)) return null;
+        return TradingSystemOutDto.builder()
+                .id(tradingSystemEntity.getId())
+                .description(tradingSystemEntity.getDescription())
+                .build();
+    }
+
+    public static CurrencyOutDto currencyEntityToCurrencyOutDto(CurrencyEntity currencyEntity) {
+        if (ObjectUtils.isEmpty(currencyEntity)) return null;
+        return CurrencyOutDto.builder()
+                .id(currencyEntity.getId())
+                .code(currencyEntity.getCode())
+                .name(currencyEntity.getName())
+                .build();
+    }
+
+    public static MarketOutDto marketEntityToMarketOutDto(MarketEntity marketEntity) {
+        if (ObjectUtils.isEmpty(marketEntity)) return null;
+        return MarketOutDto.builder()
+                .id(marketEntity.getId())
+                .description(marketEntity.getDescription())
+                .build();
+    }
+
+    public static CfiOutDto cfiEntityToCfiOutDto(CfiEntity cfiEntity) {
+        if (ObjectUtils.isEmpty(cfiEntity)) return null;
+        return CfiOutDto.builder()
+                .id(cfiEntity.getId())
+                .description(cfiEntity.getDescription())
+                .build();
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/helpers/SendNotificationUtil.java
+
+```java
+package com.nubo.operations.custody.api.helpers;
+
+import java.util.List;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.client.kafka.producer.service.KafkaNuboProducer;
+import com.nubo.operations.custody.api.models.dto.response.NotificationRequestDto;
+import com.nubo.operations.custody.api.models.enums.NotificationMessageEnum;
+import com.nubo.operations.custody.api.models.enums.NotificationTypeEnum;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
+@Component
+@RequiredArgsConstructor
+public class SendNotificationUtil {
+
+    private final ObjectMapper objectMapper;
+    private final PropertiesConfig propertiesConfig;
+
+    @Autowired(required = false)
+    private KafkaNuboProducer kafkaNuboAdapter;
+
+    public void sendNotification(NotificationTypeEnum notificationType, NotificationMessageEnum notificationMessage, Long scheduleExtensionId, Long userId) {
+        if (kafkaNuboAdapter != null) {
+            log.info("Enviando notificación tipo: {} - mensaje: {} - scheduleExtensionId: {} - userId: {}",
+                    notificationType.getDescription(), notificationMessage.getDescription(), scheduleExtensionId, userId);
+            try {
+                ObjectMapper mapper = new ObjectMapper();
+                ObjectNode metadataNode = mapper.createObjectNode();
+                if (scheduleExtensionId != null) {
+                    metadataNode.put("id", scheduleExtensionId.toString());
+                }
+
+                NotificationRequestDto notification = NotificationRequestDto.builder()
+                        .notificacionId(notificationMessage.getCode().longValue())
+                        .tipoNotificacion(notificationType.getDescription())
+                        .eventType(propertiesConfig.getKafkaNuboNotificationEventType())
+                        .modulo(propertiesConfig.getKafkaNuboNotificationModule())
+                        .usuariosIds(userId != null ? List.of(userId) : List.of())
+                        .timestamp(
+                                java.time.OffsetDateTime.now(java.time.ZoneOffset.UTC)
+                                        .withNano(0)
+                                        .toString())
+                        .metadata(metadataNode)
+                        .build();
+
+                kafkaNuboAdapter.sendMessageNotification(objectMapper.writeValueAsString(notification));
+                log.info("Notificación enviada exitosamente para usuario: {}", userId);
+
+            } catch (Exception e) {
+                log.error("Error enviando notificación a Kafka", e);
+            }
+        } else {
+            log.info("KafkaNuboAdapter no disponible, omitiendo envío de notificación");
+        }
+    }
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/request/SettlementStatusHistoryInDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.request;
+
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SettlementStatusHistoryInDto {
+
+    @NotNull
+    private Long tradeId;
+
+    @NotNull
+    private Integer fraction;
+
+    @NotNull
+    private String sideId;
+
+    @NotNull
+    private LocalDateTime time;
+
+    @NotNull
+    private Long statusId;
+
+    @NotNull
+    private Long custodianStatusId;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/request/SettlementUpdateTransferInDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SettlementUpdateTransferInDto {
+
+    private Long tradeId;
+
+    private Integer fraction;
+
+    private String sideId;
+
+    private Long custodianId;
+
+    private Long ficAdministratorId;
+
+    private Long statusId;
+
+    private Long custodianStatusId;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/request/SpecialTradeCompensationInDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.request;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SpecialTradeCompensationInDto {
+
+    @NotNull
+    @Min(value = 1)
+    private Long specialTradeId;
+
+    @NotNull
+    @Min(value = 1)
+    private Long paymentTypeId;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/request/StatusInDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class StatusInDto {
+
+    private Long id;
+
+    private String description;
+
+    private String category;
+
+    private String detail;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/request/StatusUpdateInDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.request;
+
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class StatusUpdateInDto {
+
+    @Size(max = 80)
+    private String description;
+
+    @Size(max = 30)
+    private String category;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/AfpFundOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class AfpFundOutDto {
+
+    private Long id;
+
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/BankAccountOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class BankAccountOutDto {
+
+    private Long id;
+
+    private String accountNumber;
+
+    private String bankName;
+
+    private BankOutDto bank;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/BankOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class BankOutDto {
+
+    private Long id;
+
+    private String name;
+
+    private String code;
+
+    private CountryOutDto country;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/CfiOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class CfiOutDto {
+
+    private String id;
+
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/CountryOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class CountryOutDto {
+
+    private Long id;
+
+    private String code;
+
+    private String name;
+
+    private CurrencyOutDto currency;
+
+    private String timeZone;
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/CurrencyOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class CurrencyOutDto {
+
+    private Long id;
+
+    private String code;
+
+    private String name;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/DepositoryOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class DepositoryOutDto {
+
+    private String id;
+
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/ExchangeRateOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class ExchangeRateOutDto {
+
+    private Long id;
+
+    private CurrencyOutDto baseCurrency;
+
+    private CurrencyOutDto conversionCurrency;
+
+    private LocalDate validityDate;
+
+    private BigDecimal conversionValue;
+
+    private LocalDate recordDate;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/FicAdministratorOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class FicAdministratorOutDto {
+
+    private Long id;
+
+    private String ficAdministratorCode;
+
+    private String description;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/GicsOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class GicsOutDto {
+
+    private Long id;
+
+    private String description;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/IdentificationTypeOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class IdentificationTypeOutDto {
+
+    private Long id;
+
+    private String description;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/InvestorAccountOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class InvestorAccountOutDto {
+
+    private Long id;
+
+    private InvestorOutDto investor;
+
+    private Long investorId;
+
+    private String accountNumber;
+
+    private StatusOutDto status;
+
+    private TypeOutDto type;
+
+    private DepositoryOutDto depository;
+
+    private Long participantId;
+
+    private ParticipantOutDto participant;
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/InvestorOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class InvestorOutDto {
+
+    private Long id;
+
+    private String code;
+
+    private String firstName;
+
+    private String lastName;
+
+    private String companyName;
+
+    private TypeOutDto type;
+
+    private StatusOutDto status;
+
+    private CountryOutDto country;
+
+    private String departmentId;
+
+    private Integer cityId;
+
+    private String documentNumber;
+
+    private IdentificationTypeOutDto identificationType;
+
+    private String nationality;
+
+    private String address;
+
+    private String phoneNumber;
+
+    private String email;
+
+    private String clearinghouseCode;
+
+    private GicsOutDto gicsId;
+
+    private Boolean moneyLaunderingFlag;
+
+    private TaxStatusOutDto taxStatusId;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/MarketOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class MarketOutDto {
+
+    private String id;
+
+    private String description;
+
+    private String category;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/NotificationRequestDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class NotificationRequestDto
+{
+
+    String eventType;
+
+    Long notificacionId;
+
+    List<Long> usuariosIds;
+
+    String modulo;
+
+    List<String> perfiles;
+
+    String tipoNotificacion;
+
+    JsonNode metadata;
+
+    String timestamp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/PageResponseOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class PageResponseOutDto<T> {
+
+    private List<T> content;
+
+    private Integer pageSize;
+
+    private Integer pageNumber;
+
+    private Long totalElements;
+
+    private Integer totalPages;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/ParticipantAccountOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class ParticipantAccountOutDto {
+
+    private Long id;
+
+    private ParticipantOutDto participant;
+
+    private Long participantId;
+
+    private String accountNumber;
+
+    private StatusOutDto status;
+
+    private TypeOutDto type;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/ParticipantOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class ParticipantOutDto {
+
+    private Long id;
+
+    private String code;
+
+    private String name;
+
+    private String shortName;
+
+    private String documentNumber;
+
+    private String type;
+
+    private String mnemonic;
+
+    private CountryOutDto country;
+
+    private LocalDate registrationDate;
+
+    private String taxCode;
+
+    private String department;
+
+    private String mainAddress;
+
+    private String webPage;
+
+    private String phoneNumber;
+
+    private StatusOutDto status;
+
+    private String nitClearingHouse;
+
+    private TaxStatusOutDto taxStatus;
+
+    private String typeEntity;
+
+    private String marginAccount;
+
+    private String masterAccount;
+
+    private String directAllocation;
+
+    private String marketMaker;
+
+    private Boolean enabled;
+
+    private Boolean custodian;
+
+    private IdentificationTypeOutDto identificationType;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/RejectionReasonOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class RejectionReasonOutDto {
+
+    private Long id;
+
+    private String reason;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SecurityTitleOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SecurityTitleOutDto {
+
+    private Long id;
+
+    private MarketOutDto market;
+
+    private String equityCode;
+
+    private String mnemonic;
+
+    private String isin;
+
+    private CfiOutDto cfi;
+
+    private Integer currencyId;
+
+    private String settlementPeriod;
+
+    private LocalDateTime listingDate;
+
+    private LocalDate delistingDate;
+
+    private Boolean parent;
+
+    private Long parentId;
+
+    private StatusOutDto status;
+
+    private Integer issuerId;
+
+    private Integer countryId;
+
+    private BigInteger amountIssued;
+
+    private String classId;
+
+    private Integer segmentId;
+
+    private String category;
+
+    private DepositoryOutDto depository;
+
+    private BigDecimal punishmentRepo;
+
+    private String regulatoryCode;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SettlementByCustodyOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SettlementByCustodyOutDto {
+
+    private Long tradeId;
+
+    private Integer fraction;
+
+    private SideOutDto side;
+
+    private InvestorOutDto investor;
+
+    private InvestorAccountOutDto investorAccount;
+
+    private ParticipantAccountOutDto participantAccount;
+
+    private BigDecimal fractionQuantity;
+
+    private BigDecimal fractionVolume;
+
+    private Boolean fiduciarySpecialist;
+
+    private BigDecimal commissionPercentage;
+
+    private BigDecimal commissionAmount;
+
+    private BigDecimal valTax;
+
+    private BigDecimal valTaxAmount;
+
+    private BigDecimal withholdingTax;
+
+    private BigDecimal withholdingTaxAmount;
+
+    private BigDecimal netAmount;
+
+    private BigDecimal transferValue;
+
+    private Boolean issuedReceipt;
+
+    private String issuedReceiptNumber;
+
+    private BigDecimal referenceAllocId;
+
+    private BigDecimal repoAmount;
+
+    private BigDecimal fundingAmount;
+
+    private BigDecimal netOutFlowTotal;
+
+    private BigDecimal outFlowTurnoverValue;
+
+    private BigDecimal returnTurnoverValue;
+
+    private BigDecimal deliveryVersusPaymentValue;
+
+    private TradingSystemOutDto tradingSystem;
+
+    private StatusOutDto status;
+
+    private BigDecimal brokerageService;
+
+    private Long custodianId;
+
+    private ParticipantOutDto custodian;
+
+    private BigDecimal settlementAmount;
+
+    private BankAccountOutDto bankAccount;
+
+    private String reference;
+
+    private BigDecimal capitalGainValue;
+
+    private BigDecimal disbursementValue;
+
+    private TypeOutDto sourceQuoteType;
+
+    private FicAdministratorOutDto ficAdministrator;
+
+    private StatusOutDto custodianStatus;
+
+    private StatusOutDto settlementStatus;
+
+    private TradeOutDto trade;
+
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SettlementOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.StatusEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SettlementOutDto {
+
+    private Long tradeId;
+
+    private Integer fraction;
+
+    private SideOutDto side;
+
+    private InvestorOutDto investor;
+
+    private InvestorAccountOutDto investorAccount;
+
+    private ParticipantAccountOutDto participantAccount;
+
+    private BigDecimal fractionQuantity;
+
+    private BigDecimal fractionVolume;
+
+    private Boolean fiduciarySpecialist;
+
+    private BigDecimal commissionPercentage;
+
+    private BigDecimal commissionAmount;
+
+    private BigDecimal valTax;
+
+    private BigDecimal valTaxAmount;
+
+    private BigDecimal withholdingTax;
+
+    private BigDecimal withholdingTaxAmount;
+
+    private BigDecimal netAmount;
+
+    private BigDecimal transferValue;
+
+    private Boolean issuedReceipt;
+
+    private String issuedReceiptNumber;
+
+    private BigDecimal referenceAllocId;
+
+    private BigDecimal repoAmount;
+
+    private BigDecimal fundingAmount;
+
+    private BigDecimal netOutFlowTotal;
+
+    private BigDecimal outFlowTurnoverValue;
+
+    private BigDecimal returnTurnoverValue;
+
+    private BigDecimal deliveryVersusPaymentValue;
+
+    private TradingSystemOutDto tradingSystem;
+
+    private StatusOutDto status;
+
+    private BigDecimal brokerageService;
+
+    private Long custodianId;
+
+    private ParticipantOutDto custodian;
+
+    private BigDecimal settlementAmount;
+
+    private BankAccountOutDto bankAccount;
+
+    private String reference;
+
+    private BigDecimal capitalGainValue;
+
+    private BigDecimal disbursementValue;
+
+    private TypeOutDto sourceQuoteType;
+
+    private ParticipantOutDto ficAdministrator;
+
+    private StatusOutDto custodianStatus;
+
+    private StatusOutDto settlementStatus;
+
+    private String rejectionReason;
+
+    private ParticipantOutDto directDepositor;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SettlementStatusHistoryOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SettlementStatusHistoryOutDto {
+
+    private Long tradeId;
+
+    private Integer fraction;
+
+    private SideOutDto side;
+
+    private LocalDateTime time;
+
+    private StatusOutDto status;
+
+    private StatusOutDto custodianStatus;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SideOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SideOutDto {
+
+    private String id;
+
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SmallParticipantOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SmallParticipantOutDto {
+
+    private Long id;
+
+    private String code;
+
+    private String name;
+
+    private String shortName;
+
+    private String documentNumber;
+
+    private TypeOutDto type;
+
+    private StatusOutDto status;
+
+    private IdentificationTypeOutDto identificationType;
+
+    private String bank_account;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/SpecialTradeOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class SpecialTradeOutDto {
+
+    private Long id;
+
+    private LocalDate recordDate;
+
+    private String specialOperationId;
+
+    private LocalDate settlementDate;
+
+    private Integer daysToSettlement;
+
+    private String specialOperationName;
+
+    private Long countryId;
+
+    private Long typeId;
+
+    private Long securityId;
+
+    private String depositoryId;
+
+    private String sideId;
+
+    private Long statusId;
+
+    private Long participantId;
+
+    private Long directDepositorId;
+
+    private Long clientOperatorId;
+
+    private Long afpFundId;
+
+    private BigDecimal totalAmount;
+
+    private BigDecimal totalAmountLocal;
+
+    private Long currencyId;
+
+    private Long exchangeRateId;
+
+    private BigDecimal price;
+
+    private BigDecimal quantity;
+
+    private Integer numberFolios;
+
+    private Boolean fractionalMark;
+
+    private CurrencyOutDto currency;
+
+    private CountryOutDto country;
+
+    private TypeOutDto type;
+
+    private SecurityTitleOutDto securityTitle;
+
+    private DepositoryOutDto depository;
+
+    private SideOutDto side;
+
+    private StatusOutDto status;
+
+    private ParticipantOutDto directDepositor;
+
+    private DepositoryOutDto clientSettlementAgent;
+
+    private AfpFundOutDto afpFund;
+
+    private MarketOutDto marketEntity;
+
+    private ExchangeRateOutDto exchangeRate;
+
+    private BigDecimal localCurrencyPrice;
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/StatusOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class StatusOutDto {
+
+    private Long id;
+
+    private String description;
+
+    private String category;
+
+    private String detail;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/TaxStatusOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class TaxStatusOutDto {
+
+    private Long id;
+
+    private String description;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/TradeEquityOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class TradeEquityOutDto {
+
+    private Long tradeId;
+
+    private Integer foreignBrokerBuy;
+
+    private Integer foreignBrokerSell;
+
+    private Integer directDepositorBuy;
+
+    private Integer directDepositorSell;
+
+    private Integer sourceIndicatorBuy;
+
+    private Integer sourceIndicatorSell;
+
+    private Integer responsibleTradeBuy;
+
+    private Integer responsibleTradeSell;
+
+    private String referenceBuy;
+
+    private String referenceSell;
+
+    private BigDecimal orderBookId;
+
+    private Boolean prearrangedOperation;
+
+    private Integer aggressiveTip;
+
+    private Boolean exdividendPeriod;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/TradeOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class TradeOutDto {
+
+    private Long id;
+
+    private LocalDate matchDate;
+
+    private Long matchId;
+
+    private LocalDate clearingDate;
+
+    private LocalDate returnClearingDate;
+
+    private DepositoryOutDto depository;
+
+    private CountryOutDto country;
+
+    private TypeOutDto type;
+
+    private MarketOutDto market;
+
+    private SecurityTitleOutDto securityTitle;
+
+    private ParticipantOutDto participantBuy;
+
+    private ParticipantOutDto participantSell;
+
+    private ParticipantOutDto custodianBuy;
+
+    private ParticipantOutDto custodianSell;
+
+    private Boolean assignmentMarkBuy;
+
+    private Boolean assignmentMarkSell;
+
+    private Boolean fractionalMarkBuy;
+
+    private Boolean fractionalMarkSell;
+
+    private Integer advanceStatus;
+
+    private Boolean exitIndicatorSettlement;
+
+    private Boolean returnIndicatorSettlement;
+
+    private Boolean canceledStatus;
+
+    private BigDecimal quantity;
+
+    private BigDecimal price;
+
+    private BigDecimal volume;
+
+    private BigDecimal repurchaseRate;
+
+    private BigDecimal repurchaseAmount;
+
+    private StatusOutDto status;
+
+    private LocalDateTime matchTime;
+
+    private Boolean ownPositionSell;
+
+    private Boolean ownPositionBuy;
+
+    private CurrencyOutDto currency;
+
+    private TradingSystemOutDto tradingSystem;
+
+    private TradingSessionOutDto tradingSession;
+
+    private LocalDate repurchaseAgreementDate;
+
+    private Integer daysToSettlement;
+
+    private BigDecimal repoRate;
+
+    private BigDecimal repoAmount;
+
+    private BigDecimal fundingAmount;
+
+    private BigDecimal netOutFlowTotal;
+
+    private BigDecimal outFlowTurnOverValue;
+
+    private BigDecimal totalNetReturn;
+
+    private BigDecimal returnTurnoverValue;
+
+    private BigDecimal deliveryVersusPaymentValue;
+
+    private Boolean reallocationIndicator;
+
+    private TypeOutDto businessType;
+
+    private TypeOutDto marketType;
+
+    private TypeOutDto originType;
+
+    private SpecialTradeOutDto specialTrade;
+
+    private MarketOutDto issuanceMarket;
+
+    private Boolean settlementIndicatorOutgoing;
+
+    private Boolean settlementIndicatorReturn;
+
+    private Boolean settlementIndicatorAdvance;
+
+    private TypeOutDto paymentType;
+
+    private TypeOutDto settlementType;
+
+    private StatusOutDto custodianStatus;
+
+    private StatusOutDto settlementStatus;
+
+    private StatusOutDto bloquingStatus;
+
+    private Boolean salesGuarantee;
+
+    private Boolean purchaseGuarantee;
+
+    private Boolean purchasePaymentIndicator;
+
+    private BigDecimal localCurrencyPrice;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/TradingSessionOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class TradingSessionOutDto {
+
+    private String id;
+
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/TradingSystemOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class TradingSystemOutDto {
+
+    private Long id;
+
+    private String description;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/dto/response/TypeOutDto.java
+
+```java
+package com.nubo.operations.custody.api.models.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.ALWAYS)
+public class TypeOutDto {
+
+    private Long id;
+
+    private String description;
+
+    private String category;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/AfpFundEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+import java.time.LocalDate;
+
+@Entity
+@Builder
+@Table(name = "\"AFP_FUND\"", schema = "\"NUANBODB\"")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class AfpFundEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"AFP_FUND_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"AFP_FUND_CODE\"", length = 10)
+    private String code;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/BankAccountEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"BANK_ACCOUNT\"", schema = "\"NUANBODB\"")
+public class BankAccountEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"BANK_ACCOUNT_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"BANK_ID\"")
+    private BankEntity bank;
+
+    @ManyToOne
+    @JoinColumn(name = "\"INVESTOR_ID\"")
+    private InvestorEntity investor;
+
+    @Column(name = "\"BANK_ACCOUNT\"", length = 30)
+    private String bankAccount;
+
+    @Column(name = "\"SAVING_ACCOUNT\"")
+    private Boolean savingAccount;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/BankEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+@Entity
+@Table(name = "\"BANK\"", schema = "\"NUANBODB\"")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class BankEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"BANK_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"COUNTRY_ID\"", nullable = false)
+    private CountryEntity country;
+
+    @Column(name = "\"BANK_NAME\"", length = 80, nullable = false)
+    private String name;
+
+    @Column(name = "\"BANK_CODE\"", length = 10, nullable = false)
+    private String code;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private java.time.LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/CfiEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"CFI\"", schema = "\"NUANBODB\"")
+public class CfiEntity {
+
+    @Id
+    @Column(name = "\"CFI_ID\"", length = 6, nullable = false)
+    private String id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/CountryEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"COUNTRY\"", schema = "\"NUANBODB\"")
+public class CountryEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"COUNTRY_ID\"")
+    private Long id;
+
+    @Column(name = "\"CODE\"", length = 3, nullable = false)
+    private String code;
+
+    @Column(name = "\"NAME\"", length = 30, nullable = false)
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CURRENCY_ID\"", nullable = false)
+    private CurrencyEntity currency;
+
+    @Column(name = "\"TIME_ZONE\"", length = 30, nullable = false)
+    private String timeZone;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/CurrencyEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"CURRENCY\"", schema = "\"NUANBODB\"")
+public class CurrencyEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"CURRENCY_ID\"")
+    private Long id;
+
+    @Column(name = "\"CODE\"", length = 3, nullable = false)
+    private String code;
+
+    @Column(name = "\"NAME\"", length = 30, nullable = false)
+    private String name;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/DepositoryEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"DEPOSITORY\"", schema = "\"NUANBODB\"")
+public class DepositoryEntity {
+
+    @Id
+    @Column(name = "\"DEPOSITORY_ID\"", length = 2)
+    private String id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/ExchangeRateEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+@Entity
+@Builder
+@Table(name = "\"EXCHANGE_RATE\"", schema = "\"NUANBODB\"")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ExchangeRateEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"EXCHANGE_RATE_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"BASE_CURRENCY\"", nullable = false)
+    private CurrencyEntity baseCurrency;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CONVERSION_CURRENCY\"", nullable = false)
+    private CurrencyEntity conversionCurrency;
+
+    @Column(name = "\"VALIDITY_DATE\"", nullable = false)
+    private LocalDate validityDate;
+
+    @Column(name = "\"CONVERSION_VALUE\"", precision = 16, scale = 8)
+    private BigDecimal conversionValue;
+
+    @Column(name = "\"RECORD_DATE\"")
+    private LocalDate recordDate;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/FicAdministratorEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Entity
+@Builder
+@Table(name = "\"FIC_ADMINISTRATOR\"", schema = "\"NUANBODB\"")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class FicAdministratorEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"FIC_ADMINISTRATOR_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"FIC_ADMINISTRATOR_CODE\"", length = 10)
+    private String ficAdministratorCode;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/GicsEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"GICS\"", schema = "\"NUANBODB\"")
+public class GicsEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"GICS_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 100)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private java.time.LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/IdentificationTypeEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"IDENTIFICATION_TYPE\"", schema = "\"NUANBODB\"")
+public class IdentificationTypeEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"IDENTIFICATION_TYPE_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/InvestorAccountEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"INVESTOR_ACCOUNT\"", schema = "\"NUANBODB\"")
+public class InvestorAccountEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"INVESTOR_ACCOUNT_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"INVESTOR_ID\"")
+    private InvestorEntity investor;
+
+    @Column(name = "\"ACCOUNT_NUMBER\"", length = 50)
+    private String accountNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"", nullable = false)
+    private TypeEntity type;
+
+    @ManyToOne
+    @JoinColumn(name = "\"DEPOSITORY_ID\"", nullable = false)
+    private DepositoryEntity depository;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PARTICIPANT_ID\"")
+    private ParticipantEntity participant;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/InvestorEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"INVESTOR\"", schema = "\"NUANBODB\"")
+public class InvestorEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"INVESTOR_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"CODE\"", length = 10, nullable = false)
+    private String code;
+
+    @Column(name = "\"FIRST_NAME\"", length = 60)
+    private String firstName;
+
+    @Column(name = "\"LAST_NAME\"", length = 60)
+    private String lastName;
+
+    @Column(name = "\"COMPANY_NAME\"", length = 100)
+    private String companyName;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"")
+    private TypeEntity type;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @ManyToOne
+    @JoinColumn(name = "\"COUNTRY_ID\"", nullable = false)
+    private CountryEntity country;
+
+    @Column(name = "\"DEPARTMENT_ID\"", length = 10)
+    private String departmentId;
+
+    @Column(name = "\"CITY_ID\"", length = 20)
+    private Integer cityId;
+
+    @Column(name = "\"DOCUMENT_NUMBER\"", length = 20)
+    private String documentNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "\"IDENTIFICATION_TYPE_ID\"", nullable = false)
+    private IdentificationTypeEntity identificationType;
+
+    @Column(name = "\"NATIONALITY\"", length = 2)
+    private String nationality;
+
+    @Column(name = "\"ADDRESS\"", length = 100)
+    private String address;
+
+    @Column(name = "\"PHONE_NUMBER\"", length = 20)
+    private String phoneNumber;
+
+    @Column(name = "\"EMAIL\"", length = 50)
+    private String email;
+
+    @Column(name = "\"CLEARINGHOUSE_CODE\"", length = 20)
+    private String clearinghouseCode;
+
+    @ManyToOne
+    @JoinColumn(name = "\"GICS_ID\"", nullable = false)
+    private GicsEntity gics;
+
+    @Column(name = "\"MONEY_LAUNDERING_FLAG\"")
+    private Boolean moneyLaunderingFlag;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TAX_STATUS_ID\"", nullable = false)
+    private TaxStatusEntity taxStatus;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/MarketEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"MARKET\"", schema = "\"NUANBODB\"")
+public class MarketEntity {
+
+    @Id
+    @Column(name = "\"MARKET_ID\"", length = 2)
+    private String id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"CATEGORY\"", length = 50, nullable = false)
+    private String category;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/ParticipantAccountEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"PARTICIPANT_ACCOUNT\"", schema = "\"NUANBODB\"")
+public class ParticipantAccountEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"PARTICIPANT_ACCOUNT_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PARTICIPANT_ID\"")
+    private ParticipantEntity participant;
+
+    @Column(name = "\"ACCOUNT_NUMBER\"")
+    private String accountNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"")
+    private StatusEntity status;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"")
+    private TypeEntity type;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", nullable = false)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/ParticipantBankAccountEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"PARTICIPANT_BANK_ACCOUNT\"", schema = "\"NUANBODB\"")
+public class ParticipantBankAccountEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"PARTICIPANT_BANK_ACCOUNT_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"BANK_ID\"", nullable = false)
+    private ParticipantEntity bank;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PARTICIPANT_ID\"", nullable = false)
+    private ParticipantEntity participant;
+
+    @Column(name = "\"BANK_ACCOUNT\"", length = 30)
+    private String bankAccount;
+
+    @Column(name = "\"PRINCIPAL\"")
+    private Boolean principal;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+    @Column(name = "\"BANK_BRANCH\"")
+    private Long bankBranch;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"")
+    private StatusEntity status;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"")
+    private TypeEntity type;
+
+    @ManyToOne
+    @JoinColumn(name = "\"COUNTRY_ID\"")
+    private CountryEntity country;
+
+    @Column(name = "\"ENTITY_CODE\"", length = 6)
+    private String entityCode;
+
+    @Column(name = "\"SWIFT_CODE\"")
+    private Integer swiftCode;
+
+    @Column(name = "\"BRANCH_CODE\"", length = 20)
+    private String branchCode;
+
+    @Column(name = "\"PORTFOLIO\"", length = 20)
+    private String portfolio;
+
+    @Column(name = "\"NIT_CLEARING_ENTITY\"", length = 10)
+    private String nitClearingEntity;
+
+    @Column(name = "\"DEPOSITORY_ID\"", length = 2)
+    private String depositoryId;
+
+    @ManyToOne
+    @JoinColumn(name = "\"ORIGIN_TYPE_ID\"")
+    private TypeEntity originType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CONCEPT_TYPE_ID\"")
+    private TypeEntity conceptType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CURRENCY_ID\"")
+    private CurrencyEntity currency;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/ParticipantEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"PARTICIPANT\"", schema = "\"NUANBODB\"")
+public class ParticipantEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"PARTICIPANT_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"CODE\"", nullable = false)
+    private String code;
+
+    @ManyToOne
+    @JoinColumn(name = "\"IDENTIFICATION_TYPE_ID\"", nullable = false)
+    private IdentificationTypeEntity identificationType;
+
+    @Column(name = "\"DOCUMENT_NUMBER\"", length = 20, nullable = false)
+    private String documentNumber;
+
+    @Column(name = "\"NAME\"", nullable = false)
+    private String name;
+
+    @Column(name = "\"SHORT_NAME\"", nullable = false)
+    private String shortName;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"", nullable = false)
+    private TypeEntity type;
+
+    @Column(name = "\"MNEMONIC\"", nullable = false)
+    private String mnemonic;
+
+    @ManyToOne
+    @JoinColumn(name = "\"COUNTRY_ID\"", nullable = false)
+    private CountryEntity country;
+
+    @Column(name = "\"REGISTRATION_DATE\"", nullable = false)
+    private LocalDate registrationDate;
+
+    @Column(name = "\"TAX_CODE\"", nullable = false)
+    private String taxCode;
+
+    @Column(name = "\"DEPARTMENT_ID\"", nullable = false)
+    private String departmentId;
+
+    @Column(name = "\"MAIN_ADDRESS\"", nullable = false)
+    private String mainAddress;
+
+    @Column(name = "\"WEB_PAGE\"", nullable = false)
+    private String webPage;
+
+    @Column(name = "\"PHONE_NUMBER\"", nullable = false)
+    private String phoneNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @Column(name = "\"NIT_CLEARING_HOUSE\"", nullable = false)
+    private String nitClearingHouse;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TAX_STATUS_ID\"", nullable = false)
+    private TaxStatusEntity taxStatus;
+
+    @Column(name = "\"TYPE_ENTITY\"",length = 1, nullable = false)
+    private String typeEntity;
+
+    @Column(name = "\"MARGIN_ACCOUNT\"", length = 1, nullable = false)
+    private String marginAccount;
+
+    @Column(name = "\"MASTER_ACCOUNT\"", length = 1, nullable = false)
+    private String masterAccount;
+
+    @Column(name = "\"DIRECT_ALLOCATION\"", length = 1, nullable = false)
+    private String directAllocation;
+
+    @Column(name = "\"MARKET_MAKER\"", length = 1, nullable = false)
+    private String marketMaker;
+
+    @Column(name = "\"ENABLED\"", nullable = false)
+    private Boolean enabled;
+
+    @Column(name = "\"CUSTODIAN\"")
+    private Boolean custodian;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", nullable = false)
+    private String lastModifyIp;
+
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/RejectionReasonEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "\"REJECTION_REASON\"", schema = "\"NUANBODB\"")
+public class RejectionReasonEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"REJECTION_REASON_ID\"" , nullable = false)
+    private Long id;
+
+    @Column(name = "\"REASON\"" , length = 255)
+    private String reason;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SecurityTitleEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"SECURITY_TITLE\"", schema = "\"NUANBODB\"")
+public class SecurityTitleEntity {
+
+    @Id
+    @Column(name = "\"SECURITY_ID\"", nullable = false)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "\"MARKET_ID\"", nullable = false)
+    private MarketEntity market;
+
+    @Column(name = "\"EQUITY_CODE\"", length = 15)
+    private String equityCode;
+
+    @Column(name = "\"MNEMONIC\"", length = 20, nullable = false)
+    private String mnemonic;
+
+    @Column(name = "\"ISIN\"", length = 20, nullable = false)
+    private String isin;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CFI_ID\"", nullable = false)
+    private CfiEntity cfi;
+
+    @Column(name = "\"CURRENCY_ID\"", nullable = false)
+    private Integer currencyId;
+
+    @Column(name = "\"SETTLEMENT_PERIOD\"", length = 2, nullable = false)
+    private String settlementPeriod;
+
+    @Column(name = "\"LISTING_DATE\"", nullable = false)
+    private LocalDateTime listingDate;
+
+    @Column(name = "\"DELISTING_DATE\"", nullable = false)
+    private LocalDate delistingDate;
+
+    @Column(name = "\"PARENT\"")
+    private Boolean parent;
+
+    @Column(name = "\"PARENT_ID\"")
+    private Long parentId;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @Column(name= "\"ISSUER_ID\"", nullable = false)
+    private Integer issuerId;
+
+    @Column(name = "\"COUNTRY_ID\"", nullable = false)
+    private Integer countryId;
+
+    @Column(name = "\"AMOUNT_ISSUED\"", precision = 20, nullable = false)
+    private BigInteger amountIssued;
+
+    @Column(name = "\"CLASS_ID\"", length = 2, nullable = false)
+    private String classId;
+
+    @Column(name = "\"SEGMENT_ID\"", nullable = false)
+    private Integer segmentId;
+
+    @Column(name = "\"CATEGORY\"", length = 20, nullable = false)
+    private String category;
+
+    @ManyToOne
+    @JoinColumn(name = "\"DEPOSITORY_ID\"", nullable = false)
+    private DepositoryEntity depository;
+
+    @Column(name = "\"PUNISHMENT_REPO\"", precision = 5, scale = 4)
+    private BigDecimal punishmentRepo;
+
+    @Column(name = "\"REGULATORY_CODE\"", length = 2, nullable = false)
+    private String regulatoryCode;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SettlementEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@IdClass(SettlementKey.class)
+@Table(name = "\"SETTLEMENT\"", schema = "\"NUANBODB\"")
+public class SettlementEntity {
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "\"TRADE_ID\"", nullable = false)
+    private TradeEntity trade;
+
+    @Id
+    @Column(name = "\"FRACTION\"", nullable = false)
+    private Integer fraction;
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "\"SIDE_ID\"", nullable = false)
+    private SideEntity side;
+
+    @ManyToOne
+    @JoinColumn(name = "\"INVESTOR_ID\"", nullable = false)
+    private InvestorEntity investor;
+
+    @ManyToOne
+    @JoinColumn(name = "\"INVESTOR_ACCOUNT_ID\"", nullable = false)
+    private InvestorAccountEntity investorAccount;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PARTICIPANT_ACCOUNT_ID\"", nullable = false)
+    private ParticipantAccountEntity participantAccount;
+
+    @ManyToOne
+    @JoinColumn(name = "\"BANK_ACCOUNT_ID\"", nullable = false)
+    private BankAccountEntity bankAccount;
+
+    @Column(name = "\"FRACTION_QUANTITY\"", precision = 16, scale = 4)
+    private BigDecimal fractionQuantity;
+
+    @Column(name = "\"FRACTION_VOLUME\"", precision = 16, scale = 4)
+    private BigDecimal fractionVolume;
+
+    @Column(name = "\"FIDUCIARY_SPECIALIST\"")
+    private Boolean fiduciarySpecialist;
+
+    @Column(name = "\"COMMISSION_PERCENTAGE\"", precision = 6, scale = 4)
+    private BigDecimal commissionPercentage;
+
+    @Column(name = "\"COMMISSION_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal commissionAmount;
+
+    @Column(name = "\"VAL_TAX\"", precision = 6, scale = 4)
+    private BigDecimal valTax;
+
+    @Column(name = "\"VAL_TAX_AMOUNT\"", precision = 19, scale = 4)
+    private BigDecimal valTaxAmount;
+
+    @Column(name = "\"WITHHOLDING_TAX\"", precision = 6, scale = 4)
+    private BigDecimal withholdingTax;
+
+    @Column(name = "\"WITHHOLDING_TAX_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal withholdingTaxAmount;
+
+    @Column(name = "\"NET_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal netAmount;
+
+    @Column(name = "\"TRANSFER_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal transferValue;
+
+    @Column(name = "\"ISSUED_RECEIPT\"")
+    private Boolean issuedReceipt;
+
+    @Column(name = "\"ISSUED_RECEIPT_NUMBER\"", length = 50)
+    private String issuedReceiptNumber;
+
+    @Column(name = "\"REFERENCE_ALLOC_ID\"", precision = 19)
+    private BigDecimal referenceAllocId;
+
+    @Column(name = "\"REPO_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal repoAmount;
+
+    @Column(name = "\"FUNDING_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal fundingAmount;
+
+    @Column(name = "\"NET_OUTFLOW_TOTAL\"", precision = 16, scale = 4)
+    private BigDecimal netOutFlowTotal;
+
+    @Column(name = "\"OUTFLOW_TURNOVER_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal outFlowTurnoverValue;
+
+    @Column(name = "\"RETURN_TURNOVER_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal returnTurnoverValue;
+
+    @Column(name = "\"DELIVERY_VERSUS_PAYMENT_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal deliveryVersusPaymentValue;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TRADING_SYSTEM_ID\"")
+    private TradingSystemEntity tradingSystem;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"")
+    private StatusEntity status;
+
+    @Column(name = "\"BROKERAGE_SERVICE\"", precision = 16, scale = 4)
+    private BigDecimal brokerageService;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CUSTODIAN_ID\"")
+    private ParticipantEntity custodian;
+
+    @ManyToOne
+    @JoinColumn(name = "\"DIRECT_DEPOSITOR\"")
+    private ParticipantEntity directDepositor;
+
+    @Column(name = "\"REFERENCE\"", length = 255)
+    private String reference;
+
+    @Column(name = "\"SETTLEMENT_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal settlementAmount;
+
+    @Column(name = "\"CAPITAL_GAIN_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal capitalGainValue;
+
+    @Column(name = "\"DISBURSEMENT_VALUE\"", precision = 18, scale = 4)
+    private BigDecimal disbursementValue;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SOURCE_QUOTE_TYPE_ID\"", nullable = false)
+    private TypeEntity sourceQuoteType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"FIC_ADMINISTRATOR_ID\"", nullable = false)
+    private ParticipantEntity ficAdministrator;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CUSTODIAN_STATUS_ID\"")
+    private StatusEntity custodianStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SETTLEMENT_STATUS_ID\"")
+    private StatusEntity settlementStatus;
+
+    @Column(name = "\"REJECTION_REASON\"", length = 250, nullable = false)
+    private String rejectionReason;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30, nullable = false)
+    private String lastModifyIp;
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SettlementKey.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class SettlementKey implements Serializable {
+
+    private Long trade;
+
+    private Integer fraction;
+
+    private String side;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SettlementStatusHistoryEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@IdClass(SettlementStatusHistoryKey.class)
+@Table(name = "\"SETTLEMENT_STATUS_HISTORY\"", schema = "\"NUANBODB\"")
+public class SettlementStatusHistoryEntity {
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "\"TRADE_ID\"", nullable = false)
+    private TradeEntity trade;
+
+    @Id
+    @Column(name = "\"FRACTION\"", nullable = false)
+    private Integer fraction;
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "\"SIDE_ID\"", nullable = false)
+    private SideEntity side;
+
+    @Id
+    @Column(name = "\"TIME\"", nullable = false)
+    private LocalDateTime time;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SettlementStatusHistoryKey.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SettlementStatusHistoryKey {
+
+    private Long trade;
+
+    private Integer fraction;
+
+    private String side;
+
+    private LocalDateTime time;
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SideEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"SIDE\"", schema = "\"NUANBODB\"")
+public class SideEntity {
+
+    @Id
+    @Column(name = "\"SIDE_ID\"", length = 2)
+    private String id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/SpecialTradeEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Entity
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "\"SPECIAL_TRADE\"", schema = "\"NUANBODB\"")
+public class SpecialTradeEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"SPECIAL_TRADE_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"RECORD_DATE\"")
+    private LocalDate recordDate;
+
+    @Column(name = "\"SPECIAL_OPERATION_ID\"", length = 18)
+    private String specialOperationId;
+
+    @Column(name = "\"SETTLEMENT_DATE\"")
+    private LocalDate settlementDate;
+
+    @Column(name = "\"DAYS_TO_SETTLEMENT\"")
+    private Integer daysToSettlement;
+
+    @Column(name = "\"SPECIAL_OPERATION_NAME\"", length = 80)
+    private String specialOperationName;
+
+    @ManyToOne
+    @JoinColumn(name = "\"COUNTRY_ID\"", nullable = false)
+    private CountryEntity country;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"", nullable = false)
+    private TypeEntity type;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SECURITY_ID\"", nullable = false)
+    private SecurityTitleEntity securityTitle;
+
+    @ManyToOne
+    @JoinColumn(name = "\"DEPOSITORY_ID\"", nullable = false)
+    private DepositoryEntity depository;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SIDE_ID\"", nullable = false)
+    private SideEntity side;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @ManyToOne
+    @JoinColumn(name = "\"DIRECT_DEPOSITOR\"", nullable = false)
+    private ParticipantEntity directDepositor;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CLIENT_SETTLEMENT_AGENT\"", nullable = false)
+    private DepositoryEntity clientSettlementAgent;
+
+    @ManyToOne
+    @JoinColumn(name = "\"AFP_FUND_ID\"", nullable = false)
+    private AfpFundEntity afpFund;
+
+    @Column(name = "\"TOTAL_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal totalAmount;
+
+    @Column(name = "\"TOTAL_AMOUNT_LOCAL\"", precision = 16, scale = 4)
+    private BigDecimal totalAmountLocal;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CURRENCY_ID\"", nullable = false)
+    private CurrencyEntity currency;
+
+    @ManyToOne
+    @JoinColumn(name = "\"EXCHANGE_RATE_ID\"", nullable = false)
+    private ExchangeRateEntity exchangeRate;
+
+    @Column(name = "\"PRICE\"", precision = 12, scale = 6)
+    private BigDecimal price;
+
+    @Column(name = "\"QUANTITY\"", precision = 16, scale = 4)
+    private BigDecimal quantity;
+
+    @Column(name = "\"NUMBER_FOLIOS\"")
+    private Integer numberFolios;
+
+    @Column(name = "\"FRACTIONAL_MARK\"")
+    private Boolean fractionalMark;
+
+    @ManyToOne
+    @JoinColumn(name = "\"ISSUANCE_MARKET_ID\"")
+    private MarketEntity issuanceMarket;
+
+    @Column(name = "\"LOCAL_CURRENCY_PRICE\"", precision = 16, scale = 4)
+    private BigDecimal localCurrencyPrice;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/StatusEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"STATUS\"", schema = "\"NUANBODB\"")
+public class StatusEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"STATUS_ID\"")
+    private Long id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"CATEGORY\"", length = 30, nullable = false)
+    private String category;
+
+    @Column(name = "\"DETAIL\"", length = 255, nullable = false)
+    private String detail;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/TaxStatusEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"TAX_STATUS\"", schema = "\"NUANBODB\"")
+public class TaxStatusEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"TAX_STATUS_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 100)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 36)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 30)
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private java.time.LocalDate lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 30)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/TradeEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"TRADE\"", schema = "\"NUANBODB\"")
+public class TradeEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"TRADE_ID\"")
+    private Long id;
+
+    @Column(name = "\"MATCH_DATE\"", nullable = false)
+    private LocalDate matchDate;
+
+    @Column(name = "\"MATCH_ID\"", precision = 19, nullable = false)
+    private Long matchId;
+
+    @Column(name = "\"CLEARING_DATE\"", nullable = false)
+    private LocalDate clearingDate;
+
+    @Column(name = "\"RETURN_CLEARING_DATE\"", nullable = false)
+    private LocalDate returnClearingDate;
+
+    @ManyToOne
+    @JoinColumn(name = "\"DEPOSITORY_ID\"", nullable = false)
+    private DepositoryEntity depository;
+
+    @ManyToOne
+    @JoinColumn(name = "\"COUNTRY_ID\"", nullable = false)
+    private CountryEntity country;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"", nullable = false)
+    private TypeEntity type;
+
+    @ManyToOne
+    @JoinColumn(name = "\"MARKET_ID\"", nullable = false)
+    private MarketEntity market;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SECURITY_ID\"", nullable = false)
+    private SecurityTitleEntity securityTitle;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PARTICIPANT_ID_BUY\"")
+    private ParticipantEntity participantBuy;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PARTICIPANT_ID_SELL\"")
+    private ParticipantEntity participantSell;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CUSTODIAN_ID_BUY\"")
+    private ParticipantEntity custodianBuy;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CUSTODIAN_ID_SELL\"")
+    private ParticipantEntity custodianSell;
+
+    @Column(name = "\"ASSIGNMENT_MARK_BUY\"", nullable = false)
+    private Boolean assignmentMarkBuy;
+
+    @Column(name = "\"ASSIGNMENT_MARK_SELL\"", nullable = false)
+    private Boolean assignmentMarkSell;
+
+    @Column(name = "\"FRACTIONAL_MARK_BUY\"", nullable = false)
+    private Boolean fractionalMarkBuy;
+
+    @Column(name = "\"FRACTIONAL_MARK_SELL\"", nullable = false)
+    private Boolean fractionalMarkSell;
+
+    @Column(name = "\"ADVANCE_STATUS\"", nullable = false)
+    private Integer advanceStatus;
+
+    @Column(name = "\"EXIT_INDICATOR_SETTLEMENT\"", nullable = false)
+    private Boolean exitIndicatorSettlement;
+
+    @Column(name = "\"RETURN_INDICATOR_SETTLEMENT\"", nullable = false)
+    private Boolean returnIndicatorSettlement;
+
+    @Column(name = "\"SETTLEMENT_INDICATOR_OUTGOING\"", nullable = false)
+    private Boolean settlementIndicatorOutgoing;
+
+    @Column(name = "\"SETTLEMENT_INDICATOR_RETURN\"", nullable = false)
+    private Boolean settlementIndicatorReturn;
+
+    @Column(name = "\"RESETTLEMENT_INDICATOR_ADVANCE\"", nullable = false)
+    private Boolean settlementIndicatorAdvance;
+
+    @Column(name = "\"SALES_GUARANTEE\"", nullable = false)
+    private Boolean salesGuarantee;
+
+    @Column(name = "\"PURCHASE_GUARANTEE\"", nullable = false)
+    private Boolean purchaseGuarantee;
+
+    @Column(name = "\"PURCHASE_PAYMENT_INDICATOR\"", nullable = false)
+    private Boolean purchasePaymentIndicator;
+
+    @Column(name = "\"CANCELED_STATUS\"", nullable = false)
+    private Boolean canceledStatus;
+
+    @Column(name = "\"QUANTITY\"", precision = 16, scale = 4, nullable = false)
+    private BigDecimal quantity;
+
+    @Column(name = "\"PRICE\"", precision = 16, scale = 6, nullable = false)
+    private BigDecimal price;
+
+    @Column(name = "\"VOLUME\"", precision = 16, scale = 4, nullable = false)
+    private BigDecimal volume;
+
+    @Column(name = "\"REPURCHASE_RATE\"", precision = 6, scale = 4, nullable = false)
+    private BigDecimal repurchaseRate;
+
+    @Column(name = "\"REPURCHASE_AMOUNT\"", precision = 16, scale = 4, nullable = false)
+    private BigDecimal repurchaseAmount;
+
+    @ManyToOne
+    @JoinColumn(name = "\"STATUS_ID\"", nullable = false)
+    private StatusEntity status;
+
+    @Column(name = "\"MATCH_TIME\"", nullable = false)
+    private LocalDateTime matchTime;
+
+    @Column(name = "\"OWN_POSITION_SELL\"")
+    private Boolean ownPositionSell;
+
+    @Column(name = "\"OWN_POSITION_BUY\"")
+    private Boolean ownPositionBuy;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CURRENCY_ID\"", nullable = false)
+    private CurrencyEntity currency;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TRADING_SYSTEM_ID\"")
+    private TradingSystemEntity tradingSystem;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TRADING_SESSION_ID\"", nullable = false)
+    private TradingSessionEntity tradingSession;
+
+    @Column(name = "\"REPURCHASE_AGREEMENT_DATE\"")
+    private LocalDate repurchaseAgreementDate;
+
+    @Column(name = "\"DAYS_TO_SETTLEMENT\"")
+    private Integer daysToSettlement;
+
+    @Column(name = "\"REPO_RATE\"", precision = 16, scale = 4)
+    private BigDecimal repoRate;
+
+    @Column(name = "\"REPO_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal repoAmount;
+
+    @Column(name = "\"FUNDING_AMOUNT\"", precision = 16, scale = 4)
+    private BigDecimal fundingAmount;
+
+    @Column(name = "\"NET_OUTFLOW_TOTAL\"", precision = 16, scale = 4)
+    private BigDecimal netOutFlowTotal;
+
+    @Column(name = "\"OUTFLOW_TURNOVER_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal outFlowTurnOverValue;
+
+    @Column(name = "\"TOTAL_NET_RETURN\"", precision = 16, scale = 4)
+    private BigDecimal totalNetReturn;
+
+    @Column(name = "\"RETURN_TURNOVER_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal returnTurnoverValue;
+
+    @Column(name = "\"DELIVERY_VERSUS_PAYMENT_VALUE\"", precision = 16, scale = 4)
+    private BigDecimal deliveryVersusPaymentValue;
+
+    @Column(name = "\"REALLOCATION_INDICATOR\"")
+    private Boolean reallocationIndicator;
+
+    @ManyToOne
+    @JoinColumn(name = "\"BUSINESS_TYPE_ID\"")
+    private TypeEntity businessType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"MARKET_TYPE_ID\"")
+    private TypeEntity marketType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"ORIGIN_TYPE_ID\"")
+    private TypeEntity originType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SPECIAL_TRADE_ID\"")
+    private SpecialTradeEntity specialTrade;
+
+    @ManyToOne
+    @JoinColumn(name = "\"PAYMENT_TYPE_ID\"")
+    private TypeEntity paymentType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SETTLEMENT_TYPE_ID\"")
+    private TypeEntity settlementType;
+
+    @ManyToOne
+    @JoinColumn(name = "\"CUSTODIAN_STATUS_ID\"")
+    private StatusEntity custodianStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "\"SETTLEMENT_STATUS_ID\"")
+    private StatusEntity settlementStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "\"BLOQUING_STATUS_ID\"")
+    private StatusEntity bloquingStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "\"ISSUANCE_MARKET_ID\"")
+    private MarketEntity issuanceMarket;
+
+    @Column(name = "\"LOCAL_CURRENCY_PRICE\"", precision = 12, scale = 6)
+    private BigDecimal localCurrencyPrice;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/TradingSessionEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"TRADING_SESSION\"", schema = "\"NUANBODB\"")
+public class TradingSessionEntity {
+
+    @Id
+    @Column(name = "\"TRADING_SESSION_ID\"", length = 2, nullable = false)
+    private String id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/TradingSystemEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"TRADING_SYSTEM\"", schema = "\"NUANBODB\"")
+public class TradingSystemEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"TRADING_SYSTEM_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80)
+    private String description;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/TypeEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"TYPE\"", schema = "\"NUANBODB\"")
+public class TypeEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"TYPE_ID\"")
+    private Long id;
+
+    @Column(name = "\"DESCRIPTION\"", length = 80, nullable = false)
+    private String description;
+
+    @Column(name = "\"CATEGORY\"", length = 30, nullable = false)
+    private String category;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/TypeMappingEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "\"TYPE_MAPPING\"", schema = "\"NUANBODB\"")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class TypeMappingEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"TYPE_MAPPING_ID\"")
+    private Long id;
+
+    @Column(name = "\"EXTERNAL_SYSTEM\"", nullable = false)
+    private String externalSystem;
+
+    @Column(name = "\"EXTERNAL_CODE\"", nullable = false)
+    private String externalCode;
+
+    @Column(name = "\"EXTERNAL_DESCRIPTION\"")
+    private String externalDescription;
+
+    @ManyToOne
+    @JoinColumn(name = "\"TYPE_ID\"")
+    private TypeEntity type;
+
+    @Column(name = "\"LAST_MODIFY_USER\"")
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"")
+    private String lastModifyApplic;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"")
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"")
+    private String lastModifyIp;
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/entity/UserNuboEntity.java
+
+```java
+package com.nubo.operations.custody.api.models.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "\"USER_NUBO\"", schema = "\"NUANBODB\"")
+public class UserNuboEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"USER_NUBO_ID\"", nullable = false)
+    private Long id;
+
+    @Column(name = "\"USER_NAME\"", unique = true, length = 80, nullable = false)
+    private String userName;
+
+    @Column(name = "\"PREVIOUS_SESSION\"")
+    private Boolean previousSession;
+
+    @Column(name = "\"LAST_MODIFY_USER\"", length = 250, nullable = false)
+    private String lastModifyUser;
+
+    @Column(name = "\"LAST_MODIFY_APPLIC\"", length = 250, nullable = false)
+    private String lastModifyApplication;
+
+    @Column(name = "\"LAST_MODIFY_DATE\"", nullable = false)
+    private LocalDateTime lastModifyDate;
+
+    @Column(name = "\"LAST_MODIFY_IP\"", length = 50, nullable = false)
+    private String lastModifyIp;
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/CustodianStatusEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+@Getter
+@RequiredArgsConstructor
+public enum CustodianStatusEnum {
+
+    TRANSFERRED(20L),
+    PRE_MATCH(21L),
+    ADMITTED(22L),
+    REJECTED(23L);
+
+    private final Long value;
+
+    @JsonValue
+    public Long getValue() {
+        return value;
+    }
+
+    @JsonCreator
+    public static CustodianStatusEnum fromValue(Long value) {
+        return Arrays.stream(CustodianStatusEnum.values())
+                .filter(status -> Objects.equals(status.value, value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Unknown value: " + value));
+    }
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/NotificationMessageEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
+public enum NotificationMessageEnum {
+
+    REQUEST_REJECTED(34, "Operation request rejected"),
+    REQUEST_APPROVED(37, "Operation request approved"),
+    REQUEST_TRANSMITTED(38, "Operation request transmitted");
+    
+    private final Integer code;
+    private final String description;
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/NotificationTypeEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
+public enum NotificationTypeEnum {
+    
+    INFORMATIVE(123, "INFORMATIVE"),
+    ERROR(124, "ERROR"),
+    WARNING(125, "WARNING");
+    
+    private final Integer code;
+    private final String description;
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/PropertiesEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Arrays;
+
+@Getter
+@RequiredArgsConstructor
+public enum PropertiesEnum {
+
+    CLIENT_IP("client_ip"),
+    CLIENT_USER("client_user"),
+    CLIENT_DATETIME("client_datetime"),
+    VERSION_API("version_api"),
+    AUTH_TOKEN("auth_token");
+
+    private final String value;
+
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
+
+    @JsonCreator
+    public static PropertiesEnum fromValue(String value) {
+        return Arrays.stream(PropertiesEnum.values())
+                .filter(status -> status.value.equalsIgnoreCase(value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Unknown value: " + value));
+    }
+
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/TypeEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+@Getter
+@RequiredArgsConstructor
+public enum TypeEnum {
+
+    //DESCRIPTION
+    COMPENSACION("COMPENSACION"),
+
+    //CATEGORY
+    CUENTA_CUD("CUENTA CUD"),
+    CONCEPTO_CUENTA("CONCEPTO_CUENTA");
+
+    private final String value;
+    
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
+
+    @JsonCreator
+    public static TypeEnum fromValue(String value) {
+        return Arrays.stream(TypeEnum.values())
+                .filter(type -> Objects.equals(type.value, value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Type Option is not implemented: " + value));
+    }
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/TypeMappingEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+@Getter
+@RequiredArgsConstructor
+public enum TypeMappingEnum {
+
+    //External_System
+    REFERENCE_DATA("REFERENCE DATA"),
+
+    //CATEGORY
+    CUSTODIO("Custodio"),
+    ADMIN_FIC("Administradora General de Fondos");
+
+    private final String value;
+    
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
+
+    @JsonCreator
+    public static TypeMappingEnum fromValue(String value) {
+        return Arrays.stream(TypeMappingEnum.values())
+                .filter(type -> Objects.equals(type.value, value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Type Option is not implemented: " + value));
+    }
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/UserTypeEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+@Getter
+@RequiredArgsConstructor
+public enum UserTypeEnum {
+
+    INTERNAL("INTERNAL"),
+    EXTERNAL("EXTERNAL");
+
+    private final String value;
+
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
+
+    @JsonCreator
+    public static UserTypeEnum fromValue(String value) {
+        return Arrays.stream(UserTypeEnum.values())
+                .filter(side -> Objects.equals(side.value, value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Side not implemented: " + value));
+    }
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/models/enums/VersionApiEnum.java
+
+```java
+package com.nubo.operations.custody.api.models.enums;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Arrays;
+
+@Getter
+@RequiredArgsConstructor
+public enum VersionApiEnum {
+
+    V1("v1"),
+    V2("v2"),
+    VERSION_NOT_IMPLEMENTED("VERSION_NOT_IMPLEMENTED");
+
+    private final String value;
+
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
+
+    @JsonCreator
+    public static VersionApiEnum fromValue(String value) {
+        return Arrays.stream(VersionApiEnum.values())
+                .filter(version -> version.value.equalsIgnoreCase(value))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Version not implemented: " + value));
+    }
+
+    @Converter(autoApply = true)
+    public static class VersionApiEnumConverter implements AttributeConverter<VersionApiEnum, String> {
+        @Override
+        public String convertToDatabaseColumn(VersionApiEnum status) {
+            return status != null ? status.getValue() : null;
+        }
+
+        @Override
+        public VersionApiEnum convertToEntityAttribute(String dbData) {
+            return dbData != null ? VersionApiEnum.fromValue(dbData) : null;
+        }
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/FicAdministratorRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.FicAdministratorEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FicAdministratorRepository extends JpaRepository<FicAdministratorEntity, Long> {
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/ParticipantBankAccountRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+
+import com.nubo.operations.custody.api.models.entity.ParticipantBankAccountEntity;
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.TypeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface ParticipantBankAccountRepository extends JpaRepository<ParticipantBankAccountEntity, Long> {
+
+    Optional<ParticipantBankAccountEntity> findFirstByParticipantAndOriginTypeAndConceptTypeOrderByIdAsc(ParticipantEntity participant, TypeEntity originType, TypeEntity conceptType);
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/ParticipantRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.TypeEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
+
+public interface ParticipantRepository extends JpaRepository<ParticipantEntity, Long> {
+
+    @Query("SELECT p FROM ParticipantEntity p WHERE p.custodian = true")
+    Page<ParticipantEntity> findAllCustodianParticipants(Pageable pageable);
+
+    Page<ParticipantEntity> findAllByType(Pageable pageable, TypeEntity type);
+
+    Page<ParticipantEntity> findAllByTypeAndCountryId(Pageable pageable, TypeEntity type, Long countryId);
+
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/RejectionReasonRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.RejectionReasonEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RejectionReasonRepository extends JpaRepository<RejectionReasonEntity, Long> {
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/SettlementRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.nubo.operations.custody.api.models.entity.SettlementEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementKey;
+
+public interface SettlementRepository extends JpaRepository<SettlementEntity, SettlementKey>,
+        JpaSpecificationExecutor<SettlementEntity> {
+
+    @Query("SELECT s FROM SettlementEntity s " +
+            "INNER JOIN FETCH s.trade " +
+            "INNER JOIN FETCH s.side " +
+            "LEFT JOIN FETCH s.investor " +
+            "LEFT JOIN FETCH s.investorAccount " +
+            "LEFT JOIN FETCH s.participantAccount " +
+            "LEFT JOIN FETCH s.bankAccount " +
+            "LEFT JOIN FETCH s.tradingSystem " +
+            "LEFT JOIN FETCH s.status " +
+            "LEFT JOIN FETCH s.sourceQuoteType " +
+            "LEFT JOIN FETCH s.ficAdministrator " +
+            "LEFT JOIN FETCH s.custodianStatus " +
+            "LEFT JOIN FETCH s.settlementStatus " +
+            "WHERE s.trade.id = :tradeId AND s.fraction = :fraction AND s.side.id = :sideId")
+    Optional<SettlementEntity> findByCompositeKey(
+            @Param("tradeId") Long tradeId,
+            @Param("fraction") Integer fraction,
+            @Param("sideId") String sideId);
+
+    @Query("SELECT DISTINCT s FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds")
+    Page<SettlementEntity> findByTradeIds(@Param("tradeIds") List<Long> tradeIds, Pageable pageable);
+
+    @Query("SELECT COUNT(s) > 0 FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds AND t.participantBuy.id = :participantId")
+    boolean isParticipantBuyer(@Param("tradeIds") List<Long> tradeIds, @Param("participantId") Long participantId);
+
+    @Query("SELECT COUNT(s) > 0 FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds AND t.participantSell.id = :participantId")
+    boolean isParticipantSeller(@Param("tradeIds") List<Long> tradeIds, @Param("participantId") Long participantId);
+
+    @Query("SELECT DISTINCT s FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds " +
+            "AND (t.participantBuy.id = :participantId OR t.participantSell.id = :participantId) " +
+            "AND s.side.id = :sideId")
+    Page<SettlementEntity> findByTradeIdsAndParticipantAndSide(@Param("tradeIds") List<Long> tradeIds,
+                                                               @Param("participantId") Long participantId,
+                                                               @Param("sideId") String sideId,
+                                                               Pageable pageable);
+
+    @Query("SELECT DISTINCT s FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds " +
+            "AND (t.participantBuy.id = :participantId OR t.participantSell.id = :participantId)")
+    Page<SettlementEntity> findByTradeIdsAndParticipantMultipleSides(@Param("tradeIds") List<Long> tradeIds,
+                                                                     @Param("participantId") Long participantId,
+                                                                     Pageable pageable);
+
+    @Query("SELECT DISTINCT s FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds")
+    List<SettlementEntity> findByTradeIds(@Param("tradeIds") List<Long> tradeIds, Sort sort);
+
+    @Query("SELECT DISTINCT s FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds " +
+            "AND (t.participantBuy.id = :participantId OR t.participantSell.id = :participantId) " +
+            "AND s.side.id = :sideId")
+    List<SettlementEntity> findByTradeIdsAndParticipantAndSide(@Param("tradeIds") List<Long> tradeIds,
+                                                               @Param("participantId") Long participantId,
+                                                               @Param("sideId") String sideId,
+                                                               Sort sort);
+
+    @Query("SELECT DISTINCT s FROM SettlementEntity s " +
+            "JOIN s.trade t " +
+            "WHERE t.id IN :tradeIds " +
+            "AND (t.participantBuy.id = :participantId OR t.participantSell.id = :participantId)")
+    List<SettlementEntity> findByTradeIdsAndParticipantMultipleSides(@Param("tradeIds") List<Long> tradeIds,
+                                                                     @Param("participantId") Long participantId,
+                                                                     Sort sort);
+
+    @Query("SELECT s FROM SettlementEntity s JOIN s.trade t JOIN s.side si " +
+            "WHERE t.id  = :tradeId AND si.id = :sideId")
+    List<SettlementEntity> findByTradeIdAndSideId(Long tradeId, String sideId);
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/SettlementStatusHistoryRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.nubo.operations.custody.api.models.entity.SettlementStatusHistoryEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementStatusHistoryKey;
+
+public interface SettlementStatusHistoryRepository extends JpaRepository<SettlementStatusHistoryEntity, SettlementStatusHistoryKey>,
+        JpaSpecificationExecutor<SettlementStatusHistoryEntity> {
+
+    @Query("SELECT s FROM SettlementStatusHistoryEntity s JOIN s.trade t WHERE t.id = :tradeId")
+    List<SettlementStatusHistoryEntity> findAllByTradeId(Long tradeId);
+
+    @Query("SELECT s FROM SettlementStatusHistoryEntity s " +
+            "WHERE (:tradeId IS NULL OR s.trade.id = :tradeId) " +
+            "AND (:fraction IS NULL OR s.fraction = :fraction) " +
+            "AND (:sideId IS NULL OR s.side.id = :sideId)")
+    Page<SettlementStatusHistoryEntity> findByTradeFractionSide(
+            @Param("tradeId") Long tradeId,
+            @Param("fraction") Integer fraction,
+            @Param("sideId") String sideId,
+            Pageable pageable);
+
+    @Query("SELECT s FROM SettlementStatusHistoryEntity s " +
+            "WHERE (:tradeId IS NULL OR s.trade.id = :tradeId) " +
+            "AND (:fraction IS NULL OR s.fraction = :fraction) " +
+            "AND (:sideId IS NULL OR s.side.id = :sideId)")
+    List<SettlementStatusHistoryEntity> findByTradeFractionSide(
+            @Param("tradeId") Long tradeId,
+            @Param("fraction") Integer fraction,
+            @Param("sideId") String sideId,
+            Sort sort);
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/SideRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.SideEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SideRepository extends JpaRepository<SideEntity, String> {
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/StatusRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.StatusEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+public interface StatusRepository extends JpaRepository<StatusEntity, Long>,
+        JpaSpecificationExecutor<StatusEntity> {
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/TradeRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.TradeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+public interface TradeRepository extends JpaRepository<TradeEntity, Long>, JpaSpecificationExecutor<TradeEntity> {
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/TypeMappingRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.TypeMappingEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface TypeMappingRepository extends JpaRepository<TypeMappingEntity, Long> {
+    Optional<TypeMappingEntity> findByExternalSystemAndExternalDescription(String externalSystem, String externalDescription);
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/TypeRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.TypeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface TypeRepository extends JpaRepository<TypeEntity, String> {
+
+    Optional<TypeEntity> findByCategoryIgnoreCaseAndDescriptionIgnoreCase(String category, String description);
+}
+
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/repository/UserNuboRepository.java
+
+```java
+package com.nubo.operations.custody.api.repository;
+
+import com.nubo.operations.custody.api.models.entity.UserNuboEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.Optional;
+
+public interface UserNuboRepository extends JpaRepository<UserNuboEntity, Long> {
+
+    @Query("SELECT u FROM UserNuboEntity u " +
+            "WHERE u.userName = :userName")
+    Optional<UserNuboEntity> findByUserName(String userName);
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/FicAdministratorService.java
+
+```java
+package com.nubo.operations.custody.api.service;
+
+import com.nubo.operations.custody.api.models.dto.response.FicAdministratorOutDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.ParticipantOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SmallParticipantOutDto;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+
+public interface FicAdministratorService {
+
+    PageResponseOutDto<SmallParticipantOutDto> findAllFicAdministrator(Pageable pageable);
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/ParticipantService.java
+
+```java
+package com.nubo.operations.custody.api.service;
+
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.ParticipantOutDto;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+
+public interface ParticipantService {
+
+    PageResponseOutDto<ParticipantOutDto> findAllParticipant(Pageable pageable);
+
+    PageResponseOutDto<ParticipantOutDto> findParticipantCustody(Pageable pageable, Long tradeId, String sideId);
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/RejectionReasonService.java
+
+```java
+package com.nubo.operations.custody.api.service;
+
+import com.nubo.operations.custody.api.models.dto.response.RejectionReasonOutDto;
+
+import java.util.List;
+
+public interface RejectionReasonService {
+
+    List<RejectionReasonOutDto> findAllRejectionReason();
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/SettlementService.java
+
+```java
+package com.nubo.operations.custody.api.service;
+
+import java.util.List;
+
+import com.nubo.operations.custody.api.models.dto.request.SettlementUpdateTransferInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementByCustodyOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementOutDto;
+import com.nubo.operations.custody.api.models.enums.UserTypeEnum;
+
+public interface SettlementService {
+
+
+    PageResponseOutDto<SettlementByCustodyOutDto> findAllSettlementsByUser(
+            List<Long> tradeId, Long participantId, UserTypeEnum userType,
+            int page, int size, String sort, String order, boolean all);
+
+
+    List<SettlementOutDto> updateSettlementStatus(List<SettlementUpdateTransferInDto> settlementUpdateDto,
+                                                  Long motivoId, String motivo);
+
+
+    List<SettlementOutDto> updateCustodyInSettlement(List<SettlementUpdateTransferInDto> settlementUpdateDto);
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/SettlementStatusHistoryService.java
+
+```java
+package com.nubo.operations.custody.api.service;
+
+import com.nubo.operations.custody.api.models.dto.request.SettlementStatusHistoryInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementStatusHistoryOutDto;
+
+
+public interface SettlementStatusHistoryService {
+
+    PageResponseOutDto<SettlementStatusHistoryOutDto> findAllSettlementStatusHistory(
+            Long tradeId, Integer fraction, String sideId,
+            int page, int size, String sort, String order, boolean all);
+
+    SettlementStatusHistoryOutDto createSettlementStatusHistory(SettlementStatusHistoryInDto inDto);
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/StatusService.java
+
+```java
+package com.nubo.operations.custody.api.service;
+
+import com.nubo.operations.custody.api.models.dto.request.StatusInDto;
+import com.nubo.operations.custody.api.models.dto.request.StatusUpdateInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.StatusOutDto;
+import org.springframework.data.domain.Pageable;
+
+public interface StatusService {
+
+    PageResponseOutDto<StatusOutDto> findAllStatus(Pageable pageable,
+                                                   StatusInDto statusParamInDto);
+
+    StatusOutDto findStatusById(Long statusId);
+
+    StatusOutDto createStatus(StatusInDto statusInDto);
+
+    StatusOutDto updateStatus(StatusUpdateInDto statusUpdateInDto, Long statusId);
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/impl/FicAdministratorServiceImpl.java
+
+```java
+package com.nubo.operations.custody.api.service.impl;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.helpers.MapperPageUtil;
+import com.nubo.operations.custody.api.helpers.MapperUtil;
+import com.nubo.operations.custody.api.models.dto.response.FicAdministratorOutDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.ParticipantOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SmallParticipantOutDto;
+import com.nubo.operations.custody.api.models.entity.FicAdministratorEntity;
+import com.nubo.operations.custody.api.models.entity.ParticipantBankAccountEntity;
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.TypeEntity;
+import com.nubo.operations.custody.api.models.enums.TypeEnum;
+import com.nubo.operations.custody.api.models.enums.TypeMappingEnum;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import com.nubo.operations.custody.api.repository.*;
+import com.nubo.operations.custody.api.service.FicAdministratorService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import java.lang.reflect.Type;
+import java.util.List;
+import java.util.Objects;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class FicAdministratorServiceImpl implements FicAdministratorService {
+
+    private final ParticipantRepository participantRepository;
+    private final TypeMappingRepository typeMappingRepository;
+    private final TypeRepository typeRepository;
+    private final ParticipantBankAccountRepository participantBankAccountRepository;
+
+    public PageResponseOutDto<SmallParticipantOutDto> findAllFicAdministrator(Pageable pageable) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findAllFicAdministratorV1(pageable);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private PageResponseOutDto<SmallParticipantOutDto> findAllFicAdministratorV1(Pageable pageable) {
+        log.info("Start method findAllFicAdministratorV1");
+
+        TypeEntity typeEntity = typeMappingRepository
+                .findByExternalSystemAndExternalDescription(TypeMappingEnum.REFERENCE_DATA.getValue(), TypeMappingEnum.ADMIN_FIC.getValue()).orElseThrow(() -> new ServiceException(
+                        ErrorCode.TYPE_NOT_FOUND,
+                        HttpStatus.NOT_FOUND
+                )).getType();
+
+        Page<ParticipantEntity> ficAdministratorEntityPageable= participantRepository.findAllByType(pageable, typeEntity);
+
+        List<SmallParticipantOutDto> ficAdministratorOutDto = ficAdministratorEntityPageable.stream()
+                .map(entity -> {
+                    SmallParticipantOutDto dto = MapperUtil.ficAdministratorEntityToFicAdministratorOutDto(entity);
+                    String bankAccount = findBankAccount(dto.getId());
+                    dto.setBank_account(bankAccount);
+                    return dto;
+                })
+                .toList();
+
+        log.info("End method findAllFicAdministratorV1, number of ficAdministrator found: {}", ficAdministratorOutDto.size());
+
+        return MapperPageUtil.pageToPageResponseOutDto(ficAdministratorOutDto, ficAdministratorEntityPageable);
+    }
+
+    private String findBankAccount(Long participantId){
+
+        String bank_account = "";
+
+        ParticipantEntity participantEntity = participantRepository.findById(participantId).orElse(null);
+
+        TypeEntity originType = typeRepository
+                .findByCategoryIgnoreCaseAndDescriptionIgnoreCase(TypeEnum.CUENTA_CUD.getValue(), TypeEnum.CUENTA_CUD.getValue())
+                .orElseThrow(() -> new ServiceException(ErrorCode.TYPE_NOT_FOUND, HttpStatus.NOT_FOUND));
+
+        TypeEntity conceptType = typeRepository
+                .findByCategoryIgnoreCaseAndDescriptionIgnoreCase(TypeEnum.CONCEPTO_CUENTA.getValue(), TypeEnum.COMPENSACION.getValue())
+                .orElseThrow(() -> new ServiceException(ErrorCode.TYPE_NOT_FOUND, HttpStatus.NOT_FOUND));
+
+        ParticipantBankAccountEntity participantBankAccountEntity = participantBankAccountRepository
+                .findFirstByParticipantAndOriginTypeAndConceptTypeOrderByIdAsc(participantEntity, originType, conceptType).orElse(null);
+
+        if (participantBankAccountEntity != null){
+            bank_account = participantBankAccountEntity.getBankAccount();
+        }
+
+        return bank_account;
+
+    }
+
+
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/impl/ParticipantServiceImpl.java
+
+```java
+package com.nubo.operations.custody.api.service.impl;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.helpers.MapperPageUtil;
+import com.nubo.operations.custody.api.helpers.MapperUtil;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.ParticipantOutDto;
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementEntity;
+import com.nubo.operations.custody.api.models.entity.TradeEntity;
+import com.nubo.operations.custody.api.models.entity.TypeEntity;
+import com.nubo.operations.custody.api.models.enums.TypeMappingEnum;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import com.nubo.operations.custody.api.repository.ParticipantRepository;
+import com.nubo.operations.custody.api.repository.SettlementRepository;
+import com.nubo.operations.custody.api.repository.TradeRepository;
+import com.nubo.operations.custody.api.repository.TypeMappingRepository;
+import com.nubo.operations.custody.api.service.ParticipantService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Objects;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class ParticipantServiceImpl implements ParticipantService {
+
+    private final ParticipantRepository participantRepository;
+    private final TradeRepository tradeRepository;
+    private final TypeMappingRepository typeMappingRepository;
+
+    public PageResponseOutDto<ParticipantOutDto> findAllParticipant(Pageable pageable) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findAllParticipantV1(pageable);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private PageResponseOutDto<ParticipantOutDto> findAllParticipantV1(Pageable pageable) {
+        log.info("Start method findAllParticipantV1");
+
+        Page<ParticipantEntity> pagedResult=participantRepository.findAllCustodianParticipants(pageable);
+
+        List<ParticipantOutDto> participantOutDto = pagedResult.stream()
+                .map(MapperUtil::participantEntityToParticipantOutDto)
+                .toList();
+
+        log.info("End method findAllParticipantV1, number of participant found: {}", participantOutDto.size());
+
+        return MapperPageUtil.pageToPageResponseOutDto(participantOutDto, pagedResult);
+    }
+
+    public PageResponseOutDto<ParticipantOutDto> findParticipantCustody(Pageable pageable, Long tradeId, String sideId) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findParticipantCustodyV1(pageable, tradeId, sideId);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private PageResponseOutDto<ParticipantOutDto> findParticipantCustodyV1(Pageable pageable, Long tradeId, String sideId) {
+        log.info("Start method findParticipantCustodyV1");
+
+        TypeEntity typeEntity = typeMappingRepository
+                .findByExternalSystemAndExternalDescription(TypeMappingEnum.REFERENCE_DATA.getValue(), TypeMappingEnum.CUSTODIO.getValue()).orElseThrow(() -> new ServiceException(
+                        ErrorCode.TYPE_NOT_FOUND,
+                        HttpStatus.NOT_FOUND
+                )).getType();
+
+        TradeEntity tradeEntity = validateTrade(tradeId);
+        Long countryId = tradeEntity.getCountry().getId();
+
+        Page<ParticipantEntity> pagedResult= participantRepository.findAllByTypeAndCountryId(pageable, typeEntity, countryId);
+
+        List<ParticipantOutDto> content = pagedResult.stream()
+                .map(MapperUtil::participantEntityToParticipantOutDto)
+                .toList();
+
+        log.info("End method findParticipantCustodyV1, number of participant found: {}", content.size());
+
+        return MapperPageUtil.pageToPageResponseOutDto(content, pagedResult);
+    }
+    private TradeEntity validateTrade(Long tradeId) {
+        if (tradeId == null) {
+            throw new ServiceException(ErrorCode.TRADE_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+
+        return tradeRepository.findById(tradeId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.TRADE_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/impl/RejectionReasonServiceImpl.java
+
+```java
+package com.nubo.operations.custody.api.service.impl;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.helpers.MapperUtil;
+import com.nubo.operations.custody.api.models.dto.response.RejectionReasonOutDto;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import com.nubo.operations.custody.api.repository.RejectionReasonRepository;
+import com.nubo.operations.custody.api.service.RejectionReasonService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Objects;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class RejectionReasonServiceImpl implements RejectionReasonService {
+
+    private final RejectionReasonRepository rejectionReasonRepository;
+
+    public List<RejectionReasonOutDto> findAllRejectionReason() {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findAllRejectionReasonV1();
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private List<RejectionReasonOutDto> findAllRejectionReasonV1() {
+        log.info("Start method findAllRejectionReasonV1");
+
+        List<RejectionReasonOutDto> rejectionReasonOutDto = rejectionReasonRepository.findAll().stream()
+                .map(MapperUtil::rejectionReasonEntityToRejectionReasonOutDto)
+                .toList();
+
+        log.info("End method findAllRejectionReasonV1, number of rejectionReason found: {}", rejectionReasonOutDto.size());
+
+        return rejectionReasonOutDto;
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/impl/SettlementServiceImpl.java
+
+```java
+package com.nubo.operations.custody.api.service.impl;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.client.kafka.producer.service.KafkaNuboProducer;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.helpers.MapperPageUtil;
+import com.nubo.operations.custody.api.helpers.MapperUtil;
+import com.nubo.operations.custody.api.helpers.SendNotificationUtil;
+import com.nubo.operations.custody.api.models.dto.request.SettlementUpdateTransferInDto;
+import com.nubo.operations.custody.api.models.dto.request.SpecialTradeCompensationInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementByCustodyOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementOutDto;
+import com.nubo.operations.custody.api.models.entity.FicAdministratorEntity;
+import com.nubo.operations.custody.api.models.entity.ParticipantEntity;
+import com.nubo.operations.custody.api.models.entity.RejectionReasonEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementEntity;
+import com.nubo.operations.custody.api.models.entity.SettlementKey;
+import com.nubo.operations.custody.api.models.entity.SettlementStatusHistoryEntity;
+import com.nubo.operations.custody.api.models.entity.StatusEntity;
+import com.nubo.operations.custody.api.models.entity.UserNuboEntity;
+import com.nubo.operations.custody.api.models.enums.CustodianStatusEnum;
+import com.nubo.operations.custody.api.models.enums.NotificationMessageEnum;
+import com.nubo.operations.custody.api.models.enums.NotificationTypeEnum;
+import com.nubo.operations.custody.api.models.enums.UserTypeEnum;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import com.nubo.operations.custody.api.repository.FicAdministratorRepository;
+import com.nubo.operations.custody.api.repository.ParticipantRepository;
+import com.nubo.operations.custody.api.repository.RejectionReasonRepository;
+import com.nubo.operations.custody.api.repository.SettlementRepository;
+import com.nubo.operations.custody.api.repository.SettlementStatusHistoryRepository;
+import com.nubo.operations.custody.api.repository.StatusRepository;
+import com.nubo.operations.custody.api.repository.UserNuboRepository;
+import com.nubo.operations.custody.api.service.SettlementService;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class SettlementServiceImpl implements SettlementService {
+
+    private final SettlementRepository settlementRepository;
+    private final SettlementStatusHistoryRepository settlementStatusHistoryRepository;
+    private final StatusRepository statusRepository;
+    private final ParticipantRepository participantRepository;
+    private final FicAdministratorRepository ficAdministratorRepository;
+    private final RejectionReasonRepository rejectionReasonRepository;
+    private final KafkaNuboProducer kafkaNuboProducer;
+    private final PropertiesConfig propertiesConfig;
+    private final SendNotificationUtil sendNotificationUtil;
+    private final UserNuboRepository userNuboRepository;
+
+    @Override
+    public PageResponseOutDto<SettlementByCustodyOutDto> findAllSettlementsByUser(
+            List<Long> tradeId, Long participantId, UserTypeEnum userType,
+            int page, int size, String sort, String order, boolean all) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findAllSettlementsByUserV1(tradeId, participantId, userType, page, size, sort, order, all);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private PageResponseOutDto<SettlementByCustodyOutDto> findAllSettlementsByUserV1(
+            List<Long> tradeIds, Long participantId, UserTypeEnum userType,
+            int page, int size, String sort, String order, boolean all) {
+        log.info("Start method findAllSettlementsV1 with tradeId: {}, participantId: {}, sideId: {}",
+                tradeIds, participantId, userType);
+
+        Sort.Direction direction = "desc".equalsIgnoreCase(order) ? Sort.Direction.DESC : Sort.Direction.ASC;
+        Sort sortObj = Sort.by(direction, sort != null ? sort : "trade");
+
+        List<SettlementByCustodyOutDto> settlementOutDtoList = new ArrayList<>();
+
+        if (all) {
+            if (userType == UserTypeEnum.INTERNAL) {
+                List<SettlementEntity> allResults = settlementRepository.findByTradeIds(tradeIds, sortObj);
+                settlementOutDtoList.addAll(
+                        allResults.stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                );
+            } else if (userType == UserTypeEnum.EXTERNAL) {
+                for (Long tradeId : tradeIds) {
+                    boolean isBuyer = settlementRepository.isParticipantBuyer(List.of(tradeId), participantId);
+                    boolean isSeller = settlementRepository.isParticipantSeller(List.of(tradeId), participantId);
+
+                    if (isBuyer && isSeller) {
+                        List<SettlementEntity> allResults = settlementRepository.findByTradeIdsAndParticipantMultipleSides(
+                                List.of(tradeId), participantId, sortObj);
+                        settlementOutDtoList.addAll(
+                                allResults.stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                        );
+                    } else if (isBuyer) {
+                        List<SettlementEntity> allResults = settlementRepository.findByTradeIdsAndParticipantAndSide(
+                                List.of(tradeId), participantId, "1", sortObj);
+                        settlementOutDtoList.addAll(
+                                allResults.stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                        );
+                    } else if (isSeller) {
+                        List<SettlementEntity> allResults = settlementRepository.findByTradeIdsAndParticipantAndSide(
+                                List.of(tradeId), participantId, "2", sortObj);
+                        settlementOutDtoList.addAll(
+                                allResults.stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                        );
+                    }
+                }
+            }
+
+            return buildPageResponse(settlementOutDtoList, 0, settlementOutDtoList.size(), settlementOutDtoList.size());
+        } else {
+            Pageable pageable = PageRequest.of(page, size, sortObj);
+
+            if (userType == UserTypeEnum.INTERNAL) {
+                Page<SettlementEntity> pageResult = settlementRepository.findByTradeIds(tradeIds, pageable);
+                settlementOutDtoList.addAll(
+                        pageResult.getContent().stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                );
+                return MapperPageUtil.pageToPageResponseOutDto(settlementOutDtoList, pageResult);
+            } else if (userType == UserTypeEnum.EXTERNAL) {
+                for (Long tradeId : tradeIds) {
+                    boolean isBuyer = settlementRepository.isParticipantBuyer(List.of(tradeId), participantId);
+                    boolean isSeller = settlementRepository.isParticipantSeller(List.of(tradeId), participantId);
+
+                    if (isBuyer && isSeller) {
+                        Page<SettlementEntity> pageResult = settlementRepository.findByTradeIdsAndParticipantMultipleSides(
+                                List.of(tradeId), participantId, pageable);
+                        settlementOutDtoList.addAll(
+                                pageResult.getContent().stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                        );
+                    } else if (isBuyer) {
+                        Page<SettlementEntity> pageResult = settlementRepository.findByTradeIdsAndParticipantAndSide(
+                                List.of(tradeId), participantId, "1", pageable);
+                        settlementOutDtoList.addAll(
+                                pageResult.getContent().stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                        );
+                    } else if (isSeller) {
+                        Page<SettlementEntity> pageResult = settlementRepository.findByTradeIdsAndParticipantAndSide(
+                                List.of(tradeId), participantId, "2", pageable);
+                        settlementOutDtoList.addAll(
+                                pageResult.getContent().stream().map(MapperUtil::settlementEntityToSettlementByCustodyOutDto).toList()
+                        );
+                    }
+                }
+
+                Page<SettlementByCustodyOutDto> resultPage = new PageImpl<>(settlementOutDtoList, pageable, settlementOutDtoList.size());
+                return MapperPageUtil.pageToPageResponseOutDto(settlementOutDtoList, resultPage);
+            }
+        }
+
+        log.debug("End method findAllSettlementsV1, number of settlements found: {}", settlementOutDtoList.size());
+
+        return buildPageResponse(settlementOutDtoList, page, size, settlementOutDtoList.size());
+    }
+
+    @Override
+    public List<SettlementOutDto> updateSettlementStatus(List<SettlementUpdateTransferInDto> settlementUpdateDtoList,
+                                                         Long motivoId, String motivo) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return updateSettlementStatusV1(settlementUpdateDtoList, motivoId, motivo);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private List<SettlementOutDto> updateSettlementStatusV1(List<SettlementUpdateTransferInDto> settlementUpdateDtoList,
+                                                            Long motivoId, String motivo) {
+        log.debug("Start method updateSettlementV1,  settlementUpdateInDto -> {}",
+                settlementUpdateDtoList);
+
+        Set<SpecialTradeCompensationInDto> specialTradeCompensationInDtoList = new HashSet<>();
+
+        List<SettlementOutDto> settlementOutDtoList = new ArrayList<>();
+
+        String rejectionReason = getRejectionReason(motivoId, motivo);
+
+        for (SettlementUpdateTransferInDto settlementUpdateInDto : settlementUpdateDtoList) {
+
+            SettlementKey settlementKey = new SettlementKey(settlementUpdateInDto.getTradeId(),
+                    settlementUpdateInDto.getFraction(), settlementUpdateInDto.getSideId());
+            SettlementEntity settlementEntity = validateSettlement(settlementKey);
+
+            this.addListSpecialTradeCompensation(settlementEntity, settlementUpdateInDto, specialTradeCompensationInDtoList);
+
+            if (!ObjectUtils.isEmpty(settlementUpdateInDto.getCustodianStatusId())) {
+                settlementEntity.setCustodianStatus(validateStatus(settlementUpdateInDto.getCustodianStatusId()));
+            }
+
+            if (CustodianStatusEnum.ADMITTED.getValue().equals(settlementUpdateInDto.getCustodianStatusId())) {
+                settlementEntity.setDirectDepositor(validateParticipant(settlementUpdateInDto.getCustodianId()));
+            }
+
+            if (CustodianStatusEnum.TRANSFERRED.getValue().equals(settlementUpdateInDto.getCustodianStatusId())) {
+
+                if (!ObjectUtils.isEmpty(settlementUpdateInDto.getCustodianId())) {
+                    settlementEntity.setCustodian(validateParticipant(settlementUpdateInDto.getCustodianId()));
+                }
+
+                if (!ObjectUtils.isEmpty(settlementUpdateInDto.getFicAdministratorId())) {
+                    settlementEntity.setFicAdministrator(validateFicAdministrator(settlementUpdateInDto.getFicAdministratorId()));
+                }
+
+            }
+
+            if (!ObjectUtils.isEmpty(rejectionReason)) {
+                settlementEntity.setRejectionReason(rejectionReason);
+            }
+
+            
+            settlementEntity.setLastModifyApplication(propertiesConfig.getApiName());
+            settlementEntity.setLastModifyIp(PropertiesContext.getClientIp());
+            settlementEntity.setLastModifyUser(PropertiesContext.getClientUser());
+            settlementEntity.setLastModifyDate(PropertiesContext.getClientDatetime());
+
+
+            SettlementOutDto settlementOutDto =
+                    MapperUtil.settlementEntityToSettlementOutDto(settlementRepository.save(settlementEntity));
+            settlementOutDtoList.add(settlementOutDto);
+
+            resolveNotificationUsersAndSend(settlementUpdateInDto, settlementEntity);
+
+            log.info("Update settlement -> {}", settlementOutDto);
+
+            createSettlementStatusHistory(settlementEntity, settlementEntity.getCustodianStatus());
+
+            log.info("Create settlement Status History -> {}", settlementOutDto);
+        }
+
+        this.sendKafkaMessageOperationSpecialStatusCompensation(specialTradeCompensationInDtoList);
+
+        log.info("End method updateSettlementV1, settlement -> {}", settlementOutDtoList);
+        return settlementOutDtoList;
+    }
+
+
+    public List<SettlementOutDto> updateCustodyInSettlement(List<SettlementUpdateTransferInDto> settlementUpdateDto){
+
+        return new ArrayList<>();
+    }
+
+    private void resolveNotificationUsersAndSend(SettlementUpdateTransferInDto settlementUpdateInDto, SettlementEntity settlementEntity) {
+       
+        UserNuboEntity userNuboEntity = userNuboRepository.findByUserName(PropertiesContext.getClientUser())
+                        .orElseThrow(() -> new ServiceException(ErrorCode.NOT_FOUND, HttpStatus.NOT_FOUND));
+
+        if (CustodianStatusEnum.REJECTED.getValue().equals(settlementUpdateInDto.getCustodianStatusId())) {
+
+                sendNotificationUtil.sendNotification(NotificationTypeEnum.INFORMATIVE, NotificationMessageEnum.REQUEST_REJECTED,
+                        settlementEntity.getTrade().getId(), userNuboEntity.getId()
+                );
+            }else if (CustodianStatusEnum.ADMITTED.getValue().equals(settlementUpdateInDto.getCustodianStatusId())) {
+
+                sendNotificationUtil.sendNotification(NotificationTypeEnum.INFORMATIVE, NotificationMessageEnum.REQUEST_APPROVED,
+                        settlementEntity.getTrade().getId(), userNuboEntity.getId()
+                );
+            } else if (CustodianStatusEnum.TRANSFERRED.getValue().equals(settlementUpdateInDto.getCustodianStatusId())) {
+
+                sendNotificationUtil.sendNotification(NotificationTypeEnum.INFORMATIVE, NotificationMessageEnum.REQUEST_TRANSMITTED,
+                        settlementEntity.getTrade().getId(), userNuboEntity.getId()
+                );
+            }
+    }
+
+    private String getRejectionReason(Long motivoId, String motivo) {
+        if (motivoId == null) return null;
+
+        RejectionReasonEntity rejectionStatus = validateRejectionReason(motivoId);
+        return (motivo == null)
+                ? String.format("%d - %s ", motivoId, rejectionStatus.getReason())
+                : String.format("%d - %s : %s", motivoId, rejectionStatus.getReason(), motivo);
+    }
+
+    public void createSettlementStatusHistory(SettlementEntity settlementEntity, StatusEntity statusEntity) {
+        SettlementStatusHistoryEntity settlementStatusHistoryEntity = SettlementStatusHistoryEntity.builder()
+                .trade(settlementEntity.getTrade())
+                .fraction(settlementEntity.getFraction())
+                .side(settlementEntity.getSide())
+                .time(PropertiesContext.getClientDatetime())
+                .status(statusEntity)
+                .lastModifyUser(settlementEntity.getLastModifyUser())
+                .lastModifyApplication(settlementEntity.getLastModifyApplication())
+                .lastModifyDate(PropertiesContext.getClientDatetime())
+                .lastModifyIp(settlementEntity.getLastModifyIp())
+                .build();
+
+        settlementStatusHistoryRepository.save(settlementStatusHistoryEntity);
+    }
+
+    private void addListSpecialTradeCompensation(SettlementEntity settlementEntity,
+                                                 SettlementUpdateTransferInDto settlementUpdateInDto,
+                                                 Set<SpecialTradeCompensationInDto> specialTradeCompensationInDtoList) {
+        boolean isAdmittedCustodianStatus =
+                settlementEntity.getCustodianStatus() != null &&
+                        CustodianStatusEnum.ADMITTED.getValue().equals(settlementEntity.getCustodianStatus().getId());
+
+        boolean isAdmittedFromDto =
+                CustodianStatusEnum.ADMITTED.getValue().equals(settlementUpdateInDto.getCustodianStatusId());
+
+        if ((isAdmittedCustodianStatus || isAdmittedFromDto)
+                && !ObjectUtils.isEmpty(settlementEntity.getTrade().getSpecialTrade()) &&
+                !ObjectUtils.isEmpty(settlementEntity.getTrade().getPaymentType())) {
+            SpecialTradeCompensationInDto kafkaSpecialTradeCompensationInDto =
+                    SpecialTradeCompensationInDto.builder()
+                            .specialTradeId(settlementEntity.getTrade().getSpecialTrade().getId())
+                            .paymentTypeId(settlementEntity.getTrade().getPaymentType().getId())
+                            .build();
+            specialTradeCompensationInDtoList.add(kafkaSpecialTradeCompensationInDto);
+        }
+    }
+
+    private void sendKafkaMessageOperationSpecialStatusCompensation(
+            Set<SpecialTradeCompensationInDto> specialTradeCompensationInDtoList) {
+        log.debug("Start method sendKafkaMessageOperationSpecialStatusCompensation, specialTradeCompensationInDtoList -> {}",
+                specialTradeCompensationInDtoList);
+
+        for (SpecialTradeCompensationInDto specialTradeCompensationInDto : specialTradeCompensationInDtoList) {
+            try {
+                kafkaNuboProducer.sendMessageSpecialTradeCompensation(specialTradeCompensationInDto.getSpecialTradeId(),
+                        specialTradeCompensationInDto.getPaymentTypeId());
+            } catch (Exception ex) {
+                log.error("Error sendKafkaMessageOperationSpecialStatusCompensation -> {}", ex.getMessage());
+            }
+        }
+
+        log.info("End method sendKafkaMessageOperationSpecialStatusCompensation");
+    }
+
+    private SettlementEntity validateSettlement(SettlementKey settlementKey) {
+        return settlementRepository.findByCompositeKey(settlementKey.getTrade(),
+                        settlementKey.getFraction(), settlementKey.getSide())
+                .orElseThrow(() -> new ServiceException(ErrorCode.SETTLEMENT_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private StatusEntity validateStatus(Long statusId) {
+        return statusRepository.findById(statusId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.STATUS_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private ParticipantEntity validateParticipant(Long participantId) {
+        return participantRepository.findById(participantId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.PARTICIPANT_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private ParticipantEntity validateFicAdministrator(Long ficAdministratorId) {
+        return participantRepository.findById(ficAdministratorId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.FIC_ADMINISTRATOR_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private RejectionReasonEntity validateRejectionReason(Long ficAdministratorId) {
+        return rejectionReasonRepository.findById(ficAdministratorId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.REJECTION_REASON_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private PageResponseOutDto<SettlementByCustodyOutDto> buildPageResponse(
+            List<SettlementByCustodyOutDto> content, int page, int size, int totalElements) {
+        PageResponseOutDto<SettlementByCustodyOutDto> pageResponse = new PageResponseOutDto<>();
+        pageResponse.setContent(content);
+        pageResponse.setPageNumber(page);
+        pageResponse.setPageSize(size);
+        pageResponse.setTotalElements((long) totalElements);
+        pageResponse.setTotalPages((int) Math.ceil((double) totalElements / size));
+        return pageResponse;
+    }
+
+}
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/impl/SettlementStatusHistoryServiceImpl.java
+
+```java
+package com.nubo.operations.custody.api.service.impl;
+
+import java.util.List;
+import java.util.Objects;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.helpers.MapperPageUtil;
+import com.nubo.operations.custody.api.helpers.MapperUtil;
+import com.nubo.operations.custody.api.models.dto.request.SettlementStatusHistoryInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementStatusHistoryOutDto;
+import com.nubo.operations.custody.api.models.entity.SettlementStatusHistoryEntity;
+import com.nubo.operations.custody.api.models.entity.SideEntity;
+import com.nubo.operations.custody.api.models.entity.StatusEntity;
+import com.nubo.operations.custody.api.models.entity.TradeEntity;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import com.nubo.operations.custody.api.repository.SettlementStatusHistoryRepository;
+import com.nubo.operations.custody.api.repository.SideRepository;
+import com.nubo.operations.custody.api.repository.StatusRepository;
+import com.nubo.operations.custody.api.repository.TradeRepository;
+import com.nubo.operations.custody.api.service.SettlementStatusHistoryService;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class SettlementStatusHistoryServiceImpl implements SettlementStatusHistoryService {
+
+    private final SettlementStatusHistoryRepository settlementStatusHistoryRepository;
+    private final TradeRepository tradeRepository;
+    private final SideRepository sideRepository;
+    private final StatusRepository statusRepository;
+    private final PropertiesConfig propertiesConfig;
+
+    @Override
+    public PageResponseOutDto<SettlementStatusHistoryOutDto> findAllSettlementStatusHistory(
+            Long tradeId, Integer fraction, String sideId,
+            int page, int size, String sort, String order, boolean all) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findAllSettlementStatusHistoryV1(tradeId, fraction, sideId, page, size, sort, order, all);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private PageResponseOutDto<SettlementStatusHistoryOutDto> findAllSettlementStatusHistoryV1(
+            Long tradeId, Integer fraction, String sideId,
+            int page, int size, String sort, String order, boolean all) {
+        log.info("Start method findAllSettlementStatusHistoryV1");
+
+        Sort.Direction direction = "desc".equalsIgnoreCase(order) ? Sort.Direction.DESC : Sort.Direction.ASC;
+        Sort sortObj = Sort.by(direction, sort != null ? sort : "time");
+
+        if (all) {
+            List<SettlementStatusHistoryEntity> allResults = settlementStatusHistoryRepository
+                    .findByTradeFractionSide(tradeId, fraction, sideId, sortObj);
+            List<SettlementStatusHistoryOutDto> outDtos = allResults.stream()
+                    .map(MapperUtil::settlementStatusHistoryEntityToSettlementStatusHistoryOutDto)
+                    .toList();
+
+            log.debug("End method findAllSettlementStatusHistoryV1, total records: {}", outDtos.size());
+            return buildPageResponse(outDtos, 0, outDtos.size(), outDtos.size());
+        } else {
+            Pageable pageable = PageRequest.of(page, size, sortObj);
+            Page<SettlementStatusHistoryEntity> pageResult = settlementStatusHistoryRepository
+                    .findByTradeFractionSide(tradeId, fraction, sideId, pageable);
+            List<SettlementStatusHistoryOutDto> outDtos = pageResult.getContent().stream()
+                    .map(MapperUtil::settlementStatusHistoryEntityToSettlementStatusHistoryOutDto)
+                    .toList();
+
+            log.debug("End method findAllSettlementStatusHistoryV1, total records: {}", outDtos.size());
+            return MapperPageUtil.pageToPageResponseOutDto(outDtos, pageResult);
+        }
+    }
+
+    @Override
+    public SettlementStatusHistoryOutDto createSettlementStatusHistory(SettlementStatusHistoryInDto settlementStatusHistoryInDto) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return createSettlementStatusHistoryV1(settlementStatusHistoryInDto);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private SettlementStatusHistoryOutDto createSettlementStatusHistoryV1(SettlementStatusHistoryInDto settlementStatusHistoryInDto) {
+        log.info("Start method createSettlementStatusHistoryV1, SettlementStatusHistory -> {}", settlementStatusHistoryInDto);
+
+        SettlementStatusHistoryEntity settlementStatusHistoryEntity = SettlementStatusHistoryEntity.builder()
+                .trade(validateTrade(settlementStatusHistoryInDto.getTradeId()))
+                .fraction(settlementStatusHistoryInDto.getFraction())
+                .side(validateSide(settlementStatusHistoryInDto.getSideId()))
+                .time(settlementStatusHistoryInDto.getTime())
+                .status(validateStatus(settlementStatusHistoryInDto.getStatusId()))
+                .lastModifyApplication(propertiesConfig.getApiName())
+                .lastModifyIp(PropertiesContext.getClientIp())
+                .lastModifyUser(PropertiesContext.getClientUser())
+                .lastModifyDate(PropertiesContext.getClientDatetime())
+                .build();
+
+        SettlementStatusHistoryEntity savedEntity = settlementStatusHistoryRepository.save(settlementStatusHistoryEntity);
+
+        SettlementStatusHistoryOutDto settlementStatusHistoryOutDto = MapperUtil
+                .settlementStatusHistoryEntityToSettlementStatusHistoryOutDto(savedEntity);
+
+        log.info("End method createSettlementStatusHistoryV1, SettlementStatusHistory -> {}", settlementStatusHistoryOutDto);
+        return settlementStatusHistoryOutDto;
+    }
+
+    private SideEntity validateSide(String sideId) {
+        return sideRepository.findById(sideId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.SIDE_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private TradeEntity validateTrade(Long tradeId) {
+        return tradeRepository.findById(tradeId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.TRADE_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private StatusEntity validateStatus(Long statusId) {
+        return statusRepository.findById(statusId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.STATUS_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+    private PageResponseOutDto<SettlementStatusHistoryOutDto> buildPageResponse(
+            List<SettlementStatusHistoryOutDto> content, int page, int size, int totalElements) {
+        PageResponseOutDto<SettlementStatusHistoryOutDto> pageResponse = new PageResponseOutDto<>();
+        pageResponse.setContent(content);
+        pageResponse.setPageNumber(page);
+        pageResponse.setPageSize(size);
+        pageResponse.setTotalElements((long) totalElements);
+        pageResponse.setTotalPages((int) Math.ceil((double) totalElements / size));
+        return pageResponse;
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/service/impl/StatusServiceImpl.java
+
+```java
+package com.nubo.operations.custody.api.service.impl;
+
+import com.nubo.operations.custody.api.application.properties.PropertiesConfig;
+import com.nubo.operations.custody.api.application.properties.PropertiesContext;
+import com.nubo.operations.custody.api.exception.ServiceException;
+import com.nubo.operations.custody.api.exception.error.ErrorCode;
+import com.nubo.operations.custody.api.helpers.MapperPageUtil;
+import com.nubo.operations.custody.api.helpers.MapperUtil;
+import com.nubo.operations.custody.api.models.dto.request.StatusInDto;
+import com.nubo.operations.custody.api.models.dto.request.StatusUpdateInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.StatusOutDto;
+import com.nubo.operations.custody.api.models.entity.StatusEntity;
+import com.nubo.operations.custody.api.models.enums.VersionApiEnum;
+import com.nubo.operations.custody.api.repository.StatusRepository;
+import com.nubo.operations.custody.api.service.StatusService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class StatusServiceImpl implements StatusService {
+
+    private final StatusRepository statusRepository;
+    private final PropertiesConfig propertiesConfig;
+
+    @Override
+    public PageResponseOutDto<StatusOutDto> findAllStatus(Pageable pageable, StatusInDto statusParamInDto) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findAllStatusV1(pageable, statusParamInDto);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private PageResponseOutDto<StatusOutDto> findAllStatusV1(Pageable pageable, StatusInDto statusInDto) {
+        log.info("Start method findAllStatusV1");
+
+        Page<StatusEntity> page = statusRepository.findAll(statusSpecification(statusInDto), pageable);
+
+        List<StatusOutDto> statusOutDtoList = page.getContent().stream()
+                .map(MapperUtil::statusEntityToStatusOutDto)
+                .toList();
+
+        log.info("End method findAllStatusV1, statusOutDtoList -> {}", statusOutDtoList);
+
+        return MapperPageUtil.pageToPageResponseOutDto(statusOutDtoList, page);
+    }
+
+    @Override
+    public StatusOutDto findStatusById(Long statusId) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return findStatusByIdV1(statusId);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private StatusOutDto findStatusByIdV1(Long statusId) {
+        log.info("Start method findStatusByIdV1, statusId -> {}", statusId);
+
+        StatusEntity statusEntity = validateStatus(statusId);
+
+        StatusOutDto statusOutDto = MapperUtil.statusEntityToStatusOutDto(statusEntity);
+
+        log.info("End method findStatusByIdV1, statusOutDto -> {}", statusOutDto);
+
+        return statusOutDto;
+    }
+
+    @Override
+    public StatusOutDto createStatus(StatusInDto statusInDto) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return createStatusV1(statusInDto);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private StatusOutDto createStatusV1(StatusInDto statusInDto) {
+        log.debug("Start method createStatusV1, statusInDto -> {}", statusInDto);
+
+        StatusEntity statusEntity = StatusEntity.builder()
+                .description(statusInDto.getDescription())
+                .category(statusInDto.getCategory())
+                .lastModifyApplication(propertiesConfig.getApiName())
+                .lastModifyIp(PropertiesContext.getClientIp())
+                .lastModifyUser(PropertiesContext.getClientUser())
+                .lastModifyDate(PropertiesContext.getClientDatetime())
+                .build();
+
+        StatusOutDto statusOutDto = MapperUtil.statusEntityToStatusOutDto(statusRepository.save(statusEntity));
+
+        log.info("End method createStatusV1, statusOutDto -> {}", statusOutDto);
+
+        return statusOutDto;
+    }
+
+    @Override
+    public StatusOutDto updateStatus(StatusUpdateInDto statusUpdateInDto, Long statusId) {
+        if (Objects.requireNonNull(VersionApiEnum.fromValue(PropertiesContext.getVersion())) == VersionApiEnum.V1) {
+            return updateStatusV1(statusUpdateInDto, statusId);
+        } else {
+            throw new ServiceException(ErrorCode.VERSION_API_NOT_FOUND, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    private StatusOutDto updateStatusV1(StatusUpdateInDto statusUpdateInDto, Long statusId) {
+        log.debug("Start method updateStatusV1, statusUpdateInDto -> {}, statusId -> {}",
+                statusUpdateInDto, statusId);
+
+        StatusEntity statusEntityLast = validateStatus(statusId);
+
+        StatusEntity statusEntity = StatusEntity.builder()
+                .id(statusEntityLast.getId())
+                .description(ObjectUtils.isEmpty(statusUpdateInDto.getDescription()) ?
+                        statusEntityLast.getDescription() : statusUpdateInDto.getDescription())
+                .category(ObjectUtils.isEmpty(statusUpdateInDto.getCategory()) ?
+                        statusEntityLast.getCategory() : statusUpdateInDto.getCategory())
+                .lastModifyApplication(propertiesConfig.getApiName())
+                .lastModifyIp(PropertiesContext.getClientIp())
+                .lastModifyUser(PropertiesContext.getClientUser())
+                .lastModifyDate(PropertiesContext.getClientDatetime())
+                .build();
+
+        StatusOutDto statusOutDto = MapperUtil.statusEntityToStatusOutDto(statusRepository.save(statusEntity));
+
+        log.info("End method updateStatusV1, statusOutDto -> {}", statusOutDto);
+
+        return statusOutDto;
+    }
+
+    private Specification<StatusEntity> statusSpecification(StatusInDto statusInDto) {
+        return (root, query, criteriaBuilder) -> {
+            List<jakarta.persistence.criteria.Predicate> predicates = new ArrayList<>();
+            if (statusInDto.getId() != null) {
+                predicates.add(criteriaBuilder.equal(root.get("id"), statusInDto.getId()));
+            }
+            return criteriaBuilder.and(predicates.toArray(new jakarta.persistence.criteria.Predicate[0]));
+        };
+    }
+
+    private StatusEntity validateStatus(Long statusId) {
+        return statusRepository.findById(statusId)
+                .orElseThrow(() -> new ServiceException(ErrorCode.STATUS_NOT_FOUND, HttpStatus.NOT_FOUND));
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/web/controller/FicAdministratorRestController.java
+
+```java
+package com.nubo.operations.custody.api.web.controller;
+
+import com.nubo.operations.custody.api.application.annotations.RateLimited;
+import com.nubo.operations.custody.api.models.dto.response.FicAdministratorOutDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.ParticipantOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SmallParticipantOutDto;
+import com.nubo.operations.custody.api.service.FicAdministratorService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@Tag(name = "FicAdministrator")
+@RestController
+@RequestMapping("/{version}/fic-administrator")
+@RequiredArgsConstructor
+@RateLimited
+public class FicAdministratorRestController {
+
+    private final FicAdministratorService ficAdministratorService;
+
+    @Operation(summary = "Find all FicAdministrator", description = "Find all FicAdministrator")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = SmallParticipantOutDto[].class)))})
+    @GetMapping
+    public ResponseEntity<PageResponseOutDto<SmallParticipantOutDto>> findAllFicAdministrator(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) String sort,
+            @RequestParam(required = false) String order) {
+        Pageable pageable;
+        if (sort != null && order != null) {
+            Sort.Direction direction = "desc".equalsIgnoreCase(order) ? Sort.Direction.DESC : Sort.Direction.ASC;
+            Sort sorting = Sort.by(direction, sort);
+            pageable = PageRequest.of(page, size, sorting);
+        } else {
+            pageable = PageRequest.of(page, size);
+        }
+        PageResponseOutDto<SmallParticipantOutDto> countries = ficAdministratorService.findAllFicAdministrator(pageable);
+        return ResponseEntity.ok(countries);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/web/controller/ParticipantRestController.java
+
+```java
+package com.nubo.operations.custody.api.web.controller;
+
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.ParticipantOutDto;
+import com.nubo.operations.custody.api.service.ParticipantService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@Tag(name = "Participant")
+@RestController
+@RequestMapping("/{version}/participant")
+@RequiredArgsConstructor
+public class ParticipantRestController {
+
+    private final ParticipantService participantService;
+
+    @Operation(summary = "Find all Participant", description = "Find all Participant")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = ParticipantOutDto[].class)))})
+    @GetMapping
+    public ResponseEntity<PageResponseOutDto<ParticipantOutDto>> findAllParticipant(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) String sort,
+            @RequestParam(required = false) String order) {
+        Pageable pageable;
+        if (sort != null && order != null) {
+            Sort.Direction direction = "desc".equalsIgnoreCase(order) ? Sort.Direction.DESC : Sort.Direction.ASC;
+            Sort sorting = Sort.by(direction, sort);
+            pageable = PageRequest.of(page, size, sorting);
+        } else {
+            pageable = PageRequest.of(page, size);
+        }
+        PageResponseOutDto<ParticipantOutDto> countries = participantService.findAllParticipant(pageable);
+        return ResponseEntity.ok(countries);
+    }
+
+    @Operation(summary = "Find Participant Custody", description = "Find Participant Custody")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = ParticipantOutDto[].class)))})
+    @GetMapping("/custody")
+    public ResponseEntity<PageResponseOutDto<ParticipantOutDto>> findParticipantCustody(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) Long tradeId,
+            @RequestParam(required = false)  String sideId,
+            @RequestParam(required = false) String sort,
+            @RequestParam(required = false) String order) {
+        Pageable pageable;
+        if (sort != null && order != null) {
+            Sort.Direction direction = "desc".equalsIgnoreCase(order) ? Sort.Direction.DESC : Sort.Direction.ASC;
+            Sort sorting = Sort.by(direction, sort);
+            pageable = PageRequest.of(page, size, sorting);
+        } else {
+            pageable = PageRequest.of(page, size);
+        }
+        PageResponseOutDto<ParticipantOutDto> countries = participantService.findParticipantCustody(pageable, tradeId, sideId);
+        return ResponseEntity.ok(countries);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/web/controller/RejectionReasonRestController.java
+
+```java
+package com.nubo.operations.custody.api.web.controller;
+
+import com.nubo.operations.custody.api.models.dto.response.RejectionReasonOutDto;
+import com.nubo.operations.custody.api.service.RejectionReasonService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@Tag(name = "RejectionReason")
+@RestController
+@RequestMapping("/{version}/rejection-reason")
+@RequiredArgsConstructor
+public class RejectionReasonRestController {
+
+    private final RejectionReasonService rejectionReasonService;
+
+    @Operation(summary = "Find all Rejection Reason", description = "Find all Rejection Reason")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = RejectionReasonOutDto[].class)))})
+    @GetMapping
+    public ResponseEntity<List<RejectionReasonOutDto>> findAllRejectionReason() {
+        List<RejectionReasonOutDto> countries = rejectionReasonService.findAllRejectionReason();
+        return ResponseEntity.ok(countries);
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/web/controller/SettlementRestController.java
+
+```java
+package com.nubo.operations.custody.api.web.controller;
+
+import java.util.List;
+
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nubo.operations.custody.api.models.dto.request.SettlementUpdateTransferInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementByCustodyOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementOutDto;
+import com.nubo.operations.custody.api.models.enums.UserTypeEnum;
+import com.nubo.operations.custody.api.service.SettlementService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+
+@Tag(name = "Settlement")
+@RestController
+@RequestMapping("/{version}/settlement")
+@RequiredArgsConstructor
+public class SettlementRestController {
+
+    private final SettlementService settlementService;
+
+
+    @Operation(summary = "Find all Settlement By User", description = "Find all Settlement By User")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = SettlementByCustodyOutDto[].class)))})
+    @GetMapping("/by-list-tradeid-participant-user")
+    public ResponseEntity<PageResponseOutDto<SettlementByCustodyOutDto>> findAllSettlement(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sort,
+            @RequestParam(defaultValue = "asc") String order,
+            @RequestParam(defaultValue = "false") boolean all,
+            @Parameter(example = "1") @RequestParam(required = false) List<Long> tradeId,
+            @Parameter(example = "1") @RequestParam(required = false) Long participantId,
+            @Parameter(example = "1A") @RequestParam(required = false) UserTypeEnum userType) {
+
+        PageResponseOutDto<SettlementByCustodyOutDto> countries = settlementService
+                .findAllSettlementsByUser(tradeId, participantId, userType, page, size, sort, order, all);
+        return ResponseEntity.ok(countries);
+    }
+
+    @Operation(summary = "Update Settlement Status", description = "Update settlement Status")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = SettlementOutDto.class)))})
+    @PatchMapping("/status")
+    public ResponseEntity<List<SettlementOutDto>> updateSettlementStatusTransfer(
+            @Valid @RequestBody List<SettlementUpdateTransferInDto> settlementUpdateInDtoList,
+            @Parameter(example = "1") @RequestParam(required = false) Long motivoId,
+            @Parameter(example = "1A") @RequestParam(required = false) String motivo) {
+
+        return ResponseEntity.ok(settlementService
+                .updateSettlementStatus(settlementUpdateInDtoList, motivoId, motivo));
+    }
+
+    @Operation(summary = "Update Settlement Status", description = "Update settlement Status")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = SettlementOutDto.class)))})
+    @PatchMapping("/custody")
+    public ResponseEntity<List<SettlementOutDto>> updateCustodyInSettlement(
+            @Valid @RequestBody List<SettlementUpdateTransferInDto> settlementUpdateInDtoList) {
+
+        return ResponseEntity.ok(settlementService
+                .updateCustodyInSettlement(settlementUpdateInDtoList));
+    }
+
+}
+
+```
+
+## src/main/java/com/nubo/operations/custody/api/web/controller/SettlementStatusHistoryRestController.java
+
+```java
+package com.nubo.operations.custody.api.web.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nubo.operations.custody.api.models.dto.request.SettlementStatusHistoryInDto;
+import com.nubo.operations.custody.api.models.dto.response.PageResponseOutDto;
+import com.nubo.operations.custody.api.models.dto.response.SettlementStatusHistoryOutDto;
+import com.nubo.operations.custody.api.service.SettlementStatusHistoryService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+
+@Tag(name = "SettlementStatusHistory")
+@RestController
+@RequestMapping("/{version}/settlement-status-history")
+@RequiredArgsConstructor
+public class SettlementStatusHistoryRestController {
+
+    private final SettlementStatusHistoryService settlementStatusHistoryService;
+
+    @Operation(summary = "Find all Settlement Status History", description = "Find all Settlement Status History")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully Response",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
+                    schema = @Schema(implementation = SettlementStatusHistoryOutDto[].class)))})
+    @GetMapping
+    public ResponseEntity<PageResponseOutDto<SettlementStatusHistoryOutDto>> findAllSettlement(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sort,
+            @RequestParam(defaultValue = "asc") String order,
+            @RequestParam(defaultValue = "false") boolean all,
+            @Parameter(example = "1") @RequestParam(required = false) Long tradeId,
+            @Parameter(example = "1") @RequestParam(required = false) Integer fraction,
+            @Parameter(example = "1A") @RequestParam(required = false) String sideId) {
+
+        return ResponseEntity.ok(settlementStatusHistoryService
+                .findAllSettlementStatusHistory(tradeId, fraction, sideId, page, size, sort, order, all));
+    }
+
+    @Operation(summary = "Create Settlement Status History")
+    @ApiResponse(responseCode = "201", description = "Successfully Created Settlement Status History",
+            content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE))
+    @PostMapping
+    public ResponseEntity<SettlementStatusHistoryOutDto> createSettlementStatusHistory(
+            @Valid @RequestBody SettlementStatusHistoryInDto inDto) {
+        SettlementStatusHistoryOutDto created = settlementStatusHistoryService.createSettlementStatusHistory(inDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(created);
+    }
+
+}
+
+```
+
+## src/main/resources/application-dev.yml
+
+```yaml
+server:
+  port: @spring.port@
+spring:
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}?@datasource.url.application.name@
+    hikari:
+      maximum-pool-size: ${DB_HIKARI_MAXIMUM_POOL_SIZE}
+      minimum-idle: ${DB_HIKARI_MINIMUM_IDLE}
+      idle-timeout: ${DB_HIKARI_IDLE_TIMEOUT}
+      validation-timeout: ${DB_HIKARI_VALIDATION_TIMEOUT}
+      max-lifetime: ${DB_HIKARI_MAX_LIFETIME}
+      connection-timeout: ${DB_HIKARI_CONNECTION_TIMEOUT}
+      leak-detection-threshold: ${DB_HIKARI_LEAK_DETECTION_THRESHOLD}
+      connection-test-query: SELECT 1
+      pool-name: @hikari.pool.name@
+  jpa:
+    hibernate:
+      ddl-auto: none
+      default_schema: NUANBODB
+    show-sql: 'false'
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          client-id: ${KEYCLOAK_CLIENT_ID}
+          client-secret: ${KEYCLOAK_CLIENT_SECRET}
+          introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+logging:
+  config: classpath:log/log4j2.properties
+  level:
+    org.hibernate: ERROR
+    org.springframework.jdbc.datasource: ERROR
+    com.zaxxer.hikari: ERROR
+config:
+  application:
+    rateLimited:
+      number-max-request: ${RATE_LIMIT_MAX_REQUEST}
+      range-time-request: ${RATE_LIMIT_TIME_REQUEST}
+      waiting-time: ${RATE_LIMIT_WAITING_TIME}
+client:
+  keycloak:
+    client-id: ${KEYCLOAK_CLIENT_ID}
+    client-secret: ${KEYCLOAK_CLIENT_SECRET}
+    introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+  nubo:
+    url-operation-special-status: ${NUBO_URL_OPERATION_SPECIAL_STATUS}
+kafka:
+  nubo:
+    retries: ${KAFKA_NUBO_RETRIES:5}
+    bootstrap-servers: ${KAFKA_NUBO_BOOTSTRAP_SERVER}
+    auto-offset-reset: ${KAFKA_NUBO_AUTO_OFFSET_RESET:latest}
+    security:
+      protocol: SASL_PLAINTEXT
+    sasl:
+      mechanism: SCRAM-SHA-256
+      jaas:
+        config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=${KAFKA_NUBO_SASL_USER} password=${KAFKA_NUBO_SASL_PASSWORD};"
+    producer:
+      topic-name-special-trade-compensation: ${KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION}
+    notification:
+      id: ${KAFKA_NUBO_NOTIFICATION_ID:23}
+      event-type: ${KAFKA_NUBO_NOTIFICATION_EVENT_TYPE:NOTIFICACION_LISTA_PARA_USUARIO}
+      module: ${KAFKA_NUBO_NOTIFICATION_MODULE:HORARIOS}
+      kafka-notification-request-topic: ${KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC}
+      group-id: ${KAFKA_NUBO_GROUP_ID}
+```
+
+## src/main/resources/application-local.yml
+
+```yaml
+server:
+  port: 8086
+spring:
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}?@datasource.url.application.name@
+    hikari:
+      maximum-pool-size: ${DB_HIKARI_MAXIMUM_POOL_SIZE}
+      minimum-idle: ${DB_HIKARI_MINIMUM_IDLE}
+      idle-timeout: ${DB_HIKARI_IDLE_TIMEOUT}
+      validation-timeout: ${DB_HIKARI_VALIDATION_TIMEOUT}
+      max-lifetime: ${DB_HIKARI_MAX_LIFETIME}
+      connection-timeout: ${DB_HIKARI_CONNECTION_TIMEOUT}
+      leak-detection-threshold: ${DB_HIKARI_LEAK_DETECTION_THRESHOLD}
+      connection-test-query: SELECT 1
+      pool-name: @hikari.pool.name@
+  jpa:
+    hibernate:
+      ddl-auto: none
+      default_schema: NUANBODB
+    show-sql: 'true'
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          client-id: ${KEYCLOAK_CLIENT_ID}
+          client-secret: ${KEYCLOAK_CLIENT_SECRET}
+          introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+logging:
+  config: classpath:log/log4j2.properties
+  level:
+    org.hibernate: ERROR
+    org.springframework.jdbc.datasource: ERROR
+    com.zaxxer.hikari: ERROR
+config:
+  application:
+    rateLimited:
+      number-max-request: ${RATE_LIMIT_MAX_REQUEST}
+      range-time-request: ${RATE_LIMIT_TIME_REQUEST}
+      waiting-time: ${RATE_LIMIT_WAITING_TIME}
+client:
+  keycloak:
+    client-id: ${KEYCLOAK_CLIENT_ID}
+    client-secret: ${KEYCLOAK_CLIENT_SECRET}
+    introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+  nubo:
+    url-operation-special-status: ${NUBO_URL_OPERATION_SPECIAL_STATUS}
+kafka:
+  nubo:
+    retries: ${KAFKA_NUBO_RETRIES:5}
+    bootstrap-servers: ${KAFKA_NUBO_BOOTSTRAP_SERVER}
+    auto-offset-reset: ${KAFKA_NUBO_AUTO_OFFSET_RESET:latest}
+    security:
+      protocol: PLAINTEXT
+    sasl:
+      mechanism: ""
+      jaas:
+        config: "org.apache.kafka.common.security.scram.ScramLoginModule required;"
+    producer:
+      topic-name-special-trade-compensation: ${KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION}
+    notification:
+      id: ${KAFKA_NUBO_NOTIFICATION_ID:23}
+      event-type: ${KAFKA_NUBO_NOTIFICATION_EVENT_TYPE:NOTIFICACION_LISTA_PARA_USUARIO}
+      module: ${KAFKA_NUBO_NOTIFICATION_MODULE:HORARIOS}
+      kafka-notification-request-topic: ${KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC}
+      group-id: ${KAFKA_NUBO_GROUP_ID}
+```
+
+## src/main/resources/application-prod.yml
+
+```yaml
+server:
+  port: @spring.port@
+spring:
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}?@datasource.url.application.name@
+    hikari:
+      maximum-pool-size: ${DB_HIKARI_MAXIMUM_POOL_SIZE}
+      minimum-idle: ${DB_HIKARI_MINIMUM_IDLE}
+      idle-timeout: ${DB_HIKARI_IDLE_TIMEOUT}
+      validation-timeout: ${DB_HIKARI_VALIDATION_TIMEOUT}
+      max-lifetime: ${DB_HIKARI_MAX_LIFETIME}
+      connection-timeout: ${DB_HIKARI_CONNECTION_TIMEOUT}
+      leak-detection-threshold: ${DB_HIKARI_LEAK_DETECTION_THRESHOLD}
+      connection-test-query: SELECT 1
+      pool-name: @hikari.pool.name@
+  jpa:
+    hibernate:
+      ddl-auto: none
+      default_schema: NUANBODB
+    show-sql: 'false'
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          client-id: ${KEYCLOAK_CLIENT_ID}
+          client-secret: ${KEYCLOAK_CLIENT_SECRET}
+          introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+logging:
+  config: classpath:log/log4j2-prod.properties
+  level:
+    org.hibernate: ERROR
+    org.springframework.jdbc.datasource: ERROR
+    com.zaxxer.hikari: ERROR
+config:
+  application:
+    rateLimited:
+      number-max-request: ${RATE_LIMIT_MAX_REQUEST}
+      range-time-request: ${RATE_LIMIT_TIME_REQUEST}
+      waiting-time: ${RATE_LIMIT_WAITING_TIME}
+client:
+  keycloak:
+    client-id: ${KEYCLOAK_CLIENT_ID}
+    client-secret: ${KEYCLOAK_CLIENT_SECRET}
+    introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+  nubo:
+    url-operation-special-status: ${NUBO_URL_OPERATION_SPECIAL_STATUS}
+kafka:
+  nubo:
+    retries: ${KAFKA_NUBO_RETRIES:5}
+    bootstrap-servers: ${KAFKA_NUBO_BOOTSTRAP_SERVER}
+    auto-offset-reset: ${KAFKA_NUBO_AUTO_OFFSET_RESET:latest}
+    security:
+      protocol: SASL_PLAINTEXT
+    sasl:
+      mechanism: SCRAM-SHA-256
+      jaas:
+        config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=${KAFKA_NUBO_SASL_USER} password=${KAFKA_NUBO_SASL_PASSWORD};"
+    producer:
+      topic-name-special-trade-compensation: ${KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION}
+    notification:
+      id: ${KAFKA_NUBO_NOTIFICATION_ID:23}
+      event-type: ${KAFKA_NUBO_NOTIFICATION_EVENT_TYPE:NOTIFICACION_LISTA_PARA_USUARIO}
+      module: ${KAFKA_NUBO_NOTIFICATION_MODULE:HORARIOS}
+      kafka-notification-request-topic: ${KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC}
+      group-id: ${KAFKA_NUBO_GROUP_ID}
+```
+
+## src/main/resources/application-qa.yml
+
+```yaml
+server:
+  port: @spring.port@
+spring:
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}?@datasource.url.application.name@
+    hikari:
+      maximum-pool-size: ${DB_HIKARI_MAXIMUM_POOL_SIZE}
+      minimum-idle: ${DB_HIKARI_MINIMUM_IDLE}
+      idle-timeout: ${DB_HIKARI_IDLE_TIMEOUT}
+      validation-timeout: ${DB_HIKARI_VALIDATION_TIMEOUT}
+      max-lifetime: ${DB_HIKARI_MAX_LIFETIME}
+      connection-timeout: ${DB_HIKARI_CONNECTION_TIMEOUT}
+      leak-detection-threshold: ${DB_HIKARI_LEAK_DETECTION_THRESHOLD}
+      connection-test-query: SELECT 1
+      pool-name: @hikari.pool.name@
+  jpa:
+    hibernate:
+      ddl-auto: none
+      default_schema: NUANBODB
+    show-sql: 'false'
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          client-id: ${KEYCLOAK_CLIENT_ID}
+          client-secret: ${KEYCLOAK_CLIENT_SECRET}
+          introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+logging:
+  config: classpath:log/log4j2.properties
+  level:
+    org.hibernate: ERROR
+    org.springframework.jdbc.datasource: ERROR
+    com.zaxxer.hikari: ERROR
+config:
+  application:
+    rateLimited:
+      number-max-request: ${RATE_LIMIT_MAX_REQUEST}
+      range-time-request: ${RATE_LIMIT_TIME_REQUEST}
+      waiting-time: ${RATE_LIMIT_WAITING_TIME}
+client:
+  keycloak:
+    client-id: ${KEYCLOAK_CLIENT_ID}
+    client-secret: ${KEYCLOAK_CLIENT_SECRET}
+    introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+  nubo:
+    url-operation-special-status: ${NUBO_URL_OPERATION_SPECIAL_STATUS}
+kafka:
+  nubo:
+    retries: ${KAFKA_NUBO_RETRIES:5}
+    bootstrap-servers: ${KAFKA_NUBO_BOOTSTRAP_SERVER}
+    auto-offset-reset: ${KAFKA_NUBO_AUTO_OFFSET_RESET:latest}
+    security:
+      protocol: SASL_PLAINTEXT
+    sasl:
+      mechanism: SCRAM-SHA-256
+      jaas:
+        config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=${KAFKA_NUBO_SASL_USER} password=${KAFKA_NUBO_SASL_PASSWORD};"
+    producer:
+      topic-name-special-trade-compensation: ${KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION}
+    notification:
+      id: ${KAFKA_NUBO_NOTIFICATION_ID:23}
+      event-type: ${KAFKA_NUBO_NOTIFICATION_EVENT_TYPE:NOTIFICACION_LISTA_PARA_USUARIO}
+      module: ${KAFKA_NUBO_NOTIFICATION_MODULE:HORARIOS}
+      kafka-notification-request-topic: ${KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC}
+      group-id: ${KAFKA_NUBO_GROUP_ID}
+```
+
+## src/main/resources/application-uat.yml
+
+```yaml
+server:
+  port: @spring.port@
+spring:
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}?@datasource.url.application.name@
+    hikari:
+      maximum-pool-size: ${DB_HIKARI_MAXIMUM_POOL_SIZE}
+      minimum-idle: ${DB_HIKARI_MINIMUM_IDLE}
+      idle-timeout: ${DB_HIKARI_IDLE_TIMEOUT}
+      validation-timeout: ${DB_HIKARI_VALIDATION_TIMEOUT}
+      max-lifetime: ${DB_HIKARI_MAX_LIFETIME}
+      connection-timeout: ${DB_HIKARI_CONNECTION_TIMEOUT}
+      leak-detection-threshold: ${DB_HIKARI_LEAK_DETECTION_THRESHOLD}
+      connection-test-query: SELECT 1
+      pool-name: @hikari.pool.name@
+  jpa:
+    hibernate:
+      ddl-auto: none
+      default_schema: NUANBODB
+    show-sql: 'false'
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          client-id: ${KEYCLOAK_CLIENT_ID}
+          client-secret: ${KEYCLOAK_CLIENT_SECRET}
+          introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+logging:
+  config: classpath:log/log4j2.properties
+  level:
+    org.hibernate: ERROR
+    org.springframework.jdbc.datasource: ERROR
+    com.zaxxer.hikari: ERROR
+config:
+  application:
+    rateLimited:
+      number-max-request: ${RATE_LIMIT_MAX_REQUEST}
+      range-time-request: ${RATE_LIMIT_TIME_REQUEST}
+      waiting-time: ${RATE_LIMIT_WAITING_TIME}
+client:
+  keycloak:
+    client-id: ${KEYCLOAK_CLIENT_ID}
+    client-secret: ${KEYCLOAK_CLIENT_SECRET}
+    introspection-uri: ${KEYCLOAK_INTROSPECTION_URI}
+  nubo:
+    url-operation-special-status: ${NUBO_URL_OPERATION_SPECIAL_STATUS}
+kafka:
+  nubo:
+    retries: ${KAFKA_NUBO_RETRIES:5}
+    bootstrap-servers: ${KAFKA_NUBO_BOOTSTRAP_SERVER}
+    auto-offset-reset: ${KAFKA_NUBO_AUTO_OFFSET_RESET:latest}
+    security:
+      protocol: SASL_PLAINTEXT
+    sasl:
+      mechanism: SCRAM-SHA-256
+      jaas:
+        config: "org.apache.kafka.common.security.scram.ScramLoginModule required username=${KAFKA_NUBO_SASL_USER} password=${KAFKA_NUBO_SASL_PASSWORD};"
+    producer:
+      topic-name-special-trade-compensation: ${KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION}
+    notification:
+      id: ${KAFKA_NUBO_NOTIFICATION_ID:23}
+      event-type: ${KAFKA_NUBO_NOTIFICATION_EVENT_TYPE:NOTIFICACION_LISTA_PARA_USUARIO}
+      module: ${KAFKA_NUBO_NOTIFICATION_MODULE:HORARIOS}
+      kafka-notification-request-topic: ${KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC}
+      group-id: ${KAFKA_NUBO_GROUP_ID}
+```
+
+## src/main/resources/application.yml
+
+```yaml
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+  application:
+    name: @project.name@
+    type: service
+server:
+  servlet:
+    context-path: /${spring.application.name}
+application:
+  version: @project.version@
+  description: 'Documentation Endpoints'
+  title: @project.description@
+  group: ${spring.application.name}
+management:
+  health:
+    probes:
+      enabled: true
+      livenessState:
+        enabled: true
+      readinessState:
+        enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  metrics:
+    enable:
+      hikari: true
+```
+
+## src/main/resources/banner.txt
+
+```
+ ,-----. ,------. ,------.,------.   ,---. ,--------.,--. ,-----. ,--.  ,--. ,---.   ,-----.,--. ,--. ,---.,--------.,-----. ,------.,--.   ,--.,---.,--------. ,---. ,--------.,--. ,--. ,---.   ,---.  ,------. ,--.
+'  .-.  '|  .--. '|  .---'|  .--. ' /  O  \'--.  .--'|  |'  .-.  '|  ,'.|  |'   .-' '  .--./|  | |  |'   .-'--.  .--'  .-.  '|  .-.  \\  `.'  /'   .-'--.  .--'/  O  \'--.  .--'|  | |  |'   .-' /  O  \ |  .--. '|  |
+|  | |  ||  '--' ||  `--, |  '--'.'|  .-.  |  |  |   |  ||  | |  ||  |' '  |`.  `-. |  |    |  | |  |`.  `-.  |  |  |  | |  ||  |  \  :'.    / `.  `-.  |  |  |  .-.  |  |  |   |  | |  |`.  `-.|  .-.  ||  '--' ||  |
+'  '-'  '|  | --' |  `---.|  |\  \ |  | |  |  |  |   |  |'  '-'  '|  | `   |.-'    |'  '--'\'  '-'  '.-'    | |  |  '  '-'  '|  '--'  /  |  |  .-'    | |  |  |  | |  |  |  |   '  '-'  '.-'    |  | |  ||  | --' |  |
+ `-----' `--'     `------'`--' '--'`--' `--'  `--'   `--' `-----' `--'  `--'`-----'  `-----' `-----' `-----'  `--'   `-----' `-------'   `--'  `-----'  `--'  `--' `--'  `--'    `-----' `-----'`--' `--'`--'     `--'
+
+${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}
+```
+
+## src/main/resources/log/JsonEventLayout_error.json
+
+```json
+{
+  "timestamp": {
+    "$resolver": "timestamp",
+    "pattern": {
+      "format": "yyyy-MM-dd HH:mm:ss,SSS",
+      "timeZone": "UTC"
+    }
+  },
+  "level": {
+    "$resolver": "level",
+    "field": "name"
+  },
+  "class": {
+    "$resolver": "source",
+    "field": "className"
+  },
+  "method": {
+    "$resolver": "source",
+    "field": "methodName"
+  },
+  "file": {
+    "$resolver": "source",
+    "field": "fileName"
+  },
+  "line": {
+    "$resolver": "source",
+    "field": "lineNumber"
+  },
+  "process.thread.name": {
+    "$resolver": "thread",
+    "field": "name"
+  },
+  "process.thread.id": {
+    "$resolver": "thread",
+    "field": "name"
+  },
+  "exception": {
+    "exception_class": {
+      "$resolver": "exception",
+      "field": "className"
+    },
+    "exception_message": {
+      "$resolver": "exception",
+      "field": "message"
+    },
+    "stackTrace": {
+      "$resolver": "exception",
+      "field": "stackTrace",
+      "elementTemplate": {
+        "class": {
+          "$resolver": "stackTraceElement",
+          "field": "className"
+        },
+        "method": {
+          "$resolver": "stackTraceElement",
+          "field": "methodName"
+        },
+        "file": {
+          "$resolver": "stackTraceElement",
+          "field": "fileName"
+        },
+        "line": {
+          "$resolver": "stackTraceElement",
+          "field": "lineNumber"
+        }
+      }
+    }
+  }
+}
+```
+
+## src/main/resources/log/JsonEventLayout_info.json
+
+```json
+{
+  "timestamp": {
+    "$resolver": "timestamp",
+    "pattern": {
+      "format": "yyyy-MM-dd HH:mm:ss,SSS",
+      "timeZone": "UTC"
+    }
+  },
+  "level": {
+    "$resolver": "level",
+    "field": "name"
+  },
+  "class": {
+    "$resolver": "source",
+    "field": "className"
+  }
+}
+```
+
+## src/main/resources/log/JsonEventLayout_trace.json
+
+```json
+{
+  "timestamp": {
+    "$resolver": "timestamp",
+    "pattern": {
+      "format": "yyyy-MM-dd HH:mm:ss,SSS",
+      "timeZone": "UTC"
+    }
+  },
+  "level": {
+    "$resolver": "level",
+    "field": "name"
+  },
+  "class": {
+    "$resolver": "source",
+    "field": "className"
+  },
+  "method": {
+    "$resolver": "source",
+    "field": "methodName"
+  },
+  "file": {
+    "$resolver": "source",
+    "field": "fileName"
+  }
+}
+```
+
+## src/main/resources/log/log4j2-prod.properties
+
+```properties
+# Properties
+property.CONSOLE_PATTERN = %style{%d{ISO8601}}{black} %highlight{%-5level} [%style{%t}{bright,blue}] %style{%C{1}}{cyan} - %msg%n
+
+property.TIMESTAMP_FORMAT = $${date:yyyy-MM-dd HH:mm:ss,SSS}
+property.APPLICATION_NAME = $${spring:spring.application.name}
+property.APPLICATION_TYPE = $${spring:spring.application.type}
+property.ROLLING_FILE_PATTERN = $${date:yyyy-MM}/${sys:APPLICATION_NAME}-%d{-dd-MMMM-yyyy}-%i.log.gz
+property.LOG_DIR = target/logs
+
+rootLogger = INFO, STDOUT_JSON, jsonrollinglog
+
+appender.console.name = STDOUT_JSON
+appender.console.type = Console
+appender.console.layout.type = JsonTemplateLayout
+appender.console.layout.eventTemplateUri = classpath:log/JsonEventLayout_error.json
+appender.console.layout.locationInfoEnabled = true
+appender.console.layout.eventTemplateAdditionalField[0].type = EventTemplateAdditionalField
+appender.console.layout.eventTemplateAdditionalField[0].key = marker
+appender.console.layout.eventTemplateAdditionalField[0].value = {"$resolver": "marker", "field": "name"}
+appender.console.layout.eventTemplateAdditionalField[0].format = JSON
+appender.console.layout.eventTemplateAdditionalField[1].type = EventTemplateAdditionalField
+appender.console.layout.eventTemplateAdditionalField[1].key = message
+appender.console.layout.eventTemplateAdditionalField[1].value = {"$resolver": "message", "field": "name", "style": "bold", "color": "green"}
+appender.console.layout.eventTemplateAdditionalField[1].format = JSON
+appender.console.layout.eventTemplateAdditionalField[2].type = EventTemplateAdditionalField
+appender.console.layout.eventTemplateAdditionalField[2].key = application_name
+appender.console.layout.eventTemplateAdditionalField[2].value = ${sys:APPLICATION_NAME}
+appender.console.layout.eventTemplateAdditionalField[3].type = EventTemplateAdditionalField
+appender.console.layout.eventTemplateAdditionalField[3].key = application_type
+appender.console.layout.eventTemplateAdditionalField[3].value = ${sys:APPLICATION_TYPE}
+
+appender.rolling.name = jsonrollinglog
+appender.rolling.type = RollingFile
+appender.rolling.fileName = ${sys:LOG_DIR}/${sys:APPLICATION_NAME}.log
+appender.rolling.filePattern = ${sys:LOG_DIR}/${sys:ROLLING_FILE_PATTERN}
+appender.rolling.layout.type = JsonTemplateLayout
+appender.rolling.layout.eventTemplateUri = classpath:log/JsonEventLayout_trace.json
+appender.rolling.layout.locationInfoEnabled = true
+appender.rolling.layout.eventTemplateAdditionalField[0].type = EventTemplateAdditionalField
+appender.rolling.layout.eventTemplateAdditionalField[0].key = marker
+appender.rolling.layout.eventTemplateAdditionalField[0].value = {"$resolver": "marker", "field": "name"}
+appender.rolling.layout.eventTemplateAdditionalField[0].format = JSON
+appender.rolling.layout.eventTemplateAdditionalField[1].type = EventTemplateAdditionalField
+appender.rolling.layout.eventTemplateAdditionalField[1].key = message
+appender.rolling.layout.eventTemplateAdditionalField[1].value = {"$resolver": "message", "field": "name", "style": "italic", "color": "blue"}
+appender.rolling.layout.eventTemplateAdditionalField[1].format = JSON
+appender.rolling.layout.eventTemplateAdditionalField[2].type = EventTemplateAdditionalField
+appender.rolling.layout.eventTemplateAdditionalField[2].key = application_name
+appender.rolling.layout.eventTemplateAdditionalField[2].value = ${sys:APPLICATION_NAME}
+appender.rolling.layout.eventTemplateAdditionalField[3].type = EventTemplateAdditionalField
+appender.rolling.layout.eventTemplateAdditionalField[3].key = application_type
+appender.rolling.layout.eventTemplateAdditionalField[3].value = ${sys:APPLICATION_TYPE}
+appender.rolling.policies.type = Policies
+appender.rolling.policies.size.type = SizeBasedTriggeringPolicy
+appender.rolling.policies.size.size=10MB
+appender.rolling.filter.threshold.type = ThresholdFilter
+appender.rolling.filter.threshold.level = TRACE
+
+logger.rolling.name = com.nuamx
+logger.rolling.level = trace
+logger.rolling.additivity = true
+logger.rolling.appenderRef.rolling.ref = jsonrollinglog
+
+```
+
+## src/main/resources/log/log4j2.properties
+
+```properties
+# Properties
+property.CONSOLE_PATTERN = %style{%d{ISO8601}}{black} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%C{1}}{cyan} - %msg%n
+
+appender.console.name = STDOUT
+appender.console.type = Console
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = ${sys:CONSOLE_PATTERN}
+
+rootLogger = INFO, STDOUT
+
+```
