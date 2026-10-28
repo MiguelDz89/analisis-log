@@ -1,0 +1,2182 @@
+OKR Anual 1: Mejorar las habilidades en el desarrollo de software y arquitectura de microservicios para proyectos financieros y de IA.
+KR Anual 1.1: Antes del 19 de diciembre del 2025, completar al menos 2 cursos avanzados sobre Spring Boot WebFlux y Spring Cloud Config.
+KR Anual 1.2: Implementar al menos 3 microservicios escalables en el proyecto nuBO, siguiendo buenas prácticas de arquitectura.
+KR Anual 1.3: Documentar y compartir al menos 2 casos de uso exitosos con el equipo de desarrollo, asegurando la comprensión del diseño y despliegue.
+
+
+
+OKR Anual 2: Fortalecer las capacidades en DevOps y despliegue de aplicaciones en la nube.
+KR Anual 2.1: Obtener certificación en Kubernetes antes del 19 de diciembre del 2025.
+KR Anual 2.2: Implementar un sistema de CI/CD para al menos 2 microservicios utilizando Docker y GitHub Actions.
+KR Anual 2.3: Mejorar la infraestructura de despliegue en AWS para Nubo, optimizando tiempos de respuesta por debajo de 500 ms.
+
+OKR Anual 3: Homogeneizar el conocimiento técnico del equipo sobre sistemas distribuidos y arquitecturas en la nube.
+KR Anual 3.1: Realizar al menos 3 sesiones de capacitación práctica sobre microservicios y despliegues en Kubernetes.
+KR Anual 3.2: Documentar guías técnicas sobre Spring Cloud, Spring Boot WebFlux y Spring Security, y socializarlas con el equipo.
+KR Anual 3.3: Acompañar al equipo en al menos un despliegue exitoso en ambiente de pruebas, garantizando que al menos un desarrollador pueda replicarlo de manera autónoma.
+
+OKR Anual 4: Consolidar habilidades en liderazgo técnico y mentoría.
+KR Anual 4.1: Participar en al menos 2 workshops o conferencias sobre liderazgo técnico antes del 19 de diciembre del 2025.
+KR Anual 4.2: Implementar al menos 2 estrategias de mentoría con desarrolladores junior, documentando sus progresos.
+KR Anual 4.3: Realizar al menos 1 presentación interna sobre mejores prácticas en arquitectura de software y despliegue en la nube.
+
+
+
+
+
+---------------------------------
+
+
+
+
+APX bbva
+
+
+
+
+
+
+
+
+
+dataX
+qt
+APX batch/online (
+LRA batch/online (
+Mallas ControlM (solucion de automatizacion de cargas de trabajo)
+Dimension (carga de mallas)
+chimera: devSecOps
+jenkins
+sonar
+apache feliz
+pipeline
+
+Glomo (front)
+samuel validacion
+
+
+UA: agrupamiento
+
+ether: consola 
+transcaciones
+sysconector
+
+
+-------------------------------------
+
+
+
+
+
+ 
+1) HU Funcional Opción de Cumplimiento - Envío/Reenvío Liquidación al Depósito de un Folio/Fracción	           3
+https://nuamexchange.atlassian.net/browse/RTBOF-2521	                                                       
+2) HU Funcional Opción de Cumplimiento - Desbloqueo Repique	                                                   3
+https://nuamexchange.atlassian.net/browse/RTBOF-2509	                                                       
+3) HU Funcional Opción de Cumplimiento - Recaudo al comprador	                                               3
+https://nuamexchange.atlassian.net/browse/RTBOF-2507	                                                       
+4) HU Funcional Opción de Cumplimiento - Pago al Vendedor	                                                   3
+https://nuamexchange.atlassian.net/browse/RTBOF-2510	                                                       
+5) HU Funcional Opción de Cumplimiento - Incumplimiento	                                                       5
+https://nuamexchange.atlassian.net/browse/RTBOF-2508	                                                       
+6) HU Funcional Conciliaciones con Bancos Liquidadores	                                                       5
+https://nuamexchange.atlassian.net/browse/RTBOF-1376	                                                       
+7) HU Funcional Administración de Garantías	                                                                   
+https://nuamexchange.atlassian.net/browse/RTBOF-2736	                                                       
+8) HU Funcional Transacciones Banco Liquidador	5                                                              
+https://nuamexchange.atlassian.net/browse/RTBOF-2218	                                                       
+9) HU Funcional Seguimiento de Transacciones Banco Liquidador	                                               
+https://nuamexchange.atlassian.net/browse/RTBOF-2522	                                                       
+ 
+Jira
+ 
+------------------------
+ 
+ 
+1	Tarea muy simple, casi sin incertidumbre (ej. cambiar un texto).	0 - 1 Dia
+2	Tarea pequeña, con algo de lógica pero sin complejidad significativa.	1-2 Días
+3	Tarea de complejidad media, requiere algo de lógica o interacción con APIs.	3-5 Días
+5	Requiere más trabajo, posibles validaciones o integración con terceros.	5-8 Días
+8	Tarea grande con más incertidumbre, requiere dividirse si es posible.	8-10 Días
+ 
+ git checkout development
+ git checkout release
+ 
+ 
+ git add ./
+git commit -m "feat: special-operations-compensation-closure  "
+git push
+
+	https://nuamexchange.atlassian.net/browse/RTBOF-2507
+	https://nuamexchange.atlassian.net/browse/RTBOF-2510	
+	https://nuamexchange.atlassian.net/browse/RTBOF-1376
+
+
+
+Crear estructura de Microservicio gestión de Cumplimiento Desbloqueo Repique
+Crear Endpoint de Microservicio Maquina de Estados
+Crear la lógica de negocio para la Maquina de Estados
+Pruebas unitarias Maquina de Estados
+Documentación  API Maquina de Estados
+Documentación  cobertura Maquina de Estados
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-2509
+
+feat/RTBOF-2509
+git clone --branch feat/RTBOF-2509 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-estados-back.git
+git clone --branch feat/RTBOF-2509 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+
+
+# Definir los estados y transiciones (según lo mostrado en las imágenes cargadas)
+estados = [
+    "SIN_ESTADO", "ENVIADA", "RECHAZADA", "REPIQUE", 
+    "ACEPTADA", "REGISTRADA", "ANULADA", "CUMPLIDA", "LIQUIDADA"
+]
+
+# Transiciones aproximadas según el flujo observado
+transiciones = [
+    ("SIN_ESTADO", "ENVIADA"),
+    ("ENVIADA", "RECHAZADA"),
+    ("ENVIADA", "ACEPTADA"),
+    ("RECHAZADA", "REPIQUE"),
+    ("REPIQUE", "ENVIADA"),
+    ("ACEPTADA", "REGISTRADA"),
+    ("REGISTRADA", "ANULADA"),
+    ("REGISTRADA", "CUMPLIDA"),
+    ("CUMPLIDA", "LIQUIDADA")
+]
+
+
+https://www.plantuml.com/plantuml/umla/POv12i8m44NtEKNS2hs02saHTwxSYekX6Ut09DPaKiHhUGGlfaa3eNGr-Uy_-6c3W9TeMMraG8lQWg0dK9VjLJVDNX_TH610bPjPr-CeAUpq14m6Ulf-dCONoICirJFs0xpNxWqu1LNxsHxf6L6Lk_X07gtYdOBunEipDuTeHwOrxrpaf9T-XgV_2fc4MtGcMlu1
+https://www.plantuml.com/plantuml/umla/POv12i8m44NtEKNS2hs02saHTwxSYekX6Ut09DPaKiHhUGGlfaa3eNGr-Uy_-6c3W9TeMMraG8lQWg0dK9VjLJVDNX_TH610bPjPr-CeAUpq14m6Ulf-dCONoICirJFs0xpNxWqu1LNxsHxf6L6Lk_X07gtYdOBunEipDuTeHwOrxrpaf9T-XgV_2fc4MtGcMlu1
+
+
+
+
+@startuml
+!theme materia
+[*] --> Enviada
+Enviada --> Aceptada : validación exitosa
+Enviada --> Rechazada : validación fallida
+Rechazada --> Repique
+Repique --> Enviada
+Aceptada --> Registrada
+Registrada --> Cumplida
+Registrada --> Anulada
+Cumplida --> Liquidada
+@enduml
+
+
+
+
+----------------------------------------------------------------------------
+
+@startuml
+!theme materia
+skinparam state {
+  BackgroundColor #FDF6E3
+  BorderColor #657B83
+  FontColor black
+}
+state SinEstado as "Sin estado"
+state RecaudoE as "Procesando Debito (compra)"
+state RecaudoR as "Rechazo Debito (compra)"
+state RecaudoA as "Debito Procesado (Compra)"
+state EnviadaD as "Liquidación Enviada al depósito"
+state RechazadaD as "Rechazo Folio"
+state AceptadaD as "Saldos Liquidados"
+state PagoE as "Procesando Pago (Venta)"
+state PagoR as "Rechazo Pago (Venta)"
+state Cumplida as "Liquidada"
+state Incumplida as "Incumplida"
+state Cancelada as "Cancelada"
+
+[*] --> RecaudoE
+RecaudoE --> RecaudoR : Error débito
+RecaudoE --> RecaudoA : Débito exitoso
+RecaudoA --> EnviadaD
+EnviadaD --> AceptadaD : Validación OK
+EnviadaD --> RechazadaD : Validación NO OK
+RechazadaD --> RecaudoE : Repique
+AceptadaD --> PagoE
+PagoE --> PagoR : Error pago
+PagoE --> Cumplida : Pago exitoso
+Cumplida --> [*]
+AceptadaD --> Incumplida : Incumplimiento
+PagoE --> Cancelada : Anulación
+
+@enduml
+
+----------------------------------------------------------------------------
+
+git pull origin development
+
+git add ./
+git commit -m "feat: NoCompilance    "
+git push
+
+
+
+git checkout feat/RTBOF-2509
+
+
+git add src/main/java/com/nubo/operation/special/status/api/service/SpecialTradeCompensationStatusService.java
+git commit -m "WIP: avance en SpecialTradeCompensationStatusService"
+git checkout development
+
+
+
+
+Hola, [INSERT NOMBRE DE USUARIO QUE SOLICITA LA RECUPERACIÓN DE CONTRASEÑA]
+
+¡Solicitaste la recuperación de tu contraseña del Sistema de Post negociación de nuam!
+
+A continuación encuentras el enlace con el cual podrás definir tu nueva clave [INSERT ENLACE TOKEN DEFINICIÓN NUEVA CLAVE]
+
+Si presentas dudas o inquietudes, puedes comunicarte con nosotros por medio de servicioalcliente@nuamx.com.
+
+Este correo es informativo, por lo cual no acepta respuestas.
+
+
+
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+
+defaulted.operation
+defaulted-operation
+
+
+git clone --branch feat/RTBOF-2510 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-pago-vendedor-back.git
+
+feat/RTBOF-2510
+
+git clone --branch feat/RTBOF-2508 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-incumplimiento-operaciones-back.git
+
+trade.status=44 and specialTrade.
+
+no.compliance
+no-compliance
+
+
+
+ALTER TABLE "NUANBODB"."TRADE" ADD COLUMN "REJECTION_REASON"              varchar(255);
+
+--MOTIVO DE INCUMPLIMIENTO REASON_NO_COMPLIANCE no_compliance REASON_NO_COMPLIANCE
+CREATE TABLE "NUANBODB"."REASON_NO_COMPLIANCE" (
+  "REASON_NO_COMPLIANCE_ID" BIGSERIAL NOT NULL, 
+  "REASON"        varchar(80), 
+  "LAST_MODIFY_USER"   varchar(36), 
+  "LAST_MODIFY_APPLIC" varchar(30), 
+  "LAST_MODIFY_DATE"   date, 
+  "LAST_MODIFY_IP"     varchar(30), 
+  CONSTRAINT "PK_REASON_NO_COMPLIANCE" 
+    PRIMARY KEY ("REASON_NO_COMPLIANCE_ID")) ;
+COMMENT ON TABLE "NUANBODB"."REASON_NO_COMPLIANCE" IS 'REASON_NO_COMPLIANCE Table';
+COMMENT ON COLUMN "NUANBODB"."REASON_NO_COMPLIANCE"."REASON_NO_COMPLIANCE_ID" IS 'REASON_NO_COMPLIANCE Id';
+COMMENT ON COLUMN "NUANBODB"."REASON_NO_COMPLIANCE"."REASON" IS 'REASON_NO_COMPLIANCE REASON';
+COMMENT ON COLUMN "NUANBODB"."REASON_NO_COMPLIANCE"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."REASON_NO_COMPLIANCE"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."REASON_NO_COMPLIANCE"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."REASON_NO_COMPLIANCE"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+
+INSERT INTO "NUANBODB"."REASON_NO_COMPLIANCE" (
+    "REASON_NO_COMPLIANCE_ID",
+    "REASON",
+    "LAST_MODIFY_USER",
+    "LAST_MODIFY_APPLIC",
+    "LAST_MODIFY_DATE",
+    "LAST_MODIFY_IP"
+) VALUES
+(1, 'Incumplimiento por venta', 'sistema', 'seed-data', CURRENT_DATE, '127.0.0.1'),
+(2, 'Incumplimiento por compra', 'sistema', 'seed-data', CURRENT_DATE, '127.0.0.1'),
+(3, 'Incumplimiento por compra y venta', 'sistema', 'seed-data', CURRENT_DATE, '127.0.0.1'),
+(4, 'Otro motivo', 'sistema', 'seed-data', CURRENT_DATE, '127.0.0.1');
+
+
+1 folio tiene una fraccion de venta 
+1 registro por cada fraccion
+
+
+clearing date del folio(TRADE)
+oPERACION ESPECIAL, RECHA REGISTRO, FECHA CUMPLIMIENTO, FOLIO PARTICIPANTES, CUSTODIOS, MOTIVO 
+
+
+git clone --branch feat/RTBOF-2510 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-infraestructure-flux.git
+
+
+
+curl -o- https://raw.githubusercontent.com/nvm-windows/nvm/v0.39.7/install.sh | bash
+
+
+nvm install 20
+nvm use 20
+node -v  # para verificar que ahora tienes Node 20.x
+OPERATIONNOCOMPLIANCEAPI
+
+
+No aplicar para los folios con estado de asignacion : Cancelada o con estado de cumplimiento: Cancelada
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+
+
+
+SettlementStatusId
+
+
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'restClientUtils' defined in file 
+[D:\NUAMX\nuBO\Sprint\12\Fuentes\nbo-png-incumplimiento-operaciones-back\target\classes\com\nubo\operation\no\compliance\api\application\util\RestClientUtils.class]:
+ Unsatisfied dependency expressed through constructor parameter 0: 
+ No qualifying bean of type 'org.springframework.web.client.RestClient' available: expected at least 1 bean which qualifies as autowire candidate. 
+ Dependency annotations: {}
+
+
+
+http://localhost:8085/no-compliance-operation-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/no-compliance-operation-api/swagger-ui/index.html#/
+http://localhost:8085/no-compliance-operation-api/swagger-ui/index.html#/
+
+
+http://apisix.nubo-dev.com/compliance-peal-unlock-api/swagger-ui/index.html#/
+
+
+no-compliance-operation-api
+/{version}/no-compliance-operation
+
+/no-compliance
+/enforce-no-compliance
+
+
+no-compliance-operation-api/{version}/no-compliance-operation/no-compliance
+no-compliance-operation-api/{version}/no-compliance-operation/enforce-no-compliance
+
+
+[
+  {
+    "specialTradeId": 9007199254740991,
+    "matchId": 9007199254740991,
+    "statusId": 1073741824,
+    "canceledStatus": true,
+    "participantId": 9007199254740991,
+    "typeId": 9007199254740991,
+    "countryId": 9007199254740991,
+    "startMatchDate": "2025-05-02",
+    "endMatchDate": "2025-05-02",
+    "endClearingDate": "2025-05-02"
+  }
+]
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Sprint 13
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Titulo RF, tiene fecha de vencimiento
+RV: no tiene F. Vencimiento
+Buscar el servidor donde se guarde el archivo
+
+
+https://servicedesk.nuamx.com/servicedesk/customer/portal/10/SCTI-43013
+
+
+
+DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_CONNECTION_TIMEOUT=30000;
+VALIDATE_USER_TYPE_ACCESS_TOKEN=false;
+RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60
+
+
+01 
+DNI
+0
+03
+feat/RTBOF-1822
+
+git clone --branch feat/RTBOF-1822 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-carga-modelo-riesgos-back.git
+git clone --branch feat/RTBOF-1105 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-back.git
+git clone --branch feat/RTBOF-1113 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-consulta-folios-back.git
+
+feat/RTBOF-1113
+nbo-png-operaciones-espec-consulta-folios-back/
+
+feat/RTBOF-1105
+
+Urb club grau procer merino 101
+git pull origin development
+
+git add ./
+git commit -m "feat: Register risk model additional"
+git push
+
+
+
+
+pip install fastapi "uvicorn[standard]"
+uvicorn riesgo2:app --reload
+
+https://apisix.nubo-dev.com/risk-model-load-api/swagger-ui/index.html
+
+
+
+Asignacion
+Custodio
+Cumplimiento
+
+
+
+INSERT INTO "NUANBODB"."ERROR" (
+    "CODE", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP"
+) VALUES
+(1,  'ISIN_NOT_EXIST',         'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(2,  'ADMISSIBILITY_INVALID',  'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(3,  'COUNTRY_INVALID',        'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(4,  'GENERAL_RISK_INVALID',   'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(5,  'CURRENCY_RISK_INVALID',  'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(6,  'DATE_INVALID',           'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(7,  'MNEMONIC_INVALID',       'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(8,  'PRICE_INVALID',          'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(9,  'MARKET_INVALID',         'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(10, 'CURRENCY_INVALID',       'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(11, 'ISIN_INVALID',           'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(12, 'TITLE_NOT_EXIST',        'system', 'risk-model-loader', NOW(), '127.0.0.1');
+
+INSERT INTO "NUANBODB"."STATUS" (
+    "STATUS_ID", "DESCRIPTION", "DETAIL",
+    "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP"
+) VALUES
+(700, 'SUCCESSFUL',   'Proceso ejecutado correctamente', 'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(701, 'NOT_PROCESS',  'Pendiente de procesamiento',      'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(702, 'WHIT_ERRORS',  'Procesado con errores',           'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(703, 'IN_PROCESS',   'Procesamiento en curso',          'system', 'risk-model-loader', NOW(), '127.0.0.1');
+
+
+INSERT INTO "NUANBODB"."TYPE" (
+    "TYPE_ID", "DESCRIPTION", "CATEGORY",
+    "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP"
+) VALUES
+(700, 'LOAD MANUAL',   'Carga Riesgos', 'system', 'risk-model-loader', NOW(), '127.0.0.1'),
+(701, 'LOAD AUTOMATIC',   'Carga Riesgos', 'system', 'risk-model-loader', NOW(), '127.0.0.1');
+
+
+INSERT INTO "NUANBODB"."SECURITY_TITLE"
+("MARKET_ID", "EQUITY_CODE", "MNEMONIC", "ISIN", "CFI_ID", "CURRENCY_ID", "SETTLEMENT_PERIOD", "LISTING_DATE", "DELISTING_DATE", "PARENT", "PARENT_ID", "STATUS_ID", "ISSUER_ID", "COUNTRY_ID", "AMOUNT_ISSUED", "CLASS_ID", "SEGMENT_ID", "CATEGORY", "DEPOSITORY_ID", "PUNISHMENT_REPO", "REGULATORY_CODE", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP")
+VALUES('1', 'BCE2025', 'BCE2025', ' EC000A1ZZZ00', 'ESVUFR', 32, 'T2', '2000-01-01', '4000-01-01', false, 0, 1, 1, 37, 12546444345, '1', 1, '1', '1', 0.0500, 'COD38PAAO005', 'USER_01', 'APP_01', '2025-03-13 09:32:17.892', 'IP_01');
+INSERT INTO "NUANBODB"."SECURITY_TITLE"
+( "MARKET_ID", "EQUITY_CODE", "MNEMONIC", "ISIN", "CFI_ID", "CURRENCY_ID", "SETTLEMENT_PERIOD", "LISTING_DATE", "DELISTING_DATE", "PARENT", "PARENT_ID", "STATUS_ID", "ISSUER_ID", "COUNTRY_ID", "AMOUNT_ISSUED", "CLASS_ID", "SEGMENT_ID", "CATEGORY", "DEPOSITORY_ID", "PUNISHMENT_REPO", "REGULATORY_CODE", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP")
+VALUES( '1', 'BCE2024', 'BCE2024', 'EC000A1YYX11', 'ESVUFR', 32, 'T2', '2000-01-01', '4000-01-01', false, 0, 1, 2, 37, 12546444345, '1', 1, '1', '1', 0.0500, 'COC04PAAO008', 'USER_01', 'APP_01', '2025-03-13 09:32:17.796', 'IP_01');
+
+
+
+git clone --branch feat/RTBOF-1928 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-modelo-riesgos-adicionales.git
+
+
+-------Body de pruebas para parametros adicionales
+--una sola condición
+{
+  "countryId": 1,
+  "paramTypeId": 101,
+  "paramPercentage": 5.500,
+  "oneConditionTypeId": 201,
+  "oneConditionId": 999,
+  "oneConditionDetail": "EMISOR-99",
+  "status": 1
+}
+
+--dos condiciones completas
+{
+  "countryId": 2,
+  "paramTypeId": 102,
+  "paramPercentage": 12.345,
+  "oneConditionTypeId": 202,
+  "oneConditionId": 888,
+  "oneConditionDetail": "PARTICIPANTE-88",
+  "twoConditionTypeId": 203,
+  "twoConditionId": 777,
+  "twoConditionDetail": "ISIN-77",
+  "status": 1
+}
+
+
+--ERROR: fuera de rango
+{
+  "countryId": 1,
+  "paramTypeId": 101,
+  "paramPercentage": 150.00,
+  "oneConditionTypeId": 201,
+  "oneConditionId": 999,
+  "oneConditionDetail": "EMISOR-99",
+  "status": 1
+}
+
+--ERROR: segunda condicion incompleta
+
+{
+  "countryId": 3,
+  "paramTypeId": 103,
+  "paramPercentage": 8.25,
+  "oneConditionTypeId": 204,
+  "oneConditionId": 444,
+  "oneConditionDetail": "BENEFICIARIO-44",
+  "twoConditionTypeId": 205,
+  "twoConditionDetail": "FALTANTE-DETALLE",
+  "status": 1
+}
+
+--decimales
+{
+  "countryId": 4,
+  "paramTypeId": 104,
+  "paramPercentage": 99.999,
+  "oneConditionTypeId": 206,
+  "oneConditionId": 1234,
+  "oneConditionDetail": "TEST-OK",
+  "status": 1
+}
+
+
+--------------------------Sprint 14
+
+
+http://localhost:8084/risk-model-hist-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/risk-model-hist-api/swagger-ui/index.html
+
+RISKMODELHISTAPI
+DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_USERNAME=nubo;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=group-id;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false
+
+http://localhost:8083/operations-management-api/swagger-ui/index.html#/
+
+https://nuamexchange.atlassian.net/browse/RTBOF-1831
+
+
+feat/RTBOF-1831
+git clone --branch feat/RTBOF-1831 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-historico-modelo-riesgos-back.git
+
+git pull origin development
+
+git add ./
+git commit -m "feat: marketId "
+git push
+
+https://github.com/nuamx/nbo-png-historico-modelo-riesgos-back/compare/development...feat/RTBOF-1831?expand=1
+
+http://localhost:8083/risk-model-hist-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/risk-model-hist-api/swagger-ui/index.html
+
+https://apisix.nubo-dev.com/master-participant-api/swagger-ui/index.html
+
+------
+Microservicio de estados 
+-End Point con estado inicial y final por ID
+-True o False si es permitido
+-No debe tener token 
+
+
+--------------------------------------------------
+-----------------15
+-------------------------------------------------
+RTBOF-3191
+git clone --branch feat/RTBOF-3191 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-estados-back.git
+git clone --branch feat/RTBOF-3191 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-opr-espec-comp-pagos-back.git
+git clone --branch feat/RTBOF-3748 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+
+
+feat/RTBOF-3748
+
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;
+DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;
+DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;
+DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;
+SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;
+MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;
+REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;
+KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;
+KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;
+KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;
+EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;
+EMAIL_FROM=postnegociacion@nuamx.com;
+NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;
+NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;
+NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;
+NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;
+NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;
+NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;
+NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;
+KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;
+KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;
+KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensatio
+n;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";
+KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+
+
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_CONNECTION_TIMEOUT=30000;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60
+
+
+
+ALTER TABLE "NUANBODB"."STATUS_TRANSITION" ADD COLUMN "RULE_ID" int8;
+
+
+-- TRASLADADA (20) → PRE_MATCH (21)
+INSERT INTO "NUANBODB"."STATUS_TRANSITION"("ORIGIN_STATUS_ID", "TARGET_STATUS_ID", "RESTRICTION", "DESCRIPTION","RULE_ID",
+ "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP") VALUES
+(20, 21, 'aceptación preliminar por custodio', 'Traslado a pre-match',101,
+'system', 'init', CURRENT_TIMESTAMP, '127.0.0.1');
+
+-- TRASLADADA (20) → RECHAZADA (23)
+INSERT INTO "NUANBODB"."STATUS_TRANSITION"("ORIGIN_STATUS_ID", "TARGET_STATUS_ID", "RESTRICTION", "DESCRIPTION","RULE_ID",
+ "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP") VALUES
+(20, 23, 'rechazo por custodio', 'Traslado rechazado por custodio',101,
+'system', 'init', CURRENT_TIMESTAMP, '127.0.0.1');
+
+-- PRE_MATCH (21) → ADMITIDA (22)
+INSERT INTO "NUANBODB"."STATUS_TRANSITION"("ORIGIN_STATUS_ID", "TARGET_STATUS_ID", "RESTRICTION", "DESCRIPTION","RULE_ID",
+ "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP") VALUES
+(21, 22, 'admisión formal por custodio', 'Pre-match a admitida',101,
+'system', 'init', CURRENT_TIMESTAMP, '127.0.0.1');
+
+-- PRE_MATCH (21) → RECHAZADA (23)
+INSERT INTO "NUANBODB"."STATUS_TRANSITION"("ORIGIN_STATUS_ID", "TARGET_STATUS_ID", "RESTRICTION", "DESCRIPTION","RULE_ID",
+ "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP") VALUES
+(21, 23, 'rechazo por custodio', 'Pre-match rechazada por custodio',101,
+'system', 'init', CURRENT_TIMESTAMP, '127.0.0.1');
+
+-- ADMITIDA (22) → RECHAZADA (23)
+INSERT INTO "NUANBODB"."STATUS_TRANSITION"("ORIGIN_STATUS_ID", "TARGET_STATUS_ID", "RESTRICTION", "DESCRIPTION","RULE_ID",
+ "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP") VALUES
+(22, 23, 'rechazo formal por custodio', 'Admitida rechazada por custodio',101,
+'system', 'init', CURRENT_TIMESTAMP, '127.0.0.1');
+
+
+Un usuario hace un traslado a un custodio, puede hacer traslado por punta o fracciones 
+Folio, punta , fraccion, beneficiario final
+
+git pull origin release
+git pull origin development
+
+git add ./
+git commit -m "feat:  RTBOF-3748 "
+git push
+
+
+
+ALTER TABLE "NUANBODB"."SPECIAL_OPERATION_BUSINESS_RULE" ADD COLUMN "VALIDATION" TEXT;
+ALTER TABLE "NUANBODB"."SPECIAL_OPERATION_BUSINESS_RULE" ADD COLUMN "MARKET_ID" varchar(2);
+
+--Emiliano
+
+
+https://apisix.nubo-dev.com/special-operations-status-api/swagger-ui/index.html
+https://apisix.nubo-dev.com/special-operations-compensation-payments-api/swagger-ui/index.html
+
+https://localhost:8082/special-operations-compensation-payments-api/swagger-ui/index.html
+https://apisix.nubo-dev.com/special-operations-compensation-api/swagger-ui/index.html
+https://apisix.nubo-dev.com/special-operations-compensation-closure-api/swagger-ui/index.html
+
+BANK_TRANSACTION_STATUS_HISTORY
+DETAILS
+FILE_CONSECUTIVE
+
+
+ALTER TABLE "NUANBODB"."BANK_TRANSACTION_STATUS_HISTORY" ADD COLUMN "DETAILS" varchar(250);
+ALTER TABLE "NUANBODB"."BANK_TRANSACTION_STATUS_HISTORY" ADD COLUMN "FILE_CONSECUTIVE" varchar(250);
+
+
+
+feat/RTBOF-3748
+
+beneficiario final: Settlement, SettlementStatusId
+
+Punta: Settlement
+
+Folio: trade
+
+Fracción: Trade
+
+Hasta que StatusId esten todos iguales no pueden mover el estado en OP especial,
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id 
+
+Para usuarios:
+DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_USERNAME=nubo;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=group-id;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false ;REDIRECT_PAGE_LOGIN=http:redre.com
+D:\NUAMX\nuBO\Sprint\s16\Fuentes\nbo-png-gestionusuarios-back
+D:\NUAMX\nuBO\Sprint\10\Fuentes\nbo-png-gestionusuarios-back
+D:\NUAMX\nuBO\Sprint\11\Fuentes\nbo-png-gestionusuarios-back
+D:\NUAMX\nuBO\Sprint\12\Fuentes\nbo-png-gestionusuarios-back
+D:\NUAMX\nuBO\Sprint\13\Fuentes\nbo-png-gestionusuarios-back
+D:\NUAMX\nuBO\Sprint\14\Fuentes\nbo-png-gestionusuarios-back
+D:\NUAMX\nuBO\Sprint\15\Fuentes\nbo-png-gestionusuarios-back
+
+
+
+Retirar country y currency del estado, market shortName
+Retirar country de la transiciones
+Agregar el detalle al estado
+
+
+Borrar asignacion de BD 
+100 , sin custodio a trasladada
+101, las demas premacch
+
+REGISTRADA
+ASIGNADA
+EN_PROCESO
+RECHAZADA
+LIQUIDADA
+CANCELADA
+INCUMPLIDA
+
+
+REGISTRADA
+ASIGNADA
+RECHAZADA
+
+
+REGISTRADA
+CANCELADA
+INCUMPLIDA
+ENVIADA_DEP
+REPIQUE
+RECHAZADA
+DESBLOQUEO_SOLICITADO
+LIQUIDADA
+DESBLOQUEADA
+
+
+
+BLANCO
+ENVIADO
+CONFIRMADO
+RECHAZADO
+
+
+BLANCO
+ENVIADO
+CONFIRMADO
+RECHAZADO
+
+https://nuamexchange.atlassian.net/browse/RTBOF-3685
+https://nuamexchange.atlassian.net/browse/RTBOF-3847
+https://nuamexchange.atlassian.net/browse/RTBOF-3684
+https://nuamexchange.atlassian.net/browse/RTBOF-3683
+
+
+https://apisix.nubo-dev.com/special-operations-compensation-closure-api/v1/special-trade-closure/reversal
+
+https://apisix.nubo-dev.com/special-operations-compensation-closure-api/swagger-ui/index.html
+
+--------------------------------------------------
+-----------------16
+-------------------------------------------------
+RTBOF-3194
+
+RTBOF-3195
+Implementar estados nivel de fracciones - Custodio
+Implementar nivel de fracciones - Custodio
+
+
+RTBOF-3190
+Implementar estados nivel de fracciones - Mercado primaria Colombia
+Implementar nivel de fracciones - Mercado primaria Colombia
+
+
+
+RTBOF-3191
+Implementar estados nivel de fracciones - Cumplimiento
+Implementar nivel de fracciones - Cumplimiento
+
+-------------------------------------------
+git clone --branch feat/RTBOF-2221 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-opr-espec-comp-liqu-back.git
+
+
+
+------------------------------------------
+
+https://nuamexchange.atlassian.net/browse/RTBOF-1113
+https://nuamexchange.atlassian.net/browse/RTBOF-1150
+https://nuamexchange.atlassian.net/browse/RTBOF-1149
+https://nuamexchange.atlassian.net/browse/RTBOF-1543
+--------------------------------------------
+Transiciones de garantias, op especiales, 
+
+Special TRADE
+Carga Op(registrada) -> Trade(Folios)
+Asignacion .> Settlement(Beneficiarios)
+Envio a deposito -> Settlement instrucction(Parejas Deposito)
+
+Primero 
+
+
+feat/RTBOF-3195
+git clone --branch feat/RTBOF-3195 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-custodio-estados-back.git
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_CONNECTION_TIMEOUT=30000;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60
+
+
+
+
+git pull origin development
+
+git add ./
+git commit -m "feat: Change status custody"
+git push
+
+--Jiras del sabado
+https://apisix.nubo-release.com:9443/special-operations-compensation-api/v1_CLOSE/special-trade-closure
+
+
+https://apisix.nubo-dev.com/special-operations-compensation-api/swagger-ui/index.html
+https://apisix.nubo-dev.com/special-operations-compensation-closure-api/swagger-ui/index.html
+
+
+
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-riesgos-front.git
+https://nubo.nubo-dev.com/guarantees-management/fixed-parameters-guarantees
+
+
+
+https://apisix.nubo-dev.com:9443/operations-custody-status-api/v1/settlement/status
+https://apisix.nubo-dev.com/operations-custody-status-api/v1/settlement/status
+
+https://apisix.nubo-dev.com:9443/operations-custody-status-api/swagger-ui/index.html
+https://apisix.nubo-dev.com/operations-custody-status-api/swagger-ui/index.html
+
+
+
+
+
+
+
+--------------------------------------------------
+-----------------17
+-------------------------------------------------
+
+
+
+Reestablecer password service-desk
+https://autogestionpass.bvc.com.co:1446/showLogin.cc
+
+nbo-png-consulta-ciclo-liqu-back
+
+https://nuamexchange.atlassian.net/browse/RTBOF-4309
+
+https://bolsadesantiago-my.sharepoint.com/:x:/g/personal/miguel_diaz_nuamx_com/EVWX-UsVaxhPjPei4-UyUMgBxRcBcSKTXzrDLKfqRP3YRQ?e=Mc2fgr
+
+INSERT INTO "NUANBODB"."STATUS"("STATUS_ID", "COUNTRY_ID", "MARKET_ID", "SHORTNAME", "DESCRIPTION", "CATEGORY", "DETAIL", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP")VALUES(1001,NULL,NULL,'Registrada','REGISTRADA','CUMPLIMIENTO_FOLIO','Es el primer estado de la operación antes de iniciar el ciclo de liquidación','USER_STATUS','APP_01',NOW(),'IP_01');
+
+BUSINESS_RULE_ID
+
+obtener la categoria
+
+
+SETTLEMENT: lo entrega vericlear
+
+Ir al SFTP, una carpeta 
+
+sftp://sftpgo-service.sftp-dev.svc.cluster.local:2022/output/P2680805.E01
+
+apache camel
+
+
+git clone --branch feat/RTBOF-4309 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-consulta-ciclo-liqu-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-infraestructure-flux.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-integracion-liquidacion-deceval-borde-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-valores-borde-back.git
+git clone --branch feat/RTBOF-3960 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-carga-modelo-riesgos-back.git
+git clone --branch feat/RTBOF-1831 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-historico-modelo-riesgos-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-validaciones-modelo-riesgo-back.git
+git clone --branch feat/RTBOF-2889 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-horarios-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+git clone --branch feat/RTBOF-3748 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+
+
+
+
+consulta-horarios-back
+schedule-query
+
+https://nuamexchange.atlassian.net/browse/RTBOF-4773
+
+feat/RTBOF-1831
+nbo-png-integracion-liquidacion-deceval-borde-back
+
+
+
+SPRING_PROFILES_ACTIVE=local;DB_USERNAME=nubo;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;MAIL_USERNAME=sistemajaludsac@gmail.com;MAIL_PASSWORD=zgbp keno zftn llmn;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_REALM=nbo-dev;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_GROUP_ID=group-id;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_CONNECTION_TIMEOUT=30000;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60
+SFTP_DECEVAL_HOST=192.168.22.222;SFTP_DECEVAL_PORT=22;SFTP_DECEVAL_USER=admin; SFTP_DECEVAL_PASSWORD=pass; SFTP_DECEVAL_INPUT_FOLDER=D:ftp; SFTP_DECEVAL_OUTPUT_FOLDER=D:eee;
+SFTP_DECEVAL_PROCESSED_FOLDER=D:sss;SFTP_CONNECTION_TIMEOUT_MS=3;SFTP_DATA_TIMEOUT_MS=44;SFTP_RETRY_ATTEMPTS=3;SFTP_PASSIVE_MODE=0;
+
+
+ 
+ 
+git add ./
+git commit -m "feat: consulta de ciclo y horarios   "
+git push
+
+
+
+SETTLEMENTCYCLEQUERYAPI
+
+
+https://github.com/nuamx/nbo-png-consulta-ciclo-liqu-back/compare/development...feat/RTBOF-4309?expand=1
+https://github.com/nuamx/nbo-png-horarios-back/compare/development...feat/RTBOF-2889?expand=1
+
+
+https://github.com/nuamx/nbo-png-consulta-ciclo-liqu-back/compare/5741e0a2f4b2d8f68d704b6430984dc8d69eb58b...1f0902233da77ceb6e59b8899037bd9c19cf5795
+
+
+
+
+CUMPLIMIENTO_BENEFICIAFIO_FINAL
+
+
+
+/ciclo1contado/output/roper_A143542123.txt
+/ciclo1contado/output/roper_A143542123.txt/
+
+
+http://localhost:8084/settlement-cycle-query-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/settlement-cycle-query-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/settlement-cycle-query-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/no-compliance-operation-api/swagger-ui/index.html#/
+http://localhost:8083/risk-model-load-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/settlement-cycle-query-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/integration-settlement-deceval-edge-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/schedule-query-api/swagger-ui/index.html#/
+
+nbo-png-validaciones-modelo-riesgo-back
+
+GITsTANDUP
+https://github.com/nuamx/nbo-png-consulta-ciclo-liqu-back/compare/development...feat/RTBOF-4309?expand=1
+https://github.com/nuamx/nbo-png-consulta-ciclo-liqu-back/compare/development...feat/RTBOF-4309?expand=1
+https://github.com/nuamx/nbo-png-horarios-back/compare/development...feat/RTBOF-2889?expand=1
+
+
+
+
+
+
+  {
+            "sendDateTime": "2025-08-05T20:34:48.299",
+            "fileType": "N/D",
+            "sendStatus": "Rechazado",
+            "sendOrigin": "marisol.calderon@gft.com",
+            "downloadUrl": "/api/files/download?path=sftp%3A%2F%2Fsftpgo-service.sftp-dev.svc.cluster.local%3A2022%2Foutput%2FP2680805.E01&name=P2680805.E01",
+            "recordsCount": null,
+            "responseDetailUrl": null
+        },
+
+    // SFTP Configuration
+    @Value("${client.sftp.host}")
+    private String sftpHost;
+
+    @Value("${client.sftp.port}")
+    private int sftpPort;
+
+    @Value("${client.sftp.user}")
+    private String sftpUser;
+
+    @Value("${client.sftp.password}")
+    private String sftpPassword;
+	
+    @Value("${client.sftp.input-folder}")
+    private String sftpInputFolder;
+
+    @Value("${client.sftp.output-folder}")
+    private String sftpOutputFolder;
+
+
+  sftp:
+    host: ${SFTP_DECEVAL_HOST}
+    port: ${SFTP_DECEVAL_PORT}
+    user: ${SFTP_DECEVAL_USER}
+    password: ${SFTP_DECEVAL_PASSWORD}
+    input-folder: ${SFTP_DECEVAL_INPUT_FOLDER}
+    output-folder: ${SFTP_DECEVAL_OUTPUT_FOLDER}
+    processed-folder: ${SFTP_DECEVAL_PROCESSED_FOLDER}
+    connection-timeout-ms: ${SFTP_CONNECTION_TIMEOUT_MS}
+    data-timeout-ms: ${SFTP_DATA_TIMEOUT_MS}
+    retry-attempts: ${SFTP_RETRY_ATTEMPTS}
+    passive-mode: ${SFTP_PASSIVE_MODE}
+
+FTP_CONNECTION_TIMEOUT_MS : 30000
+FTP_DATA_TIMEOUT_MS : 60000
+FTP_DECEVAL_INPUT_FOLDER : input_dcv
+FTP_DECEVAL_OUTPUT_FOLDER : output_dcv
+FTP_DECEVAL_PROCESSED_FOLDER : process_dcv
+FTP_HOST : sftpgo-service.sftp-dev.svc.cluster.local
+FTP_PASSIVE_MODE : true
+FTP_PASSWORD : garantias-valores
+FTP_PORT : 2022
+FTP_RETRY_ATTEMPTS : 3
+FTP_USER : garantias-valores
+org.apache.camel.component.file.GenericFileOperationFailedException: Cannot connect to sftp://garantias-valores@sftpgo-service.sftp-dev.svc.cluster.local:2022
+
+
+INSERT INTO "NUANBODB"."TYPE"
+("TYPE_ID", "DESCRIPTION", "CATEGORY", "DETAIL", "OPERATION_RISK_PARAMETERS", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP")
+VALUES(1001, 'CICLO 1', 'ARCHIVO ENVIO DEPOSITO', '1', NULL, 'USER_01', 'APP_01', '2025-08-08 14:21:22.611', 'IP_01');
+INSERT INTO "NUANBODB"."TYPE"
+("TYPE_ID", "DESCRIPTION", "CATEGORY", "DETAIL", "OPERATION_RISK_PARAMETERS", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP")
+VALUES(1002, 'CICLO 3', 'ARCHIVO ENVIO DEPOSITO', '3', NULL, 'USER_01', 'APP_01', '2025-08-08 14:21:22.798', 'IP_01');
+
+ALTER TABLE "NUANBODB"."FILE_GENERATION" add column "FILE_RESPONSE_PATH" VARCHAR(250);
+ALTER TABLE "NUANBODB"."FILE_GENERATION" add column "FILE_RESPONSE_NAME" VARCHAR(50);
+
+
+
+Validar a nivel de estructura y negocio, persistir en Kafka y redis
+
+---bug---
+,fecha,nemotecnico,isin,Mercado,Precio,Moneda,Pais,Admisibilidad,Riesgo Moneda,Riesgo General,Cantidad registros
+,02/07/2025,ABNA15011,COC012345678,RV,7840.43761,COP,CO,Y,2,3,1
+,02/07/2025,ABNA15051,123,RF,12037.7031,CLP,CL,N,2,3,2
+,02/07/2025,ABNA15085,COB987654321,RF,12037.7031,PEN,PE,N,2,3,3
+,02/07/2025,ABNA15085,COB987654321,EF,12037.7031,COP,CO,N,2,3,4
+,02/07/2025,ABNA15085,COA456789012,RV,12037.7031,COP,CO,N,2,3,5
+,02/07/2025,ABNA15085,COB234567890,RV,12037.7031,COP,CO,N,2,3,6
+,02/07/2025,ABNA15085,COA567890123,EF,25874111,USD,US,Y,2,3,7
+
+
+
+
+
+CaffeineCacheConfig
+ResilienceConfig
+Resilience4jConfig
+KafkaConsumerConfig
+KafkaProducerConfig
+AsyncConfig
+
+
+
+
+Resilience4jConfig, ResilienceConfig
+FileContentCache 
+
+application:
+client.sftp.*
+passive-mode nova
+
+
+Clases: FtpAdapter, FtpUploadServiceImpl, PropertiesConfig, FtpEnum, y o FileContentCache o Spring Cache (no ambas).
+
+
+
+Config: CamelConfig (recomendado), application.yml con client.sftp.*.
+
+Dependencias:
+
+camel-spring-boot-starter
+
+camel-ftp-starter (habilita sftp://…)
+
+lombok
+
+(opcional) resilience4j-spring-boot3 si mantienes @CircuitBreaker/@Retry
+
+(opcional) com.github.mwiede:jsch si tu SFTP exige algoritmos modernos de clave.
+
+
+
+CIRCUIT_BREAKER_SLIDING_WINDOW_SIZE=22;CIRCUIT_BREAKER_HALF_OPEN_CALLS=22;CIRCUIT_BREAKER_WAIT_DURATION_MS=60000;CIRCUIT_BREAKER_FAILURE_THRESHOLD=50;CIRCUIT_BREAKER_EVENT_BUFFER_SIZE=10;
+SFTP_RETRY_ATTEMPTS=10;SFTP_RETRY_WAIT_DURATION_MS=60000;
+
+Instalar WSL instalar kubctl
+
+
+
+sftp://localhost:2222/ciclo1contado/output/roper_A143542123.txt
+sftp://sftpgo-service.sftp-dev.svc.cluster.local:2022/ciclo1contado/output/roper_A143542123.txt
+
+        "path": "/ciclo1contado/output/roper_A143542123.txt",
+Descargando por SFTP 
+sftp://ciclo1_contado@sftpgo-service.sftp-dev.svc.cluster.local:2022?binary=true&strictHostKeyChecking=no&preferredAuthentications=password&fileName=roper_A143542123.txt&disconnect=true&timeout=20000&connectTimeout=15000&stepwise=false&password=
+		
+sftp://ciclo1_contado@sftpgo-service.sftp-dev.svc.cluster.local:2022/ciclo1contado/output/roper_A143542123.txt?binary=true&strictHostKeyChecking=no&preferredAuthentications=password&disconnect=true&timeout=20000&connectTimeout=15000&stepwise=false&password=
+		
+		
+	
+FLUX
+git pull origin development
+#cambiar a RELEASE
+git checkout release
+#cambiar a development
+git checkout development
+
+
+
+https://apisix.nubo-dev.com/settlement-cycle-query-api/v1/dcv/query/download/file/send?fileName=01D250821.DAT
+https://apisix.nubo-dev.com/settlement-cycle-query-api/v1/dcv/query/download/file/send?fileName=02D250821.DAT
+
+
+https://apisix.nubo-dev.com/settlement-cycle-query-api/v1/dcv/query/download/file/response?fileName=01D250821.DAT
+https://apisix.nubo-dev.com/settlement-cycle-query-api/v1/dcv/query/download/file/response?fileName=02D250821.DAT
+
+
+
+
+
+
+
+-----------------------------Sprint 18
+
+
+
+
+696
+
+Campos faltantes:
+-Identificación
+-Participante Registrado en:
+-Calidad Tributaria
+-Relación Autoriza DCV OPES RV
+-Relación Autoriza Liquidación DCV RV
+-Relación de Convenios Operador Directo 
+-Asignación directa 
+-Formador de mercado
+-Prestamos OTC
+-Relación préstamo OTC
+
+
+
+
+
+git clone --branch feat/RTBOF-696 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-maestroparticipante-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-validaciones-modelo-riesgo-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+git clone --branch feat/RTBOF-3701 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-ms-aprobacion-procesos-cmd-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-liberacion-garantias-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-reglas-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-estados-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-calculo-entero-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-calculo-entero-worker-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-calculo-entero-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-calculo-entero-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-calculo-entero-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-calculo-entero-back.git
+git clone --branch feat/RTBOF-3748 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+ 
+git pull origin development 
+git add ./
+git commit -m "feat: TEST  "
+git push
+
+
+https://github.com/nuamx/nbo-png-ms-aprobacion-procesos-cmd-back/compare/development...feat/RTBOF-3701?expand=1
+https://github.com/nuamx/nbo-png-maestroparticipante-back/compare/development...feat/RTBOF-696?expand=1
+
+
+
+DB_HIKARI_MAXIMUM_POOL_SIZE=10
+DB_HIKARI_MINIMUM_IDLE=1
+DB_HIKARI_MAX_LIFETIME=1800000
+DB_HIKARI_VALIDATION_TIMEOUT=5000
+DB_HIKARI_CONNECTION_TIMEOUT=30000
+DB_HIKARI_LEAK_DETECTION_THRESHOLD=0
+
+
+
+
+garantias-aprobacion-procesos
+
+garantias-aprobacion-procesos-back-kustomization.yaml
+
+
+150	INGRESADA
+151	CONSTITUCIÓN EN PROCESO
+152	CONSTITUCIÓN RECHAZADA
+153	CONSTITUCIÓN ACEPTADA
+
+160	LIBERACIÓN EN PROCESO
+161	LIBERACIÓN RECHAZADA
+162	LIBERACIÓN PARCIAL ACEPTADA
+163	LIBERADA TOTAL ACEPTADA
+
+157	EJECUCIÓN EN PROCESO
+158	EJECUCIÓN RECHAZADA
+159	EJECUCIÓN ACEPTADA
+
+150	151		ingresada -> En proceso (C), Garantia
+152	151		Rechazada(C) -> En proceso (C), Garantia
+
+
+151	152		En proceso (C) -> Rechazada(C), Garantia
+151	153		En proceso (C) -> Aceptada (C), Garantia
+
+
+160	161		Liberando -> Rechazada (L), Garantia
+160	162		Liberando -> Liberada Parcial, Garantia
+160	163		Liberando -> Liberada, Garantia
+
+
+157	159		En proceso (E) -> Ejecutada, Garantia
+157	158		En proceso (E) -> Rechazada (E), Garantia
+
+
+https://apisix.nubo-dev.com/master-participant-api/swagger-ui/index.html#/
+
+
+
+ApprovalGuaranteesApiApplication
+
+    <groupId>com.nubo.approval.guarantees.api</groupId>
+    <artifactId>approval-guarantees-api</artifactId>
+    <version>0.20.0</version>
+    <name>${project.artifactId}</name>
+    <description>Approval Guarantees Api</description>
+
+
+http://localhost:8084/settlement-cycle-query-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/settlement-cycle-query-api/swagger-ui/index.html#/
+https://github.com/nuamx/nbo-png-consulta-ciclo-liqu-back/compare/development...feat/RTBOF-4309?expand=1
+http://localhost:8084/guarantee-approval-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/guarantee-approval-api/swagger-ui/index.html#/
+
+https://apisix.nubo-dev.com/master-participant-api/swagger-ui/index.html#/
+	IDENTIFICATION_TYPE_ID
+ 
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "MNEMONIC";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "NIT_CLEARING_HOUSE";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "ENTITY_TYPE";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "MARGIN_ACCOUNT";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "MASTER_ACCOUNT";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "ENABLED";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "MASTER_ACCOUNT";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "MASTER_ACCOUNT";
+ALTER TABLE "NUANBODB"."PARTICIPANT" drop column "MASTER_ACCOUNT";
+
+
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN "ENTITY_TYPE_ID"             int4 NOT NULL, ;
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN "DCV_RV_OPERS_AUTH"          bool;
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN "DCV_RV_SETTLEMENT_AUTH"     bool;
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN "DIRECT_OPERATOR_AGREEMENTS" bool;
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN "OTC_LOAN_RELATIONSHIP"      bool;
+
+
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN   "CITY_ID"                    int8 NOT NULL; 
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN   "CANCELED_STATUS"            bool; 
+ALTER TABLE "NUANBODB"."PARTICIPANT" ADD COLUMN   "REGISTERED_SYSTEM_ID"       int8 NOT NULL; 
+
+
+		
+
+CREATE TABLE "NUANBODB"."PARTICIPANT" (
+  "PARTICIPANT_ID"             BIGSERIAL NOT NULL, 
+  "ENTERPRISE_GROUP_ID"        int8 NOT NULL, 
+  "CODE"                       varchar(6), 
+  "DOCUMENT_NUMBER"            varchar(20), 
+  "IDENTIFICATION_TYPE_ID"     int4 NOT NULL, 
+  "NAME"                       varchar(100), 
+  "SHORT_NAME"                 varchar(50), 
+  "TYPE_ID"                    int4 NOT NULL, 
+  "COUNTRY_ID"                 int8 NOT NULL, 
+  "REGISTRATION_DATE"          date, 
+  "TAX_CODE"                   varchar(20), 
+  "DEPARTMENT_ID"              varchar(10), 
+  "MAIN_ADDRESS"               varchar(100), 
+  "WEB_PAGE"                   varchar(100), 
+  "PHONE_NUMBER"               varchar(20), 
+  "STATUS_ID"                  int4 NOT NULL, 
+  "TAX_STATUS_ID"              int4 NOT NULL, 
+  "ENTITY_TYPE_ID"             int4 NOT NULL, 
+  "DIRECT_ALLOCATION"          char(1), 
+  "MARKET_MAKER"               char(1), 
+  "CUSTODIAN"                  bool, 
+  "CITY_ID"                    int8 NOT NULL, 
+  "CANCELED_STATUS"            bool, 
+  "REGISTERED_SYSTEM_ID"       int8 NOT NULL, 
+  "DCV_RV_OPERS_AUTH"          bool, 
+  "DCV_RV_SETTLEMENT_AUTH"     bool, 
+  "DIRECT_OPERATOR_AGREEMENTS" bool, 
+  "OTC_LOAN_RELATIONSHIP"      bool, 
+  "LAST_MODIFY_USER"           varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"         varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"           timestamp NOT NULL, 
+  "LAST_MODIFY_IP"             varchar(50) NOT NULL, 
+  CONSTRAINT "PK_PARTICIPANT" 
+    PRIMARY KEY ("PARTICIPANT_ID"));
+
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT" IS 'Detailed information on system participants, participantes en el sistema';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."PARTICIPANT_ID" IS 'Nubo Participant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."ENTERPRISE_GROUP_ID" IS 'Enterprise Group Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CODE" IS 'participant Code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DOCUMENT_NUMBER" IS '  Investor''s Document Number, Only numbers';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."IDENTIFICATION_TYPE_ID" IS 'Indentification type';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."NAME" IS 'Participant Name';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."SHORT_NAME" IS 'Participant Short Name';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."TYPE_ID" IS 'Type Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."COUNTRY_ID" IS 'Identifier of the country where the participant is located';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."REGISTRATION_DATE" IS 'Registration date of the participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."TAX_CODE" IS 'participant''s tax code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DEPARTMENT_ID" IS 'Departament_id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."MAIN_ADDRESS" IS 'main address of the participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."WEB_PAGE" IS 'participant''s website';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."PHONE_NUMBER" IS 'participant''s phone number';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."TAX_STATUS_ID" IS 'Tax status id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."ENTITY_TYPE_ID" IS 'Entity type id see table TYPE with category "ENTIDAD"';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DIRECT_ALLOCATION" IS 'Direct Allocation of the Participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."MARKET_MAKER" IS 'The participant is a market maker';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CUSTODIAN" IS 'indicates that the participant is a custodian';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CITY_ID" IS 'City_id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CANCELED_STATUS" IS 'Canceled Status';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."REGISTERED_SYSTEM_ID" IS 'Registered system id, see table SYSTEM with category REGISTRADO_EN';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DCV_RV_OPERS_AUTH" IS 'DCV opers RV authorized relationship';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DCV_RV_SETTLEMENT_AUTH" IS 'DCV RV settlement authorization relationship';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DIRECT_OPERATOR_AGREEMENTS" IS 'Direct operator agreements';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."OTC_LOAN_RELATIONSHIP" IS 'OTC loan relationship';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+ 
+
+CREATE TABLE "NUANBODB"."ENTERPRISE_GROUP" (
+  "ENTERPRISE_GROUP_ID" BIGSERIAL NOT NULL, 
+  "CODE"                int4, 
+  "NAME"                varchar(255), 
+  "CANCELED"            bool, 
+  "STATUS_ID"           int4 NOT NULL, 
+  "COUNTRY_ID"          int8 NOT NULL, 
+  "LAST_MODIFY_USER"    varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"  varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"    timestamp NOT NULL, 
+  "LAST_MODIFY_IP"      varchar(50) NOT NULL, 
+  CONSTRAINT "PK_ENTERPRISE_GROUP" 
+    PRIMARY KEY ("ENTERPRISE_GROUP_ID"));
+COMMENT ON TABLE "NUANBODB"."ENTERPRISE_GROUP" IS '(EN) Enterprise Group, (ES) Grupo empresarial';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."ENTERPRISE_GROUP_ID" IS 'Enterprise Group Id';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."CODE" IS 'Code';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."NAME" IS 'Name';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."CANCELED" IS 'Enterprise Group canceled';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."COUNTRY_ID" IS 'Country Id';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."ENTERPRISE_GROUP"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."CITY" (
+  "CITY_ID"            BIGSERIAL NOT NULL, 
+  "COUNTRY_ID"         int8 NOT NULL, 
+  "CODE"               varchar(5), 
+  "DESCRIPTION"        varchar(80), 
+  "LAST_MODIFY_USER"   varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC" varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"   timestamp NOT NULL, 
+  "LAST_MODIFY_IP"     varchar(50) NOT NULL, 
+  CONSTRAINT "PK_CITY" 
+    PRIMARY KEY ("CITY_ID"));
+COMMENT ON TABLE "NUANBODB"."CITY" IS 'City Table';
+COMMENT ON COLUMN "NUANBODB"."CITY"."CITY_ID" IS 'City Id';
+COMMENT ON COLUMN "NUANBODB"."CITY"."COUNTRY_ID" IS 'Country Id';
+COMMENT ON COLUMN "NUANBODB"."CITY"."CODE" IS 'City code WITH IATA codification';
+COMMENT ON COLUMN "NUANBODB"."CITY"."DESCRIPTION" IS 'City description';
+COMMENT ON COLUMN "NUANBODB"."CITY"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."CITY"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."CITY"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."CITY"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."SYSTEM" (
+  "SYSTEM_ID"          BIGSERIAL NOT NULL, 
+  "CODE"               int4, 
+  "DESCRIPTION"        varchar(80), 
+  "CATEGORY"           varchar(30), 
+  "LAST_MODIFY_USER"   varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC" varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"   timestamp NOT NULL, 
+  "LAST_MODIFY_IP"     varchar(50) NOT NULL, 
+  CONSTRAINT "PK_SYSTEM" 
+    PRIMARY KEY ("SYSTEM_ID"));
+COMMENT ON TABLE "NUANBODB"."SYSTEM" IS 'guarantee''s system';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."SYSTEM_ID" IS 'System Id';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."CODE" IS 'Code';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."DESCRIPTION" IS 'Description';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."CATEGORY" IS 'Type Category';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."SYSTEM"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."DEPARTMENT" (
+  "DEPARTMENT_ID"      varchar(10) NOT NULL, 
+  "COUNTRY_ID"         int8 NOT NULL, 
+  "DESCRIPTION"        varchar(80), 
+  "LAST_MODIFY_USER"   varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC" varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"   timestamp NOT NULL, 
+  "LAST_MODIFY_IP"     varchar(50) NOT NULL, 
+  CONSTRAINT "PK_DEPARTMENT" 
+    PRIMARY KEY ("DEPARTMENT_ID"));
+COMMENT ON TABLE "NUANBODB"."DEPARTMENT" IS 'Departament Table';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."DEPARTMENT_ID" IS 'Departament Id';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."COUNTRY_ID" IS 'Country id';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."DESCRIPTION" IS 'Departament description';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."DEPARTMENT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+	
+		
+
+
+
+
+
+CREATE TABLE "NUANBODB"."PARTICIPANT_ACCOUNT" (
+  "PARTICIPANT_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "PARTICIPANT_ID"         int8, 
+  "ACCOUNT_NUMBER"         varchar(50), 
+  "STATUS_ID"              int4 NOT NULL, 
+  "ORIGIN_TYPE_ID"         int4 NOT NULL, 
+  "TYPE_ID"                int4 NOT NULL, 
+  "DEPOSITORY_ID"          varchar(2) NOT NULL, 
+  "LAST_MODIFY_USER"       varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"     varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"       timestamp NOT NULL, 
+  "LAST_MODIFY_IP"         varchar(50) NOT NULL, 
+  CONSTRAINT "PK_PARTICIPANT_ACCOUNT" 
+    PRIMARY KEY ("PARTICIPANT_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT_ACCOUNT" IS 'Participant Accounts, cuentas del participante';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."PARTICIPANT_ACCOUNT_ID" IS 'Nubo Account Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."PARTICIPANT_ID" IS 'Participant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."ACCOUNT_NUMBER" IS 'Account Number';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."STATUS_ID" IS 'Account status active or inactive';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."ORIGIN_TYPE_ID" IS 'Origin type id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."TYPE_ID" IS 'Type Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."DEPOSITORY_ID" IS 'Depository Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+
+CREATE TABLE "NUANBODB"."PARTICIPANT_BANK_ACCOUNT" (
+  "PARTICIPANT_BANK_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "BANK_ID"                     int8 NOT NULL, 
+  "PARTICIPANT_ID"              int8 NOT NULL, 
+  "BANK_ACCOUNT"                varchar(30), 
+  "SAVING_ACCOUNT"              bool, 
+  "LAST_MODIFY_USER"            varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"          varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"            timestamp NOT NULL, 
+  "LAST_MODIFY_IP"              varchar(50) NOT NULL, 
+  CONSTRAINT "PK_PARTICIAPNT_BANK_ACCOUNT" 
+    PRIMARY KEY ("PARTICIPANT_BANK_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT_BANK_ACCOUNT" IS 'Participant Bank acount';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."PARTICIPANT_BANK_ACCOUNT_ID" IS 'Banck account id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."BANK_ID" IS 'Trading System Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."PARTICIPANT_ID" IS 'Participoant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."BANK_ACCOUNT" IS 'Bank account';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."SAVING_ACCOUNT" IS 'savings account flag';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------Nuevas tablas
+
+
+CREATE TABLE "NUANBODB"."PARTICIPANT" (
+  "PARTICIPANT_ID"             BIGSERIAL NOT NULL, 
+  "ENTERPRISE_GROUP_ID"        int8 NOT NULL, 
+  "CODE"                       varchar(6), 
+  "DOCUMENT_NUMBER"            varchar(20), 
+  "IDENTIFICATION_TYPE_ID"     int4 NOT NULL, 
+  "NAME"                       varchar(100), 
+  "SHORT_NAME"                 varchar(50), 
+  "TYPE_ID"                    int4 NOT NULL, 
+  "COUNTRY_ID"                 int8 NOT NULL, 
+  "REGISTRATION_DATE"          date, 
+  "TAX_CODE"                   varchar(20), 
+  "DEPARTMENT_ID"              varchar(10), 
+  "MAIN_ADDRESS"               varchar(100), 
+  "WEB_PAGE"                   varchar(100), 
+  "PHONE_NUMBER"               varchar(20), 
+  "STATUS_ID"                  int4 NOT NULL, 
+  "TAX_STATUS_ID"              int4 NOT NULL, 
+  "ENTITY_TYPE_ID"             int4 NOT NULL, 
+  "DIRECT_ALLOCATION"          char(1), 
+  "MARKET_MAKER"               char(1), 
+  "CUSTODIAN"                  bool, 
+  "CITY_ID"                    int8 NOT NULL, 
+  "CANCELED_STATUS"            bool, 
+  "REGISTERED_SYSTEM_ID"       int8 NOT NULL, 
+  "DCV_RV_OPERS_AUTH"          bool, 
+  "DCV_RV_SETTLEMENT_AUTH"     bool, 
+  "DIRECT_OPERATOR_AGREEMENTS" bool, 
+  "OTC_LOAN_RELATIONSHIP"      bool, 
+  "LAST_MODIFY_USER"           varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"         varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"           timestamp NOT NULL, 
+  "LAST_MODIFY_IP"             varchar(50) NOT NULL, 
+  CONSTRAINT "PK_PARTICIPANT" 
+    PRIMARY KEY ("PARTICIPANT_ID"));
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT" IS 'Detailed information on system participants, participantes en el sistema';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."PARTICIPANT_ID" IS 'Nubo Participant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."ENTERPRISE_GROUP_ID" IS 'Enterprise Group Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CODE" IS 'participant Code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DOCUMENT_NUMBER" IS '  Investor''s Document Number, Only numbers';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."IDENTIFICATION_TYPE_ID" IS 'Indentification type';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."NAME" IS 'Participant Name';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."SHORT_NAME" IS 'Participant Short Name';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."TYPE_ID" IS 'Type Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."COUNTRY_ID" IS 'Identifier of the country where the participant is located';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."REGISTRATION_DATE" IS 'Registration date of the participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."TAX_CODE" IS 'participant''s tax code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DEPARTMENT_ID" IS 'Departament_id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."MAIN_ADDRESS" IS 'main address of the participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."WEB_PAGE" IS 'participant''s website';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."PHONE_NUMBER" IS 'participant''s phone number';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."TAX_STATUS_ID" IS 'Tax status id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."ENTITY_TYPE_ID" IS 'Entity type id see table TYPE with category "ENTIDAD"';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DIRECT_ALLOCATION" IS 'Direct Allocation of the Participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."MARKET_MAKER" IS 'The participant is a market maker';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CUSTODIAN" IS 'indicates that the participant is a custodian';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CITY_ID" IS 'City_id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."CANCELED_STATUS" IS 'Canceled Status';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."REGISTERED_SYSTEM_ID" IS 'Registered system id, see table SYSTEM with category REGISTRADO_EN';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DCV_RV_OPERS_AUTH" IS 'DCV opers RV authorized relationship';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DCV_RV_SETTLEMENT_AUTH" IS 'DCV RV settlement authorization relationship';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."DIRECT_OPERATOR_AGREEMENTS" IS 'Direct operator agreements';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."OTC_LOAN_RELATIONSHIP" IS 'OTC loan relationship';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+CREATE TABLE "NUANBODB"."PARTICIPANT_ACCOUNT" (
+  "PARTICIPANT_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "PARTICIPANT_ID"         int8, 
+  "ACCOUNT_NUMBER"         varchar(50), 
+  "STATUS_ID"              int4 NOT NULL, 
+  "ORIGIN_TYPE_ID"         int4 NOT NULL, 
+  "TYPE_ID"                int4 NOT NULL, 
+  "DEPOSITORY_ID"          varchar(2) NOT NULL, 
+  "COUNTRY_ID"             int8 NOT NULL, 
+  "ENTITY_CODE"            varchar(6), 
+  "SWIFT_CODE"             int4, 
+  "PRINCIPAL"              bool, 
+  "BRANCH_CODE"            varchar(20), 
+  "PORTFOLIO"              varchar(20), 
+  "CONCEPT"                varchar(30), 
+  "NIT_CLEARING_ENTITY"    varchar(10), 
+  "LAST_MODIFY_USER"       varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"     varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"       timestamp NOT NULL, 
+  "LAST_MODIFY_IP"         varchar(50) NOT NULL, 
+  CONSTRAINT "PK_PARTICIPANT_ACCOUNT" 
+    PRIMARY KEY ("PARTICIPANT_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT_ACCOUNT" IS 'Participant Accounts, cuentas del participante';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."PARTICIPANT_ACCOUNT_ID" IS 'Nubo Account Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."PARTICIPANT_ID" IS 'Participant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."ACCOUNT_NUMBER" IS 'Account Number';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."STATUS_ID" IS 'Account status active or inactive';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."ORIGIN_TYPE_ID" IS 'Origin type id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."TYPE_ID" IS 'Type Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."DEPOSITORY_ID" IS 'Depository Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."COUNTRY_ID" IS 'Country Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."ENTITY_CODE" IS 'Entity Code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."SWIFT_CODE" IS 'Swift Code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."PRINCIPAL" IS 'Principal';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."BRANCH_CODE" IS 'Branch code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."PORTFOLIO" IS 'Portfolio';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."CONCEPT" IS 'Concept';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."NIT_CLEARING_ENTITY" IS 'Nit Clearing entitty';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+CREATE TABLE "NUANBODB"."PARTICIPANT_AUTHORIZATION" (
+  "PARTICIPANT_ID"            int8 NOT NULL, 
+  "AUTHORIZED_PARTICIPANT_ID" int8 NOT NULL, 
+  "LAST_MODIFY_USER"          varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"        varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"          timestamp NOT NULL, 
+  "LAST_MODIFY_IP"            varchar(50) NOT NULL, 
+  "TYPE_ID"                   int4 NOT NULL, 
+  CONSTRAINT "PK_PARTICIPANT_AUTHORIZATION" 
+    PRIMARY KEY ("PARTICIPANT_ID", 
+  "AUTHORIZED_PARTICIPANT_ID"));
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT_AUTHORIZATION" IS 'Autorizations''s participant. Autorizaciones del paticipante.';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."PARTICIPANT_ID" IS 'Participant id Authorizing Participant';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."AUTHORIZED_PARTICIPANT_ID" IS '
+Authorized Participant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_AUTHORIZATION"."TYPE_ID" IS 'Type Id see table TYPE with category AUTORIZACION';
+CREATE TABLE "NUANBODB"."PARTICIPANT_BANK_ACCOUNT" (
+  "PARTICIPANT_BANK_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "PARTICIPANT_ID"              int8 NOT NULL, 
+  "BANK_ACCOUNT"                varchar(30), 
+  "STATUS_ID"                   int4 NOT NULL, 
+  "TYPE_ID"                     int4 NOT NULL, 
+  "BANK_ID"                     int8 NOT NULL, 
+  "COUNTRY_ID"                  int8 NOT NULL, 
+  "ENTITY_CODE"                 varchar(6), 
+  "SWIFT_CODE"                  int4, 
+  "PRINCIPAL"                   bool, 
+  "BRANCH_CODE"                 varchar(20), 
+  "PORTFOLIO"                   varchar(20), 
+  "CONCEPT"                     varchar(30), 
+  "NIT_CLEARING_ENTITY"         varchar(10), 
+  "LAST_MODIFY_USER"            varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"          varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"            timestamp NOT NULL, 
+  "LAST_MODIFY_IP"              varchar(50) NOT NULL, 
+  CONSTRAINT "PK_PARTICIAPNT_BANK_ACCOUNT" 
+    PRIMARY KEY ("PARTICIPANT_BANK_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."PARTICIPANT_BANK_ACCOUNT" IS 'Participant Bank acount';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."PARTICIPANT_BANK_ACCOUNT_ID" IS 'Banck account id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."PARTICIPANT_ID" IS 'Participoant Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."BANK_ACCOUNT" IS 'Bank account';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."STATUS_ID" IS 'Status id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."TYPE_ID" IS 'Type Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."BANK_ID" IS 'Trading System Id';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."COUNTRY_ID" IS 'Country Id.';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."ENTITY_CODE" IS 'Entity Code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."SWIFT_CODE" IS 'Swift Code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."PRINCIPAL" IS 'Principal';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."BRANCH_CODE" IS 'Branch code';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."PORTFOLIO" IS 'Portfolio';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."CONCEPT" IS 'Concept';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."NIT_CLEARING_ENTITY" IS 'Nit Clearing entitty';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."PARTICIPANT_BANK_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		CREATE TABLE "NUANBODB"."GUARANTEE" (
+  "GUARANTEE_ID"                    BIGSERIAL NOT NULL, 
+  "REGISTRATION_DATE"               date NOT NULL, 
+  "PARTICIPANT_ID"                  int8, 
+  "CUSTODIAN_ID"                    int8, 
+  "FOUND_ID"                        int4, 
+  "INVESTOR_ID"                     int8, 
+  "INVESTOR_ACCOUNT_ID"             int8, 
+  "GUARANTEE_NUMBER"                varchar(50), 
+  "STATUS_ID"                       int4 NOT NULL, 
+  "GUARANTEE_ACCOUNT_ID"            int8, 
+  "SPECIFIC_ACCOUNT"                varchar(50), 
+  "DEPOSITORY_ID"                   varchar(2) NOT NULL, 
+  "MARKET_ID"                       varchar(2), 
+  "COUNTRY_ID"                      int8 NOT NULL, 
+  "SECURITY_ID"                     int8, 
+  "GUARANTEE_PRICE"                 numeric(16, 4), 
+  "GUARANTEE_QUANTITY"              numeric(18, 2), 
+  "GUARANTEE_VOLUME"                numeric(18, 5), 
+  "ISIN_NUMBER_ID"                  int8, 
+  "ACCOUNT_TYPE_ID"                 int4 NOT NULL, 
+  "GUARANTEE_TYPE_ID"               int4 NOT NULL, 
+  "CURRENCY_ID"                     int8 NOT NULL, 
+  "PARTICIPANT_BANK_ACCOUNT_ID"     int8, 
+  "GUARANTEE_SELF_RELEASE"          bool, 
+  "GUARANTEE_ACCOUNTS_ID"           int8 NOT NULL, 
+  "TITLE_OBJECT"                    bool, 
+  "GUARANTEE_NUMBER_DEPOSIT"        varchar(50), 
+  "GUARANTEE_GLOBAL_ACCOUNT_ID"     int8 NOT NULL, 
+  "GUARANTEE_PARTICULAR_ACCOUNT_ID" int8 NOT NULL, 
+  "LAST_MODIFY_USER"                varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"              varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"                timestamp NOT NULL, 
+  "LAST_MODIFY_IP"                  varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE" 
+    PRIMARY KEY ("GUARANTEE_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE" IS 'guarantee Constituted';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_ID" IS 'Guarantee Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."REGISTRATION_DATE" IS 'Registration Date';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."PARTICIPANT_ID" IS 'Participant Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."CUSTODIAN_ID" IS 'Custodian Id see table PARTICIPANT';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."FOUND_ID" IS 'Found Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."INVESTOR_ID" IS 'Investor Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."INVESTOR_ACCOUNT_ID" IS 'Investor Account Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_NUMBER" IS 'Guarantee Number';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_ACCOUNT_ID" IS 'Guarantee Account id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."SPECIFIC_ACCOUNT" IS 'Specific account';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."DEPOSITORY_ID" IS 'Depository Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."MARKET_ID" IS 'Market Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."COUNTRY_ID" IS 'Country Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."SECURITY_ID" IS 'Security  id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_PRICE" IS 'Guarantee price';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_QUANTITY" IS 'Guarantee Quantity';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_VOLUME" IS 'Guarantee Volume';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."ISIN_NUMBER_ID" IS 'Isin Number';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."ACCOUNT_TYPE_ID" IS 'Account Type Id, see table TYPE with CATEGORY  "CUENTA_GARANTIA"';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_TYPE_ID" IS 'Guarantee Type id, see TYPE with category  "TIPO_GARANTIA"';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."CURRENCY_ID" IS 'Currency Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."PARTICIPANT_BANK_ACCOUNT_ID" IS 'Participant bank account id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_SELF_RELEASE" IS 'Guarantee Self Release ';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_ACCOUNTS_ID" IS 'Guarantee accounts Id, Global and particular accounts';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."TITLE_OBJECT" IS 'Title object';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_NUMBER_DEPOSIT" IS 'Guarantee Number Deposit';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_GLOBAL_ACCOUNT_ID" IS 'Guarantee Global Account Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."GUARANTEE_PARTICULAR_ACCOUNT_ID" IS 'Guarantee Particular Account Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."GUARANTEE_TRADE" (
+  "GURANTEE_TRADE_ID"                BIGSERIAL NOT NULL, 
+  "TRADE_ID"                        int8 NOT NULL, 
+  "FRACTION"                        int4 NOT NULL, 
+  "SIDE_ID"                         varchar(2) NOT NULL, 
+  "PARTICIPANT_ID"                  int8 NOT NULL, 
+  "CUSTODIAN_ID"                    int8, 
+  "INVESTOR_ACCOUNT_ID"             int8 NOT NULL, 
+  "INVESTOR_ID"                     int8 NOT NULL, 
+  "GUARANTEE_ACCOUNT_TYPE_ID"       int4 NOT NULL, 
+  "GUARANTEE_GLOBAL_ACCOUNT_ID"     int8, 
+  "GUARANTEE_PARTICULAR_ACCOUNT_ID" int8, 
+  "AFP_FUND_ID"                     int8 NOT NULL, 
+  "RISK_MODEL_PRICE"                numeric(14, 6), 
+  "RISK_MODEL_PERCENTAGE"           numeric(6, 4), 
+  "ASSIGNED_QUANTITY"               numeric(16, 4), 
+  "ASSIGNED_AMOUNT"                 numeric(16, 4), 
+  "REQUIREMENT_AMOUNT"              numeric(16, 4), 
+  "STATUS_ID"                       int4 NOT NULL, 
+  "REOPENING"                       bool, 
+  "SECURITY_ID"                     int8 NOT NULL, 
+  "ISIN_NUMBER_ID"                  int8 NOT NULL, 
+  "COUNTRY_ID"                      int8 NOT NULL, 
+  "LAST_MODIFY_USER"                varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"              varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"                timestamp NOT NULL, 
+  "LAST_MODIFY_IP"                  varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_TRADE" 
+    PRIMARY KEY ("GURANTEE_TRADE_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_TRADE" IS 'Guarantee trade, Transactioins with guarantee';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."GURANTEE_TRADE_ID" IS 'Guarantee Trade Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."TRADE_ID" IS 'Trade Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."FRACTION" IS 'Fraction';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."SIDE_ID" IS 'Side Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."PARTICIPANT_ID" IS 'Participant id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."CUSTODIAN_ID" IS 'Custoidian id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."INVESTOR_ACCOUNT_ID" IS 'Investor account';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."INVESTOR_ID" IS 'Investor Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."GUARANTEE_ACCOUNT_TYPE_ID" IS 'Guarantee Account type id see table type with category "TIPO CUENTA GARANTIA"';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."GUARANTEE_GLOBAL_ACCOUNT_ID" IS 'Guarantee Global Account id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."GUARANTEE_PARTICULAR_ACCOUNT_ID" IS 'Guarantee Particular account id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."AFP_FUND_ID" IS 'Afp Fund id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."RISK_MODEL_PRICE" IS 'Risk Molde Price';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."RISK_MODEL_PERCENTAGE" IS 'Risk Model percentage';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."ASSIGNED_QUANTITY" IS 'Assigned Quantity';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."ASSIGNED_AMOUNT" IS 'Assigned Amount';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."REQUIREMENT_AMOUNT" IS 'Requirement Amount';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."STATUS_ID" IS 'Status id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."REOPENING" IS 'Trade in reopening at depository. Repique en el deposito';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."SECURITY_ID" IS 'Security Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."ISIN_NUMBER_ID" IS 'Isin Number';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."COUNTRY_ID" IS 'Country id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+CREATE TABLE "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY" (
+  "GUARANTEE_TRADE_STATUS_HISTORY_ID" BIGSERIAL NOT NULL, 
+  "GURANTEE_TRADE_ID"                  int8 NOT NULL, 
+  "TIME"                              timestamp, 
+  "STATUS_ID"                         int4 NOT NULL, 
+  "REASON"                            varchar(200), 
+  "LAST_MODIFY_USER"                  varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"                varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"                  timestamp NOT NULL, 
+  "LAST_MODIFY_IP"                    varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_TRADE_STATUS_HISTORY" 
+    PRIMARY KEY ("GUARANTEE_TRADE_STATUS_HISTORY_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY" IS 'guarantee Trade Status History
+ ';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."GUARANTEE_TRADE_STATUS_HISTORY_ID" IS 'Guarantee trade Status History Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."GURANTEE_TRADE_ID" IS 'Guarentee Trade Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."TIME" IS 'Time';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."REASON" IS 'Reason';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_TRADE_STATUS_HISTORY"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+
+
+CREATE TABLE "NUANBODB"."GUARANTEE_MOVEMENT" (
+	"GUARANTEE_MOVEMENT_ID" serial4 NOT NULL,
+	"GUARANTEE_ID" int8 NOT NULL,
+	"DATE" timestamptz NULL,
+	"TYPE_ID" int4 NOT NULL,
+	"MOVEMENT_QUANTITY" numeric(18, 2) NULL,
+	"LAST_MODIFY_USER" varchar(250) NOT NULL,
+	"LAST_MODIFY_APPLIC" varchar(250) NOT NULL,
+	"LAST_MODIFY_DATE" timestamptz NOT NULL,
+	"LAST_MODIFY_IP" varchar(50) NOT NULL,
+	CONSTRAINT "PK_GUARANTEE_MOVEMENT" PRIMARY KEY ("GUARANTEE_MOVEMENT_ID"),
+	CONSTRAINT "FK_GUARANTEE_GUARANTEE_MOVEMENT_358" FOREIGN KEY ("GUARANTEE_ID") REFERENCES "NUANBODB"."GUARANTEE"("GUARANTEE_ID"),
+	CONSTRAINT "FK_TYPE_GUARANTEE_MOVEMENT_359" FOREIGN KEY ("TYPE_ID") REFERENCES "NUANBODB"."TYPE"("TYPE_ID")
+);
+
+
+
+
+CREATE TABLE "NUANBODB"."GUARANTEE_ACCOUNT" (
+  "GUARANTEE_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "CODE"                 int4 NOT NULL, 
+  "NAME"                 varchar(255) NOT NULL, 
+  "STATUS_ID"            int4 NOT NULL, 
+  "TYPE_ID"              int4 NOT NULL, 
+  "CATEGORY_CLASS_ID"    varchar(3) NOT NULL, 
+  "COMPANY_ID"           int8 NOT NULL, 
+  "SYSTEM_ID"            int8 NOT NULL, 
+  "LAST_MODIFY_USER"     varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"   varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"     timestamp NOT NULL, 
+  "LAST_MODIFY_IP"       varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_ACCOUNT" 
+    PRIMARY KEY ("GUARANTEE_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_ACCOUNT" IS 'guarantee Account';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."GUARANTEE_ACCOUNT_ID" IS 'Guarantee Account  Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."CODE" IS 'Guarantee Account Code';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."NAME" IS 'Guarantee Account Name';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."STATUS_ID" IS 'Status Id, see table STATUS with CATEGORY=CUENTA_GARANTIA';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."TYPE_ID" IS 'Type Id, see table TYPE with CATEGORY = CUENTA_GARANATIA';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."CATEGORY_CLASS_ID" IS 'Category Class Id, see table cargory wirh filter CATEGORY="CATEGORIA_GARANATIA';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."COMPANY_ID" IS 'Company Id, see table COMPANY with Category GARANTIA';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."SYSTEM_ID" IS 'System Id, see table SYSTEM with CATEGORY=GARANTIA';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+CREATE TABLE "NUANBODB"."GUARANTEE_ACCOUNTS" (
+  "GUARANTEE_ACCOUNTS_ID" BIGSERIAL NOT NULL, 
+  "ACCOUNT_NUMBER"        varchar(50), 
+  "PARTICIPANT_ID"        int8 NOT NULL, 
+  "INVESTOR_ID"           int8, 
+  "TYPE_ID"               int4 NOT NULL, 
+  "STATUS_ID"             int4 NOT NULL, 
+  "LAST_MODIFY_USER"      varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"    varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"      timestamp NOT NULL, 
+  "LAST_MODIFY_IP"        varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_ACCOUNTS" 
+    PRIMARY KEY ("GUARANTEE_ACCOUNTS_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_ACCOUNTS" IS 'Guarantee accounts global and particular
+ ';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."GUARANTEE_ACCOUNTS_ID" IS 'Guarantee Accounts Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."ACCOUNT_NUMBER" IS 'Account Number';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."PARTICIPANT_ID" IS 'Participant Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."INVESTOR_ID" IS 'Investor Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."TYPE_ID" IS 'Type Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_ACCOUNTS"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."GUARANTEE_VALUATION" (
+  "GUARANTEE_ID"        int8 NOT NULL, 
+  "VALUATION_DATE"      timestamp NOT NULL, 
+  "MARKET_PRICE"        numeric(18, 4), 
+  "RISK_PERCENTAGE"     numeric(10, 4), 
+  "QUANTITY"            numeric(18, 2), 
+  "UNASSIGNED_QUANTITY" numeric(18, 2), 
+  "GUARANTEE_INTEGER"   numeric(18, 2), 
+  "UNASSIGNED_AMOUNT"   numeric(18, 2), 
+  "BLOCKING_TYPE_ID"    int4 NOT NULL, 
+  "CURRENCY_RISK"       numeric(10, 4), 
+  "LAST_MODIFY_USER"    varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"  varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"    timestamp NOT NULL, 
+  "LAST_MODIFY_IP"      varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_VALUATION" 
+    PRIMARY KEY ("GUARANTEE_ID", 
+  "VALUATION_DATE"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_VALUATION" IS 'Guarantee Valuation ';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."GUARANTEE_ID" IS 'Guarantee Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."VALUATION_DATE" IS 'Valuation Date';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."MARKET_PRICE" IS 'Market  Price';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."RISK_PERCENTAGE" IS 'Risk  Percentage';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."QUANTITY" IS 'Quantity';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."UNASSIGNED_QUANTITY" IS 'Unassigned quantiity';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."GUARANTEE_INTEGER" IS 'Guarantee Integer';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."UNASSIGNED_AMOUNT" IS 'Unassignment amount';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."BLOCKING_TYPE_ID" IS 'Blocking type, see ttable Type with Category "Bloqueo Garantias"';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."CURRENCY_RISK" IS 'Currency Risk';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_VALUATION"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+CREATE TABLE "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" (
+  "GUARANTEE_GLOBAL_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "REQUIERE_GUARANTEE"          bool, 
+  "ACCOUNT_CODE"                varchar(50), 
+  "ACCOUNT_NAME"                varchar(255), 
+  "STATUS_ID"                   int4 NOT NULL, 
+  "DESTINATION_TYPE_ID"         int4 NOT NULL, 
+  "MARKET_ID"                   varchar(2) NOT NULL, 
+  "LAST_MODIFY_USER"            varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"          varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"            timestamp NOT NULL, 
+  "LAST_MODIFY_IP"              varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_GLOBAL_ACCOUNT" 
+    PRIMARY KEY ("GUARANTEE_GLOBAL_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" IS 'Guarantee Global accounts
+ ';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."GUARANTEE_GLOBAL_ACCOUNT_ID" IS 'Guarantee Global Account Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."REQUIERE_GUARANTEE" IS 'Requieres Guarrantees';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."ACCOUNT_CODE" IS 'Account Code';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."ACCOUNT_NAME" IS 'Account Name';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."STATUS_ID" IS 'Status Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."DESTINATION_TYPE_ID" IS 'Destination type Id, see table TYPE with CATEGORY "DESTINO_GARANTIAS"';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."MARKET_ID" IS 'Market id see table MARKET with DESCRIPTION value TIPO ACTIVO';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT" (
+  "GUARANTEE_PARTICULAR_ACCOUNT_ID" BIGSERIAL NOT NULL, 
+  "ACCOUNT_PARTICULAR_CODE"         varchar(50), 
+  "LAST_MODIFY_USER"                varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"              varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"                timestamp NOT NULL, 
+  "LAST_MODIFY_IP"                  varchar(50) NOT NULL, 
+  CONSTRAINT "PK_GUARANTEE_PPARTICULAR_ACCOUNT" 
+    PRIMARY KEY ("GUARANTEE_PARTICULAR_ACCOUNT_ID"));
+COMMENT ON TABLE "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT" IS 'Guarantee Particular accounts
+ ';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT"."GUARANTEE_PARTICULAR_ACCOUNT_ID" IS 'Guarantee particular Account Id';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT"."ACCOUNT_PARTICULAR_CODE" IS 'Account Particular Code';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+CREATE TABLE "NUANBODB"."ISIN_NUMBER" (
+  "ISIN_NUMBER_ID"           BIGSERIAL NOT NULL, 
+  "ISIN_NUMBER"              varchar(100) NOT NULL, 
+  "COUNTRY_ID"               int8 NOT NULL, 
+  "MARKET_ID"                varchar(2) NOT NULL, 
+  "CURRENCY_ID"              int8 NOT NULL, 
+  "SECURITY_ID"              int8 NOT NULL, 
+  "DESCRIPTION"              varchar(255), 
+  "ISSUE_DATE"               date 	, 
+  "MATURITY_DATE"            date, 
+  "DURATION"                 int4, 
+  "CREDIT_RATING"            varchar(5), 
+  "SPREAD"                   numeric(5, 2), 
+  "RATE_VALUE"               numeric(5, 2), 
+  "USE_RATE_CONDITION_ID"    int8 NOT NULL, 
+  "PERIODICITY_CONDITION_ID" int8 NOT NULL, 
+  "PAYMENT_CONDITION_ID"     int8 NOT NULL, 
+  "RATE_CONDITION_ID"        int8 NOT NULL, 
+  "DEPOSITORY_ID"            varchar(2) NOT NULL, 
+  "LAST_MODIFY_USER"         varchar(250) NOT NULL, 
+  "LAST_MODIFY_APPLIC"       varchar(250) NOT NULL, 
+  "LAST_MODIFY_DATE"         timestamp NOT NULL, 
+  "LAST_MODIFY_IP"           varchar(50) NOT NULL, 
+  CONSTRAINT "PK_ISIN_NUMBER" 
+    PRIMARY KEY ("ISIN_NUMBER_ID"));
+COMMENT ON TABLE "NUANBODB"."ISIN_NUMBER" IS 'Isin Number';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."ISIN_NUMBER_ID" IS 'Isin Number Id';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."ISIN_NUMBER" IS 'Isin number';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."COUNTRY_ID" IS 'Country Id';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."MARKET_ID" IS 'Market Id';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."CURRENCY_ID" IS 'Currency Id';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."SECURITY_ID" IS 'Security ID';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."DESCRIPTION" IS 'Isin Description';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."ISSUE_DATE" IS 'Issue_date, Fecha de emision';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."MATURITY_DATE" IS 'Maturity Date, Fecha de vencimiento';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."DURATION" IS 'Duration';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."CREDIT_RATING" IS 'Credit rating';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."SPREAD" IS 'Spread';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."RATE_VALUE" IS 'Rate Value';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."USE_RATE_CONDITION_ID" IS 'Use Rate see table CONDITION with category "USO TASA"';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."PERIODICITY_CONDITION_ID" IS 'Periodicity Condition Id see table CONDITION with category "PERIODICIDAD"';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."PAYMENT_CONDITION_ID" IS 'Payment Condition Id see table CONDITION with category "MEDIO PAGO"';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."RATE_CONDITION_ID" IS 'Rate Condition Id see table CONDITION with category "CODIGO TASA"';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."DEPOSITORY_ID" IS 'Depository Id';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."LAST_MODIFY_USER" IS 'User of the last modified made';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."LAST_MODIFY_APPLIC" IS 'application that makes the required change';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."LAST_MODIFY_DATE" IS 'date you make the required change';
+COMMENT ON COLUMN "NUANBODB"."ISIN_NUMBER"."LAST_MODIFY_IP" IS 'IP from which you make the required change';
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_COUNTRY_GUARANTEE_170" FOREIGN KEY ("COUNTRY_ID") REFERENCES "NUANBODB"."COUNTRY" ("COUNTRY_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_CURRENCY_GUARANTEE_248" FOREIGN KEY ("CURRENCY_ID") REFERENCES "NUANBODB"."CURRENCY" ("CURRENCY_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_DEPOSITORY_GUARANTEE_168" FOREIGN KEY ("DEPOSITORY_ID") REFERENCES "NUANBODB"."DEPOSITORY" ("DEPOSITORY_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_GUARANTEE_ACCOUNT_GUARANTEE_165" FOREIGN KEY ("GUARANTEE_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_ACCOUNT" ("GUARANTEE_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_GUARANTEE_ACCOUNTS_GUARANTEE_258" FOREIGN KEY ("GUARANTEE_ACCOUNTS_ID") REFERENCES "NUANBODB"."GUARANTEE_ACCOUNTS" ("GUARANTEE_ACCOUNTS_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_GUARANTEE_GLOBAL_ACCOUNT_GUARANTEE_309" FOREIGN KEY ("GUARANTEE_GLOBAL_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ("GUARANTEE_GLOBAL_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_GUARANTEE_PPARTICUALR_ACCOUNT_GUARANTEE_310" FOREIGN KEY ("GUARANTEE_PARTICULAR_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT" ("GUARANTEE_PARTICULAR_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_INVESTOR_ACCOUNT_GUARANTEE_183" FOREIGN KEY ("INVESTOR_ACCOUNT_ID") REFERENCES "NUANBODB"."INVESTOR_ACCOUNT" ("INVESTOR_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_INVESTOR_GUARANTEE_163" FOREIGN KEY ("INVESTOR_ID") REFERENCES "NUANBODB"."INVESTOR" ("INVESTOR_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_ISIN_NUMBER_GUARANTEE_245" FOREIGN KEY ("ISIN_NUMBER_ID") REFERENCES "NUANBODB"."ISIN_NUMBER" ("ISIN_NUMBER_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_MARKET_GUARANTEE_169" FOREIGN KEY ("MARKET_ID") REFERENCES "NUANBODB"."MARKET" ("MARKET_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_PARTICIPANT_BANK_ACCOUNT_GUARANTEE_249" FOREIGN KEY ("PARTICIPANT_BANK_ACCOUNT_ID") REFERENCES "NUANBODB"."PARTICIPANT_BANK_ACCOUNT" ("PARTICIPANT_BANK_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_PARTICIPANT_GUARANTEE_162" FOREIGN KEY ("PARTICIPANT_ID") REFERENCES "NUANBODB"."PARTICIPANT" ("PARTICIPANT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_PARTICIPANT_GUARANTEE_250" FOREIGN KEY ("CUSTODIAN_ID") REFERENCES "NUANBODB"."PARTICIPANT" ("PARTICIPANT_ID");ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_SECURITY_TITLE_GUARANTEE_171" FOREIGN KEY ("SECURITY_ID") REFERENCES "NUANBODB"."SECURITY_TITLE" ("SECURITY_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_STATUS_GUARANTEE_164" FOREIGN KEY ("STATUS_ID") REFERENCES "NUANBODB"."STATUS" ("STATUS_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_TYPE_GUARANTEE_246" FOREIGN KEY ("ACCOUNT_TYPE_ID") REFERENCES "NUANBODB"."TYPE" ("TYPE_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_TYPE_GUARANTEE_247" FOREIGN KEY ("GUARANTEE_TYPE_ID") REFERENCES "NUANBODB"."TYPE" ("TYPE_ID");
+
+
+
+
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_AFP_FUND_GUARANTEE_TRADER_291" FOREIGN KEY ("AFP_FUND_ID") REFERENCES "NUANBODB"."AFP_FUND" ("AFP_FUND_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_COUNTRY_GUARANTEE_TRADE_318" FOREIGN KEY ("COUNTRY_ID") REFERENCES "NUANBODB"."COUNTRY" ("COUNTRY_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_GUARANTEE_GLOBAL_ACCOUNT_GUARANTEE_TRADE_289" FOREIGN KEY ("GUARANTEE_GLOBAL_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ("GUARANTEE_GLOBAL_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_GUARANTEE_PARTICULAR_ACCOUNT_GUARANTEE_TRADE_290" FOREIGN KEY ("GUARANTEE_PARTICULAR_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_PARTICULAR_ACCOUNT" ("GUARANTEE_PARTICULAR_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_INVESTOR_ACCOUNT_GUARANTEE_TRADE_287" FOREIGN KEY ("INVESTOR_ACCOUNT_ID") REFERENCES "NUANBODB"."INVESTOR_ACCOUNT" ("INVESTOR_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_INVESTOR_GUARANTEE_TRADE_288" FOREIGN KEY ("INVESTOR_ID") REFERENCES "NUANBODB"."INVESTOR" ("INVESTOR_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_ISIN_NUMBER_GUARANANTEE_TRADE_316" FOREIGN KEY ("ISIN_NUMBER_ID") REFERENCES "NUANBODB"."ISIN_NUMBER" ("ISIN_NUMBER_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_PARTICIPANT_GUARANTEE_TRADE_285" FOREIGN KEY ("PARTICIPANT_ID") REFERENCES "NUANBODB"."PARTICIPANT" ("PARTICIPANT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_PARTICIPANT_GUARANTEE_TRADE_286" FOREIGN KEY ("CUSTODIAN_ID") REFERENCES "NUANBODB"."PARTICIPANT" ("PARTICIPANT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_SECURITY_TITLE_GUARANTEE_TRADE_315" FOREIGN KEY ("SECURITY_ID") REFERENCES "NUANBODB"."SECURITY_TITLE" ("SECURITY_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_SETTLEMENT_GUARANTEE_TRADE_284" FOREIGN KEY ("TRADE_ID", "FRACTION", "SIDE_ID") REFERENCES "NUANBODB"."SETTLEMENT" ("TRADE_ID", "FRACTION", "SIDE_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_STATUS_GUARANTEE_TRADE_292" FOREIGN KEY ("STATUS_ID") REFERENCES "NUANBODB"."STATUS" ("STATUS_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_TYPE_GUARANTEE_TRADE_288" FOREIGN KEY ("GUARANTEE_ACCOUNT_TYPE_ID") REFERENCES "NUANBODB"."TYPE" ("TYPE_ID");
+
+ALTER TABLE "NUANBODB"."GUARANTEE_VALUATION" ADD CONSTRAINT "FK_GUARANTEE_GUARANTEE_VALUATION_180" FOREIGN KEY ("GUARANTEE_ID") REFERENCES "NUANBODB"."GUARANTEE" ("GUARANTEE_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_VALUATION" ADD CONSTRAINT "FK_TYPE_GUARANTEE_VALUATION_180" FOREIGN KEY ("BLOCKING_TYPE_ID") REFERENCES "NUANBODB"."TYPE" ("TYPE_ID");
+
+ALTER TABLE "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ADD CONSTRAINT "FK_GUARANTEE_GLOBAL_ACCOUNT_279" FOREIGN KEY ("MARKET_ID") REFERENCES "NUANBODB"."MARKET" ("MARKET_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ADD CONSTRAINT "FK_STATUS_GUARANTEE_ACCOUNT_277" FOREIGN KEY ("STATUS_ID") REFERENCES "NUANBODB"."STATUS" ("STATUS_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ADD CONSTRAINT "FK_TYPE_GUARANTEE_GLOBAL_ACCOUNT_278" FOREIGN KEY ("DESTINATION_TYPE_ID") REFERENCES "NUANBODB"."TYPE" ("TYPE_ID");
+
+
+ALTER TABLE "NUANBODB"."GUARANTEE_TRANSACTION" ADD CONSTRAINT "FK_GUARANTEE_GUARANTEE_TRANSACTION_182" FOREIGN KEY ("GUARANTEE_ID") REFERENCES "NUANBODB"."GUARANTEE" ("GUARANTEE_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_VALUATION" ADD CONSTRAINT "FK_GUARANTEE_GUARANTEE_VALUATION_180" FOREIGN KEY ("GUARANTEE_ID") REFERENCES "NUANBODB"."GUARANTEE" ("GUARANTEE_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_STATUS_HISTORY" ADD CONSTRAINT "FK_HUARANTEE_GUARANTEE_STATUS_HISTORY_202" FOREIGN KEY ("GUARANTEE_ID") REFERENCES "NUANBODB"."GUARANTEE" ("GUARANTEE_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE" ADD CONSTRAINT "FK_GUARANTEE_GLOBAL_ACCOUNT_GUARANTEE_309" FOREIGN KEY ("GUARANTEE_GLOBAL_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ("GUARANTEE_GLOBAL_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_COVERAGE" ADD CONSTRAINT "FK_GUARANTEE_GLOBAL_ACCOUNT_GUARANTEE_COVERAGE_293" FOREIGN KEY ("GUARANTEE_GLOBAL_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ("GUARANTEE_GLOBAL_ACCOUNT_ID");
+ALTER TABLE "NUANBODB"."GUARANTEE_TRADE" ADD CONSTRAINT "FK_GUARANTEE_GLOBAL_ACCOUNT_GUARANTEE_TRADE_289" FOREIGN KEY ("GUARANTEE_GLOBAL_ACCOUNT_ID") REFERENCES "NUANBODB"."GUARANTEE_GLOBAL_ACCOUNT" ("GUARANTEE_GLOBAL_ACCOUNT_ID");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1459 @@
+rd-sincronizacion-cuentas-banco-participantes-back-kustomization.yaml
+
+M1gu3lD14Z!!!
+
+git pull origin fix/correccion0704
+git add ./
+git commit -m " cfi changes security title"
+git push
+
+git pull origin feat/traslados
+git add ./
+git commit -m "empaquetamiento masivo"
+git push
+
+
+git pull origin feat/traslados
+git add ./
+git commit -m "remove endpoint allocation"
+git push
+
+
+
+git pull origin release/v0.105.0
+git add ./
+git commit -m "fix bug RTBOF-13976 "
+git push
+
+
+git pull origin development
+git pull origin release/v0.177.0
+
+git add ./
+git commit -m "merge    "
+git push
+
+--Clean force
+git merge --abort
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+
+--antes de subir en release
+git fetch origin
+git rebase origin/release/v0.41.7
+git push origin release/v0.41.7
+
+git checkout release/v0.41.7
+git fetch origin
+git pull origin release/v0.41.7
+git merge origin/development
+
+
+
+
+ir al branch desde development
+
+git fetch --all --prune
+git switch -c development --track origin/development
+
+si solo existe en remoto
+
+git fetch --all --prune
+git switch -c fix/packing --track origin/fix/packing
+
+
+git fetch --all --prune
+git switch -c fix/ajuste71 --track origin/fix/ajuste71
+
+----en caso quiero rechazar mis cambios y traer de branch
+git merge --abort
+git reset --hard
+git fetch --all --prune
+git switch fix/correccion0617
+git reset --hard fix/correccion0617
+
+
+
+
+----en caso quiero rechazar mis cambios y traer de branch
+git merge --abort
+git reset --hard
+git fetch --all --prune
+git switch main
+git reset --hard origin/main
+
+
+
+
+
+
+updateSettlementFromAssignment
+
+release/v0.76.0
+
+$env:GH_TOKEN = "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"
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operacion-vericlear-confirmada.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-pruebas-automatizacion.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operacion-vericlear-confirmada.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-fracciones-contado-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-asignacion-definitiva-auto-back.git
+git clone --branch fix/ajuste https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-custodio-traslados-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-api-ingestor-borde-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-fracciones-contado-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-orquestador-ext-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-api-ingestor-borde-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-sincronizacion-participantes-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-sincronizacion-cuentas-participantes-back.git
+git clone --branch feat/envio-mme https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-pruebas-automatizacion.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-persistencia-data-nasdaq-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-sincronizacion-emisores-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-sincronizacion-participantes-back.git
+git clone --branch fix/correccion0617 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-sincronizacion-participantes-back.git
+git clone --branch fix/correccion0617 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-sincronizacion-instrumentos-rv-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-api-ingestor-borde-back.git
+git clone --branch fix/correccion0619 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-consulta-parametros-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-maestroinstrumentos-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-maestro-feriados-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-adm-garantias-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-cmd-validacion-cierre-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-horarios-cmd-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-validacion-horarios-manual-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-horarios-query-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-maestroterceros-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-paquetes-custodios-cmd-back.git
+git clone --branch feat/empaqAutomatico https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-ops-custodio-emp-aut-query-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-carga-modelo-riesgos-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nboXXXXXXXXXXXXXXX.git
+git clone --branch development h ttps://github.com/nuamx/nbo-png-paquetes-custodios-cmd-back.git
+
+nbo-png-asignacion-definitiva-auto-back
+
+DB_URL=jdbc:postgresql://nubo-psql-pgpool.nubo-data.svc.cluster.local:5432/nubo
+DB_URL=jdbc:postgresql://ab279c685e6b1477bbc43bb457b555f1-330477387.us-east-1.elb.amazonaws.com:5432/nubo
+
+jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-172895904.us-east-1.elb.amazonaws.com:5432/nubo
+
+
+--error del index.lock
+Get-CimInstance Win32_Process | Where-Object { $_.Name -like "git*" } | Select-Object ProcessId, ParentProcessId, CommandLine
+Get-Process git -ErrorAction SilentlyContinue | Stop-Process -Force
+
+Remove-Item .git\index.lock -Force -ErrorAction SilentlyContinue
+
+
+
+
+
+release/v0.7.2
+
+git checkout -b release/v0.7.2
+
+git add .
+git commit -m "fix: remove estatus since Settlement"
+
+
+git push --set-upstream origin release/v0.7.2
+
+
+KAFKA_NUBO_TOPIC_RECEPTION_ADVANCE_CO_RECEPTION_RESULT
+kafka-nubo-recepcion-anticipos-co
+
+
+KAFKA_REGIONAL_TOPIC_RECEPTION_ADVANCE_CO_RECEPTION
+nuam-vre-png.gross-instruction-col.protobuf
+
+
+kafka-nubo-recepcion-anticipos-co
+
+        email: ${NUBO_USER_MGMT_PASSWORD_CHANGE_EMAIL}
+        phone-number: ${NUBO_USER_MGMT_PASSWORD_CHANGE_PHONE}
+
+
+$root = 'D:\NUAMX\nuBO\nuBO\CambioLastModifyIP\RepositoriesGit'; Get-ChildItem -Path $root -Directory | Where-Object { Test-Path (Join-Path $_.FullName '.git') } | ForEach-Object { Push-Location $_.FullName; $branch = git rev-parse --abbrev-ref HEAD 2>$null; $status = if ($LASTEXITCODE -eq 0) { $branch.Trim() } else { 'ERROR' }; Pop-Location; [PSCustomObject]@{ Repo = $_.Name; Branch = $status } } | Sort-Object Repo | Format-Table -AutoSize | Out-String
+$root = 'D:\NUAMX\nuBO\nuBO\CambioLastModifyIP\RepositoriesGit'; $repos = Get-ChildItem -Path $root -Directory | Where-Object { Test-Path (Join-Path $_.FullName '.git') }; "Repos detectados: $($repos.Count)"; $repos | Select-Object -ExpandProperty Name
+
+
+
+kafka-nubo-nasdaq-integracion
+kafka-nubo-operation-vericlear-confirm
+
+
+
+ALTER TABLE "NUANBODB"."TRADE" ALTER COLUMN "LAST_MODIFY_IP" DROP NOT NULL;
+
+
+SELECT "LAST_MODIFY_IP" FROM "NUANBODB"."TRADE" ;
+
+
+
+
+
+Mila Local
+
+RTBOF-10740
+
+git pull origin release/v0.177.0
+
+git checkout -b release/v0.177.0 origin/release/v0.177.0
+git checkout release/v0.177.0
+git pull origin release/v0.177.0
+git cherry-pick feat/RTBOF-7298
+
+
+
+
+
+
+
+
+
+
+
+https://apisix.nubo-release.com/operations-cmd-api/v1/validate/counted-fraction/assignment/account-fraction/account-number/2345678/trade/1063/side/2/origin/120
+http://localhost:8083/operations-cmd-api/v1/validate/counted-fraction/assignment/account-fraction/account-number/2345678/trade/1063/side/2/origin/120
+
+2345678
+1063
+2
+120%22
+
+select iae1_0."INVESTOR_ACCOUNT_ID",iae1_0."ACCOUNT_NUMBER",iae1_0."DEPOSITORY_ID",iae1_0."INVESTOR_ID",iae1_0."LAST_MODIFY_APPLIC",iae1_0."LAST_MODIFY_DATE",iae1_0."LAST_MODIFY_IP",iae1_0."LAST_MODIFY_USER",iae1_0."ORIGIN_TYPE_ID",iae1_0."PARTICIPANT_ID",iae1_0."STATUS_ID",iae1_0."TYPE_ID" 
+from "NUANBODB"."INVESTOR_ACCOUNT" iae1_0 
+left join "NUANBODB"."INVESTOR" i1_0 on i1_0."INVESTOR_ID"=iae1_0."INVESTOR_ID" 
+left join "NUANBODB"."DEPOSITORY" d1_0 on d1_0."DEPOSITORY_ID"=iae1_0."DEPOSITORY_ID" 
+left join "NUANBODB"."TYPE" ot1_0 on ot1_0."TYPE_ID"=iae1_0."ORIGIN_TYPE_ID" 
+where iae1_0."ACCOUNT_NUMBER"='2345678' and i1_0."DOCUMENT_NUMBER"<>'800096036-9' and d1_0."DEPOSITORY_ID"=1 and ot1_0."TYPE_ID"<>120 
+
+
+select pae1_0."PARTICIPANT_ACCOUNT_ID",pae1_0."ACCOUNT_NUMBER",pae1_0."DEPOSITORY_ID",pae1_0."LAST_MODIFY_APPLIC",pae1_0."LAST_MODIFY_DATE",pae1_0."LAST_MODIFY_IP",pae1_0."LAST_MODIFY_USER",pae1_0."ORIGIN_TYPE_ID",pae1_0."PARTICIPANT_ID",pae1_0."STATUS_ID",pae1_0."TYPE_ID" 
+from "NUANBODB"."PARTICIPANT_ACCOUNT" pae1_0 
+left join "NUANBODB"."TYPE" ot1_0 on ot1_0."TYPE_ID"=pae1_0."ORIGIN_TYPE_ID" 
+where pae1_0."ACCOUNT_NUMBER"='2345678' and pae1_0."PARTICIPANT_ID"<>7 and pae1_0."DEPOSITORY_ID"=1 and ot1_0."TYPE_ID"<>121  
+
+
+
+    `/validate/counted-fraction/assignment/account-fraction/account-number/${accountNumber}/trade/${tradeId}/side/${sideId}/origin/${originId}`,
+    `/validate/counted-fraction/assignment/account-fraction/account-number/${accountNumber}/trade/${tradeId}/side/${sideId}/origin/${originId}`,
+
+
+  mila:
+    local:
+      country-id-colombia: ${NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA}
+      identification-type-nit: ${NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT}
+      document-number-dcv-chile: ${NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE}
+      document-number-cavali: ${NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI}
+      document-number-indeval: ${NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL}
+      depositor-dcv-chile: ${NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE}
+      depositor-cavali: ${NUBO_MILA_LOCAL_DEPOSITOR_CAVALI}
+      depositor-indeval: ${NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL}
+	  
+
+
+    @Value("${client.mila.local.country-id-colombia}")
+    private Integer milaLocalCountryIdColombia;
+
+    @Value("${client.mila.local.identification-type-nit}")
+    private String milaLocalIdentificationTypeNit;
+
+    @Value("${client.mila.local.document-number-dcv-chile}")
+    private String milaLocalDocumentNumberDcvChile;
+
+    @Value("${client.mila.local.document-number-cavali}")
+    private String milaLocalDocumentNumberCavali;
+
+    @Value("${client.mila.local.document-number-indeval}")
+    private String milaLocalDocumentNumberIndeval;
+
+    @Value("${client.mila.local.depositor-dcv-chile}")
+    private String milaLocalDepositorDcvChile;
+
+    @Value("${client.mila.local.depositor-cavali}")
+    private String milaLocalDepositorCavali;
+
+    @Value("${client.mila.local.depositor-indeval}")
+    private String milaLocalDepositorIndeval;	  
+	
+mila:
+  local:
+    country-id-colombia: 37
+    identification-type-nit: NIT
+    document-number-dcv-chile: 4444444443
+    document-number-cavali: 4444444450
+    document-number-indeval: 9006880663
+    depositor-dcv-chile: 834
+    depositor-cavali: 835
+    depositor-indeval: 897
+	
+	
+	NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA      = 37
+; NUBO_MILA_LOCAL_DEPOSITOR_CAVALI         = 835
+; NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE      = 834
+; NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL        = 897
+; NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI   = 4444444450
+; NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE= 4444444443
+; NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL  = 9006880663
+; NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT  = NIT
+	
+	
+		
+	NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA      = 37; NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT  = NIT; NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE= 4444444443; NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI   = 4444444450; NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL  = 9006880663; NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE      = 834; NUBO_MILA_LOCAL_DEPOSITOR_CAVALI         = 835; NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL        = 897
+	
+	
+	
+  NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA      :
+  NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT  :
+  NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE:
+  NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI   :
+  NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL  :
+  NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE      :
+  NUBO_MILA_LOCAL_DEPOSITOR_CAVALI         :
+  NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL        :
+
+  NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA: Mzc=
+  NUBO_MILA_LOCAL_DEPOSITOR_CAVALI: ODM1
+  NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE: ODM0
+  NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL: ODk3
+  NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI: NDQ0NDQ0NDQ1MA==
+  NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE: NDQ0NDQ0NDQ0Mw==
+  NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL: OTAwNjg4MDY2Mw==
+  NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT: TklU
+  
+  
+  https://nubo.nubo-release.com/operation-management/operation/1063
+  
+  POST
+  https://apisix.nubo-release.com/operations-cmd-api/v1/fractionation/counted-operation/create-fractions/trade/1063/side/2
+
+
+https://apisix.nubo-release.com/operations-cmd-api/v1/fractionation/counted-operation/update-assignments/trade/1082/side/1
+[{`"investorAccountId`":17,`"fiduciarySpecialist`":false,`"sourceQuoteTypeId`":120,`"reference`":`"`",`"fractionQuantity`":100000,`"commissionPercentage`":1,`"valTax`":19,`"cashAccount`":`"12345`"}]
+{"investorAccountId":17,"fiduciarySpecialist":false,"sourceQuoteTypeId":120,"reference":"","fractionQuantity":100000,"commissionPercentage":1,"valTax":19,"cashAccount":"12345"}
+
+
+
+BUG 
+GET
+https://apisix.nubo-release.com/operations-cmd-api/v1/validate/counted-fraction/assignment/account-fraction/account-number/2311652/trade/1094/side/1/origin/120
+cASO ERROR:
+https://apisix.nubo-release.com/operations-cmd-api/v1/validate/counted-fraction/assignment/account-fraction/account-number/2311652/trade/1092/side/1/origin/120
+
+
+POST
+https://apisix.nubo-release.com/operations-query-api/v1/calculation/counted-operation/trade/1094/country/37?documentNumber=830035217-3&identificationTypeCode=NIT
+
+
+select pae1_0."PARTICIPANT_ACCOUNT_ID",pae1_0."ACCOUNT_NUMBER",pae1_0."DEPOSITORY_ID",pae1_0."LAST_MODIFY_APPLIC",pae1_0."LAST_MODIFY_DATE",pae1_0."LAST_MODIFY_IP",pae1_0."LAST_MODIFY_USER",pae1_0."ORIGIN_TYPE_ID",pae1_0."PARTICIPANT_ID",pae1_0."STATUS_ID",pae1_0."TYPE_ID" 
+from "NUANBODB"."PARTICIPANT_ACCOUNT" pae1_0 
+left join "NUANBODB"."TYPE" ot1_0 on ot1_0."TYPE_ID"=pae1_0."ORIGIN_TYPE_ID"
+ where pae1_0."ACCOUNT_NUMBER"='2311652' and pae1_0."PARTICIPANT_ID"<>6 and pae1_0."DEPOSITORY_ID"=1 and ot1_0."TYPE_ID"<>'121';
+
+
+
+select iae1_0."INVESTOR_ACCOUNT_ID",iae1_0."ACCOUNT_NUMBER",iae1_0."DEPOSITORY_ID",iae1_0."INVESTOR_ID",iae1_0."LAST_MODIFY_APPLIC",iae1_0."LAST_MODIFY_DATE",iae1_0."LAST_MODIFY_IP",iae1_0."LAST_MODIFY_USER",iae1_0."ORIGIN_TYPE_ID",iae1_0."PARTICIPANT_ID",iae1_0."STATUS_ID",iae1_0."TYPE_ID" 
+from "NUANBODB"."INVESTOR_ACCOUNT" iae1_0 
+left join "NUANBODB"."INVESTOR" i1_0 on i1_0."INVESTOR_ID"=iae1_0."INVESTOR_ID" 
+left join "NUANBODB"."DEPOSITORY" d1_0 on d1_0."DEPOSITORY_ID"=iae1_0."DEPOSITORY_ID" 
+left join "NUANBODB"."TYPE" ot1_0 on ot1_0."TYPE_ID"=iae1_0."ORIGIN_TYPE_ID" 
+where iae1_0."ACCOUNT_NUMBER"='2311652' and i1_0."DOCUMENT_NUMBER"<>'830035217-3' and d1_0."DEPOSITORY_ID"=1 and ot1_0."TYPE_ID"<>121
+
+
+scripts
+ALTER TABLE "NUANBODB"."SETTLEMENT"  ADD "MILA_DIRECT_DEPOSITOR" int8 NULL;
+
+ALTER TABLE "NUANBODB"."TRADE_CONFIRM" add "DEAL_ID" int8 null;
+
+
+
+  1164,1165,1166,1167,1168,1169,1170
+1171,1172,1173,1174,1175,1176,1177,1178,1179,1180,1181,1182,1183
+
+
+
+Cuenta titulos, , :se va al deposito
+Cuenta titulos,% COmisison, referencia: los corrige nubo, es estado aceptada
+
+
+https://apisix.nubo-release.com/operations-cmd-api/v1/fractionation/counted-operation/update-corrections/trade/1160/side/2/correction/5
+[{"investorAccountId":22,"fiduciarySpecialist":false,"sourceQuoteTypeId":120,"reference":"","fractionQuantity":50000,"commissionPercentage":0,"valTax":19,"cashAccount":"2938475","fraction":1},
+
+ {"investorAccountId":17,"fiduciarySpecialist":false,"sourceQuoteTypeId":120,"reference":"","fractionQuantity":50000,"commissionPercentage":0,"valTax":19,"cashAccount":"392485","fraction":2}]
+ 
+ 
+ 
+ INSERT INTO "NUANBODB"."SETTLEMENT" ("TRADE_ID", "FRACTION", "SIDE_ID", "INVESTOR_ID", "INVESTOR_ACCOUNT_ID", "PARTICIPANT_ACCOUNT_ID", "FRACTION_QUANTITY", "FRACTION_VOLUME", "FRACTION_VOLUME_LOCAL_PRICE", "FIDUCIARY_SPECIALIST", "COMMISSION_PERCENTAGE", "COMMISSION_AMOUNT", "VAL_TAX", "VAL_TAX_AMOUNT", "WITHHOLDING_TAX", "WITHHOLDING_TAX_AMOUNT", "NET_AMOUNT", "TRANSFER_VALUE", "ISSUED_RECEIPT", "ISSUED_RECEIPT_NUMBER", "REFERENCE_ALLOC_ID", "REPO_RATE", "REPO_AMOUNT", "LATE_PENALITY", "FUNDING_AMOUNT", "NET_OUTFLOW_TOTAL", "OUTFLOW_TURNOVER_VALUE", "RETURN_TURNOVER_VALUE", "DELIVERY_VERSUS_PAYMENT_VALUE", "SETTLEMENT_AMOUNT", "TRADING_SYSTEM_ID", "STATUS_ID", "BROKERAGE_SERVICE", "CUSTODIAN_ID", "BANK_ACCOUNT_ID", "REFERENCE", "CAPITAL_GAIN_VALUE", "DISBURSEMENT_VALUE", "SOURCE_QUOTE_TYPE_ID", "FIC_ADMINISTRATOR_ID", "CUSTODIAN_STATUS_ID", "SETTLEMENT_STATUS_ID", "BLOQUING_STATUS_ID", "REJECTION_REASON", "DIRECT_DEPOSITOR", "PARTICIPANT_BANK_ACCOUNT_ID", "BANK_TRANSACTION_MARK", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "AFP_FUND_ID", "FRACTION_VOLUME_DVD", "FRACTION_VOLUME_DVP", "FRACTION_VOLUME_LP", "GURANTEE_INDICATOR", "CASH_ACCOUNT", "IND_MASTER", "TRANSFER_PARTICIPANT_ID", "MILA_DIRECT_DEPOSITOR") VALUES(1160, 1, '2', 18, 18, NULL, 50000.0000, 90000000.0000, NULL, false, 0.0000, 0.0000, 19.0000, 0.0000, NULL, NULL, 90000000.0000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.0000, 0.0000, 0.0000, NULL, 90000000.0000, 1, 7, NULL, NULL, NULL, '', NULL, NULL, 120, NULL, NULL, NULL, NULL, NULL, 7, NULL, false, 'emiliano.gamarra@nuam.com', 'operations-cmd-api', '2026-04-25 15:19:12.000', '10.53.130.35', NULL, NULL, NULL, NULL, NULL, 2938475, false, NULL, NULL); 
+ INSERT INTO "NUANBODB"."SETTLEMENT" ("TRADE_ID", "FRACTION", "SIDE_ID", "INVESTOR_ID", "INVESTOR_ACCOUNT_ID", "PARTICIPANT_ACCOUNT_ID", "FRACTION_QUANTITY", "FRACTION_VOLUME", "FRACTION_VOLUME_LOCAL_PRICE", "FIDUCIARY_SPECIALIST", "COMMISSION_PERCENTAGE", "COMMISSION_AMOUNT", "VAL_TAX", "VAL_TAX_AMOUNT", "WITHHOLDING_TAX", "WITHHOLDING_TAX_AMOUNT", "NET_AMOUNT", "TRANSFER_VALUE", "ISSUED_RECEIPT", "ISSUED_RECEIPT_NUMBER", "REFERENCE_ALLOC_ID", "REPO_RATE", "REPO_AMOUNT", "LATE_PENALITY", "FUNDING_AMOUNT", "NET_OUTFLOW_TOTAL", "OUTFLOW_TURNOVER_VALUE", "RETURN_TURNOVER_VALUE", "DELIVERY_VERSUS_PAYMENT_VALUE", "SETTLEMENT_AMOUNT", "TRADING_SYSTEM_ID", "STATUS_ID", "BROKERAGE_SERVICE", "CUSTODIAN_ID", "BANK_ACCOUNT_ID", "REFERENCE", "CAPITAL_GAIN_VALUE", "DISBURSEMENT_VALUE", "SOURCE_QUOTE_TYPE_ID", "FIC_ADMINISTRATOR_ID", "CUSTODIAN_STATUS_ID", "SETTLEMENT_STATUS_ID", "BLOQUING_STATUS_ID", "REJECTION_REASON", "DIRECT_DEPOSITOR", "PARTICIPANT_BANK_ACCOUNT_ID", "BANK_TRANSACTION_MARK", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "AFP_FUND_ID", "FRACTION_VOLUME_DVD", "FRACTION_VOLUME_DVP", "FRACTION_VOLUME_LP", "GURANTEE_INDICATOR", "CASH_ACCOUNT", "IND_MASTER", "TRANSFER_PARTICIPANT_ID", "MILA_DIRECT_DEPOSITOR") VALUES(1160, 2, '2', 17, 17, NULL, 50000.0000, 90000000.0000, NULL, false, 0.0000, 0.0000, 19.0000, 0.0000, NULL, NULL, 90000000.0000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.0000, 0.0000, 0.0000, NULL, 90000000.0000, 1, 9, NULL, NULL, NULL, '', NULL, NULL, 120, NULL, NULL, NULL, NULL, NULL, 7, NULL, false, 'emiliano.gamarra@nuam.com', 'operations-cmd-api', '2026-04-25 15:19:12.000', '10.53.130.35', NULL, NULL, NULL, NULL, NULL, 392485, false, NULL, NULL);
+ 
+ 
+ 
+ release/v0.46.3
+ 
+ 
+ 
+ ======================================================================================================================================
+ 
+ 
+ 
+https://apisix.nubo-release.com/operations-query-api/v1/trade/custodian?participantId=1&page=0&size=25
+
+
+findFirstByAccountNumberAndParticipantNotAndDepositoryAndOriginTypeIdNot
+findFirstByAccountNumberAndParticipantAndDepositoryAndOriginTypeIdNotAndIndMasterTrue
+
+findFirstByAccountNumberAndDepositoryAndOriginTypeIdNot
+Participant
+IndMasterTrue
+
+    Optional<ParticipantAccountEntity>
+    findFirstByAccountNumberAndParticipantNotAndDepositoryAndOriginTypeIdNot(
+            String accountNumber,
+            ParticipantEntity participant,
+            DepositoryEntity depositoryEntity,
+            Long originTypeId
+    );
+
+    Optional<ParticipantAccountEntity>
+    findFirstByAccountNumberAndParticipantAndDepositoryAndOriginTypeIdNotAndIndMasterTrue(
+            String accountNumber,
+            ParticipantEntity participant,
+            DepositoryEntity depositoryEntity,
+            Long originTypeId
+    );
+
+https://apisix.nubo-dev.com/operations-query-api/v1/settlement?tradeId=1546756&sideId=1&all=true&reassignment=true
+
+
+	"FINAL_ASSIGNMENT_MARK_BUY" bool DEFAULT false NULL,
+	"FINAL_ASSIGNMENT_MARK_SELL" bool DEFAULT false NULL,
+
+http://operaciones-fracciones-contado-back-service/operations-fractionation-api/v1/fractionation/update-fraction/trade/130000/side/1%22
+
+
+userNuboEntityToUserNuboOutDto
+
+https://apisix.nubo-release.com/user-management-api/v1/user?excludeParticipantId=1&accessProfileId=17&page=0&size=10
+https://apisix.nubo-release.com/user-management-api/v1/user?participant=NUAM+COLOMBIA&accessProfileId=17&page=0&size=10
+
+https://apisix.nubo-release.com/user-management-api/v1/user?participant=NUAM+COLOMBIA&accessProfileId=17&profile=Prueba+ochenta+y+nueve&page=0&size=10
+
+
+
+select distinct count(distinct une1_0."USER_NUBO_ID") from "NUANBODB"."USER_NUBO" une1_0 left join "NUANBODB"."PARTICIPANT_USER_NUBO" punl1_0 on une1_0."USER_NUBO_ID"=punl1_0."USER_NUBO_ID" join "NUANBODB"."PARTICIPANT" p1_0 on p1_0."PARTICIPANT_ID"=punl1_0."PARTICIPANT_ID" join "NUANBODB"."COUNTRY" c1_0 on c1_0."COUNTRY_ID"=une1_0."COUNTRY_ID" where c1_0."CODE" in (?,?,?) and lower(p1_0."NAME") like ? escape ''
+
+
+
+https://apisix.nubo-dev.com/user-management-api/v1/user?participant=NUAM&accessProfileId=70&page=0&size=10
+
+https://apisix.nubo-dev.com/user-management-api/v1/user?participant=NUAM&accessProfileId=70&page=0&size=10
+
+https://apisix.nubo-release.com/user-management-api/v1/user?participant=NUAM+COLOMBIA&accessProfileId=17&page=0&size=10
+https://apisix.nubo-release.com/user-management-api/v1/user?participant=NUAM+COLOMBIA&accessProfileId=17&page=0&size=10
+https://apisix.nubo-release.com/user-management-api/v1/user?participant=NUAM+COLOMBIA&accessProfileId=17&profile=ADMINISTRADOR&page=0&size=10
+
+DEV
+internal-a7079a4c485d84db18ab9e537959a035-91906503.us-east-1.elb.amazonaws.com
+
+
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-13976
+
+https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/settlement/trade/1967
+[{"sideId":"1"},{"sideId":"2"}]
+
+
+curl 'https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/settlement/trade/1963' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-419,es;q=0.9,en;q=0.8' \
+  -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0R3Axbl9tSU5ORWpFbTFjN29SYVdzR3lfUEpFTHQ1cmlGU21TcWdJb2prIn0.eyJleHAiOjE3ODAzNDI5ODksImlhdCI6MTc4MDM0MDI4OSwianRpIjoib25ydHJvOjgxNmUxYTUyLTEwMmEtNGUyOS1mOTE0LTI0NjY0YTBmNTFlNSIsImlzcyI6Imh0dHBzOi8vc3NvLWRldm9wcy5udWFtZXhjaGFuZ2UuY29tL3JlYWxtcy9uYm8tZGV2IiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJicm9rZXIiLCJhY2NvdW50IiwibnViby1mcm9udGVuZCJdLCJzdWIiOiI4NjZlNzg0Yy1jNzUwLTRkMGUtOTBjMi1kOGE2ZmY4ZGEyZjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJudWJvLWZyb250ZW5kLTIiLCJzaWQiOiJhZmQ0ZDJiYS0zZTZmLTQ4YjgtOGEwNy0wZmUzNDBmMzU2YmMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJvLWRldiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJ2aWV3LXJlYWxtIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibnViby1mcm9udGVuZC0yIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsIm1hbmFnZS1jb25zZW50IiwiZGVsZXRlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX0sIm51Ym8tZnJvbnRlbmQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJNaWd1ZWwgRGlheiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1pZ3VlbGR6ODlAZ21haWwuY29tIiwiZ2l2ZW5fbmFtZSI6Ik1pZ3VlbCIsImZhbWlseV9uYW1lIjoiRGlheiIsImVtYWlsIjoibWlndWVsZHo4OUBnbWFpbC5jb20ifQ.dLhcstMkciUxtJif4uo2TFseG5znTJtKVDHaDmrlAUxxH7_zdL90o4tYPZMnpYUR9y4tq7zU6JSfcNpKlVsXEZ9UkokoxXc2EmgqSPJ2aTtLlJdZxnTe-OBLb9qjdVxuiLSRBf9hH89wa2mzrKWBD-C-Ed6zRfw-YrVbzJV_OX8-jejL4WOOCZsYHcq2l_mLvHVD6JL4MmmlqGp9ptE5y0kuIEvEnPeLq87S7c-kUDmgUcv3z05U1B6WWO-JYfn_HRzNr2jn04j4m3rEeEbVQ48RMfzJg7aikAi6wcVsBEnUvbQsPfeMSniI3HGbMBiaMwYYazXjtq8H5ekODV5C5A' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://nubo.nubo-release.com' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: https://nubo.nubo-release.com/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36' \
+  -H 'client_datetime: 2026-06-02T16:35:24' \
+  -H 'client_user: migueldz89@gmail.com' \
+  -H 'sec-ch-ua: "Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw '[{"sideId":"1"},{"sideId":"2"}]'
+
+
+https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/settlement/trade/1965
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-13971
+
+https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/receipt/massive/folios/user/33
+
+curl 'https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/receipt/massive/folios/user/33' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-419,es;q=0.9,en;q=0.8' \
+  -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0R3Axbl9tSU5ORWpFbTFjN29SYVdzR3lfUEpFTHQ1cmlGU21TcWdJb2prIn0.eyJleHAiOjE3ODAzNDI5ODksImlhdCI6MTc4MDM0MDI4OSwianRpIjoib25ydHJvOjgxNmUxYTUyLTEwMmEtNGUyOS1mOTE0LTI0NjY0YTBmNTFlNSIsImlzcyI6Imh0dHBzOi8vc3NvLWRldm9wcy5udWFtZXhjaGFuZ2UuY29tL3JlYWxtcy9uYm8tZGV2IiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJicm9rZXIiLCJhY2NvdW50IiwibnViby1mcm9udGVuZCJdLCJzdWIiOiI4NjZlNzg0Yy1jNzUwLTRkMGUtOTBjMi1kOGE2ZmY4ZGEyZjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJudWJvLWZyb250ZW5kLTIiLCJzaWQiOiJhZmQ0ZDJiYS0zZTZmLTQ4YjgtOGEwNy0wZmUzNDBmMzU2YmMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJvLWRldiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJ2aWV3LXJlYWxtIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibnViby1mcm9udGVuZC0yIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsIm1hbmFnZS1jb25zZW50IiwiZGVsZXRlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX0sIm51Ym8tZnJvbnRlbmQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJNaWd1ZWwgRGlheiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1pZ3VlbGR6ODlAZ21haWwuY29tIiwiZ2l2ZW5fbmFtZSI6Ik1pZ3VlbCIsImZhbWlseV9uYW1lIjoiRGlheiIsImVtYWlsIjoibWlndWVsZHo4OUBnbWFpbC5jb20ifQ.dLhcstMkciUxtJif4uo2TFseG5znTJtKVDHaDmrlAUxxH7_zdL90o4tYPZMnpYUR9y4tq7zU6JSfcNpKlVsXEZ9UkokoxXc2EmgqSPJ2aTtLlJdZxnTe-OBLb9qjdVxuiLSRBf9hH89wa2mzrKWBD-C-Ed6zRfw-YrVbzJV_OX8-jejL4WOOCZsYHcq2l_mLvHVD6JL4MmmlqGp9ptE5y0kuIEvEnPeLq87S7c-kUDmgUcv3z05U1B6WWO-JYfn_HRzNr2jn04j4m3rEeEbVQ48RMfzJg7aikAi6wcVsBEnUvbQsPfeMSniI3HGbMBiaMwYYazXjtq8H5ekODV5C5A' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://nubo.nubo-release.com' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: https://nubo.nubo-release.com/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36' \
+  -H 'client_datetime: 2026-06-02T17:31:46' \
+  -H 'client_user: migueldz89@gmail.com' \
+  -H 'sec-ch-ua: "Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw '[{"tradeId":1966},{"tradeId":1965}]'
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-13796
+
+https://apisix.nubo-release.com/operations-custody-actions-api/v1/custody-actions/reject
+{"custodianId":1,"items":[{"tradeId":1897,"fraction":0,"sideId":"1","custodianStatus":"ADMITIDA","sourceQuoteTypeId":120}],"rejectionReasonId":19}
+
+curl 'https://apisix.nubo-release.com/operations-custody-actions-api/v1/custody-actions/reject' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-419,es;q=0.9,en;q=0.8' \
+  -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0R3Axbl9tSU5ORWpFbTFjN29SYVdzR3lfUEpFTHQ1cmlGU21TcWdJb2prIn0.eyJleHAiOjE3ODA1MDM2MDUsImlhdCI6MTc4MDUwMDkwNSwianRpIjoib25ydHJvOmJmZmFhOTIyLTA1YTQtMDliYS1lMWY1LWQwMDUxNWMwOGI1MCIsImlzcyI6Imh0dHBzOi8vc3NvLWRldm9wcy5udWFtZXhjaGFuZ2UuY29tL3JlYWxtcy9uYm8tZGV2IiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJicm9rZXIiLCJhY2NvdW50IiwibnViby1mcm9udGVuZCJdLCJzdWIiOiI4NjZlNzg0Yy1jNzUwLTRkMGUtOTBjMi1kOGE2ZmY4ZGEyZjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJudWJvLWZyb250ZW5kLTIiLCJzaWQiOiI1Y2ZkZGMzNi1jY2E3LTQyMTAtYmQ2Yi01YmI1ZDkwYWQ3NjkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJvLWRldiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJ2aWV3LXJlYWxtIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibnViby1mcm9udGVuZC0yIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsIm1hbmFnZS1jb25zZW50IiwiZGVsZXRlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX0sIm51Ym8tZnJvbnRlbmQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJNaWd1ZWwgRGlheiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1pZ3VlbGR6ODlAZ21haWwuY29tIiwiZ2l2ZW5fbmFtZSI6Ik1pZ3VlbCIsImZhbWlseV9uYW1lIjoiRGlheiIsImVtYWlsIjoibWlndWVsZHo4OUBnbWFpbC5jb20ifQ.adktWp-nMpZFsmt60RVDuGmLQIWdaSfLto0fFOUdQhBjPD7AkSDi3rZ4dhryartpbNhcjAyYe3gTI_K0abpG3cEBjjpUEQJ56ZFUIrQTfYkazr_HTcrWu1SKeUC6xq_oEPRs0bVF0WkLW7Ks1T5Wa5hsWUQs_ybYeN8ogRidZX_KZHWTB0aQKY3NieFyzCpNOuCYvTXfreSBZGpdXVcQTrXJ0-b3IK-8HY-u6BcLFRM6NhxLzkAukg0kkw2V1hBmO9E4DhsGbuOBHWahfJo21LchTEaom5gKetGhKiZy5yIhNqMBLjBA9L48YsrHpk9Ipi6fr0lX9gipYTfDa4Kk0Q' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://nubo.nubo-release.com' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: https://nubo.nubo-release.com/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36' \
+  -H 'client_datetime: 2026-06-03T15:35:40' \
+  -H 'client_user: migueldz89@gmail.com' \
+  -H 'sec-ch-ua: "Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw '{"custodianId":1,"items":[{"tradeId":1897,"fraction":0,"sideId":"1","custodianStatus":"ADMITIDA","sourceQuoteTypeId":120}],"rejectionReasonId":19}'
+
+statusUpdateSettlementOutDto.setIsValid(true); 
+statusUpdateSettlementOutDto.setNewStatusCustodian(new com.nubo.operations.custody.api.models.dto.response.StatusOutDto()); 
+statusUpdateSettlementOutDto.getNewStatusCustodian().setId(1074l)
+
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-14124
+C:\Users\miguel.diaz\Downloads\1-5_NUAM COLOMBIA_03-06-2026_migueldz89@gmail.com.zip
+
+[{"sideId":"1"},{"sideId":"2"}]
+
+curl 'https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/settlement/trade/1881' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-419,es;q=0.9,en;q=0.8' \
+  -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0R3Axbl9tSU5ORWpFbTFjN29SYVdzR3lfUEpFTHQ1cmlGU21TcWdJb2prIn0.eyJleHAiOjE3ODA1MzE1OTcsImlhdCI6MTc4MDUyODg5NywianRpIjoib25ydHJvOmRlMTQyNGE5LTFlYTAtM2Y3YS05ZTc1LTE3MTRiZTY4MDNhYyIsImlzcyI6Imh0dHBzOi8vc3NvLWRldm9wcy5udWFtZXhjaGFuZ2UuY29tL3JlYWxtcy9uYm8tZGV2IiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJicm9rZXIiLCJhY2NvdW50IiwibnViby1mcm9udGVuZCJdLCJzdWIiOiI4NjZlNzg0Yy1jNzUwLTRkMGUtOTBjMi1kOGE2ZmY4ZGEyZjAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJudWJvLWZyb250ZW5kLTIiLCJzaWQiOiJmYjY2YjRjNy03ZjBiLTQzZmUtOWRhMy02NzIxZTI3NWZkMmQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJvLWRldiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJ2aWV3LXJlYWxtIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibnViby1mcm9udGVuZC0yIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsIm1hbmFnZS1jb25zZW50IiwiZGVsZXRlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX0sIm51Ym8tZnJvbnRlbmQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJNaWd1ZWwgRGlheiIsInByZWZlcnJlZF91c2VybmFtZSI6Im1pZ3VlbGR6ODlAZ21haWwuY29tIiwiZ2l2ZW5fbmFtZSI6Ik1pZ3VlbCIsImZhbWlseV9uYW1lIjoiRGlheiIsImVtYWlsIjoibWlndWVsZHo4OUBnbWFpbC5jb20ifQ.eM95wGee27te_nOVQSn6DFXOm3-Ri2z-oPg75WqRWC_YgBIoYOaxrb-0_mx5DS4DZXE-mX7o7G9CyGebGd9Np1S4Xp6Kq4tGF7AnSztci1nRxlDqHw5oVHm0VHrxjS3C88xc4vcWjAjBme2mwOX0BdH5A_u_YD0_OhODBqXugeUJv8l3w8mZ-0i_Ice8B0lxARGpcABdyI4pshC0fUyETfyXj7PYK0WeCKw2NGB69E9J7BJ4R1tkTDHVXfQyz6mZfx1_aPNoh3x3fIVveJbiAV23cn1oV4R2HvzVKPzta3fIYZFozVA72iWWanZ9GDJJJYZ_vv1uv5OmkCsLmpPbKQ' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://nubo.nubo-release.com' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: https://nubo.nubo-release.com/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36' \
+  -H 'client_datetime: 2026-06-03T23:24:22' \
+  -H 'client_user: migueldz89@gmail.com' \
+  -H 'sec-ch-ua: "Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw '[{"sideId":"1"},{"sideId":"2"}]'
+
+https://apisix.nubo-nuam.com/user-management-api/v1/user?participant=NUAM+COLOMBIA&accessProfileId=1&page=0&size=10
+
+
+
+
+C:\Users\miguel.diaz\AppData\Local\Microsoft\WinGet\Packages\AquaSecurity.Trivy_Microsoft.Winget.Source_8wekyb3d8bbwe\trivy.exe
+
+& "C:\Users\miguel.diaz\AppData\Local\Microsoft\WinGet\Packages\AquaSecurity.Trivy_Microsoft.Winget.Source_8wekyb3d8bbwe\trivy.exe" fs "D:\NUAMX\nuBO\nuBO\FuentesBack\nbo-png-api-ingestor-borde-back"
+
+Ejecuta este comando:
+& "C:\Users\miguel.diaz\AppData\Local\Microsoft\WinGet\Packages\AquaSecurity.Trivy_Microsoft.Winget.Source_8wekyb3d8bbwe\trivy.exe" fs "D:\NUAMX\nuBO\nuBO\FuentesBack\nbo-png-sincronizacion-cuentas-participantes-back"
+
+y corrigeme las todas vulnerabilidades para el proyecto nbo-png-sincronizacion-cuentas-participantes-back , normalmente se soluciona cambiando la versión de spring o versiones de las dependencias
+
+
+
+
+
+
+
+
+
+
+
+
+Lee el siguiente proyecto en spring boot y reliza los siguientes cambios:
+El proyecto hace una lectura desde Kafka y lo inserta en base de datos
+-Siguiendo el mismo patron cambia el Dto DataReferenceParticipantInDto con la siguiente configuración
+El cuadro completo debera ser el siguiente
+respuesta-asignacion-ccp-back
+
+Asignacion
+
+persistencia-asignacion-vericlear
+asignacion-borde-ccp-back
+comprobantes-back
+consulta-parametros-back
+correcciones-siidj-borde-back
+maestro-participante-back
+generador-csv-borde-back
+garantias-limites-query-back
+garantias-calculo-exigencias-worker-back
+correcciones-transformador-siidj-back
+operacion-vericlear-confirmada-back
+operaciones-cmd-back
+operaciones-custodio-traslados-back
+operaciones-estados-back
+operaciones-fracciones-contado-back
+operaciones-query-back
+operaciones-reglas-back
+operaciones-rf-query-back
+persistencia-data-nasdaq-back
+respuesta-asignacion-ccp-back
+
+
+
+rd-api-ingestor-borde-emisores-back
+rd-sincronizacion-cuentas-banco-participantes-back
+recepcion-anticipos-back
+reportes-descarga-cmd
+
+
+
+
+
+
+http://localhost:8083/operations-cmd-api/actuator/metrics/operations.cmd.fractionation.create.fractions
+https://apisix.nubo-dev.com/operations-cmd-api/actuator/metrics/operations.cmd.fractionation.create.fractions
+http://localhost:8083/operations-cmd-api/actuator/metrics
+
+https://apisix.nubo-dev.com/operations-cmd-api/actuator/metrics
+
+http://localhost:8083/operations-cmd-api/actuator/prometheus
+
+
+
+https://github.com/nuamx/nbo-png-sincronizacion-cuentas-participantes-back/compare/d6cf31f2a5b0789ad5b1cd5ec185d4824698e369...0c4fa84d10f6a41d711feec038bb806a2e76ab56
+
+
+https://github.com/nuamx/nbo-png-operaciones-cmd-back/compare/5e4636513cd189fcad5ba11b78e4ae962c8e513f...0c4fa84d10f6a41d711feec038bb806a2e76ab56
+https://github.com/nuamx/nbo-png-operaciones-cmd-back/compare/0c4fa84d10f6a41d711feec038bb806a2e76ab56...5e4636513cd189fcad5ba11b78e4ae962c8e513f
+
+dir c:\ /s /b /a:d | findstr /I "OpenLens"
+
+
+
+eks-nubo-dev
+kubectl config get-contexts
+ ./OpenLens-6.5.2-366.x86_64.AppImage --no-sandbox
+aws s3 ls
+aws eks --region us-east-1 update-kubeconfig --name eks-postneg-release-qa-eks --kubeconfig /home/hespinozav/.kube/eks-nubo-uat --profile Power_Users_Iam-009160073106
+
+aws eks --region us-east-1 update-kubeconfig --name eks-postneg-release-qa-eks --kubeconfig /root/.kube/config --profile Power_Users_Iam-009160073106
+ /mnt/c/Users/miguel.diaz/.kube
+ /root/.config/OpenLens/kubeconfigs/65d1f186-bdbe-493a-91ab-f56245f967f2
+ /mnt/c/Users/miguel.diaz/abrir-openlens.sh
+ 
+ 
+ 
+ ### PRuebas automatizacion
+https://github.com/nuamx/nbo-png-pruebas-automatizacion/tree/feat/envio-mme
+SELECT "MATCH_ID",  "BUY_STATUS_ID", "SELL_STATUS_ID", *
+FROM "NUANBODB"."TRADE" 
+WHERE "MATCH_DATE" = DATE '2026-06-09' 
+ORDER BY "TRADE_ID" DESC 
+
+ /mnt/c/Users/miguel.diaz/abrir-openlens.sh
+
+
+sincronizacion-cuentas-banco-participantes-back
+
+
+
+
+
+dESEA ELIMINAR ESTE CHAT
+Esto eliminará Bug RTBOF-13796 Diagnóstico.
+Ve a Configuración para eliminar todas las memorias guardadas durante este chat.
+
+
+
+--RTBOF-13796
+62257372   6225087
+
+INSERT INTO "NUANBODB"."TRADE"
+("TRADE_ID", "MATCH_DATE", "MATCH_ID", "CLEARING_DATE", "RETURN_CLEARING_DATE", "DEPOSITORY_ID", "COUNTRY_ID", "TYPE_ID", "MARKET_ID", "ISSUANCE_MARKET_ID", "SECURITY_ID", "PARTICIPANT_ID_BUY", "PARTICIPANT_ID_SELL", "CUSTODIAN_ID_BUY", "CUSTODIAN_ID_SELL", "ASSIGNMENT_MARK_BUY", "ASSIGNMENT_MARK_SELL", "FRACTIONAL_MARK_BUY", "FRACTIONAL_MARK_SELL", "ADVANCE_STATUS", "EXIT_INDICATOR_SETTLEMENT", "CANCELED_STATUS", "QUANTITY", "PRICE", "LOCAL_CURRENCY_PRICE", "VOLUME", "VOLUME_LOCAL_PRICE", "REPURCHASE_RATE", "REPURCHASE_AMOUNT", "STATUS_ID", "MATCH_TIME", "OWN_POSITION_SELL", "OWN_POSITION_BUY", "CURRENCY_ID", "TRADING_SYSTEM_ID", "TRADING_SESSION_ID", "REPURCHASE_AGREEMENT_DATE", "DAYS_TO_SETTLEMENT", "REPO_RATE", "REPO_AMOUNT", "FUNDING_AMOUNT", "NET_OUTFLOW_TOTAL", "OUTFLOW_TURNOVER_VALUE", "TOTAL_NET_RETURN", "RETURN_TURNOVER_VALUE", "DELIVERY_VERSUS_PAYMENT_VALUE", "REALLOCATION_INDICATOR", "BUSINESS_TYPE_ID", "MARKET_TYPE_ID", "ORIGIN_TYPE_ID", "SETTLEMENT_INDICATOR_OUTGOING", "SETTLEMENT_INDICATOR_RETURN", "RESETTLEMENT_INDICATOR_ADVANCE", "SPECIAL_TRADE_ID", "PAYMENT_TYPE_ID", "SETTLEMENT_TYPE_ID", "CUSTODIAN_STATUS_ID", "SETTLEMENT_STATUS_ID", "BLOQUING_STATUS_ID", "PURCHASE_PAYMENT_INDICATOR", "RETURN_INDICATOR_SETTLEMENT", "ISIN_NUMBER_ID", "AFP_FUND_ID", "REJECTION_REASON", "ENTERING_FIRM_BUY", "ENTERING_FIRM_SELL", "SOURCE_QUOTE_BUY_TYPE", "SOURCE_QUOTE_SELL_TYPE", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "VOLUME_DVP", "VOLUME_LP", "VOLUME_DVD", "SELL_STATUS_ID", "BUY_STATUS_ID", "PARENT_MATCHI_ID", "AFP_FUND_SELL", "AFP_FUND_BUY", "DEPOSITORY_ID_BUY", "DEPOSITORY_ID_SELL", "PURCHASE_COLLECTION_STATUS_ID", "SALE_PAYMENT_STATUS_ID", "PREVIOUS_CYCLE_STATUS_ID", "SUBSEQUENT_CYCLE_STATUS_ID", "SALES_GUARANTEE", "PURCHASE_GUARANTEE", "IND_MASTER_BUY", "IND_MASTER_SELL", "FORWARD_PRICE", "FINAL_ASSIGNMENT_MARK_BUY", "FINAL_ASSIGNMENT_MARK_SELL", "CLEARING_DATE_OLD")
+VALUES
+(3000, '2026-06-11', 600702, '2026-06-16', NULL, '1', 37, 60, '1', '11', 33, 7, 8, NULL, NULL, true, true, false, false, 0, NULL, false, 10.0000, 1800.0000, 1800.0000, 18000.0000, 18000.0000, 0.0000, NULL, 2, '2026-06-11 10:05:06.111', NULL, NULL, 32, 1, '1', NULL, 2, 0.0000, NULL, NULL, NULL, NULL, 0.0000, 0.0000, NULL, NULL, 70, 81, 90, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'CO0005', 'CO0007', 120, 120, 'jorge.hernandez@nuam.com', 'operations-fractionation-api', '2026-06-11 16:51:35.000', '10.53.129.112', NULL, NULL, NULL, 2, 2, NULL, NULL, NULL, '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, false, false, 0.000000, false, false, NULL);
+
+
+
+INSERT INTO "NUANBODB"."SETTLEMENT"
+("TRADE_ID", "FRACTION", "SIDE_ID", "INVESTOR_ID", "INVESTOR_ACCOUNT_ID", "PARTICIPANT_ACCOUNT_ID", "FRACTION_QUANTITY", "FRACTION_VOLUME", "FRACTION_VOLUME_LOCAL_PRICE", "FIDUCIARY_SPECIALIST", "COMMISSION_PERCENTAGE", "COMMISSION_AMOUNT", "VAL_TAX", "VAL_TAX_AMOUNT", "WITHHOLDING_TAX", "WITHHOLDING_TAX_AMOUNT", "NET_AMOUNT", "TRANSFER_VALUE", "ISSUED_RECEIPT", "ISSUED_RECEIPT_NUMBER", "REFERENCE_ALLOC_ID", "REPO_RATE", "REPO_AMOUNT", "LATE_PENALITY", "FUNDING_AMOUNT", "NET_OUTFLOW_TOTAL", "OUTFLOW_TURNOVER_VALUE", "RETURN_TURNOVER_VALUE", "DELIVERY_VERSUS_PAYMENT_VALUE", "SETTLEMENT_AMOUNT", "TRADING_SYSTEM_ID", "STATUS_ID", "BROKERAGE_SERVICE", "CUSTODIAN_ID", "BANK_ACCOUNT_ID", "REFERENCE", "CAPITAL_GAIN_VALUE", "DISBURSEMENT_VALUE", "SOURCE_QUOTE_TYPE_ID", "FIC_ADMINISTRATOR_ID", "CUSTODIAN_STATUS_ID", "SETTLEMENT_STATUS_ID", "BLOQUING_STATUS_ID", "REJECTION_REASON", "DIRECT_DEPOSITOR", "PARTICIPANT_BANK_ACCOUNT_ID", "BANK_TRANSACTION_MARK", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "AFP_FUND_ID", "FRACTION_VOLUME_DVD", "FRACTION_VOLUME_DVP", "FRACTION_VOLUME_LP", "GURANTEE_INDICATOR", "CASH_ACCOUNT", "IND_MASTER", "TRANSFER_PARTICIPANT_ID", "MILA_DIRECT_DEPOSITOR", "UNIQUE_FRACTION_ID")
+VALUES
+(3000, 0, '1', 12, 12, NULL, 10.0000, 18000.0000, NULL, false, 0.0000, 0.0000, 19.0000, 0.0000, NULL, NULL, 18000.0000, NULL, true, '9f909e36-fcac-3ac1-8e29-c28d93fa819f', NULL, NULL, NULL, NULL, NULL, 0.0000, 0.0000, 0.0000, NULL, 18000.0000, 1, 2, NULL, 123, NULL, '', NULL, NULL, 120, 170, 1071, NULL, NULL, NULL, 7, NULL, false, 'juan.pablo@yopmail.com', 'receipts-api', '2026-06-11 16:48:05.000', '10.53.129.112', NULL, NULL, NULL, NULL, NULL, 62250311, false, 1, NULL, 1781193069009683001);
+
+INSERT INTO "NUANBODB"."SETTLEMENT"
+("TRADE_ID", "FRACTION", "SIDE_ID", "INVESTOR_ID", "INVESTOR_ACCOUNT_ID", "PARTICIPANT_ACCOUNT_ID", "FRACTION_QUANTITY", "FRACTION_VOLUME", "FRACTION_VOLUME_LOCAL_PRICE", "FIDUCIARY_SPECIALIST", "COMMISSION_PERCENTAGE", "COMMISSION_AMOUNT", "VAL_TAX", "VAL_TAX_AMOUNT", "WITHHOLDING_TAX", "WITHHOLDING_TAX_AMOUNT", "NET_AMOUNT", "TRANSFER_VALUE", "ISSUED_RECEIPT", "ISSUED_RECEIPT_NUMBER", "REFERENCE_ALLOC_ID", "REPO_RATE", "REPO_AMOUNT", "LATE_PENALITY", "FUNDING_AMOUNT", "NET_OUTFLOW_TOTAL", "OUTFLOW_TURNOVER_VALUE", "RETURN_TURNOVER_VALUE", "DELIVERY_VERSUS_PAYMENT_VALUE", "SETTLEMENT_AMOUNT", "TRADING_SYSTEM_ID", "STATUS_ID", "BROKERAGE_SERVICE", "CUSTODIAN_ID", "BANK_ACCOUNT_ID", "REFERENCE", "CAPITAL_GAIN_VALUE", "DISBURSEMENT_VALUE", "SOURCE_QUOTE_TYPE_ID", "FIC_ADMINISTRATOR_ID", "CUSTODIAN_STATUS_ID", "SETTLEMENT_STATUS_ID", "BLOQUING_STATUS_ID", "REJECTION_REASON", "DIRECT_DEPOSITOR", "PARTICIPANT_BANK_ACCOUNT_ID", "BANK_TRANSACTION_MARK", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "AFP_FUND_ID", "FRACTION_VOLUME_DVD", "FRACTION_VOLUME_DVP", "FRACTION_VOLUME_LP", "GURANTEE_INDICATOR", "CASH_ACCOUNT", "IND_MASTER", "TRANSFER_PARTICIPANT_ID", "MILA_DIRECT_DEPOSITOR", "UNIQUE_FRACTION_ID")
+VALUES
+(3000, 0, '2', NULL, NULL, 63, 10.0000, 18000.0000, NULL, false, 0.0000, 0.0000, 19.0000, 0.0000, NULL, NULL, 18000.0000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.0000, 0.0000, 0.0000, NULL, 18000.0000, 1, 2, NULL, NULL, NULL, '', NULL, NULL, 120, NULL, NULL, NULL, NULL, NULL, 8, NULL, false, 'jorge.hernandez@nuam.com', 'operations-fractionation-api', '2026-06-11 16:51:35.000', '10.53.129.112', NULL, NULL, NULL, NULL, NULL, 62250287, false, NULL, NULL, 1781196711305074001);
+
+
+
+INSERT INTO "NUANBODB"."CUSTODIAN_STATUS_HISTORY"
+("MARKET_ID", "UNIQUE_FRACTION_ID", "FRACTION", "CUSTODIAN_STATUS_TIME", "INVESTOR_ACCOUNT_ID", "CUSTODIAN_STATUS_ID", "REJECTION_REASON_ID", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "TRADE_ID", "SIDE_ID", "INVESTOR_ID", "CUSTODIAN_ID", "FIC_ADMINISTRATOR_ID", "FRACTION_QUANTITY", "FRACTION_VOLUME", "NET_AMOUNT", "COMMISSION_AMOUNT", "VAL_TAX_AMOUNT")
+VALUES
+('1', 1781193069009683001, 0, '2026-06-11 10:51:09.023', 12, 1071, NULL, 'jorge.hernandez@nuam.com', 'operations-fractionation-api', '2026-06-11 10:50:53.000', '10.53.129.112', 3000, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+
+
+
+BEGIN;
+
+CREATE TEMP TABLE qa_trade_clone_params (
+    new_trade_id BIGINT NOT NULL,
+    new_unique_fraction_id_side_1 BIGINT NOT NULL,
+    new_unique_fraction_id_side_2 BIGINT NOT NULL
+) ON COMMIT DROP;
+
+INSERT INTO qa_trade_clone_params (
+    new_trade_id,
+    new_unique_fraction_id_side_1,
+    new_unique_fraction_id_side_2
+)
+VALUES
+    (3002, 1781193069009683002, 1781196711305073002),
+    (3003, 1781193069009683003, 1781196711305073003),
+    (3004, 1781193069009683004, 1781196711305073004),
+    (3005, 1781193069009683005, 1781196711305073005),
+    (3006, 1781193069009683006, 1781196711305073006),
+    (3007, 1781193069009683007, 1781196711305073007),
+    (3008, 1781193069009683008, 1781196711305073008),
+    (3009, 1781193069009683009, 1781196711305073009),
+    (3010, 1781193069009683010, 1781196711305073010);
+
+-- =========================================================
+-- 1. CLONAR TRADE DESDE TRADE_ID = 2046
+-- =========================================================
+INSERT INTO "NUANBODB"."TRADE"
+(
+    "TRADE_ID",
+    "MATCH_DATE",
+    "MATCH_ID",
+    "CLEARING_DATE",
+    "RETURN_CLEARING_DATE",
+    "DEPOSITORY_ID",
+    "COUNTRY_ID",
+    "TYPE_ID",
+    "MARKET_ID",
+    "ISSUANCE_MARKET_ID",
+    "SECURITY_ID",
+    "PARTICIPANT_ID_BUY",
+    "PARTICIPANT_ID_SELL",
+    "CUSTODIAN_ID_BUY",
+    "CUSTODIAN_ID_SELL",
+    "ASSIGNMENT_MARK_BUY",
+    "ASSIGNMENT_MARK_SELL",
+    "FRACTIONAL_MARK_BUY",
+    "FRACTIONAL_MARK_SELL",
+    "ADVANCE_STATUS",
+    "EXIT_INDICATOR_SETTLEMENT",
+    "CANCELED_STATUS",
+    "QUANTITY",
+    "PRICE",
+    "LOCAL_CURRENCY_PRICE",
+    "VOLUME",
+    "VOLUME_LOCAL_PRICE",
+    "REPURCHASE_RATE",
+    "REPURCHASE_AMOUNT",
+    "STATUS_ID",
+    "MATCH_TIME",
+    "OWN_POSITION_SELL",
+    "OWN_POSITION_BUY",
+    "CURRENCY_ID",
+    "TRADING_SYSTEM_ID",
+    "TRADING_SESSION_ID",
+    "REPURCHASE_AGREEMENT_DATE",
+    "DAYS_TO_SETTLEMENT",
+    "REPO_RATE",
+    "REPO_AMOUNT",
+    "FUNDING_AMOUNT",
+    "NET_OUTFLOW_TOTAL",
+    "OUTFLOW_TURNOVER_VALUE",
+    "TOTAL_NET_RETURN",
+    "RETURN_TURNOVER_VALUE",
+    "DELIVERY_VERSUS_PAYMENT_VALUE",
+    "REALLOCATION_INDICATOR",
+    "BUSINESS_TYPE_ID",
+    "MARKET_TYPE_ID",
+    "ORIGIN_TYPE_ID",
+    "SETTLEMENT_INDICATOR_OUTGOING",
+    "SETTLEMENT_INDICATOR_RETURN",
+    "RESETTLEMENT_INDICATOR_ADVANCE",
+    "SPECIAL_TRADE_ID",
+    "PAYMENT_TYPE_ID",
+    "SETTLEMENT_TYPE_ID",
+    "CUSTODIAN_STATUS_ID",
+    "SETTLEMENT_STATUS_ID",
+    "BLOQUING_STATUS_ID",
+    "PURCHASE_PAYMENT_INDICATOR",
+    "RETURN_INDICATOR_SETTLEMENT",
+    "ISIN_NUMBER_ID",
+    "AFP_FUND_ID",
+    "REJECTION_REASON",
+    "ENTERING_FIRM_BUY",
+    "ENTERING_FIRM_SELL",
+    "SOURCE_QUOTE_BUY_TYPE",
+    "SOURCE_QUOTE_SELL_TYPE",
+    "LAST_MODIFY_USER",
+    "LAST_MODIFY_APPLIC",
+    "LAST_MODIFY_DATE",
+    "LAST_MODIFY_IP",
+    "VOLUME_DVP",
+    "VOLUME_LP",
+    "VOLUME_DVD",
+    "SELL_STATUS_ID",
+    "BUY_STATUS_ID",
+    "PARENT_MATCHI_ID",
+    "AFP_FUND_SELL",
+    "AFP_FUND_BUY",
+    "DEPOSITORY_ID_BUY",
+    "DEPOSITORY_ID_SELL",
+    "PURCHASE_COLLECTION_STATUS_ID",
+    "SALE_PAYMENT_STATUS_ID",
+    "PREVIOUS_CYCLE_STATUS_ID",
+    "SUBSEQUENT_CYCLE_STATUS_ID",
+    "SALES_GUARANTEE",
+    "PURCHASE_GUARANTEE",
+    "IND_MASTER_BUY",
+    "IND_MASTER_SELL",
+    "FORWARD_PRICE",
+    "FINAL_ASSIGNMENT_MARK_BUY",
+    "FINAL_ASSIGNMENT_MARK_SELL",
+    "CLEARING_DATE_OLD"
+)
+SELECT
+    p.new_trade_id,
+    t."MATCH_DATE",
+    t."MATCH_ID",
+    t."CLEARING_DATE",
+    t."RETURN_CLEARING_DATE",
+    t."DEPOSITORY_ID",
+    t."COUNTRY_ID",
+    t."TYPE_ID",
+    t."MARKET_ID",
+    t."ISSUANCE_MARKET_ID",
+    t."SECURITY_ID",
+    t."PARTICIPANT_ID_BUY",
+    t."PARTICIPANT_ID_SELL",
+    t."CUSTODIAN_ID_BUY",
+    t."CUSTODIAN_ID_SELL",
+    t."ASSIGNMENT_MARK_BUY",
+    t."ASSIGNMENT_MARK_SELL",
+    t."FRACTIONAL_MARK_BUY",
+    t."FRACTIONAL_MARK_SELL",
+    t."ADVANCE_STATUS",
+    t."EXIT_INDICATOR_SETTLEMENT",
+    t."CANCELED_STATUS",
+    t."QUANTITY",
+    t."PRICE",
+    t."LOCAL_CURRENCY_PRICE",
+    t."VOLUME",
+    t."VOLUME_LOCAL_PRICE",
+    t."REPURCHASE_RATE",
+    t."REPURCHASE_AMOUNT",
+    t."STATUS_ID",
+    t."MATCH_TIME",
+    t."OWN_POSITION_SELL",
+    t."OWN_POSITION_BUY",
+    t."CURRENCY_ID",
+    t."TRADING_SYSTEM_ID",
+    t."TRADING_SESSION_ID",
+    t."REPURCHASE_AGREEMENT_DATE",
+    t."DAYS_TO_SETTLEMENT",
+    t."REPO_RATE",
+    t."REPO_AMOUNT",
+    t."FUNDING_AMOUNT",
+    t."NET_OUTFLOW_TOTAL",
+    t."OUTFLOW_TURNOVER_VALUE",
+    t."TOTAL_NET_RETURN",
+    t."RETURN_TURNOVER_VALUE",
+    t."DELIVERY_VERSUS_PAYMENT_VALUE",
+    t."REALLOCATION_INDICATOR",
+    t."BUSINESS_TYPE_ID",
+    t."MARKET_TYPE_ID",
+    t."ORIGIN_TYPE_ID",
+    t."SETTLEMENT_INDICATOR_OUTGOING",
+    t."SETTLEMENT_INDICATOR_RETURN",
+    t."RESETTLEMENT_INDICATOR_ADVANCE",
+    t."SPECIAL_TRADE_ID",
+    t."PAYMENT_TYPE_ID",
+    t."SETTLEMENT_TYPE_ID",
+    t."CUSTODIAN_STATUS_ID",
+    t."SETTLEMENT_STATUS_ID",
+    t."BLOQUING_STATUS_ID",
+    t."PURCHASE_PAYMENT_INDICATOR",
+    t."RETURN_INDICATOR_SETTLEMENT",
+    t."ISIN_NUMBER_ID",
+    t."AFP_FUND_ID",
+    t."REJECTION_REASON",
+    t."ENTERING_FIRM_BUY",
+    t."ENTERING_FIRM_SELL",
+    t."SOURCE_QUOTE_BUY_TYPE",
+    t."SOURCE_QUOTE_SELL_TYPE",
+    t."LAST_MODIFY_USER",
+    t."LAST_MODIFY_APPLIC",
+    t."LAST_MODIFY_DATE",
+    t."LAST_MODIFY_IP",
+    t."VOLUME_DVP",
+    t."VOLUME_LP",
+    t."VOLUME_DVD",
+    t."SELL_STATUS_ID",
+    t."BUY_STATUS_ID",
+    t."PARENT_MATCHI_ID",
+    t."AFP_FUND_SELL",
+    t."AFP_FUND_BUY",
+    t."DEPOSITORY_ID_BUY",
+    t."DEPOSITORY_ID_SELL",
+    t."PURCHASE_COLLECTION_STATUS_ID",
+    t."SALE_PAYMENT_STATUS_ID",
+    t."PREVIOUS_CYCLE_STATUS_ID",
+    t."SUBSEQUENT_CYCLE_STATUS_ID",
+    t."SALES_GUARANTEE",
+    t."PURCHASE_GUARANTEE",
+    t."IND_MASTER_BUY",
+    t."IND_MASTER_SELL",
+    t."FORWARD_PRICE",
+    t."FINAL_ASSIGNMENT_MARK_BUY",
+    t."FINAL_ASSIGNMENT_MARK_SELL",
+    t."CLEARING_DATE_OLD"
+FROM "NUANBODB"."TRADE" t
+CROSS JOIN qa_trade_clone_params p
+WHERE t."TRADE_ID" = 2046;
+
+-- =========================================================
+-- 2. CLONAR SETTLEMENT DESDE TRADE_ID = 2046
+-- =========================================================
+INSERT INTO "NUANBODB"."SETTLEMENT"
+(
+    "TRADE_ID",
+    "FRACTION",
+    "SIDE_ID",
+    "INVESTOR_ID",
+    "INVESTOR_ACCOUNT_ID",
+    "PARTICIPANT_ACCOUNT_ID",
+    "FRACTION_QUANTITY",
+    "FRACTION_VOLUME",
+    "FRACTION_VOLUME_LOCAL_PRICE",
+    "FIDUCIARY_SPECIALIST",
+    "COMMISSION_PERCENTAGE",
+    "COMMISSION_AMOUNT",
+    "VAL_TAX",
+    "VAL_TAX_AMOUNT",
+    "WITHHOLDING_TAX",
+    "WITHHOLDING_TAX_AMOUNT",
+    "NET_AMOUNT",
+    "TRANSFER_VALUE",
+    "ISSUED_RECEIPT",
+    "ISSUED_RECEIPT_NUMBER",
+    "REFERENCE_ALLOC_ID",
+    "REPO_RATE",
+    "REPO_AMOUNT",
+    "LATE_PENALITY",
+    "FUNDING_AMOUNT",
+    "NET_OUTFLOW_TOTAL",
+    "OUTFLOW_TURNOVER_VALUE",
+    "RETURN_TURNOVER_VALUE",
+    "DELIVERY_VERSUS_PAYMENT_VALUE",
+    "SETTLEMENT_AMOUNT",
+    "TRADING_SYSTEM_ID",
+    "STATUS_ID",
+    "BROKERAGE_SERVICE",
+    "CUSTODIAN_ID",
+    "BANK_ACCOUNT_ID",
+    "REFERENCE",
+    "CAPITAL_GAIN_VALUE",
+    "DISBURSEMENT_VALUE",
+    "SOURCE_QUOTE_TYPE_ID",
+    "FIC_ADMINISTRATOR_ID",
+    "CUSTODIAN_STATUS_ID",
+    "SETTLEMENT_STATUS_ID",
+    "BLOQUING_STATUS_ID",
+    "REJECTION_REASON",
+    "DIRECT_DEPOSITOR",
+    "PARTICIPANT_BANK_ACCOUNT_ID",
+    "BANK_TRANSACTION_MARK",
+    "LAST_MODIFY_USER",
+    "LAST_MODIFY_APPLIC",
+    "LAST_MODIFY_DATE",
+    "LAST_MODIFY_IP",
+    "AFP_FUND_ID",
+    "FRACTION_VOLUME_DVD",
+    "FRACTION_VOLUME_DVP",
+    "FRACTION_VOLUME_LP",
+    "GURANTEE_INDICATOR",
+    "CASH_ACCOUNT",
+    "IND_MASTER",
+    "TRANSFER_PARTICIPANT_ID",
+    "MILA_DIRECT_DEPOSITOR",
+    "UNIQUE_FRACTION_ID"
+)
+SELECT
+    p.new_trade_id,
+    s."FRACTION",
+    s."SIDE_ID",
+    s."INVESTOR_ID",
+    s."INVESTOR_ACCOUNT_ID",
+    s."PARTICIPANT_ACCOUNT_ID",
+    s."FRACTION_QUANTITY",
+    s."FRACTION_VOLUME",
+    s."FRACTION_VOLUME_LOCAL_PRICE",
+    s."FIDUCIARY_SPECIALIST",
+    s."COMMISSION_PERCENTAGE",
+    s."COMMISSION_AMOUNT",
+    s."VAL_TAX",
+    s."VAL_TAX_AMOUNT",
+    s."WITHHOLDING_TAX",
+    s."WITHHOLDING_TAX_AMOUNT",
+    s."NET_AMOUNT",
+    s."TRANSFER_VALUE",
+    s."ISSUED_RECEIPT",
+    s."ISSUED_RECEIPT_NUMBER",
+    s."REFERENCE_ALLOC_ID",
+    s."REPO_RATE",
+    s."REPO_AMOUNT",
+    s."LATE_PENALITY",
+    s."FUNDING_AMOUNT",
+    s."NET_OUTFLOW_TOTAL",
+    s."OUTFLOW_TURNOVER_VALUE",
+    s."RETURN_TURNOVER_VALUE",
+    s."DELIVERY_VERSUS_PAYMENT_VALUE",
+    s."SETTLEMENT_AMOUNT",
+    s."TRADING_SYSTEM_ID",
+    s."STATUS_ID",
+    s."BROKERAGE_SERVICE",
+    s."CUSTODIAN_ID",
+    s."BANK_ACCOUNT_ID",
+    s."REFERENCE",
+    s."CAPITAL_GAIN_VALUE",
+    s."DISBURSEMENT_VALUE",
+    s."SOURCE_QUOTE_TYPE_ID",
+    s."FIC_ADMINISTRATOR_ID",
+    s."CUSTODIAN_STATUS_ID",
+    s."SETTLEMENT_STATUS_ID",
+    s."BLOQUING_STATUS_ID",
+    s."REJECTION_REASON",
+    s."DIRECT_DEPOSITOR",
+    s."PARTICIPANT_BANK_ACCOUNT_ID",
+    s."BANK_TRANSACTION_MARK",
+    s."LAST_MODIFY_USER",
+    s."LAST_MODIFY_APPLIC",
+    s."LAST_MODIFY_DATE",
+    s."LAST_MODIFY_IP",
+    s."AFP_FUND_ID",
+    s."FRACTION_VOLUME_DVD",
+    s."FRACTION_VOLUME_DVP",
+    s."FRACTION_VOLUME_LP",
+    s."GURANTEE_INDICATOR",
+    s."CASH_ACCOUNT",
+    s."IND_MASTER",
+    s."TRANSFER_PARTICIPANT_ID",
+    s."MILA_DIRECT_DEPOSITOR",
+    CASE
+        WHEN s."SIDE_ID" = '1' THEN p.new_unique_fraction_id_side_1
+        WHEN s."SIDE_ID" = '2' THEN p.new_unique_fraction_id_side_2
+        ELSE s."UNIQUE_FRACTION_ID"
+    END
+FROM "NUANBODB"."SETTLEMENT" s
+CROSS JOIN qa_trade_clone_params p
+WHERE s."TRADE_ID" = 2046;
+
+-- =========================================================
+-- 3. CLONAR CUSTODIAN_STATUS_HISTORY DESDE TRADE_ID = 2046
+-- =========================================================
+INSERT INTO "NUANBODB"."CUSTODIAN_STATUS_HISTORY"
+(
+    "MARKET_ID",
+    "UNIQUE_FRACTION_ID",
+    "FRACTION",
+    "CUSTODIAN_STATUS_TIME",
+    "INVESTOR_ACCOUNT_ID",
+    "CUSTODIAN_STATUS_ID",
+    "REJECTION_REASON_ID",
+    "LAST_MODIFY_USER",
+    "LAST_MODIFY_APPLIC",
+    "LAST_MODIFY_DATE",
+    "LAST_MODIFY_IP",
+    "TRADE_ID",
+    "SIDE_ID",
+    "INVESTOR_ID",
+    "CUSTODIAN_ID",
+    "FIC_ADMINISTRATOR_ID",
+    "FRACTION_QUANTITY",
+    "FRACTION_VOLUME",
+    "NET_AMOUNT",
+    "COMMISSION_AMOUNT",
+    "VAL_TAX_AMOUNT"
+)
+SELECT
+    h."MARKET_ID",
+    CASE
+        WHEN h."SIDE_ID" = '1' THEN p.new_unique_fraction_id_side_1
+        WHEN h."SIDE_ID" = '2' THEN p.new_unique_fraction_id_side_2
+        ELSE h."UNIQUE_FRACTION_ID"
+    END,
+    h."FRACTION",
+    h."CUSTODIAN_STATUS_TIME",
+    h."INVESTOR_ACCOUNT_ID",
+    h."CUSTODIAN_STATUS_ID",
+    h."REJECTION_REASON_ID",
+    h."LAST_MODIFY_USER",
+    h."LAST_MODIFY_APPLIC",
+    h."LAST_MODIFY_DATE",
+    h."LAST_MODIFY_IP",
+    p.new_trade_id,
+    h."SIDE_ID",
+    h."INVESTOR_ID",
+    h."CUSTODIAN_ID",
+    h."FIC_ADMINISTRATOR_ID",
+    h."FRACTION_QUANTITY",
+    h."FRACTION_VOLUME",
+    h."NET_AMOUNT",
+    h."COMMISSION_AMOUNT",
+    h."VAL_TAX_AMOUNT"
+FROM "NUANBODB"."CUSTODIAN_STATUS_HISTORY" h
+CROSS JOIN qa_trade_clone_params p
+WHERE h."TRADE_ID" = 2046;
+
+COMMIT;
+
+    uses: nuamx/devops-resources-refactor/.github/workflows/CI-java-main_facade.yaml@development
+jobs:
+  continuos_integration:
+    name: '[CI]'
+    uses: nuamx/devops-resources-refactor/.github/workflows/CI-java-main_facade.yaml@development
+
+
+https://apisix.nubo-release.com/operations-query-api/v1/validate/counted-operation/verify-correction-allowed/trade/{tradeId}/side/{sideId}
+
+validateAllBusinessRules
+
+https://nbo-qa.nubo-nuam.com/operations-query-api/v1/settlement?tradeId=2603&sideId=1&page=0&size=10
+
+https://apisix.nubo-release.com/operations-query-api/v1/settlement?tradeId=2603&sideId=1&page=0&size=10
+
+https://apisix.nubo-nuam.com/operations-query-api/v1/settlement?tradeId=2603&sideId=1&page=0&size=10
+
+
+Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0R3Axbl9tSU5ORWpFbTFjN29SYVdzR3lfUEpFTHQ1cmlGU21TcWdJb2prIn0.eyJleHAiOjE3ODEzODY3MTksImlhdCI6MTc4MTM4NDAxOSwianRpIjoidHJydGNjOjBmOTA2NDdjLTM3MzAtNjhhZC01MzZiLTA5NjVmOWE3YTZkMCIsImlzcyI6Imh0dHBzOi8vc3NvLWRldm9wcy5udWFtZXhjaGFuZ2UuY29tL3JlYWxtcy9uYm8tZGV2IiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJicm9rZXIiLCJhY2NvdW50IiwibnViby1mcm9udGVuZCJdLCJzdWIiOiI3NWYzZTU0ZC1lZWY3LTRiOWEtOGQ2Yy03ZDgwNzcyZjBjYTIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJudWJvLWZyb250ZW5kLTIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJvLWRldiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJ2aWV3LXJlYWxtIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibnViby1mcm9udGVuZC0yIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsIm1hbmFnZS1jb25zZW50IiwiZGVsZXRlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX0sIm51Ym8tZnJvbnRlbmQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy42NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1udWJvLWZyb250ZW5kLTIiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuNjQiLCJjbGllbnRfaWQiOiJudWJvLWZyb250ZW5kLTIifQ.WKQrKKk-NEz0cJYKlEGckdbbW_ZBe6z2Y1b_HjzshAZAoJCRb01zKWduy80Ig0vYI8q3Dh_bZT-wzNWFEo9oQpZEfPKwef1JsRk7cV5U_DIZi5O-AZxTC7dypO-TV2BugL5OIspXgFuf4UPFXRjub35qIoAilhXaqvBBsnmX1h_VbM-gklysGVzA6VOK5EJQpUb2bVZZxIOGOJHd0yThmMuuCY9Y_DDmCRufl1JYuDAf_yCWxcwV7vy8wCatFiBEwillgfbEC3ji6-EGRHWcZBvcpK9czbpnPY9GqMOaBA59htHytDn6_YvCr73bZzpWkNSwAjVOKqb3aplnvSDWjg
+CORRECTION_NOT_ALLOWED
+
+
+
+
+
+
+INSERT INTO "NUANBODB"."DEPOSITORY_MAPPING"
+("DEPOSITORY_MAPPING_ID", "EXTERNAL_SYSTEM", "EXTERNAL_CODE", "EXTERNAL_DESCRIPTION", "DEPOSITORY_ID", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "CATEGORY")
+VALUES(23, 'MME', 'CO', 'DVL', '1', 'USER', 'APP', '2025-02-13 09:21:52.604', '127.0.0.1', 'DEPOSITO');
+
+INSERT INTO "NUANBODB"."DEPOSITORY_MAPPING"
+("DEPOSITORY_MAPPING_ID", "EXTERNAL_SYSTEM", "EXTERNAL_CODE", "EXTERNAL_DESCRIPTION", "DEPOSITORY_ID", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "CATEGORY")
+VALUES(24, 'MME', 'PE', 'CAVALI', '5', 'USER', 'APP', '2025-02-13 09:21:52.604', '127.0.0.1', 'DEPOSITO');
+
+INSERT INTO "NUANBODB"."DEPOSITORY_MAPPING"
+("DEPOSITORY_MAPPING_ID", "EXTERNAL_SYSTEM", "EXTERNAL_CODE", "EXTERNAL_DESCRIPTION", "DEPOSITORY_ID", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "CATEGORY")
+VALUES(25, 'MME', 'CL', 'DCV CHILE', '6', 'USER', 'APP', '2025-02-13 09:21:52.604', '127.0.0.1', 'DEPOSITO');
+
+
+
+
+
+
+/mnt/c/Users/miguel.diaz/abrir-openlens.sh
+
+
+chmod +x upload-files.sh
+
+./upload-files.sh input.csv inputSell.csv output.csv outputSell.csv
+
+
+kubectl config use-context "$CURRENT_CONTEXT"
+backup al config
+cp ~/.kube/config ~/.kube/config.backup.$(date +%Y%m%d_%H%M%S)
+restarurarlo
+cp ~/.kube/config.backup.20260616_180726 ~/.kube/config
+
+ls -lh ~/.kube/config.backup.*
+-rw------- 1 root root 7.3K Jun 16 18:07 /root/.kube/config.backup.20260616_180726
+
+
+kubectl config use-context <context-name>
+
+aws eks update-kubeconfig --region us-east-1 --name eks-postneg-release-qa-eks
+aws eks update-kubeconfig --region us-east-1 --name NOMBRE_DE_TU_CLUSTER
+
+--------------------------------------------------------
+subir un build.sh
+---------------------------------------------------------
+ ./build.sh
+docker tag registry.example.com/aiops/nbo-png-pruebas-automatizacion:latest registry.nuamexchange.com/nubo/nbo-png-pruebas-automatizacion:v0.0.3
+docker push registry.nuamexchange.com/nubo/nbo-png-pruebas-automatizacion:v0.0.3
+
+docker login registry.nuamexchange.com -u miguel.diaz@nuamx.com
+
+./upload-files.sh input.csv inputSell.csv output.csv outputSell.csv
+
+#cambia al contexto los build.sh y upload-files-sh
+export KUBECONFIG=/root/.kube/eks-postneg-release-qa
+
+export KUBECONFIG=/root/.kube/config
+
+/mnt/c/Users/miguel.diaz/abrir-openlens.sh
+
+kubectl get namespaces
+kubectl config current-context
+kubectl config get-contexts
+aws eks list-clusters --region us-east-1 --output text --query "clusters"
+
+
+playwright.config.ts
+flujo-completo.spec.ts
+
+https://apisix.nubo-release.com/operations-query-api/v1/settlement/search?page=0&size=10
+https://apisix.nubo-nuam.com/master-participant-api/v1/participant-associated?participantId=2034&&page=0&size=10
+
+
+
+
+
+curl -X GET http://intrumentos-api-ingestor-borde-back-service.nubo-back-integracion/ingestor-edge-api/v1/synchronization/reference-data -H "client_ip: 127.0.0.0" -H "client_user: admin" -H "client_datetime: 2025-10-15T12:30:45"
+
+curl -X GET http://emisores-api-ingestor-borde-back-service.nubo-back-integracion/ingestor-edge-api/v1/synchronization/reference-data -H "client_ip: 127.0.0.0" -H "client_user: admin" -H "client_datetime: 2025-10-15T12:30:45"
+
+Instrumentos RV
+curl -X GET http://intrumentos-api-ingestor-borde-back-service.nubo-back-integracion/ingestor-edge-api/v1/synchronization/reference-data -H "client_ip: 127.0.0.0" -H "client_user: admin" -H "client_datetime: 2025-10-15T12:30:45"
+
+Participantes:
+curl -X GET http://participante-api-ingestor-borde-back-service.nubo-back-integracion/ingestor-edge-api/v1/synchronization/reference-data -H "client_ip: 127.0.0.0" -H "client_user: admin" -H "client_datetime: 2025-10-15T12:30:45"
+
+
+Cuentas de banco participante
+curl -X GET http://cuentas-participante-api-ingestor-borde-back-service.nubo-back-integracion/ingestor-edge-api/v1/synchronization/reference-data -H "client_ip: 127.0.0.0" -H "client_user: admin" -H "client_datetime: 2025-10-15T12:30:45"
+
+asignacion con custodio
+cambiar cta efectivo por la que tiene el participant bank account el custodio
+
+
+custodio 
+cambiar cta titulo, si admite mantiene cuenta custodio, si rechaza mantiene la cuenta asociada al participante
+
+ 
+ http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/participants
+ http://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/participants
+
+
+ Cuenta de banco participante
+http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/participant-bank-accounts
+http://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/participant-bank-accounts
+ 
+Participantes
+ http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/participants
+ http://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/participants
+
+Emisores
+http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/issuers
+http://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/issuers
+
+Instrumentos RV
+http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/instrument-rv
+https://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/instrument-rv
+
+
+ 
+[30m2026-06-17T22:24:31,123[m [32mINFO  [m[[1;34mmain[m] [36mClientReferenceDataServiceImpl[m - Consulting external URI -> [GET] https://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/participant-bank-accounts?size=100&page=0
+
+
+Cambio real 
+/root/.kube/config.backup.20260618_200141
+
+/root/.aws/config.backup.20260618_200141
+
+
+
+KUBE_BACKUP=$(ls -t ~/.kube/config.backup.20260618_200141 | head -1)
+AWS_BACKUP=$(ls -t ~/.aws/config.backup.20260618_200141 | head -1)
+
+echo "KUBE_BACKUP=$KUBE_BACKUP"
+echo "AWS_BACKUP=$AWS_BACKUP"
+
+
+
+ls -lh ~/.kube/config.backup.20260618_200141
+
+KUBE_BACKUP=$(ls -t ~/.kube/config.backup.20260618_200141 | head -1)
+echo "$KUBE_BACKUP"
+cp "$KUBE_BACKUP" ~/.kube/config
+
+
+ cp ~/.kube/config.backup.20260618_200141 ~/.kube/config
+
+
+
+https://apisix.nubo-release.com/operations-cmd-api/v1/fractionation/counted-operation/create-fractions/trade/6/side/1
+
+
+ISSUER
+
+ 
+ISIN_NUMBER
+EQUITY_SECURITY
+SECURITY_TITLE
+
+
+---Instrument
+dev
+ REFERENCE_DATA_HOST : https://apisix-gw-rda-preprod-cloud.nuamx.com
+https://apisix-gw-rda-preprod-cloud.nuamx.com
+/api/query/instrument-rv
+
+Reference data:
+
+REFERENCE_DATA_HOST : https://apisix-gw-rda-qa-postneg.nuamx.com
+/api/query/instrument-rv
+
+
+https://apisix-gw-rda-qa-postneg.nuamx.com
+https://apisix-gw-rda-qa-postneg.nuamx.com/kafka-nubo-reference-data-instrumentos
+https://apisix-gw-rda-preprod-cloud.nuamx.com/api/query/instrument-rv
+
+https://apisix-gw-rda-preprod-cloud.nuamx.com/api/query/instrument-rv
+https://apisix-gw-rda-preprod-cloud.nuamx.com/v2/api/query/instrument-rv
+http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/instrument-rv
+https://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/instrument-rv
+
+https://apisix-gw-rda-qa-postneg.nuamx.com/api/query/instrument-rv
+
+https://apisix-gw-rda-qa-postneg.nuamx.com/api/query/instrument-rv
+
+https://apisix-gw-rda-preprod-cloud.nuamx.com/api/query/instrument-rv?size=500&page=0
+
+
+{"httpCode":"502","httpMethod":"GET","url":"http://cuentas-participante-api-ingestor-borde-back-service.nubo-back-integracion/ingestor-edge-api/v1/synchronization/reference-data","timestamp":"2025-10-15T12:30:45","errorCode":"CLIENT_REFERENCE_DATA_ERROR","errorMessage":"Error Occurred In Reference Data","errorMessageDetail":"400 Bad Request: \"{\"error\":\"invalid_grant\",\"error_description\":\"Account is not fully set up\"}\""}nginx-netshoot-656795d7d5-76zx4:~# 
+
+ https://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/participant-bank-accounts?size=100&page=0
+
+https://apisix-gw-rda-preprod-cloud.nuamx.com/api/query/participant-bank-accounts
+https://apisix-gw-rda-preprod-cloud.nuamx.com/v2/api/query/participant-bank-accounts
+http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/participant-bank-accounts
+http://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/participant-bank-accounts
+REFERENCE_DATA_AUTH_ENABLED
+
+
+
+https://apisix-gw-rda-preprod-cloud.nuamx.com/api/query/instrument-rv
+https://apisix-gw-rda-preprod-cloud.nuamx.com/v2/api/query/instrument-rv
+http://apisix-gw-rda-qa-postneg.nuamx.com/api/query/instrument-rv
+https://apisix-gw-rda-qa-postneg.nuamx.com/v2/api/query/instrument-rv
+
+
+
+
+
+
+
+https://nuamexchange.atlassian.net/browse/PRUID1-1736
+-Cierre para operaciones que ya estan en fecha de cumplimineto a hoy
+Asignacion definitiva del dia
+Trade ClearinDate=hoy
+
+Componente revisa esa consulta, lo envia a camara,
+Se debe configurar un horario
+
+
+- Sincronizaciones en una hora
+
+
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/search/name?name=&page=0&size=10
+
+http://localhost:8083/master-third-parties-api/v1/investor/search/name?name=&page=0&size=10
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/search/name?name=&page=0&size=10
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/search/document?documentNumber=&page=0&size=10
+
+
+
+
+https://apisix.nubo-dev.com/master-third-parties-api/v1/investor/dynamic?&page=0&size=10
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/dynamic?&page=0&size=10
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/dynamic?&page=0&size=10
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/dynamic?&page=0&size=10
+
+
+https://apisix.nubo-release.com/master-third-parties-api/v1/investor/dynamic?&page=1&size=10
+
+
+http://localhost:8082/operations-custody-automatic-packages-query-api/swagger-ui/index.html#
+https://apisix.nubo-dev.com/operations-custody-automatic-packages-query-api/swagger-ui/index.html#
+https://apisix.nubo-dev.com/packages-custody-cmd-api/swagger-ui/index.html#
+https://apisix.nubo-release.com/packages-custody-cmd-api/swagger-ui/index.html
+https://apisix.nubo-dev.com/packages-custody-cmd-api/swagger-ui/index.html#
+https://apisix.nubo-dev.com/operations-custody-automatic-packages-query-api/swagger-ui/index.html#
+https://apisix.nubo-dev.com/operations-custody-automatic-packages-query-api/swagger-ui/index.html#
+https://apisix.nubo-dev.com/operations-custody-transfer-api/swagger-ui/index.html#/Investor/findAllInvestorDynamic
+https://apisix.nubo-release.com/operations-custody-automatic-packages-api/swagger-ui/index.html#
+
+https://apisix.nubo-dev.com/master-third-parties-api/v1/investor/dynamic?companyName=COMPANY+1&page=0&size=10
+
+
+manifest_path_preprod: overlays/release/apps/operaciones-empaquetamiento-automatico-back
+
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report/generate/report-liquida/user/9?participantId=9&date=2026-07-02&status=REGISTRADAS
+
+
+	25-abr	08:00 am a 01:00 pm
+	06-jun	8:00 am a 3:00 pm
+	13-jun	3: 00 pm a 6: 00 pm
+	20-jun	8: 00 am a 2 : 00 pm
+
+
+
+                .registrationDate(dataReferenceParticipantInDto.getRegistrationDate())
+
+
+
+http://localhost:8083/packages-custody-cmd-api/swagger-ui/index.html
+
+
+
+
+
+

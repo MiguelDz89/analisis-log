@@ -1,0 +1,562 @@
+
+M1gu3lD14Z!!!
+
+git pull origin fix/optimize-performance
+git add ./
+git commit -m " remove ASSIGNMENT_PERSISTENCE_NEW_SETTLEMENT_PERSIST_ENABLED"
+git push
+
+
+git pull origin fix/revert-uniqueFractionId
+git add ./
+git commit -m "vulnerabilidad"
+git push
+
+
+--nbo-png-ops-custodio-emp-aut-query-back
+git pull origin fix/optimize-performance
+git add ./
+git commit -m "pom vulnerabilides"
+git push
+
+fix/fin-optimizacion0909
+
+
+--nbo-png-paquetes-custodios-cmd-back
+git pull origin fix/isinNumber
+git add ./
+git commit -m "migration java 21"
+git push -u origin chore/upgrade-java21-springboot4
+
+trivy fs --scanners vuln,misconfig,secret `
+  --severity HIGH,CRITICAL `
+  --ignore-unfixed `
+  --timeout 30m `
+  --skip-dirs .git `
+  --format table .
+
+--nbo-png-operaciones-custodio-traslados-back
+git pull origin fix/empaquetamiento poi 
+
+trivy fs --scanners vuln --severity HIGH,CRITICAL --ignore-unfixed --format table .
+
+git pull origin fix/packing
+git add src
+git commit -m " query packing SIDE"
+git push
+
+
+
+git fetch --all --prune
+git switch -c fix/optimize-performance --track origin/fix/optimize-performance
+
+git fetch --all --prune
+git switch -c nubo-asignacion
+
+git fetch --all --prune
+git switch -c fix/ajusteIsinNumber --track origin/fix/ajusteIsinNumber
+
+git fetch --all --prune
+git switch -c chore/upgrade-java21-springboot4 --track origin/chore/upgrade-java21-springboot4
+
+---despues del merge hacer:
+git add pom.xml CHANGELOG.md
+--validar que no queden marcadores
+git grep -n "<<<<<<<"
+git grep -n "======="
+git grep -n ">>>>>>>"
+
+.\mvnw.cmd clean verify
+git commit -m 'Merge branch '
+
+git status
+git log --oneline --decorate -5
+
+git push origin <tu-rama>
+
+--no quiero cambios locales y ya hice add pom...
+git merge --abort
+git fetch origin
+git reset --hard origin/development
+
+fix/optimize-performance
+
+
+
+git fetch --all --prune
+
+git checkout fix/vulnerabilidades29092026
+fix/vulnerabilidades29092026
+
+
+persistencia-data-nasdaq: 7283ca4
+orquestador-ext: 5cec0fe
+asignacion-definitiva-auto: a608bd7
+operaciones-cmd: f1212ae
+asignacion-srv17: 9518e33
+kafka-transfer-svc: 96ef21d
+operaciones-estados: 8718304
+operaciones-calculos: adfbb0a
+consulta-folios: aaf0c75
+fracciones-contado: e9f9752
+gestionusuarios: 440f4e1
+grupos-empresariales-query: 09c13c0
+comprobantes: d5c44c0
+
+
+ trivy fs --scanners vuln --severity HIGH,CRITICAL --ignore-unfixed --format table .
+
+
+
+
+http://localhost:8011/ui/clusters/kafka-cluster/all-topics/kafka-nubo-recepcion-anticipos-co/messages?filterQueryType=STRING_CONTAINS&attempt=2&limit=500&page=0&seekDirection=BACKWARD&keySerde=String&valueSerde=String&seekType=LATEST
+
+
+
+
+
+--error del index.lock
+Get-CimInstance Win32_Process | Where-Object { $_.Name -like "git*" } | Select-Object ProcessId, ParentProcessId, CommandLine
+Get-Process git -ErrorAction SilentlyContinue | Stop-Process -Force
+
+Remove-Item .git\index.lock -Force -ErrorAction SilentlyContinue
+
+git pull origin preprod
+
+
+
+
+---------------------------------------------------------
+Actúa como backend senior Java/Spring Boot y revisa el proyecto:
+
+
+
+
+QUERY
+
+1. Crear paquetes.
+2. Crear detalles.
+3. Crear históricos.
+4. Validar duplicados.
+5. Validar estados.
+6. Desempaquetar paquetes si aplica.
+7. Reempaquetar paquetes si aplica.
+8. Ejecutar todo en una transacción.
+
+CMD
+1. Buscar paquetes existentes del día en estado TRASLADADA.
+2. Validar si pueden desempaquetarse.
+3. Eliminar o anular paquetes existentes.
+4. Eliminar o anular detalles.
+5. Insertar históricos.
+6. Crear nuevos paquetes.
+7. Crear nuevos detalles.
+8. Crear nuevos históricos.
+
+SettlementServiceImpl.updateSettlementStatusV1
+linea 635 
+
+
+Flujo:
+1. Query llama al CMD.
+2. CMD intenta crear/agregar detalles.
+3. CMD detecta que un uniqueFractionId ya está en PACKAGE_DETAIL.
+4. CMD lanza PACKAGE_DETAIL_ALREADY_EXISTS.
+5. Query captura el error del cliente CMD.
+6. Query responde CMD_AUTOMATIC_PACKAGING_ERROR con HTTP 502.
+7. Query NO actualiza SETTLEMENT.
+
+
+
+
+
+
+
+
+
+
+
+
+create index if not exists "IX_PACKAGE_DETAIL_UNIQUE_FRACTION_STATUS"
+on "NUANBODB"."PACKAGE_DETAIL" ("UNIQUE_FRACTION_ID", "PACKAGE_STATUS_ID");
+
+create index if not exists "IX_SETTLEMENT_TRADE_SIDE_FRACTION_UNIQUE"
+on "NUANBODB"."SETTLEMENT" ("TRADE_ID", "SIDE_ID", "FRACTION", "UNIQUE_FRACTION_ID");
+
+
+
+
+
+-----------------
+desarrollo
+----------------
+ curl -i \
+  --connect-timeout 10 \
+  --max-time 1200 \
+  -X POST "http://operaciones-empaquetamiento-automatico-back-svc.nubo-back.svc.cluster.local:8080/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/run" \
+  -H "Content-Type: application/json" \
+  -H "client_ip: 127.0.0.1" \
+  -H "client_user: automatic-packaging-cronjob" \
+  -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)" \
+  -d '{"executionDate":"2026-09-29","cutType":"SAME_DAY_CUT_1","sameDaySettlement":true}'
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 18 Jul 2026 00:47:21 GMT
+
+{"executionDate":"2026-07-16","cutType":"SAME_DAY_CUT_1","sameDaySettlement":true,"candidatesFound":0,"candidatesDiscarded":0,"packagesBuilt":0,"detailsBuilt":0,"cmdStatus":"NO_CANDIDATES","cmdProcessedPackages":0,"cmdCreatedPackages":0,"cmdProcessedDetails":0,"cmdCreatedDetails":0,"discardReasons":[]}nginx-netshoot-57765cf997-dh4fx:~# 
+
+
+
+ NUBO_URL_PACKAGES_CUSTODY_CMD_BASE_URL : http://paquetes-custodios-cmd-back-service/packages-custody-cmd-api
+http://paquetes-custodios-cmd-back-service/packages-custody-cmd-api
+http://operaciones-empaquetamiento-automatico-back-service/operations-custody-automatic-packages-query-api
+
+operations-custody-automatic-packages-api
+
+
+------------------
+QA
+------------------
+curl -i \
+  --connect-timeout 10 \
+  --max-time 1200 \
+  -X POST "http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/run" \
+  -H "Content-Type: application/json" \
+  -H "client_ip: 127.0.0.1" \
+  -H "client_user: automatic-packaging-cronjob" \
+  -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)" \
+  -d '{"executionDate":"2026-10-27","cutType":"SAME_DAY_CUT_1","sameDaySettlement":true}'
+  
+  
+curl -i \
+  --connect-timeout 10 \
+  --max-time 1200 \
+  -X POST "http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/run" \
+  -H "Content-Type: application/json" \
+  -H "client_ip: 127.0.0.1" \
+  -H "client_user: automatic-packaging-cronjob" \
+  -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)" \
+  -d '{"executionDate":"2026-10-27","cutType":"FUTURE_DAY_CUT_1","sameDaySettlement":false}'
+  
+  
+origin/fix/revert-uniqueFractionId'
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report/report/history/user/33/dynamic?_refresh=0&typeReport=LIQUIDA_DIARIO&participantId=8
+
+La descarga de los archivos liquida para operaciones ASIGNADAS debe ser liqrebvc.dat NO liqbvc.dat
+
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report/generate/report-liquida/user/33?participantId=8&date=2026-08-01&status=ASIGNADAS
+
+        value: registry.nuamexchange.com/nubo/operaciones-reglas-back:0.55.6-beta.2
+        value: registry.nuamexchange.com/nubo/operaciones-estados-back:0.24.1-beta.2
+reglas
+0.56.1-alpha.9
+estados
+0.24.1-beta.2
+
+
+
+{{Admin_Key}}
+DEV
+edd1c9f034335f136f87ad84b625c8f1
+QA
+a47f2e9189c34d5ab6e12f8a9dfc1b02
+
+
+dashboard-metrics-query-back-service
+com.nubo.operations.query.api
+dashboard-metrics-query-api
+
+
+
+    <groupId>com.nubo.operations.query.api</groupId>
+    <artifactId>dashboard-metrics-query-api</artifactId>
+
+
+
+curl.exe -i -X GET "http://localhost:9180/apisix/admin/upstreams" `
+  -H "X-API-KEY: a47f2e9189c34d5ab6e12f8a9dfc1b02"
+
+
+
+
+        value: registry.nuamexchange.com/nubo/operaciones-reglas-back:0.55.6-rc.2
+
+
+
+maestro-terceros
+operaciones-custodio-traslados
+operaciones-custodio-acciones
+nbo-png-paquetes-custodios-cmd-back
+nbo-png-ops-custodio-emp-aut-query-back
+
+
+
+overlays 
+release
+
+
+
+
+INSERT INTO "NUANBODB"."MICROSERVICE" ("MICROSERVICE_ID", "NAME", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "SUBMODULE_ID") VALUES(61, 'Envio automatico de paquetes', 'USER_01', 'APP_01', '2026-07-17 17:30:48.774', 'IP_01', 45);
+
+
+INSERT INTO "NUANBODB"."PROCESS" ("PROCESS_ID", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "MICROSERVICE_ID", "PATH", "HTTP_METHOD", "TYPE_ID") VALUES(111, 'Paquetes del dia corte 1', 'USER_01', 'APP_01', '2026-08-05 19:13:04.617', '127.0.0.1', 61, 'http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_1', 'POST', NULL);
+INSERT INTO "NUANBODB"."PROCESS" ("PROCESS_ID", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "MICROSERVICE_ID", "PATH", "HTTP_METHOD", "TYPE_ID") VALUES(111, 'Paquetes del dia corte 1', 'USER_01', 'APP_01', '2026-08-05 19:13:04.617', '127.0.0.1', 61, 'http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_2', 'POST', NULL);
+INSERT INTO "NUANBODB"."PROCESS" ("PROCESS_ID", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "MICROSERVICE_ID", "PATH", "HTTP_METHOD", "TYPE_ID") VALUES(111, 'Paquetes del dia corte 1', 'USER_01', 'APP_01', '2026-08-05 19:13:04.617', '127.0.0.1', 61, 'http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_3', 'POST', NULL);
+INSERT INTO "NUANBODB"."PROCESS" ("PROCESS_ID", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "MICROSERVICE_ID", "PATH", "HTTP_METHOD", "TYPE_ID") VALUES(111, 'Paquetes del dia corte 1', 'USER_01', 'APP_01', '2026-08-05 19:13:04.617', '127.0.0.1', 61, 'http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/SAME_DAY_CUT_1', 'POST', NULL);
+INSERT INTO "NUANBODB"."PROCESS" ("PROCESS_ID", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "MICROSERVICE_ID", "PATH", "HTTP_METHOD", "TYPE_ID") VALUES(111, 'Paquetes del dia corte 1', 'USER_01', 'APP_01', '2026-08-05 19:13:04.617', '127.0.0.1', 61, 'http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/SAME_DAY_CUT_2', 'POST', NULL);
+INSERT INTO "NUANBODB"."PROCESS" ("PROCESS_ID", "DESCRIPTION", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "MICROSERVICE_ID", "PATH", "HTTP_METHOD", "TYPE_ID") VALUES(111, 'Paquetes del dia corte 1', 'USER_01', 'APP_01', '2026-08-05 19:13:04.617', '127.0.0.1', 61, 'http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/SAME_DAY_CUT_3', 'POST', NULL);
+
+
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_1
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_2
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_3
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/SAME_DAY_CUT_1
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/SAME_DAY_CUT_2
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/SAME_DAY_CUT_3
+
+.\mvnw.cmd -version
+
+.\mvnw.cmd dependency:tree "-Dincludes=org.apache.logging.log4j:log4j-spring-boot"
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+--------------------UPGRADE JAVA 21
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+UPGRADE_BRANCH="chore/upgrade-java21-springboot4"
+
+
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/run/X
+
+
+
+
+ gh auth login
+
+ gh auth status
+cd /home/miguel_diaz/NUAM/nubo/upgradeJava21
+
+./01_descargar_repos_spring_boot.sh \
+  --dest-dir /home/miguel_diaz/NUAM/nubo/upgradeJava21 \
+  --dry-run
+
+
+chmod +x 02_actualizar_proyectos.sh
+bash -n 02_actualizar_proyectos.sh
+ls -l 02_actualizar_proyectos.sh
+chmod +x 03_trivy_corregir_vulnerabilidades.sh
+
+UPGRADE_BRANCH="chore/upgrade-java21-springboot4"
+
+./01_descargar_repos_spring_boot.sh \
+  --dest-dir /home/miguel_diaz/NUAM/nubo/upgradeJava21
+  
+  ./02_actualizar_proyectos.sh \
+  --root-dir /home/miguel_diaz/NUAM/nubo/upgradeJava21 \
+  --projects-file proyectos_seleccionados.txt \
+  --manifest repos_descargados.csv \
+  --dry-run
+  
+  ./02_actualizar_proyectos.sh \
+  --root-dir /home/miguel_diaz/NUAM/nubo/upgradeJava21 \
+  --projects-file proyectos_seleccionados.txt \
+  --manifest repos_descargados.csv
+  
+  ./03_trivy_corregir_vulnerabilidades.sh \
+  --root-dir /home/miguel_diaz/NUAM/nubo/upgradeJava21 \
+  --projects-file proyectos_seleccionados.txt \
+  --max-iterations 5
+  
+  cp 02_actualizar_proyectos_v3.sh 02_actualizar_proyectos.sh
+chmod +x 02_actualizar_proyectos.sh
+  
+---------------------------------------------------------------------------------------------------------------------------------------------
+--------------------END UPGRADE JAVA 21
+---------------------------------------------------------------------------------------------------------------------------------------------
+git add .
+git commit -m "chore: upgrade to Java 21 and Spring Boot 4"
+git push -u origin chore/upgrade-java21-springboot4
+
+---Instalar trivy WSL
+sudo apt-get update
+
+sudo apt-get install -y \
+  wget \
+  apt-transport-https \
+  gnupg
+wget -qO - https://get.trivy.dev/deb/public.key \
+  | gpg --dearmor \
+  | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+  
+  mkdir -p ~/.config/trivy-docker
+  cat > ~/.config/trivy-docker/config.json <<'EOF'
+	{
+	  "auths": {}
+	}
+	EOF
+  export DOCKER_CONFIG="$HOME/.config/trivy-docker"
+
+DB_URL_DEV=jdbc:postgresql://a30c097de99444e3abfdf700546728ec-665764264.us-east-1.elb.amazonaws.com:5432/nubo;DB_HIKARI_CONNECTION_TIMEOUT=3000000;DB_HIKARI_IDLE_TIMEOUT=6000000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=200000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000000;DB_PASSWORD=nubo_admin_password;DB_URL=jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com:5432/nubo;DB_USERNAME=postgres;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=nubo-back-integracion;KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC=kafka-nubo-notification-request-topic;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_FINAL_ASSIGNMENT_REQUEST=2;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_OPERATION_CORRECTED_REPORTS=kafka-nubo-operation-corrected-reports;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA= 37;NUBO_MILA_LOCAL_DEPOSITOR_CAVALI= 835;NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE= 834;NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL= 897 ;NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI= 4444444450;NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE= 4444444443;NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL= 9006880663;NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT= NIT;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_QUERY=2;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_LOGIN=http:redre.com ;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false  
+
+ecepción de la negociación
+- nbo-png-persistencia-data-nasdaq-back
+
+Asignación
+- nbo-png-operaciones-calculos-back
+- nbo-png-operaciones-estados-back
+- nbo-png-operaciones-query-back
+- nbo-png-operaciones-fracciones-contado-back
+- nbo-png-operaciones-cmd-back
+- nbo-png-asignacion-definitiva-auto-back
+- nbo-png-asignacion-borde-ccp-back
+- nbo-png-asignacion-srv17-back
+- nbo-png-kafka-transfer-svc-back
+- nbo-png-asignacion-rta-ccp-back
+- nbo-png-operaciones-orquestador-ext-back
+- nbo-png-operaciones-consulta-folios-back
+
+Custodios
+- nbo-png-operaciones-custodio-traslados-back
+- nbo-png-operaciones-custodio-acciones-back
+- nbo-png-paquetes-custodios-cmd-back
+- nbo-png-ops-custodio-emp-aut-query-back
+
+Correcciones
+- nbo-png-correcciones-transformador-siidj-back
+- nbo-png-correcciones-borde-back
+- nbo-png-recepcion-correciones-operaciones-back
+
+Usuarios, perfiles, menú, grupos, email
+- nbo-png-gestionusuarios-back
+- nbo-png-perfiles-query-back
+- nbo-png-perfiles-cmd-back
+- nbo-png-grupos-empresariales-query-back
+- nbo-png-grupos-empresariales-cmd-back
+- nbo-png-mantenedor-modulos-query-back
+- nbo-png-mantenedor-modulos-cmd-back
+- nbo-png-email-back
+
+Horarios
+- nbo-png-horarios-query-back
+- nbo-png-horarios-cmd-back
+- nbo-png-validacion-horarios-manual-back
+- nbo-png-horarios-k8s-operator-borde-back
+- nbo-png-horarios-transformador-back
+- nbo-png-reglas-negocio-horarios-back
+- nbo-png-horarios-ampliacion-back
+
+Sin categoría específica
+- nbo-png-comprobantes-back
+- nbo-png-ms-generador-csv-borde-back
+ 
+
+Asignacion
+
+plan detallado 
+mejoras con las mejores practicas en el proceso de la asignacion
+que encuentre todo lo que genere que demore en la asignacion
+
+2 MS atendiendo al tiempo
+si 1 hilo maneja 10 procesos en 2 hilos se van a manejar 20 hilos
+la asignacion por su complejidad puede ser xxx
+la replica se activa por instruccion(solo cuando unio se ha colgado)
+
+
+
+NUBO_URL_PACKAGES_CUSTODY_CMD_BASE_URL
+
+
+
+$env:JAVA_HOME = "C:\Users\miguel.diaz\.jdks\ms-21.0.12"
+$env:Path = "$env:JAVA_HOME\bin;$env:Path"
+
+
+
+DB_URL=jdbc:postgresql://a30c097de99444e3abfdf700546728ec-665764264.us-east-1.elb.amazonaws.com:5432/nubo;DB_URL_DEV=jdbc:postgresql://a30c097de99444e3abfdf700546728ec-665764264.us-east-1.elb.amazonaws.com:5432/nubo;DB_HIKARI_CONNECTION_TIMEOUT=3000000;DB_HIKARI_IDLE_TIMEOUT=6000000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=200000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000000;DB_PASSWORD=nubo_admin_password;DB_URL=jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com:5432/nubo;DB_USERNAME=postgres;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=nubo-back-integracion;KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC=kafka-nubo-notification-request-topic;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_FINAL_ASSIGNMENT_REQUEST=2;KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_OPERATION_CORRECTED_REPORTS=kafka-nubo-operation-corrected-reports;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_MILA_LOCAL_COUNTRY_ID_COLOMBIA= 37;NUBO_MILA_LOCAL_DEPOSITOR_CAVALI= 835;NUBO_MILA_LOCAL_DEPOSITOR_DCV_CHILE= 834;NUBO_MILA_LOCAL_DEPOSITOR_INDEVAL= 897 ;NUBO_MILA_LOCAL_DOCUMENT_NUMBER_CAVALI= 4444444450;NUBO_MILA_LOCAL_DOCUMENT_NUMBER_DCV_CHILE= 4444444443;NUBO_MILA_LOCAL_DOCUMENT_NUMBER_INDEVAL= 9006880663;NUBO_MILA_LOCAL_IDENTIFICATION_TYPE_NIT= NIT;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_QUERY=2;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_LOGIN=http:redre.com ;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false  
+
+
+
+
+
+
+
+
+git status /nbo-png-asignacion-definitiva-auto-back
+nbo-png-asignacion-rta-ccp-back
+nbo-png-asignacion-srv17-back
+nbo-png-operaciones-consulta-folios-back
+nbo-png-operaciones-estados-back
+nbo-png-operaciones-fracciones-contado-back
+
+
+
+
+
+----------------
+
+
+
+10,000 asignaciones
+Inicio: 19:09:39.363
+Fin:    19:22:06.801
+
+Tiempo total = 747.438 s
+Throughput   = 13.38 asignaciones/s
+Promedio     = 74.74 ms/asignación
+Errores      = 0
+
+
+
+
+3. El breakdown de Fracciones es muy revelador
+
+En la muestra estable Codex encontró aproximadamente:
+
+Fracciones = 52.2 ms/item
+
+├─ Rules       25.6 ms/item   ≈ 49%
+├─ DB          14.7 ms/item   ≈ 28%
+├─ Calculations 2.17 ms/item  ≈ 4%
+└─ Otros        ~9.7 ms/item  ≈ 19%
+
+Esto cambia nuestras prioridades.
+
+Rules
+
+Rules consume aproximadamente:
+
+25.6 / 52.2 ≈ 49%
+
+
+
+
+
+
+
+
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_1
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_2
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/same-day/run/SAME_DAY_CUT_3
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/FUTURE_DAY_CUT_1
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/FUTURE_DAY_CUT_2
+http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/future-day/run/FUTURE_DAY_CUT_3
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,206 @@
+
+
+
+
+OPERATIONSCUSTODYACTIONSAPI
+
+https://apisix.nubo-dev.com/operations-custody-actions-api/swagger-ui/index.html#/
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/settlement/rv/33?participantId=6&startDate=2026-02-01&endDate=2026-02-23&statusId=1&countryId=37
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/history/33/dynamic?typeId=160&_refresh=1&page=0&size=10
+
+
+generateSettlementReportByStatusAndParticipantV1
+CANCELATED 11
+NEGOCIADA
+
+a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com
+jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com:5432/nubo
+jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com:5432/nubo
+
+
+git pull origin development 
+git add ./
+git commit -m "RTBOF-6801  desbloquear usuario "
+git push
+175.4
+
+git pull origin development 
+git add ./
+git commit -m "fix Vulnerabilities jackson"
+git push
+
+
+git pull origin development 
+git add ./
+git commit -m "RTBOF-6342 estado de trade  "
+git push
+
+
+git pull origin main 
+git add ./
+git commit -m "RTBOF-6342  recepcion anticipos "
+git push
+
+
+
+liqbvc
+liqrebvc
+liqnuam
+liqrenuam
+
+
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/7/20260303/liqbvc.dat
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/6/20260303/liqbvc.dat
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/settlement/rv/33?participantId=6&startDate=2026-02-01&endDate=2026-03-04&statusId=2&countryId=37
+
+
+jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com:5432/nubo
+select se1_0."FRACTION",se1_0."SIDE_ID",se1_0."TRADE_ID",se1_0."BROKERAGE_SERVICE",se1_0."COMMISSION_AMOUNT",se1_0."COMMISSION_PERCENTAGE",se1_0."CUSTODIAN_ID",se1_0."DELIVERY_VERSUS_PAYMENT_VALUE",se1_0."FIDUCIARY_SPECIALIST",se1_0."FRACTION_QUANTITY",se1_0."FRACTION_VOLUME",se1_0."FUNDING_AMOUNT",se1_0."INVESTOR_ID",se1_0."INVESTOR_ACCOUNT_ID",se1_0."ISSUED_RECEIPT",se1_0."ISSUED_RECEIPT_NUMBER",se1_0."LAST_MODIFY_APPLIC",se1_0."LAST_MODIFY_DATE",se1_0."LAST_MODIFY_IP",se1_0."LAST_MODIFY_USER",se1_0."LATE_PENALITY",se1_0."NET_AMOUNT",se1_0."NET_OUTFLOW_TOTAL",se1_0."OUTFLOW_TURNOVER_VALUE",se1_0."PARTICIPANT_ACCOUNT_ID",se1_0."REFERENCE_ALLOC_ID",se1_0."REPO_AMOUNT",se1_0."REPO_RATE",se1_0."RETURN_TURNOVER_VALUE",se1_0."STATUS_ID",se1_0."TRADING_SYSTEM_ID",se1_0."TRANSFER_VALUE",se1_0."VAL_TAX",se1_0."VAL_TAX_AMOUNT",se1_0."WITHHOLDING_TAX",se1_0."WITHHOLDING_TAX_AMOUNT" 
+from "NUANBODB"."SETTLEMENT" se1_0 
+join "NUANBODB"."TRADE" t1_0 on t1_0."TRADE_ID"=se1_0."TRADE_ID" 
+where t1_0."TYPE_ID" in (60,61) 
+and t1_0."MATCH_DATE" between '01/02/2026' and '24/02/2026'
+and se1_0."STATUS_ID" not in (11) and se1_0."STATUS_ID" in (1) 
+and (t1_0."CANCELED_STATUS" is null or t1_0."CANCELED_STATUS"=false) 
+and t1_0."COUNTRY_ID"=37 
+and ((t1_0."PARTICIPANT_ID_BUY"=t1_0."PARTICIPANT_ID_SELL" 
+and t1_0."PARTICIPANT_ID_BUY"=6)
+ or (t1_0."PARTICIPANT_ID_BUY"<>t1_0."PARTICIPANT_ID_SELL" 
+ and ((t1_0."PARTICIPANT_ID_BUY"=6 and se1_0."SIDE_ID"=1) 
+or (t1_0."PARTICIPANT_ID_SELL"=6 and se1_0."SIDE_ID"=2))))
+DB_HIKARI_MAXIMUM_POOL_SIZE
+kafka.nubo.sasl.jaas.config
+
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/liqbvc.dat
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/liqbvc.dat
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/liqbvc.dat
+
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/6/liqbvc.dat
+
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/7/20260303/liqbvc.dat
+sftp://liquida_reports@sftpgo-dos.sftp-qa.svc.cluster.local:2223/contado/liquidaReports/6/20260303/liqbvc.dat
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/history/33/dynamic?typeId=160&_refresh=0&page=0&size=10
+
+https://apisix.nubo-release.com/receipts-api/swagger-ui/index.html#/
+https://apisix.nubo-release.com/master-participant-api/swagger-ui/index.html#/
+
+
+
+
+                   (t.participantBuy.id = :participantId AND s.side.id = :buySideId)
+                   OR
+                   (t.participantSell.id = :participantId AND s.side.id = :sellSideId)
+
+
+,
+                SideEnum.BUY.getId(),
+                SideEnum.SELL.getId()
+
+nbo-png-recepcion-anticipos-back
+
+package com.nubo.reception.advance.payment;
+
+
+
+https://apisix.nubo-release.com/operations-query-api/v1/all-trade/797
+
+
+KAFKA_NUBO_TOPIC_ADVANCE_CH_RECEPTION_RESULT
+KAFKA_NUBO_TOPIC_ADVANCE_CO_RECEPTION_RESULT
+KAFKA_NUBO_TOPIC_ADVANCE_PE_RECEPTION_RESULT
+
+KAFKA_NUBO_TOPIC_RECEPTION_ADVANCE_CO_RECEPTION
+
+
+KAFKA_NUBO_TOPIC_RECEPTION_ADVANCE_CH_RECEPTION_RESULT
+KAFKA_NUBO_TOPIC_RECEPTION_ADVANCE_CO_RECEPTION_RESULT
+KAFKA_NUBO_TOPIC_RECEPTION_ADVANCE_PE_RECEPTION_RESULT
+
+
+
+kafka-transfer-svc-back-recepcion-anticipos-ch
+kafka-transfer-svc-back-recepcion-anticipos-co
+kafka-transfer-svc-back-recepcion-anticipos-pe
+
+nuam-vre-png.gross-instruction-col.protobuf
+
+
+KAFKA_REGIONAL_TOPIC_RECEPTION_ADVANCE_CO_RECEPTION
+
+https://apisix.nubo-release.com/operations-query-api/v1/settlement?tradeId=797&sideId=1&page=0&size=10
+https://apisix.nubo-release.com/operations-query-api/v1/all-trade/797
+
+
+	"RESETTLEMENT_INDICATOR_ADVANCE" bool NULL,
+	"CLEARING_DATE_OLD" date NULL,
+KAFKA_REGIONAL_TOPIC_RECEPTION_ADVANCE_CO_RECEPTION
+
+kafka-nubo-recepcion-anticipos-co
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-query-back.git
+
+AdvancePaymentVericlearInDto advancePaymentVericlearInDto
+
+DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=nubo_admin_password;DB_URL=jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-172895904.us-east-1.elb.amazonaws.com:5432/nubo;DB_USERNAME=postgres;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=nubo-back-integracion;KAFKA_NUBO_NOTIFICATION_REQUEST_TOPIC=kafka-nubo-notification-request-topic;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_OPERATION_CORRECTED_REPORTS=kafka-nubo-operation-corrected-reports;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_LOGIN=http:redre.com ;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false  
+
+recepcion-anticipos-back
+
+
+
+KAFKA_NUBO_TOPIC_NAME_OPERATION_VERICLEAR_CONFIRM
+
+
+kafka-nubo-operation-vericlear-confirm
+nuam-vre-png.gross-instruction-col.protobuf
+
+https://apisix.nubo-release.com/user-management-api/v1/user/42
+http://localhost:8082/user-management-api/v1/user/42
+
+
+DB_URL
+jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-172895904.us-east-1.elb.amazonaws.com:5432/nubo
+
+DB_PASSWORD
+nubo_admin_password
+
+
+nuam-vre-png.gross-instruction-col.protobuf
+
+
+
+CREATE TABLE IF NOT EXISTS "NUANBODB"."INVESTOR_ACCOUNT"
+(
+    "INVESTOR_ACCOUNT_ID" bigint NOT NULL DEFAULT nextval('"NUANBODB"."INVESTOR_ACCOUNT_INVESTOR_ACCOUNT_ID_seq"'::regclass),
+    "INVESTOR_ID" bigint,
+    "ACCOUNT_NUMBER" character varying(50) COLLATE pg_catalog."default",
+    "STATUS_ID" bigint NOT NULL,
+    "ORIGIN_TYPE_ID" bigint NOT NULL,
+    "TYPE_ID" bigint NOT NULL,
+    "DEPOSITORY_ID" character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    "RELATION_INVESTOR" integer,
+    "ACCOUNT_PRINCIPAL" boolean DEFAULT false,
+    "TYPE_ACCOUNT" bigint,
+    "ACCOUNT_NAME" character varying(100) COLLATE pg_catalog."default",
+    "LAST_MODIFY_USER" character varying(250) COLLATE pg_catalog."default" NOT NULL,
+    "LAST_MODIFY_APPLIC" character varying(250) COLLATE pg_catalog."default" NOT NULL,
+    "LAST_MODIFY_DATE" timestamp with time zone NOT NULL,
+    "LAST_MODIFY_IP" character varying(50) COLLATE pg_catalog."default",
+    "PARTICIPANT_ID" bigint,
+    CONSTRAINT "PK_INVESTOR_ACCOUNT" PRIMARY KEY ("INVESTOR_ACCOUNT_ID"),
+
+
+
+
+
+http://apisix.nubo-nuam.com:9080/operations-custody-transfer-api/v1/settlement/by-list-tradeid-participant-user
+
+ajuste en fix
+PR a test
+
+
+
+

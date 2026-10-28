@@ -1,0 +1,34 @@
+
+
+git clone --branch development  https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-front.git
+git clone --branch development  https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-front.git
+git clone --branch development  https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-front.git
+git clone --branch development  https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-front.git
+
+
+
+
+
+git clone --branch feat/RTBOF-6147 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+
+
+
+
+git pull origin development 
+git add ./
+git commit -m "feat: fixbug Custodian  "
+git push
+
+
+
+
+
+Código depositante
+
+

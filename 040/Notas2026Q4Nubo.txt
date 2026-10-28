@@ -1,0 +1,143 @@
+
+
+M1gu3lD14Z!!!
+
+git pull origin fix/optimize-performance
+git add ./
+git commit -m " package 60k"
+git push
+
+
+
+
+--forma segura de traer cambios rama
+git stash push -m "WIP validation reference size"
+git fetch origin
+git merge origin/development
+git stash pop
+
+
+git add ./
+git commit -m " anticipos change bussines by trade Date"
+git push --set-upstream origin fix/matchDate
+
+
+_202610121203
+
+
+
+http://localhost:8011/ui/clusters/kafka-cluster/all-topics/kafka-nubo-recepcion-anticipos-co/messages?filterQueryType=STRING_CONTAINS&attempt=2&limit=500&page=0&seekDirection=BACKWARD&keySerde=String&valueSerde=String&seekType=LATEST
+
+
+
+git status
+trivy fs --scanners vuln --severity HIGH,CRITICAL --ignore-unfixed --format table .
+
+
+https://github.com/nuamx/nbo-png-ops-custodio-emp-aut-query-back
+https://github.com/nuamx/nbo-png-paquetes-custodios-cmd-back
+
+
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-kafka-transfer-svc-back.git
+
+
+echo "INICIO: $(date '+%Y-%m-%d %H:%M:%S.%3N')"; 
+curl -i 
+--connect-timeout 10 --max-time 3600 -X 
+POST "http://operaciones-empaquetamiento-automatico-back-service.nubo-back.svc.cluster.local/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/run" 
+-H "Content-Type: application/json" -H "client_ip: 127.0.0.1" -H "client_user: automatic-packaging-cronjob" -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)" 
+-d '{"executionDate":"2026-10-27","cutType":"FUTURE_DAY_CUT_1","sameDaySettlement":false}' 
+-w '\n--- TIEMPOS ---\nconexion:     %{time_connect}s\nprimer_byte:  %{time_starttransfer}s\ntotal:       
+ %{time_total}s\nhttp_code:    %{http_code}\n'; echo "FIN: $(date '+%Y-%m-%d %H:%M:%S.%3N')"
+ 
+
+
+
+
+ /mnt/c/Users/miguel.diaz/abrir-openlens.sh
+
+nbo-png-kafka-transfer-svc-back
+nbo-png-persistencia-data-nasdaq-back
+
+
+
+este cambio seran:
+---(1)
+nbo-png-comprobantes-back
+nbo-png-ms-generador-csv-borde-back
+nbo-png-notificaciones-back
+
+---(2)
+nbo-png-operaciones-calculos-back
+nbo-png-operaciones-cmd-back
+nbo-png-operaciones-custodio-acciones-back
+
+
+---(3)
+nbo-png-operaciones-fracciones-contado-back
+nbo-png-operaciones-orquestador-ext-back
+nbo-png-operaciones-query-back
+
+---(4)
+nbo-png-paquetes-custodios-cmd-back
+nbo-png-perfiles-cmd-back
+nbo-png-perfiles-query-back
+
+
+--3.5.16
+nbo-png-operaciones-estados-back
+nbo-png-operaciones-reglas-back
+
+
+
+
+
+curl -i -sS -X POST \
+  'http://comprobantes-back-service-back-svc.nubo-back.svc.cluster.local:8080/receipts-api/v1/receipt-operation/generate/settlement/trade/812599' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -H 'client_ip: 127.0.0.1' \
+  -H 'client_user: diagnostico-openlens' \
+  -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)" \
+  --data '[{"sideId":"2"}]'
+
+
+
+
+ curl -i \
+  --connect-timeout 10 \
+  --max-time 1200 \
+  -X POST "http://operaciones-empaquetamiento-automatico-back-svc.nubo-back.svc.cluster.local:8080/operations-custody-automatic-packages-api/v1/automatic-custodian-packages/run" \
+  -H "Content-Type: application/json" \
+  -H "client_ip: 127.0.0.1" \
+  -H "client_user: automatic-packaging-cronjob" \
+  -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)" \
+  -d '{"executionDate":"2026-09-29","cutType":"SAME_DAY_CUT_1","sameDaySettlement":true}'
+
+
+
+curl -i \
+  --connect-timeout 10 \
+  --max-time 120 \
+  "http://operaciones-query-back-service.nubo-back.svc.cluster.local:80/operations-query-api/v1/all-trade/812599" \
+  -H "Accept: application/json" \
+  -H "client_ip: 127.0.0.1" \
+  -H "Authorization: Bearer eyJleHAiOjE3OTI1MTMyNTQsImlhdCI6MTc5MjUxMDI1NCwianRpIjoidHJydGNjOjdhOTVhNzI0LWVkZjUtNDJiMS1kNDQyLTAwYjMyZTE0NTJiZCIsImlzcyI6Imh0dHBzOi8vc3NvLWRldm9wcy5udWFtZXhjaGFuZ2UuY29tL3JlYWxtcy9uYm8tZGV2IiwiYXVkIjpbInJlYWxtLW1hbmFnZW1lbnQiLCJicm9rZXIiLCJhY2NvdW50IiwibnViby1mcm9udGVuZCJdLCJzdWIiOiI3NWYzZTU0ZC1lZWY3LTRiOWEtOGQ2Yy03ZDgwNzcyZjBjYTIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJudWJvLWZyb250ZW5kLTIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJvLWRldiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJ2aWV3LXJlYWxtIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJyZWFsbS1hZG1pbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibnViby1mcm9udGVuZC0yIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsIm1hbmFnZS1jb25zZW50IiwiZGVsZXRlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX0sIm51Ym8tZnJvbnRlbmQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMi4yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW51Ym8tZnJvbnRlbmQtMiIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMi4yIiwiY2xpZW50X2lkIjoibnViby1mcm9udGVuZC0yIn0"  \
+  -H "client_user: kevin.alvarezm@gmail.com" \
+  -H "client_datetime: $(date +%Y-%m-%dT%H:%M:%S)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

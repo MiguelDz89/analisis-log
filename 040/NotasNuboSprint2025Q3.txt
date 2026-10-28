@@ -1,0 +1,1427 @@
+OKR Anual 1: Fortalecer y aplicar los principios y practicas de agilismo utilizando el marco safe para mejorar la gestión de proyectos.	KR Anual 1.1: Obtener nuevos conocimientos y fortalecer los ya existentes de las capacitaciones del playbook.
+	KR Anual 1.2: Implementar 3 practicas de Safe dentro de los equipos durante los primeros dos Q del año.
+	KR Anual 1.3:Obtener retroalimentación de los equipos de trabajo para validar la efectividad de la implementación con una encuesta de satisfacción del 85%. 
+OKR Anual 2: Mejorar las habilidades en el desarrollo de software y arquitectura de microservicios 	KR Anual 1.1: Antes del 19 de diciembre del 2025, completar al menos 2 cursos avanzados sobre Spring Boot WebFlux y Spring Cloud Config.
+	KR Anual 2.2:  Implementar al menos 3 microservicios escalables en el proyecto nuBO, siguiendo buenas prácticas de arquitectura.
+	KR Anual 2.3: Documentar y compartir al menos 2 casos de uso exitosos con el equipo de desarrollo, asegurando la comprensión del diseño y despliegue.
+OKR Anual 3: Fortalecer las capacidades en DevOps y despliegue de aplicaciones en la nube.	KR Anual 3.1: Obtener certificación en Kubernetes antes del 19 de diciembre del 2025.
+	KR Anual 3.2:  Implementar un sistema de CI/CD para al menos 2 microservicios utilizando Docker y GitHub Actions.
+	KR Anual 3.3: Mejorar la infraestructura de despliegue en AWS para Nubo, optimizando tiempos de respuesta por debajo de 500 ms.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	I'm currently working on 
+I'm looking to colaborate on
+I'm looking for help with
+I'm currently learnig
+Ask me about
+Fun fact
+
+
+---------------------------
+
+Intellij IDEA (yo tengo la comunity)
+Postman
+Postgres 16
+Git
+Jdk 17
+
+
+variables de entorno de gestion de usuarios
+
+DB_USERNAME: nubo_sophos
+DB_PASSWORD: nubo_sophos_password
+DB_URL: jdbc:postgresql://ab279c685e6b1477bbc43bb457b555f1-2093536171.us-east-1.elb.amazonaws.com:5432/nubo
+JWT_JWK_SET_URI: https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/certs
+JWT_ISSUER_URI: https://sso-devops.nuamexchange.com/realms/nbo-dev
+
+
+
+
+
+
+RAMAS:
+Nombre de historia:
+feat/RTBOF-192
+commit:
+feat: <Mensaje del commit>
+
+
+
+Juan Sebasta Moreno
+Accesos a NUBO AWS
+nuam_nubo_postnegociacion_desarrollo
+ 009160073182
+EKS, S3, 
+
+
+
+
+--------------------------------------------------------
+dump-nubo-202410101547.sql
+
+>psql -h localhost -U nuanbodb -d nuanbodb -f C:\Users\miguel.diaz\dump-nubo-202410101547.sql
+
+
+
+pg_dump -h ab279c685e6b1477bbc43bb457b555f1-2093536171.us-east-1.elb.amazonaws.com -U nubo_sophos -p 5432 -d nubo -F c -f dump-nubo-202410101640.sql
+
+ nubo_sophos_password
+ab279c685e6b1477bbc43bb457b555f1-2093536171.us-east-1.elb.amazonaws.com
+
+
+DB_USERNAME=nubo_sophos
+DB_PASSWORD=nubo_sophos_password
+DB_URL=jdbc:postgresql://ab279c685e6b1477bbc43bb457b555f1-2093536171.us-east-1.elb.amazonaws.com:5432/nubo
+
+
+
+com.nubo.user.management.api.UserManagementApiApplication
+
+
+create database nubo;
+
+
+create role nubo with login password '123456';
+grant all privileges on database nubo to nubo;
+alter database nubo owner to nubo;
+alter role nubo createdb;
+
+
+
+
+-----------------------------Sprint 19 
+
+
+
+
+details
+code
+documentNumber
+name
+country.name
+type.description
+status.description
+
+https://apisix.nubo-dev.com/operations-api/v1/settlement/update-commission/trade/17/fraction/0/side/1
+trivy
+
+
+2747
+
+20600452020
+IGH
+
+Presentar un informa del trabajo
+Oscar.malpartida@ighgroup.com
+
+
+git clone --branch release https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-infraestructure-flux.git
+git clone --branch feat/RTBOF-4870 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-back.git
+git clone --branch feat/RTBOF-4245 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-opr-espec-comp-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-front.git
+git clone --branch feat/RTBOF-3410 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-front.git
+git clone --branch feat/RTBOF-5533  https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-front.git
+git clone --branch feat/RTBOF-5601 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-persistencia-asignacion-vericlear-back.git
+git clone --branch feat/RTBOF-5601 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-persistencia-data-nasdaq-back.git
+git clone --branch feat/RTBOF-5627 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-comprobantes-back.git
+
+
+
+feat/RTBOF-5627
+
+git pull origin development 
+git add ./
+git commit -m "feat:  InvestorAccount join "
+git push
+
+
+git pull 
+git add ./
+git commit -m "feat: log  "
+git push
+
+
+http://apisix.nubo-release.com/settlement-cycle-query-api/swagger-ui/index.html#/
+
+https://apisix.nubo-dev.com/settlement-cycle-query-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/operations-cmd-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/guarantee-approval-api/swagger-ui/index.html#/
+https://apisix.nubo-dev.com/operations-api/swagger-ui/index.html#/
+https://apisix.nubo-release.com/guarantee-approval-api/swagger-ui/index.html#/
+https://apisix.nubo-release.com/operations-api/swagger-ui/index.html#/
+http://localhost:8084/guarantee-approval-api/swagger-ui/index.html#/
+
+
+4795
+El valor de comision no supere el valor de la captacion
+Repo_amount(valor comision)
+
+
+https://apisix.nubo-release.com/operations-api/v1/settlement/update-commission/trade/7/fraction/0/side/1
+https://apisix.nubo-release.com/operations-api/v1/settlement/update-commission/trade/7/fraction/0/side/1
+
+
+
+
+
+consulta-ciclo-liqu-back
+
+overlays/development/apps/consulta-ciclo-liqu-back/kustomization.yaml:
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../../bases/apps/consulta-ciclo-liqu-back
+patches:
+  - patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: registry.nuamexchange.com/nubo/consulta-ciclo-liqu-back:0.37.0
+    target:
+      kind: Deployment
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+overlays/development/kustoms/consulta-ciclo-liqu-back-kustomization.yaml
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kustom-consulta-ciclo-liqu-back
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./overlays/development/apps/consulta-ciclo-liqu-back
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system-development
+  timeout: 5m0s
+  wait: true
+-------------------------------------------------------------------------------------------------------------------------------
+overlays/development/kustomization.yaml
+
+  - ./kustoms/consulta-ciclo-liqu-back-kustomization.yaml
+
+
+
+
+
+
+DB_HIKARI_CONNECTION_TIMEOUT=             MzAwMA==
+DB_HIKARI_IDLE_TIMEOUT=                   MzAwMDAw
+DB_HIKARI_LEAK_DETECTION_THRESHOLD=       MA==
+DB_HIKARI_MAXIMUM_POOL_SIZE=              NQ==
+DB_HIKARI_MAX_LIFETIME=                   MTIwMDAwMA==
+DB_HIKARI_MINIMUM_IDLE=                   MA==
+DB_HIKARI_VALIDATION_TIMEOUT=             MTUwMA==
+ 
+DB_HIKARI_KEEPALIVE_TIME=                 MTgwMDAw
+DB_HIKARI_LEAK_DETECTION_THRESHOLD=       MA==
+
+DB_HIKARI_MAXIMUM_POOL_SIZE=5
+DB_HIKARI_MINIMUM_IDLE=0           # 0–1; 0 ahorra slots cuando está ocioso
+DB_HIKARI_IDLE_TIMEOUT=300000      # 5 min
+DB_HIKARI_MAX_LIFETIME=1200000     # 20 min (menor que timeouts de LB/red)
+DB_HIKARI_KEEPALIVE_TIME=180000    # 3 min
+DB_HIKARI_CONNECTION_TIMEOUT=3000  # 2–5 s, falla rápido si no hay cupo
+DB_HIKARI_VALIDATION_TIMEOUT=1500
+DB_HIKARI_LEAK_DETECTION_THRESHOLD=0  # 120000 solo al depurar
+
+
+
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-5601
+:
+
+Indicador de anticipo:
+Indicador de asignacion compra y venta:
+Estado Trade
+Codigo depositante
+IVA
+Nombre Custodio, iD custodio:
+Origen:
+deposito
+Indicador de cuenta
+
+
+
+git pull origin development 
+git add ./
+git commit -m "feat: fixbug origin settlement  "
+git push
+
+
+ALTER TABLE  "NUANBODB"."TRADE" ADD COLUMN "SOURCE_QUOTE_BUY_TYPE" int4 NULL;
+ALTER TABLE  "NUANBODB"."TRADE" ADD COLUMN "SOURCE_QUOTE_SELL_TYPE" int4 NULL;
+
+
+
+INSERT INTO "NUANBODB"."TYPE" ("TYPE_ID", "DESCRIPTION", "CATEGORY", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "DETAIL", "OPERATION_RISK_PARAMETERS") VALUES(90, 'NEGOCIACIÓN', 'ORIGEN NEGOCIACION', 'USER_01', 'APP_01', '2025-04-04 18:21:18.630', 'IP_01', NULL, NULL);
+INSERT INTO "NUANBODB"."TYPE" ("TYPE_ID", "DESCRIPTION", "CATEGORY", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "DETAIL", "OPERATION_RISK_PARAMETERS") VALUES(90, 'NEGOCIACIÓN', 'ORIGEN NEGOCIACION', 'USER_01', 'APP_01', '2025-04-04 18:21:18.630', 'IP_01', NULL, NULL);
+INSERT INTO "NUANBODB"."TYPE" ("TYPE_ID", "DESCRIPTION", "CATEGORY", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "DETAIL", "OPERATION_RISK_PARAMETERS") VALUES(90, 'NEGOCIACIÓN', 'ORIGEN NEGOCIACION', 'USER_01', 'APP_01', '2025-04-04 18:21:18.630', 'IP_01', NULL, NULL);
+
+
+https://us-east-1.signin.aws/platform/d-9067aa9e80/login?workflowStateHandle=b32e0d6e-9e05-4dff-abc1-44354279f8af
+https://bvc-deceval.awsapps.com/start#/
+miguel.diaz@nuamx.com
+BDolsa2025.
+
+aws s3 ls
+
+
+Bono Deportivo
+4 Monedas *90 =360
+Bono Oftalmológico o Dental
+4 Monedas *90 =360
+
+
+migueldz89@gmail.com
+N3g0c1nT3cMD#$%
+
+@Nu4mX24#Md%1
+
+
+
+kubectl port-forward service/vnc-desktop-service 6080:6080 -n sftp-dev
+
+
+Registro Vericlear y Nasdaq
+https://nuamexchange.atlassian.net/browse/RTBOF-5601
+Preguntar a Frank donde mas se hace asignacion de operaciones
+-------------------------------------------------
+Se realiza prueba de cargue y asignación de una operación contado (700006510 del 23/09/25), se evidencia el siguiente error:
+Indicador de anticipo se marca en “SI” cuando no se ha recibido anticipo
+Indicador de asignación por cada punta no se actualiza, cuando ya se recibió asignación
+Estado no se actualiza cuando ya se asignaron las dos puntas, debería estar “ASIGNADA”
+El campo código de depositante no se está llenando                                          directDepositor
+El campo IVA no se está calculando                                                          valTaxAmount
+El campo nombre custodio e ID custodio se está llenando a pesar de no haberse cargado información de custodio
+El campo origen no se está llenando 
+El campo deposito no se está llenando                                                        ??
+La cuenta 446365 fue creada en nuBO como cuenta master y no se está actualizando el Indicador de cuenta master a SI
+-------------------------------------------------------------------------
+
+Dias de cumplimiento (dias habiles con fecha de registro y fecha de cumplimiento)
+Maestro de feriados
+
+
+Cuenta parametrizada como cuenta master , Cuenta maestra debe ser SI 
+
+
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+wsl -d Ubuntu
+
+aws sts get-caller-identity
+
+sudo apt update && sudo apt install -y wslu
+
+aws sso login --profile default
+
+
+OpenLens-6.5.2-366.x86_64.AppImage
+
+\\wsl$
+ wget https://github.com/MuhammedKalkan/OpenLens/releases/download/v6.5.2-366/OpenLens-6.5.2-366.x86_64.AppImage
+chmod +x OpenLens-6.5.2-366.x86_64.AppImage
+./OpenLens-6.5.2-366.x86_64.AppImage --no-sandbox
+
+sudo apt install libfuse2
+
+sudo apt-get install libnss3
+
+sudo apt-get install libatk1.0-0
+
+sudo apt-get install libatk-bridge2.0-0
+
+sudo apt-get install libcups2
+
+sudo apt-get install libgtk-3-0
+
+sudo apt-get install libgbm1
+
+
+sudo apt-get install libasound2t64
+
+--sudo apt-get install libasound2
+ 
+
+
+
+./OpenLens-6.5.2-366.x86_64.AppImage --no-sandbox
+
+
+
+aws configure sso
+
+eks-nubo
+https://bvc-deceval.awsapps.com/start/#
+ eks-nubo
+
+---QA
+aws eks --region us-east-1 update-kubeconfig --name eks-nbo-postneg-qa-eks --kubeconfig /home/mdiaz/.kube/eks-nubo-qa --profile Power_Users_Iam-009160073106
+
+ 
+
+File Extensions
+@alebcay/openlens-node-pod-menu
+
+
+
+
+aws configure sso
+--DEV
+aws eks --region us-east-1 update-kubeconfig --name eks-nbo-postneg-develop-eks --kubeconfig /home/mdiaz/.kube/eks-nubo-dev --profile Power_Users_Iam-009160073182
+
+
+
+
+----------------------------------------------------------------------------------------------------------
+Abrir Open Lens
+----------------------------------------------------------------------------------------------------------
+./OpenLens-6.5.2-366.x86_64.AppImage --no-sandbox
+miguel.diaz@nuamx.com
+BDolsa2025.
+
+-------------------KAFKA
+POD
+NAMESPACE: INTEGRACION
+KAFKA-UI
+FORWARD
+PUERTA 8091
+http://localhost:8091/
+operacion MME
+kafka-nubo-nasdaq-integracion
+Message
+ProduceMessage
+
+
+
+
+
+
+
+Carga Modelo de riesgos
+https://nuamexchange.atlassian.net/browse/RTBOF-3960
+
+INSERT INTO "NUANBODB"."MARKET" ("MARKET_ID", "DESCRIPTION", "CATEGORY", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP", "CODE") VALUES('4', 'RENTA VARIABLE ', 'MME_RV', 'USER_01', 'APP_01', '2025-07-14 14:21:52.882', 'IP_01', 'RV');
+
+
+
+
+
+Descarga de comprobantes
+https://nuamexchange.atlassian.net/browse/RTBOF-5627
+Operacione MME y vericlear-back
+
+https://apisix.nubo-release.com/receipts-api/v1/receipt-operation/generate/settlement/trade/339
+ [{sideId: "1"}, {sideId: "2"}]
+0: {sideId: "1"}
+sideId: "1"
+1: {sideId: "2"}
+sideId: "2"
+
+
+3410
+
+
+overlays\development\apps\comprobantes-back\kustomization.yaml
+overlays\development\kustoms\comprobantes-back-kustomization.yaml
+
+
+git pull 
+git add ./
+git commit -m "feat: comprobantes-back  "
+git push
+
+
+BugFix
+HotFix
+Feature
+
+
+El avance del NPI es del 80.6% de acuerdo a lo expuesto en la entrega de resultados de junio y se espera tener los desarrollos de renta variable en nuBO para el Q4.
+Se proyecta un cumplimiento del 'mínimo'. 
+
+
+
+Para el Q2, el avance del NPI es del 75.2% de acuerdo a lo expuesto en la entrega de resultados de septiembre y se espera tener los desarrollos de renta variable en nuBO para el Q4. Se proyecta un cumplimiento del 'mínimo'.
+
+feat/RTBOF-5561
+
+Natalia Vargas Murcia, Claudia Sandoval Vargas, Frank Konja
+
+  GUARANTEES_REPORT: '/guarantees/reports-by-filters',
+  getGuaranteesReport
+  
+  
+  
+  
+  	
+10.53.160.254:80/api/query/swagger-ui/index.html
+
+
+
+chore: Merge pull request #124 from nuamx/feat/RTBOF-5533
+chore: Merge pull request #123 from nuamx/feat/RTBOF-integration
+
+
+El comentario de aprobación del Pull Request no contiene el indicador de versionamiento
+Recuerde que el comentario debe indicar que tipo de versionamiento debe hacerse:
+\[patch\], \[minor\] ó \[major\]
+Solo se debe indicar uno de estos tipos
+
+
+
+"C:\Program Files\Google\Chrome\Application
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/chrome-dev"
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------       SPRINT 20
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+https://nuamexchange.atlassian.net/issues/?jql=issueKey%20in%20%28RTBOF-5774%2CRTBOF-5776%2CRTBOF-5777%2CRTBOF-5778%2CRTBOF-5780%2CRTBOF-5782%2CRTBOF-5783%2CRTBOF-5784%2CRTBOF-5785%2CRTBOF-5786%2CRTBOF-5787%2CRTBOF-5788%2CRTBOF-5789%2CRTBOF-5790%2CRTBOF-5791%2CRTBOF-5792%2CRTBOF-5794%2CRTBOF-5795%2CRTBOF-5796%2CRTBOF-5798%2CRTBOF-5800%2CRTBOF-5802%2CRTBOF-5803%2CRTBOF-5804%2CRTBOF-5807%2CRTBOF-5808%2CRTBOF-5809%2CRTBOF-5810%2CRTBOF-5811%29
+
+
+
+EPICA
+5828
+
+Juan Pablo Castellanos
+git clone --branch feat/RTBOF-5786 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch feat/RTBOF-6211 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-fracciones-contado-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-parent-container.git
+git clone --branch feat/RTBOF-6120 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-repo-back.git
+git clone --branch feat/RTBOF-6120 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-back.git
+git clone --branch feat/RTBOF-6147 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-calculos-back.git
+git clone --branch feat/RTBOF-6189 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-garantias-back.git
+
+git clone --branch feat/RTBOF-5802  https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-front.git
+
+feat/RTBOF-6189
+
+feat/RTBOF-6120
+
+Usuarios:
+DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=123456;DB_URL=jdbc:postgresql://localhost:5432/nubo;DB_USERNAME=nubo;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=group-id;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false ;REDIRECT_PAGE_LOGIN=http:redre.com
+
+
+
+https://apisix.nubo-dev.com/user-management-api
+
+
+https://apisix.nubo-dev.com/user-management-api/swagger-ui/index.html#/
+
+https://apisix.nubo-dev.com/user-management-api/v1/notification/send-email-block-user?userName=miguel.diaz@nuamx.com
+
+https://github.com/nuamx/nbo-png-authentication-keycloak-front
+
+
+npm 
+
+
+Eliminar
+ 
+package-lock.json
+node_modules
+ 
+npm cache clean --force
+ 
+---------------------------------------
+npm login --registry https://npm.nuamexchange.com/
+ 
+username: "nubo"
+password: "4A3LY5lSEYBi8yoK"
+ 
+npm set registry https://npm.nuamexchange.com/
+ 
+npm install @nuam/common-fe-lib-components@1.25.2
+ 
+workflows --------------------------
+uses: nuamx/devops_resources/.github/workflows/CI-react-main_facade.yml@main
+ 
+with:
+      node_version: 20
+      registry_repository: riesgos-front
+      registry_project: nubo
+      ubuntu_version: latest
+      port_exposed: 80
+      mui_usage: 'true'  <----- nuevo
+ 
+ 
+antes: CodeArtifact - @nuam/bvc-fe-lib-components
+ahora: Artifactory - "@nuam/common-fe-lib-components": "^1.25.2"
+nuam NPM Registry
+ 
+Omite el paso final y ejecuta npm i
+nuam NPM Registry
+ 
+INSERT INTO "NUANBODB"."USER_NUBO" ("USER_NUBO_ID", "USER_NAME", "FIRST_NAME", "LAST_NAME", "IDENTIFICATION_TYPE_ID", "IDENTIFICATION", "ID_KEYCLOAK", "EMAIL", "VERIFIED_EMAIL", "PHONE_NUMBER", "USER_GROUP", "USER_TYPE", "JIRA_NUMBER", "FAILED_ATTEMPTS", "BLOCKED", "PARTICIPANT_ID", "COUNTRY_ID", "PROFILE_ID", "STATUS_ID", "OTP", "OTP_SECRET", "OTP_CREATED_DATE", "PREVIOUS_SESSION", "USER_CREATED_DATE", "USER_CREATED_BY", "PASSWORD_TEMPORARY_MODIFY_DATE", "PASSWORD_AUTH_MODIFY_DATE", "RECOVERY_PASSWORD_URL", "RECOVERY_PASSWORD_URL_MODIFY_DATE", "BLOCKED_FAILED_ATTEMPTS_DATE", "LAST_MODIFY_USER", "LAST_MODIFY_APPLIC", "LAST_MODIFY_DATE", "LAST_MODIFY_IP") VALUES(327, 'migueldz89@gmail.com', 'Miguel ', 'Diaz', 1, '15746416741', '0e714e46-6243-45fd-8b49-9aa0e5cd9bde', 'migueldz89@gmail.com', true, '', 'N/A', 'INTERNAL', 'BGPT-1919186', 0, false, 1, 37, 1, 500, true, '1Jgqi3x8i2GLxOr5m+lgmhuIj8yGv2hs9toBsr4EAaI82S9u7YGfN0efHsM12/sl', '2025-09-24', false, '2025-09-24', 'gloria.bohorquez@nuamx.com', NULL, '2025-09-24 14:39:11.000', NULL, NULL, NULL, 'migueldz89@gmail.com', 'user-management-api', '2025-10-10 06:38:06.000', '10.53.130.102');
+
+
+
+https://servicedesk.nuamx.com/servicedesk/customer/portal/10/SCTI-66634
+
+PARTICIPANT_ACCOUNT:
+ENTITY_CODE: 
+
+Primero en participant_account, 
+
+
+redux desktop-
+
+
+
+InvestorAccount
+IParticipantAccount
+https://nubo.nubo-release.com/operation-management/operation/6
+
+
+
+message: "Existen folios con estados pendientes de cumplimiento.",
+
+
+
+git pull origin development 
+git add ./
+git commit -m "fixBug RTBOF-6266 posicion propia vs terceros y portafolio colectivo  "
+git push
+
+
+git pull 
+git add ./
+git commit -m "feat: log  "
+git push
+
+
+
+
+Ajuste MS Asignacion (Participant y Investor)
+https://nuamexchange.atlassian.net/browse/RTBOF-6142
+Error campos contado (Front)
+https://nuamexchange.atlassian.net/browse/RTBOF-6147
+Miguel Diaz Arica incluimos otro porque el calculo en las operaciones fraccionadas esta quedando con un cero de menos  *10
+https://nuamexchange.atlassian.net/browse/RTBOF-6148
+
+
+https://kubernetes-dashboard.nubo-release.com/#/login
+eyJhbGciOiJSUzI1NiIsImtpZCI6Imc0TklIRjc1N2dCelRJbElGWjlZX2x0OHgyUlZoemtxaW5ud2xYZS1uNGcifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJyZWFkb25seS11c2VyLXRva2VuIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6InJlYWRvbmx5LXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiJmNmJiN2UyNy00NGZhLTRiMTUtYWI1Yy05NGU2YjE5NWM1MDMiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6cmVhZG9ubHktdXNlciJ9.stklDa2wv3yDJOgnroRUpBdsD0glqJx7nl0hNe399tsDPItCeIvaXmsX5WnXtFVSE6J6GIS5xmm04xZpDOnzQyi7ISxGmpW_yXbiLdWYpmiyxO9f2Se3vB0F2RxoBNoaf3o8weAAnHCdrEVnnAYfr7Qu71T4mlFpPRjHoSMjOiXUVKg_Cvv1_GJZI75pX4FIyeywmzp7A-Iyp2QGJIdnVWATy44SWbRiVA6Xr3voUaFA19AWzriR5vDNwQ5BF7UKrg8yabpzBJ1kZOWsIrw9wg_Wh07qhFRsehGI3LVpuYt8uXOtGbNKCsc0WlYUwxU3ihrqr8hMnrVnYLmmp-domg
+eyJhbGciOiJSUzI1NiIsImtpZCI6Imc0TklIRjc1N2dCelRJbElGWjlZX2x0OHgyUlZoemtxaW5ud2xYZS1uNGcifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiI1NGJhMjk1YS1lODY5LTQ5Y2EtYjBhNy1jMjczODBjZDgzOTQiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.aMp3onQbEYdqUAYJKdPpE_MyRNIEw6PVIicAnOgoq0FAogtI7plLQxWTIj-NU9EEIK2KjxsKqPc2Dg33yJqDqnV_77OO8QLo2iHirw0NUNuTYGljTkQHQVaxJN6Ske18DuNfWw7a4wJyoiIoFpEn9jNOwUSCBFuoYLpgSPb6awnXhDzIoJM-mf2uo86F5kP9PUMD9SlnRc86MhjgwYnUDHH9Oma-dIAsRSgX-S24SbvnLd8Gr1YS58uiBiQ2_0FHkKE9jm3YJ41mOAeNUtFFt507aEN_qaHifPA2lttom_TSEyMheT4xpGbfBo11_WOEfcuCEcrDkMtheu_zUy6Qng
+
+https://kafka-ui.nubo-release.com
+kafkaadmin
+kafka123456
+
+Inactividad 15 minutos
+https://nuamexchange.atlassian.net/browse/RTBOF-5715
+
+Notificacion Desbloqueo:
+https://nuamexchange.atlassian.net/browse/RTBOF-4774
+Notificacion bloqueo
+https://nuamexchange.atlassian.net/browse/RTBOF-4769
+Cantidad de folios y estados:
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-6167
+
+
+
+
+http://apisix.nubo-dev.com/guarantees-tracking-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/guarantees-tracking-api/swagger-ui/index.html#/
+
+"SOURCE_QUOTE_BUY_TYPE"	"SOURCE_QUOTE_SELL_TYPE"
+
+10:
+121	120
+20:
+120	120
+
+
+
+REPURCHASE_RATE: mme 
+
+
+
+Especial fiduciaria:
+25
+Cuenta portafolio Check SI
+
+src/components/OperationComponent/Hooks/UseOperation.tsx
+
+
+
+
+CREATE TABLE "NUANBODB"."MARKET_MAPPING" (
+	"MARKET_MAPPING_ID" bigserial NOT NULL,
+	"EXTERNAL_SYSTEM" varchar(30) NOT NULL,
+	"EXTERNAL_CODE" varchar(20) NULL,
+	"CATEGORY" varchar(30) NULL,
+	"EXTERNAL_DESCRIPTION" varchar(255) NOT NULL,
+	"MARKET_ID" varchar(2) NOT NULL,
+	"LAST_MODIFY_USER" varchar(250) NOT NULL,
+	"LAST_MODIFY_APPLIC" varchar(250) NOT NULL,
+	"LAST_MODIFY_DATE" timestamptz NOT NULL,
+	"LAST_MODIFY_IP" varchar(50) NOT NULL,
+	CONSTRAINT "PK_MARKET_MAPPING" PRIMARY KEY ("MARKET_MAPPING_ID"),
+	CONSTRAINT "FK_MARKET_MARKET_MAPPING_443" FOREIGN KEY ("MARKET_ID") REFERENCES "NUANBODB"."MARKET"("MARKET_ID")
+);
+
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-6211
+Al cambiar Trade 23 , la cuenta 1274
+https://apisix.nubo-release.com/operations-api/v1/validate/counted-fraction/correction/account-fraction/account-number/1274/trade/23/side/1
+
+
+
+
+2270446
+Finalizada
+https://nuamexchange.atlassian.net/browse/RTBOF-5803
+https://nuamexchange.atlassian.net/browse/RTBOF-6104 Error campos operación repo
+https://nuamexchange.atlassian.net/browse/RTBOF-6211 Erro campo guardar(beneficiarios)
+https://nuamexchange.atlassian.net/browse/RTBOF-6189 Sumatoria monto total
+https://nuamexchange.atlassian.net/browse/RTBOF-3445 Sumatoria cantidad total
+https://nuamexchange.atlassian.net/browse/RTBOF-6203 secret participant afp
+
+https://apisix.nubo-release.com/guarantees-api/v1/guarantees/guarantees-by-filters?&order=desc&sort=id&page=0&size=10
+
+https://apisix.nubo-release.com/guarantees-api/v1/guarantees/calculation-total-guarantees
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-5684
+https://nubo.nubo-release.com/user-management/business-groups
+
+
+
+Por hacer:
+https://nuamexchange.atlassian.net/browse/RTBOF-6267 Correccion fraccionada
+Compra 153 a 2270446  cantidad:200
+Nueva Fraccion 1752 q 100000 comision 2%
+https://apisix.nubo-release.com/operations-api/v1/fractionation/counted-operation/create-fractions/trade/27/side/1
+
+[
+  {
+    "fraction": 0,
+    "investorAccountId": null,
+    "commissionPercentage": 0,
+    "directDepositorId": null,
+    "fiduciarySpecialist": false,
+    "fractionQuantity": 200000,
+    "participantAccountId": 64,
+    "reference": 29804,
+    "sourceQuoteTypeId": 120,
+    "valTax": 19
+  },
+  {
+    "fraction": 2,
+    "investorAccountId": 1018,
+    "commissionPercentage": 2,
+    "directDepositorId": 9,
+    "fiduciarySpecialist": false,
+    "fractionQuantity": "100000",
+    "participantAccountId": null,
+    "reference": "",
+    "sourceQuoteTypeId": 120,
+    "valTax": 19
+  }
+]
+
+
+  directDepositorId: row.participantAccount?.participant
+                      ?.depositoryId
+                      ? row.participantAccount?.participant?.depositoryId
+                      : row.investorAccount?.investor?.depositoryId
+                      ? row.investorAccount?.investor?.depositoryId
+                      : row?.directDepositor
+                      ? row.directDepositor.id
+                      : null,
+
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-6266
+
+Si cambio la cuenta y el Origen es distinto me debe salir un error que no se debe cambiar la cuenta porque no corresponde con origen
+Trade =28; origen= Terceros
+Cuenta original= 2269160; Origen=TERCEROS
+Cuenta nueva= 132; Origen = Posicion Propia
+Prueba con cuenta= 136; Salio mensaje=  Los datos de asignación no corresponden con el origen POSICION PROPIA
+OWN_POSITION_NOT_CORRESPOND_TO_ORIGIN
+THIRD_PARTIES_COLLECTIVE_PORTFOLIOS_NOT_CORRESPOND_TO_ORIGIN
+de 1752 a 1755 (caso InvestorAccount)
+
+s21
+https://nuamexchange.atlassian.net/browse/RTBOF-5648
+https://nuamexchange.atlassian.net/browse/RTBOF-4245
+
+
+
+http://apisix.nubo-dev.com/master-third-parties-api/swagger-ui/index.html#/
+
+
+
+
+
+
+CIRCUIT_BREAKER_EVENT_BUFFER_SIZE=10;CIRCUIT_BREAKER_FAILURE_THRESHOLD=50;CIRCUIT_BREAKER_HALF_OPEN_CALLS=22;CIRCUIT_BREAKER_SLIDING_WINDOW_SIZE=22;CIRCUIT_BREAKER_WAIT_DURATION_MS=60000;DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=nubo_admin_password;DB_URL=jdbc:postgresql://ab279c685e6b1477bbc43bb457b555f1-731974232.us-east-1.elb.amazonaws.com:5432/nubo;DB_USERNAME=postgres;EMAIL_AZURE_CLIENT_ID=variable;EMAIL_AZURE_CLIENT_SECRET=variable;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=group-id;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-release.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-release.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-release.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-release.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-release.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-release.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-release.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60 ;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SFTP_CONNECTION_TIMEOUT_MS=30000;SFTP_DATA_TIMEOUT_MS=60000;SFTP_DECEVAL_HOST=sftpgo-service.sftp-dev.svc.cluster.local;SFTP_DECEVAL_INPUT_FOLDER=input_dcv;SFTP_DECEVAL_OUTPUT_FOLDER=output_dcv;SFTP_DECEVAL_PASSWORD=garantias-valores;SFTP_DECEVAL_PORT=2022;SFTP_DECEVAL_PROCESSED_FOLDER=process_dcv;SFTP_DECEVAL_USER=garantias-valores;SFTP_PASSIVE_MODE=true;SFTP_RETRY_ATTEMPTS=3;SFTP_RETRY_WAIT_DURATION_MS=60000;SPRING_PROFILES_ACTIVE=local
+
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-4245
+https://apisix.nubo-dev.com/special-operations-compensation-api/v1/special-trade-compensation/payments/special-trade/2/payment-type/100?page=0&size=50
+http://apisix.nubo-dev.com/special-operations-compensation-api/swagger-ui/index.html#/
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Spring 21-27
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-consulta-folios-back.git
+git clone --branch feat/RTBOF-5613 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-perfiles-query-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-mantenedor-modulos-cmd-back.git
+git clone --branch feat/RTBOF-5681 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-consulta-folios-back.git
+git clone --branch feat/RTBOF-6771 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+git clone --branch release/v0.20.1 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-mantenedor-modulos-cmd-back.git
+git clone --branch release/v0.32.4 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-ms-generador-csv-borde-back.git
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-validaciones-modelo-riesgo-back.git
+
+
+https://nuamexchange.atlassian.net/browse/RTBOF-5600
+https://apisix.nubo-release.com/operations-consult-folios-api/v1/tracking-trade/3
+
+
+
+
+Epicas
+https://nuamexchange.atlassian.net/browse/RTBOF-6049- Q4: Certificación Func. Visualización, detalle, seguimiento Op RV
+
+
+
+git pull origin development 
+git add ./
+git commit -m "Fix bug calculo para op repo RTBOF-4795"
+git push
+
+https://nuamexchange.atlassian.net/browse/RTBOF-5613
+https://nuamexchange.atlassian.net/browse/RTBOF-6170 Fracciones
+https://nuamexchange.atlassian.net/browse/RTBOF-6075 StatusHistory
+
+1373
+
+
+https://nubo.nubo-release.com/loan-operations-management
+/guarantees-management/fixed-parameters-guarantees
+
+https://nubo.nubo-release.com/loan-operations-management
+/guarantees-management/fixed-parameters-guarantees
+
+https://apisix.nubo-release.com/operations-consult-folios-api/v1/tracking-trade/63
+
+
+
+
+INSERT INTO "NUANBODB"."SCREEN" (
+    "SCREEN_ID",
+    "CODE",
+    "DESCRIPTION",
+    "CATEGORY_ID",
+    "MODULE_ID",
+    "SUBMODULE_ID",
+    "LAST_MODIFY_USER",
+    "LAST_MODIFY_APPLIC",
+    "LAST_MODIFY_DATE",
+    "LAST_MODIFY_IP"
+) VALUES (
+    nextval('"NUANBODB"."SCREEN_SCREEN_ID_seq"'),
+    '051',
+    '/user-management/user-management-external',
+    NULL,
+    NULL,
+    NULL,
+    'USER_01',
+    'APP_01',
+    NOW(),
+    'IP_01'
+);
+ 
+Long sourceQuoteId = sourceQuoteTrade.getId();
+TypeEnum.OWN_POSITION_POINT_ORIGIN.getValue().equals(sourceQuoteId)
+
+
+
+
+
+
+
+DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=nubo_admin_password;DB_URL=jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-172895904.us-east-1.elb.amazonaws.com:5432/nubo;DB_USERNAME=postgres;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=group-id;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_LOGIN=http:redre.com ;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false 
+
+
+
+
+
+https://apisix.nubo-release.com/operations-api/v1/settlement/update-commission/trade/32/fraction/0/side/1
+http://localhost:8084/operations-api/v1/settlement/update-commission/trade/32/fraction/0/side/1
+
+Commision, 
+6420000000000
+500000000
+1284000000
+
+quantity = {BigDecimal@24575} "100000.0000"
+price = {BigDecimal@24608} "1284000000.000000"
+commission = {BigDecimal@24578} "5"
+valTax = {BigDecimal@24021} "0.0000"
+sideId = "1"
+
+1219800000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------SPRINT 28
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch feat/RTBOF-5681 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-correcciones-transformador-siidj-back.git
+git clone --branch feat/RTBOF-6120 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-back.git
+git clone --branch feat/RTBOF-5601 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-persistencia-asignacion-vericlear-back.git
+git clone --branch feat/RTBOF-7298 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-gestionusuarios-back.git
+git clone --branch release/v0.87.0 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-comprobantes-back.git
+git clone --branch feat/RTBOF-7298 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-consulta-folios-back.git
+git clone --branch feat/RTBOF-5681 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-correcciones-borde-back.git
+git clone --branch protobuf https://MiguelDiazNuam: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@github.com/nuamx/bin-ti-lib.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-persistencia-data-nasdaq-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-reglas-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-reglas-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-authentication-keycloak-front.git
+
+chore: 
+[patch] 
+
+
+git pull origin development 
+git add ./
+git commit -m "Fix bug RTBOF-5681 estados"
+git push
+
+
+Carpetas a pasar importantes:
+INFO 
+INFO C
+INFO_2025
+INFO_NUEVO
+Instaladores
+MiguelDz
+MIT_INTERFACES
+MonitoreoAlgoritmos
+mvnet
+NUAMX
+Proyecto DMA
+Proyecto WEB
+Proyecto XBRL
+Proyecto_INFO
+repository
+Sistemas
+VADEMECUM
+
+
+
+
+Carpetas a excluir
+git
+gitTest
+gitTest2
+home
+MIT_NUEVO
+MJ
+MONITOREO_BVL
+TVR
+var
+WUDownloadCache
+
+
+
+
+
+ properties:
+      ssl:
+        endpoint:
+          identification:
+            algorithm: https
+
+
+
+
+git clone --branch release/v0.17.0 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-mantenedor-modulos-query-back.git
+
+release/v0.25.0
+
+release/v0.42.5
+
+{
+ 	"operationIndicator": 1,  
+ 	"plazaCode": 7,
+ 	"operationMode": 1,
+ 	"operationRegistrationDate": "20251125",
+ 	"operationNumber": "100000007",
+ 	"processType": 0,
+ 	"countedSettlementType": 1,
+ 	"termSettlementType": 1,
+ 	"countedSettlementDate": "20251201",
+ 	"termSettlementDate": "20251201",
+ 	"sellDepositorCode": null,
+ 	"sellCustodianCode": null,
+ 	"sellInvestorAccount": "446512",
+ 	"sellCud": "0",
+ 	"buyDepositorCode": 6,
+ 	"buyCustodianCode": 6,
+ 	"buyInvestorAccount": "446368",
+ 	"buyCud": "0",
+ 	"isin": "CLP3880F1085",
+ 	"deposit": 1,
+ 	"unitValue": 5000.000000,
+ 	"cashValue": 14000000.000000,
+ 	"currencyCode": 1,
+ 	"buySettlementIndicator": 0,
+ 	"sellSettlementIndicator": 0,
+ 	"referencePlazaCode": 7,
+ 	"referenceOperationMode": 1,
+ 	"referenceOperationRegistrationDate": "20251202",
+ 	"referenceOperationNumber": "100000007"
+ }
+ 
+
+https://nuamexchange.atlassian.net/browse/RTBOF-7435
+https://nuamexchange.atlassian.net/browse/RTBOF-7399
+
+    https://apisix.nubo-dev.com/receipts-api/v1/settlement-report-operation/generate/report/history/196/dynamic?typeId=163&_refresh=0&page=0&size=10
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/history/33/dynamic?typeId=163&_refresh=1&page=0&size=10
+
+
+
+https://apisix.nubo-release.com/corrected-reports-cmd-api/v1/corrected-reports-operations/validate
+https://apisix.nubo-release.com/corrected-reports-cmd-api/v1/corrected-reports-operations/validate
+
+
+
+
+git clone --branch release/v0.32.4 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-ms-generador-csv-borde-back.git
+git clone --branch release/v0.22.1 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-estados-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-estados-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-fracciones-back.git
+git clone --branch release/v0.35.0 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-espec-reglas-back.git
+git clone --branch release/v0.10.0 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-reportes-descarga-cmd.git
+
+git clone --branch release/v0.3.3 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-reportes-corregidas-borde-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-custodio-estados-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-reportes-descarga-cmd.git
+git clone --branch release/v0.1.5 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-cmd-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-custodio-acciones-back.git
+git clone --branch release/v0.74.1 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-maestroparticipante-back.git
+git clone --branch feat/RTBOF-7812 https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operaciones-custodio-acciones-back.git
+git clone --branch main https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-infraestructure-flux.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-reportes-descarga-cmd.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-recepcion-anticipos-back.git
+git clone --branch development https://MiguelDiazNuam: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@github.com/nuamx/nbo-png-operacion-vericlear-confirmada.git
+
+
+
+
+operations-status-api/v1/ope-spec-status-transition/special-operation/validation  post
+operations-status-api/v1/ope-spec-status-transition/special-operation/origin-status/
+operations-status-api/v1/ope-spec-status-transition/operation/origin-status/{originStatusId}
+operations-status-api/v1/ope-spec-status-transition/special-operation/business-rule/{businessRuleId}/origin-status/{originStatusId}
+
+operations-status-api/v1/ope-status-transition/operation/validation
+operations-status-api/v1/ope-status-transition/operation/origin-status/
+operations-status-api/v1/ope-status-transition/operation/origin-status/{originStatusId}
+operations-status-api/v1/ope-status-transition/operation/business-rule/{businessRuleId}/origin-status/{originStatusId}
+
+
+http://apisix.nubo-dev.com/special-operations-status-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/no-compliance-operation-api/swagger-ui/index.html#/
+http://apisix.nubo-dev.com/no-compliance-operation-api/swagger-ui/index.html#/
+
+
+
+
+
+Estado Origen 1            Registrado
+Estado Destino 3           Aprobado
+
+Transiciones  1   3  true
+
+{
+	
+}
+
+https://github.com/nuamx/nbo-png-operaciones-espec-back/tree/development
+ 
+https://github.com/nuamx/nbo-png-operaciones-espec-fracciones-back
+
+StatusTransitionOpSpecRestController
+
+release/v0.10.0
+ 0.35.0
+
+
+
+git pull origin main 
+git add ./
+git commit -m "Fix bug RTBOF-7813 Op. Custodio prematch"
+git push
+
+
+
+git pull origin development 
+git add ./
+git commit -m "Fix bug RTBOF-7493 tradeIds"
+git push
+
+
+
+
+git pull origin development 
+git add ./
+git commit -m "RTBOF-7274  add participantId"
+git push
+
+
+git pull origin release/v0.3.11
+git commit -m "Fix corrected date RTBOF-7457"
+git fetch origin --prune
+git pull --rebase origin release/v0.1.5
+git push -u origin release/v0.1.5
+
+
+
+
+git fetch origin --prune
+git checkout -b release/v0.1.3
+
+git fetch origin --prune
+git checkout -b release/v0.47.2
+
+
+##Antes de hacer commit
+git fetch origin
+
+git checkout release/v0.3.15
+git fetch origin
+git push
+git pull
+
+git stash push -m "tmp antes de rebase release/v0.3.15"
+# 3. Traer y rebasar contra el remoto
+git pull --rebase origin release/v0.3.15
+# 4. Recuperar los cambios del stash
+git stash pop
+git stash push -m "tmp antes de rebase release/v0.3.15"
+# 3. Traer y rebasar contra el remoto
+git pull --rebase origin release/v0.3.15
+# 4. Recuperar los cambios del stash
+git stash pop
+git status   # debe decir: working tree clean
+git push --set-upstream origin release/v0.3.15
+
+
+
+
+git fetch origin --prune
+git pull --rebase origin release/v0.1.5
+git push -u origin release/v0.1.5
+
+
+
+git fetch origin --prune
+git pull --rebase origin release/v0.74.1
+git push -u origin release/v0.74.1
+
+
+
+
+
+# 1) Asegura que tu working tree esté limpio (ya lo tienes limpio por tu ejemplo)
+git status
+
+# 2) Trae refs actualizadas del remoto
+git fetch origin --prune
+
+# 3) Cambia a la rama release (creando tracking si no existe localmente)
+git checkout -b release/v0.4.7 origin/release/v0.4.7
+
+# 4) Verifica
+git status
+git branch -vv
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/settlement/rv/33?participantId=1&startDate=2025-10-23&endDate=2025-12-23&statusId=1&countryId=37
+
+
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/history/33/dynamic?typeId=160&_refresh=1&page=0&size=10
+
+{
+    "content": [
+        {
+            "id": 133,
+            "fileName": "liqbvc",
+            "fileType": "CSV",
+            "filePath": null,
+            "generatedAt": "2025-12-23T22:38:51.55548Z",
+            "generatedBy": "migueldz89@gmail.com",
+            "operationStatusId": 1,
+            "operationStatusDescription": "REGISTRADA",
+            "generationStatusId": 900,
+            "generationStatusDescription": "EN PROCESO",
+            "participantId": 6,
+            "participantName": "ITAU COMISIONISTA DE BOLSA COL",
+            "country": "COLOMBIA",
+            "typeId": 160,
+            "typeDescription": "ARCHIVO LIQ. CONTADO REPO",
+            "totalTrades": 10,
+            "fileConsecutive": 133,
+            "message": null
+        },
+        {
+            "id": 134,
+            "fileName": "liqbvc",
+            "fileType": "CSV",
+            "filePath": null,
+            "generatedAt": "2025-12-23T22:40:48.928926Z",
+            "generatedBy": "migueldz89@gmail.com",
+            "operationStatusId": 1,
+            "operationStatusDescription": "REGISTRADA",
+            "generationStatusId": 900,
+            "generationStatusDescription": "EN PROCESO",
+            "participantId": 6,
+            "participantName": "ITAU COMISIONISTA DE BOLSA COL",
+            "country": "COLOMBIA",
+            "typeId": 160,
+            "typeDescription": "ARCHIVO LIQ. CONTADO REPO",
+            "totalTrades": 10,
+            "fileConsecutive": 134,
+            "message": null
+        },
+        {
+            "id": 135,
+            "fileName": "liqbvc",
+            "fileType": "CSV",
+            "filePath": null,
+            "generatedAt": "2025-12-24T12:02:32.531962Z",
+            "generatedBy": "migueldz89@gmail.com",
+            "operationStatusId": 1,
+            "operationStatusDescription": "REGISTRADA",
+            "generationStatusId": 900,
+            "generationStatusDescription": "EN PROCESO",
+            "participantId": 6,
+            "participantName": "ITAU COMISIONISTA DE BOLSA COL",
+            "country": "COLOMBIA",
+            "typeId": 160,
+            "typeDescription": "ARCHIVO LIQ. CONTADO REPO",
+            "totalTrades": 10,
+            "fileConsecutive": 135,
+            "message": null
+        },
+        {
+            "id": 136,
+            "fileName": "liqbvc",
+            "fileType": "CSV",
+            "filePath": null,
+            "generatedAt": "2025-12-24T12:05:20.753657Z",
+            "generatedBy": "migueldz89@gmail.com",
+            "operationStatusId": 1,
+            "operationStatusDescription": "REGISTRADA",
+            "generationStatusId": 900,
+            "generationStatusDescription": "EN PROCESO",
+            "participantId": 6,
+            "participantName": "ITAU COMISIONISTA DE BOLSA COL",
+            "country": "COLOMBIA",
+            "typeId": 160,
+            "typeDescription": "ARCHIVO LIQ. CONTADO REPO",
+            "totalTrades": 10,
+            "fileConsecutive": 136,
+            "message": null
+        },
+        {
+            "id": 137,
+            "fileName": "liqbvc",
+            "fileType": "CSV",
+            "filePath": null,
+            "generatedAt": "2025-12-24T12:06:28.664631Z",
+            "generatedBy": "migueldz89@gmail.com",
+            "operationStatusId": 1,
+            "operationStatusDescription": "REGISTRADA",
+            "generationStatusId": 900,
+            "generationStatusDescription": "EN PROCESO",
+            "participantId": 6,
+            "participantName": "ITAU COMISIONISTA DE BOLSA COL",
+            "country": "COLOMBIA",
+            "typeId": 160,
+            "typeDescription": "ARCHIVO LIQ. CONTADO REPO",
+            "totalTrades": 10,
+            "fileConsecutive": 137,
+            "message": null
+        },
+        {
+            "id": 138,
+            "fileName": "liqbvc",
+            "fileType": "CSV",
+            "filePath": null,
+            "generatedAt": "2025-12-24T12:14:45.55659Z",
+            "generatedBy": "migueldz89@gmail.com",
+            "operationStatusId": 1,
+            "operationStatusDescription": "REGISTRADA",
+            "generationStatusId": 900,
+            "generationStatusDescription": "EN PROCESO",
+            "participantId": 6,
+            "participantName": "ITAU COMISIONISTA DE BOLSA COL",
+            "country": "COLOMBIA",
+            "typeId": 160,
+            "typeDescription": "ARCHIVO LIQ. CONTADO REPO",
+            "totalTrades": 10,
+            "fileConsecutive": 138,
+            "message": null
+        }
+    ],
+    "totalElements": 6,
+    "totalPages": 1,
+    "pageSize": 10,
+    "pageNumber": 0
+}
+
+
+https://apisix.nubo-release.com/report-downloader-api/v1/file-download/download/141
+
+
+
+https://apisix.nubo-release.com/corrected-reports-cmd-api/v1/corrected-reports-operations/validate
+
+git fetch origin
+
+git branch -a | findstr "release/v0.4.3"
+git switch release/v0.4.3
+
+
+DB_HIKARI_CONNECTION_TIMEOUT=30000;DB_HIKARI_IDLE_TIMEOUT=600000;DB_HIKARI_LEAK_DETECTION_THRESHOLD=2000;DB_HIKARI_MAX_LIFETIME=1800000;DB_HIKARI_MAXIMUM_POOL_SIZE=10;DB_HIKARI_MINIMUM_IDLE=5;DB_HIKARI_VALIDATION_TIMEOUT=5000;DB_PASSWORD=nubo_admin_password;DB_URL=jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-172895904.us-east-1.elb.amazonaws.com:5432/nubo;DB_USERNAME=postgres;EMAIL_AZURE_CLIENT_ID=2;EMAIL_AZURE_CLIENT_SECRET=3;EMAIL_AZURE_TENANT_ID=variable;EMAIL_FROM=postnegociacion@nuamx.com;KAFKA_NUBO_AUTO_OFFSET_RESET=earliest;KAFKA_NUBO_BOOTSTRAP_SERVER=localhost:9092;KAFKA_NUBO_GROUP_ID=group-id;KAFKA_NUBO_RETRIES=5;KAFKA_NUBO_SASL_PASSWORD=qtkhM9xGJV;KAFKA_NUBO_SASL_USER=user1;KAFKA_NUBO_TOPIC_NAME="";KAFKA_NUBO_TOPIC_NAME_GUARANTEES_TRACKING=kafka-nubo-guarantees-tracking;KAFKA_NUBO_TOPIC_NAME_SETTLEMENT_BANK_TRANSACTION="";KAFKA_NUBO_TOPIC_NAME_SPECIAL_TRADE_COMPENSATION=kafka-nubo-special-trade-compensation;KEYCLOAK_CLIENT_ID=nubo-frontend-2;KEYCLOAK_CLIENT_SECRET=yWhOtTwkuNWkVdMnCupgK5xWtIDofcwj;KEYCLOAK_GRANT_TYPE=password;KEYCLOAK_HOST=https://sso-devops-admin.nuamexchange.com;KEYCLOAK_INTROSPECTION_URI=https://sso-devops-admin.nuamexchange.com/realms/nbo-dev/protocol/openid-connect/token/introspect;KEYCLOAK_POLICY_PASSWORD_EXPIRE_QUANTITY=2;KEYCLOAK_REALM=nbo-dev;MAIL_PASSWORD=zgbp keno zftn llmn;MAIL_USERNAME=sistemajaludsac@gmail.com;NUBO_URL_OPERATION_CALCULATION=https://apisix.nubo-dev.com/operations-calculation-api;NUBO_URL_OPERATION_FRACTIONATION=https://apisix.nubo-dev.com/operations-fractionation-api;NUBO_URL_OPERATION_RULES=https://apisix.nubo-dev.com/operations-rules-api;NUBO_URL_OPERATION_SPECIAL_CALCULATION=https://apisix.nubo-dev.com/special-operation-calculation-api;NUBO_URL_OPERATION_SPECIAL_FRACTIONATION=https://apisix.nubo-dev.com/operations-special-fractionation-api;NUBO_URL_OPERATION_SPECIAL_RULES=https://apisix.nubo-dev.com/operations-special-rules-api;NUBO_URL_OPERATION_SPECIAL_STATUS=https://apisix.nubo-dev.com/special-operations-status-api;RATE_LIMIT_MAX_REQUEST=10000;RATE_LIMIT_TIME_REQUEST=30000;RATE_LIMIT_WAITING_TIME=60;REDIRECT_PAGE_LOGIN=http:redre.com ;REDIRECT_PAGE_NUBO=https://nubo.nubo-dev.com/;SECRET_KEY_PASSWORD_GENERATE=FC691174F23188E7756E8AA787D7E4465A8E5D14C685AA7C9A19BC98124DDBFA;SPRING_PROFILES_ACTIVE=local;VALIDATE_USER_TYPE_ACCESS_TOKEN=false  ;KAFKA_NUBO_TOPIC_NAME_OPERATION_CORRECTED_REPORTS=kafka-nubo-operation-corrected-reports
+;FTP_PROTOCOL=sftp ; FTP_HOST=localhost ; FTP_PORT=22 ; FTP_USER=user ; FTP_PASSWORD= pwd ; SFTP_CORRECTED_REPORTS_INPUT_FOLDER= local ; 
+
+
+
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class ParticipantShortOutDto {
+
+    private Long id;
+
+    private String code;
+
+    private String name;
+
+}
+
+
+OPERATIONSCUSTODYACTIONSAPI
+
+https://apisix.nubo-dev.com/operations-custody-actions-api/swagger-ui/index.html#/
+
+
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/settlement/rv/33?participantId=6&startDate=2026-02-01&endDate=2026-02-23&statusId=1&countryId=37
+https://apisix.nubo-release.com/receipts-api/v1/settlement-report-operation/generate/report/history/33/dynamic?typeId=160&_refresh=1&page=0&size=10
+
+
+generateSettlementReportByStatusAndParticipantV1
+CANCELATED 11
+NEGOCIADA
+
+a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com
+jdbc:postgresql://a6f36a5db63bb4c9b8afacf3400fc49e-77910875.us-east-1.elb.amazonaws.com:5432/nubo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
